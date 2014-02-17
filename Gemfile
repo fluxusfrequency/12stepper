@@ -8,6 +8,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'travis'
+gem 'high_voltage'
+gem 'ckeditor'
+gem 'paperclip'
 
 group :development, :test do
   gem 'quiet_assets'
