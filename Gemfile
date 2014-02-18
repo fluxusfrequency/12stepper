@@ -24,6 +24,7 @@ group :test do
   gem 'shoulda'
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'database_cleaner'
 end
 
 group :development do
