@@ -4,6 +4,7 @@ TwelveStepper::Application.routes.draw do
   scope "(:locale)", locale: /en|es|fr/ do
     # resources :entries
     resources :users
+    resources :entries
     resources :sessions
     delete '/sessions', to: 'sessions#destroy'
   end
