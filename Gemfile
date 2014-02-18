@@ -11,6 +11,7 @@ gem 'high_voltage'
 gem 'ckeditor'
 gem 'paperclip'
 gem 'bcrypt-ruby'
+gem 'meeting_finder'
 
 group :development, :test do
   gem 'quiet_assets'
