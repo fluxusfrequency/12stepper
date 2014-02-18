@@ -12,6 +12,7 @@ gem 'ckeditor'
 gem 'paperclip'
 gem 'bcrypt-ruby'
 gem 'meeting_finder'
+gem 'geocoder'
 
 group :development, :test do
   gem 'quiet_assets'
