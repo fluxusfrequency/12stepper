@@ -2,15 +2,22 @@ require 'spec_helper'
 
 describe "Static Pages" do
 
-  context "12 Steps" do
-    it "can visit the 12 steps page", :js => true do
-      user = login
+  context "Navbar" do
+
+    it "sees the dropdown on click", :js => true do
+      login
       within("#navbar") do
         expect(page).to_not have_content("The 12 Steps")
+        expect(page).to_not have_content("The 12 Traditions")
+        expect(page).to_not have_content("The Serenity Prayer")
         click_on "Resources"
         expect(page).to have_content("The 12 Steps")
+        expect(page).to have_content("The 12 Traditions")
+        expect(page).to have_content("The Serenity Prayer")
       end
     end
+
+
   end
 
 end
