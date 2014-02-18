@@ -7,5 +7,6 @@ TwelveStepper::Application.routes.draw do
 
   get '/:locale', to: 'entries#index'
   resources :sessions
+  resources :users
   root 'entries#index'
 end

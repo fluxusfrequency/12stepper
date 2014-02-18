@@ -4,6 +4,8 @@ FactoryGirl.define do
     username "SecretSanta"
     email "santa@northpole.org"
     password_digest "password"
-    language "en"
+    password "password"
+    password_confirmation "password"
+    locale "en"
   end
 end
