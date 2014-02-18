@@ -5,7 +5,7 @@ describe "User Authentication" do
   context "logging in" do
     it "can login with username and valide password" do
       user = login
-      expect(current_path).to eq(user_path(user))
+      expect(current_path).to eq(user_path(user, locale: :en))
       within("#navbar") do
         expect(page).to_not have_content "Login"
         expect(page).to_not have_content "Sign Up"
