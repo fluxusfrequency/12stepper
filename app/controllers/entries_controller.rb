@@ -1,9 +1,7 @@
 class EntriesController < ApplicationController
 
   def index
-    if current_user
-      @entries = current_user.entries
-    end
+    @entries = current_user.entries
   end
 
   def new
