@@ -42,8 +42,17 @@ describe "Static Pages" do
       within("#navbar") do
         click_on "The Serenity Prayer"
       end
-      expect(page).to have_content('God grant me the serenity')
+      expect(page).to have_content('God, give me grace to accept with serenity')
       expect(current_path).to eq("/pages/serenity-prayer-en")
+    end
+
+    xit "redirects to the big book index page" do
+      login
+      within("#navbar") do
+        click_on "The Big Book"
+      end
+      expect(page).to have_content('WAR FEVER ran high in the New England town')
+      expect(current_path).to eq(big_book_path)
     end
 
 
