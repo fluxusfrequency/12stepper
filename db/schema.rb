@@ -11,10 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218002832) do
+ActiveRecord::Schema.define(version: 20140218215800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "big_book_chapters", force: true do |t|
+    t.string  "title"
+    t.text    "body"
+    t.integer "chapter_number"
+  end
 
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
@@ -31,14 +37,6 @@ ActiveRecord::Schema.define(version: 20140218002832) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
-
-  create_table "texts", force: true do |t|
-    t.text     "body"
-    t.string   "source"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "title"
-  end
 
   create_table "users", force: true do |t|
     t.string   "username"

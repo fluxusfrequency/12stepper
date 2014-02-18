@@ -11,6 +11,7 @@ gem 'high_voltage'
 gem 'ckeditor'
 gem 'paperclip'
 gem 'bcrypt-ruby'
+gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1e5253d7e92ba'
 
 group :development, :test do
   gem 'quiet_assets'
