@@ -15,5 +15,12 @@ describe User do
     expect(user2).to_not be_valid
   end
 
+  it "requires a unique email" do
+    user1 = FactoryGirl.create(:user)
+    user2 = FactoryGirl.build(:user)
+    expect(user1).to be_valid
+    expect(user2).to_not be_valid
+  end
+
 
 end
