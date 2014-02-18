@@ -1,0 +1,6 @@
+fr:
+  title: Douze Steppeur
+  navbar:
+    logout: Déconnexion
+    login: Connexion
+    signup: Inscription

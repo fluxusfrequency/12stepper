@@ -3,11 +3,11 @@ TwelveStepper::Application.routes.draw do
 
   scope "(:locale)", locale: /en|es|fr/ do
     # resources :entries
+    resources :users
+    resources :sessions
+    delete '/sessions', to: 'sessions#destroy'
   end
 
   get '/:locale', to: 'entries#index'
-  delete '/sessions', to: 'sessions#destroy'
-  resources :sessions
-  resources :users
   root 'entries#index'
 end

@@ -1,0 +1,6 @@
+en:
+  title: Twelve Stepper
+  navbar:
+    logout: Logout
+    login: Login
+    signup: Sign Up

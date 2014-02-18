@@ -1,0 +1,6 @@
+es:
+  title: Doce Bailarín
+  navbar:
+    logout: Desloguear
+    login: Conexión
+    signup: Apuntarse

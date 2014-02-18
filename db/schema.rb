@@ -32,6 +32,14 @@ ActiveRecord::Schema.define(version: 20140218002832) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
+  create_table "texts", force: true do |t|
+    t.text     "body"
+    t.string   "source"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+  end
+
   create_table "users", force: true do |t|
     t.string   "username"
     t.string   "email"
