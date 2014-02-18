@@ -19,6 +19,33 @@ describe "Static Pages" do
       end
     end
 
+    it "can view the 12 steps page" do
+      login
+      within("#navbar") do
+        click_on "The 12 Steps"
+      end
+      expect(page).to have_content('We admitted we were powerless over alcohol')
+      expect(current_path).to eq("/pages/twelve-steps-en")
+    end
+
+    it "can view the 12 traditions page" do
+      login
+      within("#navbar") do
+        click_on "The 12 Traditions"
+      end
+      expect(page).to have_content('Our common welfare should come first;')
+      expect(current_path).to eq("/pages/twelve-traditions-en")
+    end
+
+    it "can view the serenity prayer page" do
+      login
+      within("#navbar") do
+        click_on "The Serenity Prayer"
+      end
+      expect(page).to have_content('God grant me the serenity')
+      expect(current_path).to eq("/pages/serenity-prayer-en")
+    end
+
 
   end
 
