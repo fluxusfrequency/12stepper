@@ -11,6 +11,7 @@ gem 'travis'
 gem 'high_voltage'
 gem 'ckeditor'
 gem 'paperclip'
+gem 'bcrypt-ruby'
 
 group :development, :test do
   gem 'quiet_assets'
