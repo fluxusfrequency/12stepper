@@ -6,6 +6,7 @@ TwelveStepper::Application.routes.draw do
   end
 
   get '/:locale', to: 'entries#index'
+  delete '/sessions', to: 'sessions#destroy'
   resources :sessions
   resources :users
   root 'entries#index'

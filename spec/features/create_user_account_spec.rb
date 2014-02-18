@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "User Authentication" do
+describe "User Account Creation" do
 
   context "create an account" do
     before :each do
@@ -24,18 +24,6 @@ describe "User Authentication" do
     end
   end
 
-  context "logging in" do
-    it "can login with username and valide password" do
-      user = FactoryGirl.create(:user, password: "password")
-      visit '/'
-      click_on "Login"
-      fill_in "Email", with: user.email
-      fill_in "Password", with: "password"
-      click_on "Log in"
-      expect(current_path).to eq(user_path(user))
-      # save_and_open_page
-    end
-  end
 
 end
 

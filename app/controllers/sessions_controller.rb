@@ -19,14 +19,13 @@ class SessionsController < ApplicationController
         render :text => "Found the user #{user}, but the PW was wrong"
       end
     else
-      binding.pry
       render :new, flash[:error] => "You entered an invalid email or password, please try again."
     end
   end
 
   def destroy
     session[:user_id] = nil
-    redirect_to pages_path
+    redirect_to root_path
   end
 
 
