@@ -48,6 +48,7 @@ describe "Static Pages" do
 
     it "redirects to the big book index page" do
       login
+      FactoryGirl.create(:chapter)
       within("#navbar") do
         click_on "The Big Book"
       end
