@@ -5,6 +5,7 @@ require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rails'
 require 'capybara/rspec'
+require 'capybara/poltergeist'
 require 'translations'
 require 'database_cleaner'
 
@@ -33,6 +34,12 @@ RSpec.configure do |config|
 
   config.order = "random"
 end
+
+Capybara.register_driver :poltergeist do |app|
+  Capybara::Poltergeist::Driver.new(app, :phantomjs => Phantomjs.path)
+end
+
+Capybara.javascript_driver = :poltergeist
 
 def login
   user = FactoryGirl.create(:user, password: "password")

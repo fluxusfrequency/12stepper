@@ -1,4 +1,5 @@
 <div id='navbar'>
+  <%= link_to t("navbar.resources"), "#", id:"resources-link" %>
   <% if current_user %>
     <%= link_to t("navbar.logout"), sessions_path, method: :delete %>
   <% else %>
@@ -6,4 +7,8 @@
 
     <%= link_to t("navbar.login"), new_session_path %>
   <% end %>
+
+  <div id="resources-link-panel">
+    <%= link_to t("navbar.twelvesteps"), "#" %>
+  </div>
 </div>
