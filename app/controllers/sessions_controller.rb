@@ -14,18 +14,26 @@ class SessionsController < ApplicationController
       result = user.authenticate(password)
       if result
         session[:user_id] = result.id
+        flash[:notice] = "Signed In!"
         redirect_to user_path(user)
       else
-        render :new, flash[:error] => "You entered an invalid email or password, please try again."
+        display_error_message
+        render :new
       end
     else
-      render :new, flash[:error] => "You entered an invalid email or password, please try again."
+      display_error_message
+      render :new
     end
   end
 
   def destroy
     session[:user_id] = nil
+    flash[:notice] = "Successfully signed out."
     redirect_to root_path
+  end
+
+  def display_error_message
+    flash[:error] = "You entered an invalid email or password, please try again."
   end
 
 
