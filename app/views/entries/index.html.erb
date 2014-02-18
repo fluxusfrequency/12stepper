@@ -1,15 +1,20 @@
-<% @entries.each do |entry| %>
-  
-  Title: <%= entry.title %><br />
-  Body: <%= entry.body.html_safe %><br />
+<% if current_user %>
 
-  <% if entry.step %>
-    Step: <%= entry.step %>
-  <% else %>
-    <em>There is no step associated with this entry</em>
+  <% @entries.each do |entry| %>
+    
+    Title: <%= entry.title %><br />
+    Body: <%= entry.body.html_safe %><br />
+
+    <% if entry.step %>
+      Step: <%= entry.step %>
+    <% else %>
+      <em>There is no step associated with this entry</em>
+    <% end %>
+
+    <%= link_to "Edit Entry", edit_entry_path(entry.id) %>
+
+
   <% end %>
-
-  <%= link_to "Edit Entry", edit_entry_path(entry.id) %>
-
-
+<% else %>
+  NOTHIN TO SHOW
 <% end %>
