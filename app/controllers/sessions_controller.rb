@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
         session[:user_id] = result.id
         redirect_to user_path(user)
       else
-        render :text => "Found the user #{user}, but the PW was wrong"
+        render :new, flash[:error] => "You entered an invalid email or password, please try again."
       end
     else
       render :new, flash[:error] => "You entered an invalid email or password, please try again."
