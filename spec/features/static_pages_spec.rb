@@ -10,10 +10,12 @@ describe "Static Pages" do
         expect(page).to_not have_content("The 12 Steps")
         expect(page).to_not have_content("The 12 Traditions")
         expect(page).to_not have_content("The Serenity Prayer")
+        expect(page).to_not have_content("The Big Book")
         click_on "Resources"
         expect(page).to have_content("The 12 Steps")
         expect(page).to have_content("The 12 Traditions")
         expect(page).to have_content("The Serenity Prayer")
+        expect(page).to have_content("The Big Book")
       end
     end
 
