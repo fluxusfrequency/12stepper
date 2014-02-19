@@ -28,6 +28,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'poltergeist'
   gem 'phantomjs', :require => 'phantomjs/poltergeist'
+  gem 'json_spec'
 end
 
 group :development do

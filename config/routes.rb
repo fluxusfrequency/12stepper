@@ -12,6 +12,14 @@ TwelveStepper::Application.routes.draw do
     end
   end
 
+  namespace :api do
+    namespace :v1 do
+      namespace :big_book do
+        resources :chapters
+      end
+    end
+  end
+
   get '/:locale', to: 'entries#index'
   root 'entries#index'
 end
