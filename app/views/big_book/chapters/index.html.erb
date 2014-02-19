@@ -7,7 +7,7 @@
       Table of Contents
       <br />
       <% @chapter_titles.each_with_index do |c, i| %>
-        <%= link_to "#{i+1}. #{c.title}", "#" %>
+        <%= link_to "#{i+1}. #{c.title}", "#", class:"chapter-link" %>
         <br />
       <% end %>
     </div>
