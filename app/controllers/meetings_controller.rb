@@ -5,8 +5,8 @@ class MeetingsController < ApplicationController
   end
 
   def search_meetings
-    @meetings = MeetingFinder::Search.by_zip(params[:zipcode])
-    fail
+    coords = MeetingFinder::Search.find_lat_long_from(params[:zipcode])
+    @meetings = MeetingFinder::Search.by_lat_lng(coords.first, coords.last)
   end
 
 end

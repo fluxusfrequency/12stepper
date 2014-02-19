@@ -47,7 +47,7 @@ GEM
     celluloid-io (0.15.0)
       celluloid (>= 0.15.0)
       nio4r (>= 0.5.0)
-    childprocess (0.3.9)
+    childprocess (0.5.1)
       ffi (~> 1.0, >= 1.0.11)
     ckeditor (4.0.10)
       mime-types
@@ -123,9 +123,8 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    meeting_finder (0.0.2)
+    meeting_finder (0.0.4)
       faraday
-      geocoder
       nokogiri
     method_source (0.8.2)
     mime-types (1.25.1)
@@ -151,7 +150,7 @@ GEM
       cliver (~> 0.3.1)
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
-    polyglot (0.3.3)
+    polyglot (0.3.4)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)

@@ -1,0 +1,8 @@
+<% @meetings.each do |meeting| %>
+  <h2><%= meeting.name %></h2>
+  Location: <%= meeting.location %><br/>
+  Address: <%= meeting.address %><br/>
+  Day: <%= meeting.day %><br/>
+  Time: <%= meeting.time %><br/>
+  Fellowship: <%= meeting.fellowship %><br/>
+<% end %>
