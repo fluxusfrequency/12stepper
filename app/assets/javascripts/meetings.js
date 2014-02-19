@@ -11,12 +11,11 @@ $(function() {
       dataType: 'json',
       data: queryData,
       success: function(response) {
-        // clearMarkers();
-        // var counter = 1;
-        // for (var store in response) {
-        //   addToMap(response[store], counter);
-        //   counter++;
-        // }
+        clearMarkers();
+        for (var meeting in response) {
+          console.log(response[meeting])
+          addToMap(response[meeting]);
+        }
       },
       error: function(response) {
         var errors = response.responseJSON;
@@ -46,4 +45,38 @@ var addResults = function(response) {
       $('#search-results').append(meetingName + meetingLocation + meetingAddress + meetingDay + meetingTime + meetingFellowship);
     };
   };
+};
+
+var markers = [];
+
+var addToMap = function(meeting) {
+  var marker = L.mapbox.markerLayer({
+    // this feature is in the GeoJSON format: see geojson.org
+    // for the full specification
+    type: 'Feature',
+    geometry: {
+        type: 'Point',
+        // coordinates here are in longitude, latitude order because
+        // x, y is the standard for GeoJSON and many formats
+        coordinates: [parseFloat(meeting["lng"]), parseFloat(meeting["lat"])]
+    },
+    properties: {
+        title: meeting["name"],
+        description: meeting["address"],
+        // one can customize markers by adding simplestyle properties
+        // http://mapbox.com/developers/simplestyle/
+        'marker-size': 'large',
+        'marker-color': '#f0a'
+        // 'marker-symbol': counter
+    }
+  });
+  markers.push(marker);
+  marker.addTo(map);
+};
+
+
+var clearMarkers = function() {
+  for (var m in markers) {
+    markers[m].clearLayers();
+  }
 };
