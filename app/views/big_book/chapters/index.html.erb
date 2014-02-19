@@ -7,7 +7,7 @@
       <%= t('bigbook.toc') %>
       <br />
       <% @chapter_titles.each_with_index do |c, i| %>
-        <%= link_to "#{i+1}. #{c.title}", "#", class:"chapter-link" %>
+        <%= link_to "#{i+1}. #{c}", "#", class:"chapter-link" %>
         <br />
       <% end %>
     </div>
