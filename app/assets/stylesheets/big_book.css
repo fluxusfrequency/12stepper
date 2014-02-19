@@ -7,3 +7,21 @@
   float: right;
   width: 75%;
 }
+
+#toc-search-field-panel {
+  display: inline;
+}
+
+#toc-search-results-panel, #toc-search-tabs {
+  display: none;
+}
+
+.search-result-item {
+  list-style: none;
+  display: block;
+  text-align: left;
+}
+
+.search-result {
+  background: yellow;
+}

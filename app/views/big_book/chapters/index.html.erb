@@ -1,21 +1,34 @@
 <div id="big-book-container">
   <div id="big-book-nav-container">
+
     <div id="toc-search-field-panel">
-      <%= search_field t("bigbook.search"), :toc_search, placeholder: t("bigbook.search") %>
+      <%= search_field "toc-search-form", :toc_search, id: 'toc_search', placeholder: t("bigbook.search") %>
+      <button id="search-submit">Search</button>
     </div>
+
+    <div id="toc-search-tabs">
+      <%= link_to "Table of Contents", "#", id:"toc-tab" %>
+      <%= link_to "Search Results", "#", id:"results-tab" %>
+    </div>
+
     <div id="toc-main-panel">
       <%= t('bigbook.toc') %>
       <br />
-      <% @chapter_titles.each_with_index do |c, i| %>
-        <%= link_to "#{i+1}. #{c}", "#", class:"chapter-link" %>
+      <% @chapters.each_with_index do |c, i| %>
+        <%= link_to "#{i+1}. #{c.title}", "#", class:"chapter-link", id: "chapter-#{c.id}-link" %>
         <br />
       <% end %>
     </div>
     <div id="toc-search-results-panel">
+      <%= t('bigbook.searchresults') + ": " %>
+      <div id="results">
+        <ul id="result-list">
+        </ul>
+      </div>
     </div>
   </div>
 
   <div id="chapter-view-panel">
-    <%= render partial: 'chapter', chapter: @chapter %>
+    <%= render partial: 'chapter', chapter: @chapters.first %>
   </div>
 </div>
