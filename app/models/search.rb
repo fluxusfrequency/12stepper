@@ -3,12 +3,12 @@ class Search
   def self.in_big_book(query)
     all = BigBook::Chapter.all
     found = all.select do |chapter|
-      chapter.attributes.any?{|attribute, data| data.include?(query)}
+      chapter.attributes.any?{|attribute, data| data.to_s.downcase.include?(query.downcase)}
     end
 
     results = []
     found.each do |record|
-      i = record.body.index(query) || 0
+      i = record.body.downcase.index(query.downcase) || 0
       j = i + query.length
 
       results << SearchResult.new(

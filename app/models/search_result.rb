@@ -14,4 +14,11 @@ class SearchResult
     end
   end
 
+  def to_h
+    { :search_text => search_text,
+      :chapter_number => chapter_number,
+      :chapter_title => chapter_title,
+      :snippet => snippet }
+  end
+
 end
