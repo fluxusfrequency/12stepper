@@ -3,4 +3,5 @@ class BigBook::ChaptersController < ApplicationController
     @chapter = BigBook::Chapter.first
     @chapter_titles = BigBook::Chapter.all.select(:title)
   end
+
 end

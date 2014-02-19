@@ -11,10 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218215800) do
+ActiveRecord::Schema.define(version: 20140219040134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "big_book_chapter_translations", force: true do |t|
+    t.integer  "big_book_chapter_id", null: false
+    t.string   "locale",              null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.text     "body"
+  end
+
+  add_index "big_book_chapter_translations", ["big_book_chapter_id"], name: "index_big_book_chapter_translations_on_big_book_chapter_id", using: :btree
+  add_index "big_book_chapter_translations", ["locale"], name: "index_big_book_chapter_translations_on_locale", using: :btree
 
   create_table "big_book_chapters", force: true do |t|
     t.string  "title"

@@ -98,6 +98,9 @@ GEM
       multi_json (~> 1.0)
       net-http-persistent (>= 2.7)
       net-http-pipeline
+    globalize (4.0.0)
+      activemodel (>= 4.0.0, < 5)
+      activerecord (>= 4.0.0, < 5)
     guard (2.4.0)
       formatador (>= 0.2.4)
       listen (~> 2.1)
@@ -275,6 +278,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   factory_girl_rails
+  globalize
   guard
   guard-rspec
   high_voltage
