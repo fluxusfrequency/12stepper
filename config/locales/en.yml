@@ -9,3 +9,6 @@ en:
     twelvetraditions: The 12 Traditions
     serenityprayer: The Serenity Prayer
     bigbook: The Big Book
+  bigbook:
+    toc: Table of Contents
+    chapter: Chapter

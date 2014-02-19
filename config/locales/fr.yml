@@ -9,3 +9,6 @@ fr:
     twelvetraditions: Les 12 Traditions
     serenityprayer: La Prière de Sérénité
     bigbook: Gros Livre
+  bigbook:
+    toc: Table des Matières
+    chapter: Chapitre

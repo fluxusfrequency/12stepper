@@ -1,4 +1,4 @@
-<%= "Chapter #{@chapter.chapter_number}" %>
+<%= t('bigbook.chapter') + " " + @chapter.chapter_number.to_s %>
 <br />
 <%= @chapter.title %>
 <br />

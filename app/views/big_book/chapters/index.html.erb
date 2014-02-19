@@ -4,7 +4,7 @@
       <%= search_field "Search the Big Book", :toc_search, value: "Search the Big Book" %>
     </div>
     <div id="toc-main-panel">
-      Table of Contents
+      <%= t('bigbook.toc') %>
       <br />
       <% @chapter_titles.each_with_index do |c, i| %>
         <%= link_to "#{i+1}. #{c.title}", "#", class:"chapter-link" %>
