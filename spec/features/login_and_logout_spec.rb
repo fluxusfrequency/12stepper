@@ -3,9 +3,9 @@ require 'spec_helper'
 describe "User Authentication" do
 
   context "logging in" do
-    it "can login with username and valide password" do
+    it "can login with username and valid password" do
       user = login
-      expect(current_path).to eq(user_path(user, locale: :en))
+      expect(current_path).to eq(root_path)
       within("#navbar") do
         expect(page).to_not have_content "Login"
         expect(page).to_not have_content "Sign Up"
@@ -27,7 +27,7 @@ describe "User Authentication" do
         expect(page).to have_content "Sign Up"
       end
 
-      expect(current_path).to eq(root_path)
+      expect(current_path).to eq(new_session_path(locale: :en))
     end
   end
 

@@ -1,17 +1,26 @@
 <div id='navbar'>
-  <%= link_to t("navbar.resources"), "#", id:"resources-link" %>
-  <% if current_user %>
-    <%= link_to t("navbar.logout"), sessions_path, method: :delete %>
-  <% else %>
-    <%= link_to t("navbar.signup"), new_user_path %>
 
-    <%= link_to t("navbar.login"), new_session_path %>
-  <% end %>
+  <div id="navbar-main">
+    <%= link_to t("title"), root_path(locale: :en), id: "logo-link" %>
+    <%= link_to t("navbar.resources"), "#", id:"resources-link" %>
+    <%= link_to t("navbar.meetings"), "#", id:"meetings-link" %>
+    <div id="resources-link-panel">
+      <%= link_to t("navbar.twelvesteps"), page_path("twelve-steps-#{I18n.locale.to_s}") %>
+      <%= link_to t("navbar.twelvetraditions"), page_path("twelve-traditions-#{I18n.locale.to_s}") %>
+      <%= link_to t("navbar.serenityprayer"), page_path("serenity-prayer-#{I18n.locale.to_s}") %>
+      <%= link_to t("navbar.bigbook"), big_book_chapters_path %>
+    </div>
+  </div>
 
-  <div id="resources-link-panel">
-    <%= link_to t("navbar.twelvesteps"), page_path("twelve-steps-#{I18n.locale.to_s}") %>
-    <%= link_to t("navbar.twelvetraditions"), page_path("twelve-traditions-#{I18n.locale.to_s}") %>
-    <%= link_to t("navbar.serenityprayer"), page_path("serenity-prayer-#{I18n.locale.to_s}") %>
-    <%= link_to t("navbar.bigbook"), big_book_chapters_path %>
+  <div id="navbar-account">
+    <% if current_user %>
+      <%= t('navbar.congrats') + " on #{current_user.days_of_sobriety} " + 
+        t('navbar.sober') + "!" %>
+      <%= t('navbar.welcome') + ", " + current_user.username + "!" %>
+      <%= link_to t("navbar.logout"), sessions_path, method: :delete %>
+    <% else %>
+      <%= link_to t("navbar.signup"), new_user_path %>
+      <%= link_to t("navbar.login"), new_session_path %>
+    <% end %>
   </div>
 </div>

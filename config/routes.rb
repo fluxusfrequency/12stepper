@@ -22,8 +22,6 @@ TwelveStepper::Application.routes.draw do
     end
   end
 
-  
-
   get '/:locale', to: 'entries#index'
   root 'entries#index'
 end

@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
       if result
         session[:user_id] = result.id
         flash[:notice] = "Signed In!"
-        redirect_to user_path(user)
+        redirect_to root_path
       else
         display_error_message
         render :new

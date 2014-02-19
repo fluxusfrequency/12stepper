@@ -5,4 +5,8 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email
 
   has_many :entries
+
+  def days_of_sobriety
+    "15 days"
+  end
 end

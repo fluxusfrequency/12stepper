@@ -3,6 +3,8 @@ class EntriesController < ApplicationController
   def index
     if current_user
       @entries = current_user.entries
+    else
+      redirect_to new_session_path
     end
   end
 
@@ -30,6 +32,19 @@ class EntriesController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    entry = Entry.find(params[:id])
+    if entry.destroy
+      flash[:notice] = "Entry was deleted!"
+      redirect_to entries_path
+    else
+      flash[:notice] = "Couldn't delete your entry."
+      render :index
+    end
+
+  end
+
+  private
 
   def entry_params
     params.require(:entry).permit(:title, :body, :step)
