@@ -7,6 +7,7 @@ TwelveStepper::Application.routes.draw do
     delete '/sessions', to: 'sessions#destroy'
 
     namespace :big_book do
+      get '/', to: 'chapters#index'
       resources :chapters
     end
   end

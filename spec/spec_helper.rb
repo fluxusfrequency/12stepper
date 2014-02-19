@@ -27,8 +27,8 @@ RSpec.configure do |config|
   end
 
   config.include I18nHelpers
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
-  config.use_transactional_fixtures = true
+  # config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  # config.use_transactional_fixtures = true
 
   config.infer_base_class_for_anonymous_controllers = false
 
@@ -40,6 +40,8 @@ Capybara.register_driver :poltergeist do |app|
 end
 
 Capybara.javascript_driver = :poltergeist
+
+
 
 def login
   user = FactoryGirl.create(:user, password: "password")

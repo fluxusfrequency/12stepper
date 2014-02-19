@@ -1,0 +1,9 @@
+#big-book-nav-container {
+  float: left;
+  width: 20%;
+}
+
+#chapter-view-panel {
+  float: right;
+  width: 75%;
+}

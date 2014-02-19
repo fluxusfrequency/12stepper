@@ -1,19 +1,21 @@
-<div id="big-book-nav-container">
-  <div id="toc-search-field-panel">
-    <%= search_field "Search the Big Book", :toc_search, value: "Search the Big Book" %>
-  </div>
-  <div id="toc-main-panel">
-    Table of Contents
-    <br />
-    <% @chapter_titles.each_with_index do |c, i| %>
-      <%= link_to "#{i+1}. #{c.title}", "#" %>
+<div id="big-book-container">
+  <div id="big-book-nav-container">
+    <div id="toc-search-field-panel">
+      <%= search_field "Search the Big Book", :toc_search, value: "Search the Big Book" %>
+    </div>
+    <div id="toc-main-panel">
+      Table of Contents
       <br />
-    <% end %>
+      <% @chapter_titles.each_with_index do |c, i| %>
+        <%= link_to "#{i+1}. #{c.title}", "#" %>
+        <br />
+      <% end %>
+    </div>
+    <div id="toc-search-results-panel">
+    </div>
   </div>
-  <div id="toc-search-results-panel">
-  </div>
-</div>
 
-<div id="chapter-view-panel">
-  <%= render partial: 'chapter', chapter: @chapter %>
+  <div id="chapter-view-panel">
+    <%= render partial: 'chapter', chapter: @chapter %>
+  </div>
 </div>
