@@ -5,7 +5,7 @@ class MeetingsController < ApplicationController
   end
 
   def search_meetings
-    coords = MeetingFinder::Search.find_lat_long_from(params[:zipcode])
+    coords = MeetingFinder::Search.find_lat_long_from(params[:address])
     @meetings = MeetingFinder::Search.by_lat_lng(coords.first, coords.last)
     respond_to do |format|
       format.html
@@ -13,6 +13,4 @@ class MeetingsController < ApplicationController
     end
   end
     
-  
-
 end
