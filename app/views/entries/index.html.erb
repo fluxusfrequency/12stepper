@@ -1,7 +1,7 @@
 <div class="row page-header">
     <div class="col-lg-8 col-md-8">
       <h1><%= t('entries.my_journal') %>
-        <small><%= search_field_tag 'entries_search', t('meetings.search') %></small>
+        <small><%= search_field 'entries_search', :meetings_search,  placeholder: t('meetings.search') %></small>
       </h1>
     </div>
     <div class="col-lg-4 col-md-4" id="entry-index-actions">
@@ -12,8 +12,10 @@
 </div>
 <hr />
 
-<% if @entries %>
-  <%= render @entries %>
-<% else %>
-  <p><%= t("entries.none") %></p>
-<% end %>
+<div id="entry-list-container">
+  <% if @entries %>
+    <%= render @entries %>
+  <% else %>
+    <p><%= t("entries.none") %></p>
+  <% end %>
+</div>

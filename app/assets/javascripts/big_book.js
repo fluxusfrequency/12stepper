@@ -71,13 +71,13 @@
       e.preventDefault();
       $('#toc-main-panel').css('display', 'inline');
       $('#toc-search-results-panel').css('display', 'none');
-    })
+    });
 
     $('#results-tab').on('click', function(e) {
       e.preventDefault();
       $('#toc-main-panel').css('display', 'none');
       $('#toc-search-results-panel').css('display', 'inline');
-    })
+    });
 
     function findChapterTranslationForLocale(locale) {
       var message;
@@ -89,7 +89,7 @@
         message = "Chapter ";
       }
       return message; 
-    }
+    };
 
     
   });
