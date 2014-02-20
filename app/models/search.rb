@@ -10,7 +10,6 @@ class Search
     found.each do |record|
       i = record.body.downcase.index(query.downcase) || 0
       j = i + query.length
-
       results.unshift(SearchResult.new(
         search_text: query, 
         chapter_number: record.chapter_number, 

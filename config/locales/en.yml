@@ -35,3 +35,8 @@ en:
     step: Step
     no_step: There is no step associated with this entry
     none: You do not currently have any entries
+    my_journal: My Journal
+    create: Create Entry
+    edit: Edit
+    delete: Delete
+    share: Share

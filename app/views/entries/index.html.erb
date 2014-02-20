@@ -1,34 +1,19 @@
-<div id="journal-actions">
-  <%= link_to t("entries.work_step", new_entry_path %>
-  <%= link_to t("entries.worksheet"), new_entry_path %>
-  <%= link_to t("entries.write"), new_entry_path %>
+<div class="row page-header">
+    <div class="col-lg-8 col-md-8">
+      <h1><%= t('entries.my_journal') %>
+        <small><%= search_field_tag 'entries_search', t('meetings.search') %></small>
+      </h1>
+    </div>
+    <div class="col-lg-4 col-md-4" id="entry-index-actions">
+      <%= link_to t("entries.work_step") + " - ", new_entry_path %> 
+      <%= link_to t("entries.worksheet") + " - ", new_entry_path %>
+      <%= link_to t("entries.write"), new_entry_path %>
+    </div>
 </div>
+<hr />
 
-<div id="entries-index-container">
-  <% if @entries %>
-    <ul class="entry-index-list">
-    <% @entries.each do |entry| %>
-      <li>
-        <p><%= t("entries.title") %>: </p>
-        <%= link_to "#{entry.title}" %>
-        <br />
-        <p>Body: <%= entry.body.html_safe %></p>
-        <br />
-        <div id="step-info">
-          <% if entry.step %>
-            <p><%= t("entries.step") %>: <%= entry.step %></p>
-          <% else %>
-            <em><%= t("entries.no_step") %></em>
-          <% end %>
-        </div>
-        <ul id="entry-index-actions">
-          <li><%= link_to "Edit Entry", edit_entry_path(entry.id) %> - </li>
-          <li><%= link_to "Delete Entry", entry_path(entry.id), method: :delete %> - </li>
-          <li><%= link_to "Share on Feed", "#" %></li>
-        </ul>
-      </li>
-    <% end %>
-  <% else %>
-    <p><%= t("entries.none") %></p>
-  <% end %>
-</div>
+<% if @entries %>
+  <%= render @entries %>
+<% else %>
+  <p><%= t("entries.none") %></p>
+<% end %>

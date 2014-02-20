@@ -3,7 +3,7 @@
   <div class="col-lg-2 col-md-2">
     <h3 class="entry-item-title"><%= link_to "#{entry.title}" %></h3>
     <% if entry.step %>
-      <h4>Step <%= entry.step %></h4>
+      <h4><%= t("entries.step") %>: <%= entry.step %></h4>
     <% end %>
     <img class="img-responsive" src="http://placehold.it/700x300" alt="">
   </div>
@@ -14,9 +14,9 @@
 
   <div class="col-lg-2 col-md-2">
     <ul id="entry-item-actions">
-      <li><%= link_to "Edit Entry", edit_entry_path(entry.id) %></li>
-      <li><%= link_to "Delete Entry", entry_path(entry.id), method: :delete %></li>
-      <li><%= link_to "Share on Feed", "#" %></li>
+      <li><%= link_to t('entries.edit'), edit_entry_path(entry.id) %></li>
+      <li><%= link_to t('entries.delete'), entry_path(entry.id), method: :delete %></li>
+      <li><%= link_to t('entries.share'), "#" %></li>
     </ul>
   </div>
 

@@ -1,19 +1,4 @@
-#resources-link-panel {
-  display: none;
-}
-
 li {
   list-style: none;
 }
 
-#navbar {
-  border-bottom: 1px solid black;
-}
-
-#navbar-main {
-  text-align: left;
-}
-
-#navbar-account {
-  text-align: right;
-}
