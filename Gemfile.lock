@@ -91,7 +91,6 @@ GEM
       faraday (>= 0.7.4, < 0.9)
     ffi (1.9.3)
     formatador (0.2.4)
-    geocoder (1.1.9)
     gh (0.13.2)
       addressable
       backports
@@ -136,8 +135,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    meeting_finder (0.0.6)
+    meeting_finder (0.1.1)
       faraday
+      json
       nokogiri
     method_source (0.8.2)
     mime-types (1.25.1)
@@ -282,7 +282,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   database_cleaner
   factory_girl_rails
-  geocoder
   globalize
   guard
   guard-rspec
@@ -290,7 +289,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   json_spec
-  meeting_finder (= 0.0.6)
+  meeting_finder (= 0.1.1)
   paperclip
   pg
   phantomjs
