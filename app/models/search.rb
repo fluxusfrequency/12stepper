@@ -11,12 +11,12 @@ class Search
       i = record.body.downcase.index(query.downcase) || 0
       j = i + query.length
 
-      results << SearchResult.new(
+      results.unshift(SearchResult.new(
         search_text: query, 
         chapter_number: record.chapter_number, 
         chapter_title: record.title, 
         snippet: "..." + record.body[i-20..i - 1] + "<span class='search-result'>" + 
-          query + "</span>" + record.body[j..j+20] + "..." )
+          query + "</span>" + record.body[j..j+20] + "..." ))
     end
 
     results
