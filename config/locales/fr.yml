@@ -18,3 +18,20 @@ fr:
     chapter: Chapitre
     search: Rechercher dans le Big Book
     searchresults: Résultats de la Recherche
+  meetings:
+    title: Trouver Réunions
+    address: Saisissez l'adresse
+    search: Recherche
+    location: Emplacement
+    address: Adresse
+    day: Jour
+    time: Heure
+    fellowship: Camaraderie
+  entries:
+    work_step: Travailler sur une étape
+    worksheet: Trouvez une feuille de calcul
+    write: Il suffit d'écrire
+    title: Titre 
+    step: Étape
+    no_step: Il n'y a aucune étape associée avec cette inscription
+    none: Vous n'avez pas actuellement toutes les entrées

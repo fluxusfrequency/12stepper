@@ -1,11 +1,11 @@
-MEETING INDEX!
+<h1><%= t("meetings.title") %></h1>
 
 <%= form_tag search_meetings_path, method: :get do %>
   <p>
-    <%= text_field_tag :address, params[:address], id: "search-form", placeholder: "Enter address" %>
+    <%= text_field_tag :address, params[:address], id: "search-form", placeholder: t("meetings.address") %>
   </p>
   <p>
-    <%= submit_tag 'Search', name: nil, id: "search-button"%>
+    <%= submit_tag t('meetings.search'), name: nil, id: "search-button"%>
   </p>
 <% end %>
 

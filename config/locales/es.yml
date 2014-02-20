@@ -18,3 +18,20 @@ es:
     chapter: Capítulo
     search: Buscar en el Libro Grande
     searchresults: Resultados de la Búsqueda
+  meetings:
+    title: Buscar reuniones
+    address: Introduzca la dirección
+    search: Buscar
+    location: Sitio
+    address: Dirección
+    day: Día
+    time: Tiempo
+    fellowship: Compañerismo
+  entries:
+    step: Trabajar en un paso
+    worksheet: Buscar una hoja de cálculo
+    write: Sólo escribir
+    title: Título
+    step: Paso
+    no_step: No hay ningún paso asociado con esta entrada
+    none: Usted actualmente no tiene ninguna entrada
