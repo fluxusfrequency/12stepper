@@ -25,10 +25,10 @@ describe Api::V1::BigBook::SearchController do
       get :show, query: "ALCOHOL", format: :json
       expect(JSON.parse(response.body).length).to be(2)
       expect(response.body).to have_json_path('0/snippet')
-      expect(response.body).to be_json_eql(%|"THERE IS A SOLUTION"|).at_path('0/chapter_title')
+      expect(response.body).to be_json_eql(%|"MORE ABOUT ALCOHOLISM"|).at_path('0/chapter_title')
 
       expect(response.body).to have_json_path('1/chapter_number')
-      expect(response.body).to be_json_eql(%|"... to admit we were...\u003Cspan class='search-result'\u003EALCOHOL\u003C/span\u003E us have been unwilli..."|).at_path('1/snippet')
+      expect(response.body).to be_json_eql(%|"...\u003Cspan class='search-result'\u003EALCOHOL\u003C/span\u003EICS ANONYMOUS, know t..."|).at_path('1/snippet')
     end
   end
 
