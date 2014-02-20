@@ -1,0 +1,19 @@
+MEETING INDEX!
+
+<%= form_tag search_meetings_path, method: :get do %>
+  <p>
+    <%= text_field_tag :zipcode, params[:zipcode], id: "search-form", placeholder: "Enter zipcode" %>
+  </p>
+  <p>
+    <%= submit_tag 'Search', name: nil, id: "search-button"%>
+  </p>
+<% end %>
+
+<div class="span6">
+  <div id='main-map' class='light'></div>
+  <script type='text/javascript' id="map-script">
+    var map = L.mapbox.map('main-map', 'examples.map-20v6611k').setView([39.7391667, -104.984167], 12);
+  </script>
+</div>
+
+<div id='search-results'></div>
