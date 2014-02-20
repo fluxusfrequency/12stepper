@@ -13,6 +13,7 @@ es:
     meetings: Buscar Reuniones
     congrats: ¡Felicidades!
     sober: sobrio 
+    profile: Perfil
   bigbook:
     toc: Tabla de Contenidos
     chapter: Capítulo
@@ -40,3 +41,5 @@ es:
     edit: Editar
     delete: Borrar
     share: Compartir
+  profile:
+    title: Mi Perfil

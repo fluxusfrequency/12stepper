@@ -13,6 +13,7 @@ fr:
     meetings: Trouver Réunions
     congrats: Félicitations
     sober: sobre
+    profile: Profil
   bigbook:
     toc: Table des Matières
     chapter: Chapitre
@@ -40,3 +41,5 @@ fr:
     edit: Modifier
     delete: Effacer
     share: Partager
+  profile: 
+    title: Mon Profil
