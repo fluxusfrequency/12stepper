@@ -24,10 +24,9 @@
         dataType: 'json',
         success: function(response) {
           var chapter = findChapterTranslationForLocale(locale);
-          debugger;
-          $('#chapter-view-panel').html(chapter + 
-            response.chapter_number.toString() + "<br />" + response.title + 
-            "<br />" + response.body);
+          $('#chapter-view-panel').html("<p>" + chapter + 
+            response.chapter_number.toString() + "<br /><br />" + response.title + 
+            "<br /><br />" + response.body.replace(/\n/g, "<br /><br />" + "</p>"));
         },
         error: function(response) {
         }
