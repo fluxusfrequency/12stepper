@@ -3,7 +3,8 @@ class Api::V1::Entries::SearchController < ApplicationController
 
   def show
     found = Entry.where(user_id: current_user.id).select do |record|
-      record.body.downcase.include?(params[:query].to_s.downcase)
+      record.body.downcase.include?(params[:query].to_s.downcase) ||
+      record.title.downcase.include?(params[:query].to_s.downcase)
     end
 
     respond_with found
