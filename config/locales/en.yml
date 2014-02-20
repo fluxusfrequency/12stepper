@@ -20,3 +20,18 @@ en:
     searchresults: Search Results 
   meetings:
     title: Find Meetings
+    address: Enter Address
+    search: Search
+    location: Location
+    address: Address
+    day: Day 
+    time: Time 
+    fellowship: Fellowship
+  entries:
+    step: Work a Step
+    worksheet: Find a Worksheet
+    write: Just Write
+    title: Title
+    step: Step
+    no_step: There is no step associated with this entry
+    none: You do not currently have any entries

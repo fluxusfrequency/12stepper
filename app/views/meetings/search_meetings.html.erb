@@ -1,11 +1,9 @@
 <% @meetings.each do |meeting| %>
   <h2><%= meeting.name %></h2>
-  Location: <%= meeting.location %><br/>
-  Address: <%= meeting.address %><br/>
-  Day: <%= meeting.day %><br/>
-  Time: <%= meeting.time %><br/>
-  Time: <%= meeting.lat %><br/>
-  Time: <%= meeting.lng %><br/>
-  Fellowship: <%= meeting.fellowship %><br/>
+  <%= t("meetings.location") %>: <%= meeting.location %><br/>
+  <%= t("meetings.address") %>: <%= meeting.address %><br/>
+  <%= t("meetings.day") %>: <%= meeting.day %><br/>
+  <%= t("meetings.time") %>: <%= meeting.time %><br/>
+  <%= t("meetings.fellowship") %>: <%= meeting.fellowship %><br/>
 <% end %>
 
