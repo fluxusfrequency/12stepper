@@ -1,19 +1,31 @@
-#resources-link-panel {
-  display: none;
-}
-
 li {
   list-style: none;
 }
 
-#navbar {
-  border-bottom: 1px solid black;
+#entry-index-item-body h3 {
+  margin-top: 0px;
 }
 
-#navbar-main {
-  text-align: left;
+#entry-index-actions {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
-#navbar-account {
-  text-align: right;
+#entry-item-actions li {
+  line-height: 1.5em;
+  font-size: 1.2em;
+}
+
+#entry-index-item-row {
+  padding-top: 20px;
+}
+
+.entry-item-title {
+  margin-top: 0;
+}
+
+.page-header {
+  border: none;
 }

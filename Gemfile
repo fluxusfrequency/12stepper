@@ -20,6 +20,8 @@ group :development, :test do
   gem 'quiet_assets'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'guard-livereload', require: false
+  gem "rack-livereload"
 end
 
 group :test do

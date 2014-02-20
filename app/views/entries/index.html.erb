@@ -1,34 +1,22 @@
-<div id="journal-actions">
-  <%= link_to "Work A Step", new_entry_path %>
-  <%= link_to "Find A Worksheet", new_entry_path %>
-  <%= link_to "Just Write", new_entry_path %>
-</div>
 
-<div id="entries-index-container">
-  <% if @entries %>
-    <ul class="entry-index-list">
-    <% @entries.each do |entry| %>
-      <li>
-        <p>Title: </p>
-        <%= link_to "#{entry.title}" %>
-        <br />
-        <p>Body: <%= entry.body.html_safe %></p>
-        <br />
-        <div id="step-info">
-          <% if entry.step %>
-            <p>Step: <%= entry.step %></p>
-          <% else %>
-            <em>There is no step associated with this entry</em>
-          <% end %>
-        </div>
-        <ul id="entry-index-actions">
-          <li><%= link_to "Edit Entry", edit_entry_path(entry.id) %> - </li>
-          <li><%= link_to "Delete Entry", entry_path(entry.id), method: :delete %> - </li>
-          <li><%= link_to "Share on Feed", "#" %></li>
-        </ul>
-      </li>
-    <% end %>
-  <% else %>
-    <p>NOTHIN TO SHOW</p>
-  <% end %>
+
+<div class="row page-header">
+    <div class="col-lg-8 col-md-8">
+      <h1>My Journal
+        <small><%= search_field_tag 'entries_search', "Search" %></small>
+      </h1>
+    </div>
+    <div class="col-lg-4 col-md-4" id="entry-index-actions">
+      <%= link_to "Work A Step" + " - ", new_entry_path %> 
+      <%= link_to "Find A Worksheet" + " - ", new_entry_path %>
+      <%= link_to "Just Write", new_entry_path %>
+    </div>
+
 </div>
+<hr />
+
+<% if @entries %>
+  <%= render @entries %>
+<% else %>
+  <p>NOTHIN TO SHOW</p>
+<% end %>
