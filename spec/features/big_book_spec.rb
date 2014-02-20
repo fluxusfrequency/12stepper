@@ -67,7 +67,7 @@ describe "Big Book" do
 
       within "#toc-search-field-panel" do
         fill_in "toc-search-form[toc_search]", with: "ALCOHOL"
-        click_on "Search"
+        find("#search-submit").trigger('click')
       end
 
       expect(page).to have_selector("#toc-main-panel", visible: false)

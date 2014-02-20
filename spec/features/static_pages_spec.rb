@@ -6,7 +6,7 @@ describe "Static Pages" do
 
     it "sees the dropdown on click", :js => true do
       login
-      within("#navbar") do
+      within(".navbar") do
         expect(page).to_not have_content("The 12 Steps")
         expect(page).to_not have_content("The 12 Traditions")
         expect(page).to_not have_content("The Serenity Prayer")
@@ -21,7 +21,7 @@ describe "Static Pages" do
 
     it "can view the 12 steps page" do
       login
-      within("#navbar") do
+      within(".navbar") do
         click_on "The 12 Steps"
       end
       expect(page).to have_content('We admitted we were powerless over alcohol')
@@ -30,7 +30,7 @@ describe "Static Pages" do
 
     it "can view the 12 traditions page" do
       login
-      within("#navbar") do
+      within(".navbar") do
         click_on "The 12 Traditions"
       end
       expect(page).to have_content('Our common welfare should come first;')
@@ -39,7 +39,7 @@ describe "Static Pages" do
 
     it "can view the serenity prayer page" do
       login
-      within("#navbar") do
+      within(".navbar") do
         click_on "The Serenity Prayer"
       end
       expect(page).to have_content('God, give me grace to accept with serenity')
@@ -49,7 +49,7 @@ describe "Static Pages" do
     it "redirects to the big book index page" do
       login
       FactoryGirl.create(:chapter)
-      within("#navbar") do
+      within(".navbar") do
         click_on "The Big Book"
       end
       expect(page).to have_content('WAR FEVER ran high in the New England town')
