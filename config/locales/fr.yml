@@ -46,3 +46,5 @@ fr:
     username: Nom
     last_drink: À quand remonte votre dernier verre?
     update: Mettre à jour le profil
+    password: Mot de passe
+    password_confirmation: Confirmation de mot de passe

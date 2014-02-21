@@ -46,3 +46,5 @@ es:
     username: Nombre
     last_drink: ¿Cuándo fue su última copa?
     update: Actualizar Perfil
+    password: Contraseña
+    password_confirmation: Confirmación de la contraseña

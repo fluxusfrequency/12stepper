@@ -46,3 +46,5 @@ en:
     username: Username
     last_drink: When was your last drink?
     update: Update Profile
+    password: Password
+    password_confirmation: Password Confirmation

@@ -33,7 +33,7 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to t('navbar.congrats') + 
+          <li><%= link_to t('navbar.congrats') +
             " #{days_ago(current_user.last_drink)} " + 
             t('navbar.sober') + "!", "#", id:"congrats-link" %>
             <%= image_tag('blue_token.png', class: "navbar-token") %>
