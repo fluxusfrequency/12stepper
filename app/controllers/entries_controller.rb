@@ -16,7 +16,7 @@ class EntriesController < ApplicationController
     entry = Entry.new(entry_params)
     entry.user_id = current_user.id
     if entry.save
-      redirect_to root_path
+      redirect_to entries_path
     else
       render :new
     end

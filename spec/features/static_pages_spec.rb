@@ -22,8 +22,9 @@ describe "Static Pages" do
     it "can view the 12 steps page" do
       login
       within(".navbar") do
-        click_on "The 12 Steps"
+        click_on "Resources"
       end
+      click_on "The 12 Steps"
       expect(page).to have_content('We admitted we were powerless over alcohol')
       expect(current_path).to eq("/pages/twelve-steps-en")
     end
@@ -31,8 +32,9 @@ describe "Static Pages" do
     it "can view the 12 traditions page" do
       login
       within(".navbar") do
-        click_on "The 12 Traditions"
+        click_on "Resources"
       end
+      click_on "The 12 Traditions"
       expect(page).to have_content('Our common welfare should come first;')
       expect(current_path).to eq("/pages/twelve-traditions-en")
     end
@@ -40,8 +42,9 @@ describe "Static Pages" do
     it "can view the serenity prayer page" do
       login
       within(".navbar") do
-        click_on "The Serenity Prayer"
+        click_on "Resources"
       end
+      click_on "The Serenity Prayer"
       expect(page).to have_content('God, give me grace to accept with serenity')
       expect(current_path).to eq("/pages/serenity-prayer-en")
     end
@@ -50,8 +53,9 @@ describe "Static Pages" do
       login
       FactoryGirl.create(:chapter)
       within(".navbar") do
-        click_on "The Big Book"
+        click_on "Resources"
       end
+      click_on "The Big Book"
       expect(page).to have_content('WAR FEVER ran high in the New England town')
       expect(current_path).to eq(big_book_chapters_path(locale: :en))
     end

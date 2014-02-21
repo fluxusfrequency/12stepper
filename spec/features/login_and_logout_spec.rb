@@ -16,6 +16,7 @@ describe "User Authentication" do
       user = login
       expect(page).to_not have_content "Our Support."
       expect(page).to_not have_content "Your Success."
+      click_on "Welcome back, SecretSanta!"
       expect(page).to have_content "Logout"
       click_on "Logout"
       

@@ -40,14 +40,18 @@ Capybara.register_driver :poltergeist do |app|
 end
 
 Capybara.javascript_driver = :poltergeist
+Capybara.default_driver = :poltergeist
 
 
 
 def login
   user = FactoryGirl.create(:user, password: "password")
-  visit new_session_path
-  fill_in "email", with: user.email
-  fill_in "password", with: "password"
-  click_on "Log in"
+  visit login_path
+  page.execute_script("$('#password').show()")
+  within "#login-form" do
+    fill_in "email", with: user.email
+    fill_in "password", with: "password"
+    click_on "Log in"
+  end
   user
 end

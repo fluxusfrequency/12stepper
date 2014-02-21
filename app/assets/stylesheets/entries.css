@@ -16,10 +16,17 @@
 
 #entry-index-item-row {
   padding-top: 20px;
+  border-bottom: 1px solid #B5ABAF;
 }
 
 .entry-item-title {
   margin-top: 0;
+  display: inline;
+}
+
+.entry-item-title a {
+  color: #3F3A3C;
+  font-size: 1.15em;
 }
 
 .page-header {
@@ -59,4 +66,27 @@
   margin-right: 45px;
   margin-bottom: 0px;
   padding-bottom: 0px;
+}
+
+.entry-token {
+  vertical-align: baseline;
+}
+
+.entry-token img{
+  display: inline;
+}
+
+.entry-date,
+.entry-step {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#work-a-step {
+  margin-right: 35px;
+}
+
+#entries-search {
+  margin-top: 24px;
+  margin-left: -13px;
 }

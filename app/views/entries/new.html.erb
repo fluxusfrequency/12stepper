@@ -21,9 +21,9 @@
     <br />
     <br />
     <p class="new-entry-action">
-      <%= link_to t('entries.create') %>
-      <%= link_to t('entries.delete') %>
-      <%= link_to t('entries.share') %>
+      <%= f.submit t('entries.create'), id:"entry-submit" %>
+      <%= link_to t('entries.delete'), entries_path %>
+      <%= link_to t('entries.share'), "#" %>
     </p>
     
   <% end %>

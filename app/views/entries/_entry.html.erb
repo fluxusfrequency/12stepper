@@ -1,14 +1,15 @@
 <div class="row" id="entry-index-item-row">
 
-  <div class="col-lg-2 col-md-2">
-    <h3 class="entry-item-title"><%= link_to "#{entry.title}", edit_entry_path(entry.id) %></h3>
+  <div class="col-lg-3 col-md-3">
+    <%= image_tag "green_token_sm.png", class: "entry-token" %>
+    <h4 class="entry-item-title"><%= link_to "#{entry.title}", edit_entry_path(entry.id) %></h4>
+    <p class="entry-date"><%= entry.created_at.strftime("%m/%d/%Y") %></p>
     <% if entry.step %>
-      <h4><%= t("entries.step") %>: <%= entry.step %></h4>
+      <p class="entry-step"><%= t("entries.step") %>: <%= entry.step %></p>
     <% end %>
-    <img class="img-responsive" src="http://placehold.it/165x70" alt="">
   </div>
 
-  <div class="col-lg-8 col-md-8" id="entry-index-item-body">
+  <div class="col-lg-7 col-md-7" id="entry-index-item-body">
     <%= entry.body.html_safe %>
   </div>
 
@@ -21,4 +22,3 @@
   </div>
 
 </div>
-<hr />

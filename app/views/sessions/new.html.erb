@@ -8,7 +8,7 @@
     <div class="actions" id="welcome">
       <%= link_to I18n.t("profile.welcome_back") %>
     </div>
-    <%= form_tag sessions_path do %>
+    <%= form_tag sessions_path, id:"login-form" do %>
       <div class="field">
         <%= text_field_tag :email, params[:email], {:placeholder => I18n.t("profile.email")} %>
       </div>

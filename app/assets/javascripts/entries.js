@@ -1,6 +1,6 @@
 (function(){
   $(function(){
-    $('#entries_search_meetings_search').on('keyup', function(){
+    $('#entries-search').on('keyup', function(){
       var query, queryData, locale;;
       query = $(this).val();
       
@@ -8,7 +8,7 @@
       queryData = { query: query };
 
       $.ajax({
-        url: "http://localhost:3000/" + locale + '/api/v1/entries/search/' + query,
+        url: 'api/v1/entries/search/' + query,
         type: 'GET',
         dataType: 'json',
         data: queryData,
