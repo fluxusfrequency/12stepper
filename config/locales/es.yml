@@ -47,8 +47,12 @@ es:
   profile:
     title: Mi Perfil
     username: Nombre
+    email: Email
     last_drink: ¿Cuándo fue su última copa?
     update: Actualizar Perfil
     password: Contraseña
     password_confirmation: Confirmación de la contraseña
     details: Editar Detalles de su Cuenta
+    create_account: Crear una Cuenta
+    login: Iniciar la sesión
+

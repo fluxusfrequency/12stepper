@@ -47,8 +47,11 @@ en:
   profile: 
     title: My Profile
     username: Username
+    email: Email
     last_drink: When was your last drink?
     update: Update Profile
     password: Password
     password_confirmation: Password Confirmation
     details: Edit Your Account Details
+    create_account: Create Account
+    login: Log in

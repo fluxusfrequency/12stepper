@@ -7,15 +7,14 @@
   <div class="col-lg-3 col-md-3">
     <%= form_tag sessions_path do %>
       <div class="field">
-        <%= label_tag :email %>
-        <%= text_field_tag :email, params[:email] %>
+        <%= text_field_tag :email, params[:email], {:placeholder => I18n.t("profile.email")} %>
       </div>
       <div class="field">
-        <%= label_tag :password %>
-        <%= password_field_tag :password %>
+        <%= text_field_tag :fake_password, params[:fake_password], {:placeholder => I18n.t("profile.password")} %>
+        <%= password_field_tag :password, params[:password] %>
       </div>
       <div class="actions">
-        <%= submit_tag "Log in" %>
+        <%= link_to I18n.t("profile.login") %>
       </div>
     <% end %>
   </div>
