@@ -1,16 +1,15 @@
 <div class="row page-header">
   <div class="col-lg-8 col-md-8">
     <h1><%= t('profile.title') %></h1>
-    <p>Username: <%= current_user.username %>
-    <p><%= days_ago(current_user.last_drink) %> <%= t("navbar.sober") %></p>
     
-
     <%= form_for current_user do |f| %>
       <%= f.label :username, t("profile.username") %>
-      <%= f.text_field :username %>
+      <%= f.text_field :username %><br/><br/>
 
       <%= f.label :last_drink, t("profile.last_drink") %>
-      <%= f.text_field :last_drink, id: "datepicker" %>
+      <%= f.text_field :last_drink, id: "datepicker" %><br/>
+
+      <p><%= days_ago(current_user.last_drink) %> <%= t("navbar.sober") %></p><br/>
 
       <%= f.submit %>
     <% end %>
