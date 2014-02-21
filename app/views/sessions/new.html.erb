@@ -1,15 +1,25 @@
-<h1>Log in</h1>
-
-<%= form_tag sessions_path do %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
+<div class="row" id="landing-stripe">
+  <div class="col-lg-2 col-md-2 col-lg-offset-1 col-md-offset-1">
+    <h1>Our Support.</h1>
+    <h1>Your Success.</h1>
+    <%= image_tag '12Stepper_dark_logo.png' %>
   </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
+  <div class="col-lg-3 col-md-3">
+    <%= form_tag sessions_path do %>
+      <div class="field">
+        <%= label_tag :email %>
+        <%= text_field_tag :email, params[:email] %>
+      </div>
+      <div class="field">
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+      </div>
+      <div class="actions">
+        <%= submit_tag "Log in" %>
+      </div>
+    <% end %>
   </div>
-  <div class="actions">
-    <%= submit_tag "Log in" %>
+  <div class="col-lg-6 col-md-6">
+    <%= render partial: 'users/new', user: @user %>
   </div>
-<% end %>
+</div>

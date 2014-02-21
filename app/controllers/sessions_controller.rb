@@ -1,16 +1,18 @@
 class SessionsController < ApplicationController
+  layout 'landing', only: :new
 
   def new
+    @user = User.new
   end
 
   def create
     email = params[:email]
     password = params[:password]
 
-    user = User.find_by(email: email)
+    @user = User.find_by(email: email)
 
-    if user
-      result = user.authenticate(password)
+    if @user
+      result = @user.authenticate(password)
       if result
         session[:user_id] = result.id
         flash[:notice] = "Signed In!"
@@ -28,7 +30,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     flash[:notice] = "Successfully signed out."
-    redirect_to root_path
+    redirect_to new_session_path
   end
 
   def display_error_message

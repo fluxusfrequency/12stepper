@@ -1,0 +1,9 @@
+#landing-body {
+  background: url('landing_page_bg.jpg');
+}
+
+#landing-stripe {
+  margin-top: 200px;
+  background: rgba(255, 255, 255, 0.55);
+  width: 100%;
+}
