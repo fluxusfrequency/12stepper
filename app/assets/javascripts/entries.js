@@ -4,9 +4,9 @@
       var query, queryData, locale;;
       query = $(this).val();
       
-      locale = document.URL.split("/")[3];
+      locale = document.URL.split("/")[3].replace(/\?locale\=/, "");
       queryData = { query: query };
-      
+
       $.ajax({
         url: "http://localhost:3000/" + locale + '/api/v1/entries/search/' + query,
         type: 'GET',

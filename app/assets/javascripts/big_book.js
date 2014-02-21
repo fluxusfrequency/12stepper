@@ -16,7 +16,7 @@
 
     function searchApi(id) {
       var locale;
-      locale = document.URL.split("/")[3];
+      locale = document.URL.split("/")[3].replace(/\?locale\=/, "");
 
       $.ajax({
         url: "/" + locale + '/api/v1/big_book/chapters/' + id,
@@ -38,7 +38,7 @@
       var query, locale;
 
       query = $('#toc_search').val();
-      locale = document.URL.split("/")[3];
+      locale = document.URL.split("/")[3].replace(/\?locale\=/, "");
 
       $.ajax({
         url: "/" + locale + '/api/v1/big_book/search/' + query,
