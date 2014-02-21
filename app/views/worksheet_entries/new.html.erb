@@ -1,13 +1,20 @@
-<%= form_for @entry do |f| %>
+<div id='worksheet-entry-text'>
+  <%= form_for @entry do |f| %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
 
-  <%= f.cktext_area :body, {:class => 'ckeditor', :id => 'worksheet-step'} %>
+    <%= f.cktext_area :body, {:class => 'ckeditor', :id => 'worksheet-step'} %>
 
-  <%= f.submit t('entries.create') %>
-  
-<% end %>
-<div class='worksheet col-lg-5'>
-hello
+    <%= f.submit t('entries.create') %>
+    
+  <% end %>
+</div>
+<div class='worksheet'>
+  <% @worksheets.each do |worksheet| %>
+    <%= worksheet.title %>
+    <%= worksheet.body.html_safe %>
+  <% end %>
+  <%= paginate @worksheets %>
+
 </div>

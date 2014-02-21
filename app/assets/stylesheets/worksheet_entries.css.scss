@@ -6,8 +6,17 @@
   width: 600px;
 }
 
-.worksheet {
+#worksheet-entry-text {
   display: inline-block;
+  float: left;
+  padding-right: 20px;
+}
+
+.worksheet {
+  width: 515px;
+  display: inline-block;
+  height: 600px;
+  overflow:scroll;
 }
 
 #worksheet-entry-submit {
