@@ -5,7 +5,7 @@
     <p><%= current_user.days_of_sobriety %> <%= t("navbar.sober") %></p>
     <p>Enter the last day you had a drink?: <input type="text" id="datepicker"></p>
 
-    <%= form_for @user do |f| %>
+    <%= form_for current_user do |f| %>
       <%= f.label :username, t("profile.username") %>
       <%= f.text_field :username %>
 
