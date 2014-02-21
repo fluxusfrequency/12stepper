@@ -16,11 +16,12 @@ class UsersController < ApplicationController
   end
 
   def update
-    raw_date = user_params["last_drink"].split("/")
-    formatted_date = [raw_date[-1], raw_date[0], raw_date[1]].join("-")
-
     current_user.update(user_params)
-    current_user.update_attributes(last_drink: formatted_date)
+    if current_user.save
+      flash[:notice] = t("flash.account_update_success")
+    else
+      flash[:notice] = t("flash.account_update_failure")
+    end
     redirect_to edit_user_path(current_user)
   end
 

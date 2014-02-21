@@ -1,23 +1,25 @@
 <div class="row page-header">
   <div class="col-lg-8 col-md-8">
     <h1><%= t('profile.title') %></h1>
-    
-    <%= form_for current_user do |f| %>
-      <p><%= f.label :username, t("profile.username") %></p>
-      <p><%= f.text_field :username %></p>
+    <div id="profile-edit">
+      <h3><%= t('profile.details') %></h3>
+      <%= form_for current_user do |f| %>
+        <p><%= f.label :username, t("profile.username") %></p>
+        <p><%= f.text_field :username %></p>
 
-      <p><%= f.label :password, t("profile.password") %></p>
-      <p><%= f.password_field :password %></p>
-      
-      <p><%= f.label :password_confirmation, t("profile.password_confirmation") %></p>
-      <p><%= f.password_field :password_confirmation %></p>
+        <p><%= f.label :password, t("profile.password") %></p>
+        <p><%= f.password_field :password %></p>
 
-      <p><%= f.label :last_drink, t("profile.last_drink") %></p>
-      <p><%= f.text_field :last_drink, id: "datepicker" %></p>
+        <p><%= f.label :password_confirmation, t("profile.password_confirmation") %></p>
+        <p><%= f.password_field :password_confirmation %></p>
 
-      <p><%= days_ago(current_user.last_drink) %> <%= t("navbar.sober") %></p><br/>
+        <p><%= f.label :last_drink, t("profile.last_drink") %></p>
+        <p><%= f.text_field :last_drink, id: "datepicker" %></p>
 
-      <%= f.submit t("profile.update") %>
-    <% end %>
+        <p><%= days_ago(current_user.last_drink) %> <%= t("navbar.sober") %></p><br/>
+
+        <%= f.submit t("profile.update") %>
+      <% end %>
+    </div>
   </div>
 </div>

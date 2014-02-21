@@ -1,5 +1,8 @@
 es:
   title: Doce Bailarín
+  flash:
+    account_update_success: Detalles de la cuenta se han actualizado!
+    account_update_failure: Hubo un problema al actualizar sus datos.
   navbar:
     logout: Desloguear
     login: Conexión
@@ -48,3 +51,4 @@ es:
     update: Actualizar Perfil
     password: Contraseña
     password_confirmation: Confirmación de la contraseña
+    details: Editar Detalles de su Cuenta

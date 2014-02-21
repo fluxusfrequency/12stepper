@@ -1,5 +1,8 @@
 fr:
   title: Douze Steppeur
+  flash:
+    account_update_success: Vos coordonnées bancaires ont été mis à jour!
+    account_update_failure: Il y avait un problème de mise à jour vos coordonnées.
   navbar:
     logout: Déconnexion
     login: Connexion
@@ -48,3 +51,4 @@ fr:
     update: Mettre à jour le profil
     password: Mot de passe
     password_confirmation: Confirmation de mot de passe
+    details: Modifier Détails de Votre Compte
