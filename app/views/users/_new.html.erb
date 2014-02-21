@@ -34,5 +34,8 @@
       <%= text_field_tag :new_fake_password_confirmation, params[:new_fake_password_confirmation], {:placeholder => I18n.t("profile.password_confirmation")} %>
       <%= f.password_field :password_confirmation, id: "new_password_confirmation" %>
     </div>
+    <div class="actions" id="sign-up-locale">
+      <p><%= f.select :locale, [:en, :es, :fr] %></p>
+    </div>
   </div>
 <% end %>

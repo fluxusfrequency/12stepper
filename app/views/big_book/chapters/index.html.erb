@@ -1,9 +1,13 @@
-<div id="big-book-container">
-  <div id="big-book-nav-container">
+<div id="big-book-container" class="row">
+  <div id="big-book-nav-container" class="col-lg-4">
 
     <div id="toc-search-field-panel">
       <%= search_field "toc-search-form", :toc_search, id: 'toc_search', placeholder: t("bigbook.search") %>
-      <button id="search-submit">Search</button>
+      <br />
+      <br />
+      <button id="search-submit" class="btn">Search</button>
+      <br />
+      <br />
     </div>
 
     <div id="toc-search-tabs">
@@ -28,7 +32,7 @@
     </div>
   </div>
 
-  <div id="chapter-view-panel">
+  <div id="chapter-view-panel" class="col-lg-8">
     <%= render partial: 'chapter', chapter: @chapters.first %>
   </div>
 </div>

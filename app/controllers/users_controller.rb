@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    I18n.locale = params[:user][:locale]
     current_user.update(user_params)
     if current_user.save
       flash[:notice] = t("flash.account_update_success")
@@ -35,7 +36,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation, :last_drink)
+    params.require(:user).permit(:username, :email, :password, :password_confirmation, :last_drink, :locale)
   end
 
 end

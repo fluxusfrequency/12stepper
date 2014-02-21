@@ -13,10 +13,11 @@
         <p><%= f.label :password_confirmation, t("profile.password_confirmation") %></p>
         <p><%= f.password_field :password_confirmation %></p>
 
-        <p><%= f.label :last_drink, t("profile.last_drink") %></p>
-        <p><%= f.text_field :last_drink, id: "datepicker" %></p>
+        <p><%= f.label :locale, t("profile.language") %></p>
+        <p><%= f.select :locale, [:en, :es, :fr] %></p>
 
-        <p><%= days_ago(current_user.last_drink) %> <%= t("navbar.sober") %></p><br/>
+        <p><%= f.label :last_drink, t("profile.last_drink") %></p>
+        <p><%= f.text_field :last_drink, value: "", id: "datepicker" %></p>
 
         <%= f.submit t("profile.update") %>
       <% end %>
