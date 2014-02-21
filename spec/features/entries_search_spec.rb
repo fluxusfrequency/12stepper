@@ -10,10 +10,9 @@ describe "Entries searching" do
     end
 
     it "should give back search results for entries", js: true do
-      visit '/'
-      click_on "Login"
-      fill_in "Email", with: @user.email
-      fill_in "Password", with: "password"
+      visit new_session_path
+      fill_in "email", with: @user.email
+      fill_in "password", with: "password"
       click_on "Log in"
 
       expect(page).to have_content("My Journal")
