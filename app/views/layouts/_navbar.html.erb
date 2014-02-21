@@ -36,7 +36,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
         <li><%= link_to t('navbar.congrats') + 
-          " on #{current_user.days_of_sobriety} " + 
+          " #{days_ago(current_user.last_drink)} " + 
           t('navbar.sober') + "!", "#" %></li>
           <li class="dropdown">
             <%= link_to t('navbar.welcome') + ", " + 
