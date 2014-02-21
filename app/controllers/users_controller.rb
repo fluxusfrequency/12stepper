@@ -15,13 +15,26 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    raw_date = user_params["last_drink"].split("/")
+    formatted_date = [raw_date[-1], raw_date[0], raw_date[1]].join("-")
+
+    current_user.update(user_params)
+    current_user.update_attributes(last_drink: formatted_date)
+    redirect_to edit_user_path(current_user)
+  end
+
+  def edit
+
+  end
+
   def show
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation)
+    params.require(:user).permit(:username, :email, :last_drink, :password, :password_confirmation)
   end
 
 end

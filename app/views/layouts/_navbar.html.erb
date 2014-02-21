@@ -33,18 +33,22 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to t('navbar.congrats') + ", " +
-            "#{current_user.days_of_sobriety} " + 
+          <li><%= link_to t('navbar.congrats') + 
+            " #{days_ago(current_user.last_drink)} " + 
             t('navbar.sober') + "!", "#", id:"congrats-link" %>
             <%= image_tag('blue_token.png', class: "navbar-token") %>
           </li>
           <li class="dropdown">
             <%= link_to t('navbar.welcome') + ", " + 
-              current_user.username + "!", "#", {:id => "account-link", 
-              :class => "dropdown-toggle", 'data-toggle' => "dropdown"} %>
+            current_user.username + "!", "#", {:id => "account-link", 
+            :class => "dropdown-toggle", 'data-toggle' => "dropdown"} %>
 
             <ul class="dropdown-menu account-dropdown">
-              <li><%= link_to t("navbar.logout"), sessions_path, method: :delete %>
+              <li>
+                <%= link_to t("navbar.profile"), edit_user_path(current_user) %>
+              </li>
+              <li>
+                <%= link_to t("navbar.logout"), sessions_path, method: :delete %>
               </li>
             </ul>
           </li>

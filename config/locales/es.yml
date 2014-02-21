@@ -12,7 +12,8 @@ es:
     welcome: Bienvenidos
     meetings: Buscar Reuniones
     congrats: ¡Felicidades!
-    sober: sobrio 
+    sober: días sobrio 
+    profile: Perfil
   bigbook:
     toc: Tabla de Contenidos
     chapter: Capítulo
@@ -40,3 +41,8 @@ es:
     edit: Editar
     delete: Borrar
     share: Compartir
+  profile:
+    title: Mi Perfil
+    username: Nombre
+    last_drink: ¿Cuándo fue su última copa?
+    update: Actualizar Perfil
