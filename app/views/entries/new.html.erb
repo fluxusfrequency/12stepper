@@ -14,14 +14,14 @@
 <div id="new-entry-container">
   <%= form_for @entry do |f| %>
 
-    <p><%= f.text_field :title %></p>
+    <p><%= f.text_field :title, :placeholder => I18n.t('entries.title') %></p>
 
     <p><%= f.cktext_area :body, :class => 'ckeditor' %></p>
 
     <br />
     <br />
     <p class="new-entry-action">
-      <%= f.submit t('entries.create'), id:"entry-submit" %>
+      <%= link_to t('entries.create'), "#", :onclick=>"$('.new_entry').submit()", id:"entry-submit" %>
       <%= link_to t('entries.delete'), entries_path %>
       <%= link_to t('entries.share'), "#" %>
     </p>
