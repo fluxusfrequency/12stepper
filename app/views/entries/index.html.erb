@@ -1,10 +1,10 @@
 <div class="row page-header">
-    <div class="col-lg-8 col-md-8">
+    <div class="col-lg-7 col-md-7">
       <h1><%= t('entries.my_journal') %>
         <small><%= search_field 'entries_search', :meetings_search,  placeholder: t('meetings.search') %></small>
       </h1>
     </div>
-    <div class="col-lg-4 col-md-4" id="entry-index-actions">
+    <div class="col-lg-5 col-md-5" id="entry-index-actions">
       <%= link_to t("entries.work_step") + " - ", new_entry_path %> 
       <%= link_to t("entries.worksheet") + " - ", new_entry_path %>
       <%= link_to t("entries.write"), new_entry_path %>
