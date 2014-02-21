@@ -8,7 +8,7 @@
       <%= form_tag new_worksheet_entry_path, method: 'get' do %>
         <%= select_tag :step, "<option>1</option><option>2</option><option>3</option><option>4</option>".html_safe, id:'work-a-step' %>
       <%# link_to t("entries.work_step") + " - ", work_a_step_path %> 
-        <%= submit_tag t("entries.step"), id:'worksheet-entry-submit' %> - 
+        <%= submit_tag t("entries.work_step"), id:'worksheet-entry-submit' %> - 
       <% end %>
       <%= link_to t("entries.worksheet"), new_entry_path %> - 
       <%= link_to t("entries.write"), new_entry_path %>
