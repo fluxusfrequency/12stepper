@@ -16,7 +16,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    redirect_to edit_user_path(current_user)
+  end
+
   def edit
+    @user = current_user
   end
 
   def show

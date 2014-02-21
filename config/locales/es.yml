@@ -43,3 +43,5 @@ es:
     share: Compartir
   profile:
     title: Mi Perfil
+    username: Nombre
+    last_drink: ¿Cuándo fue su última copa?

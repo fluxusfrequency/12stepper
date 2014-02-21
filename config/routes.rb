@@ -2,7 +2,7 @@ TwelveStepper::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
   scope "(:locale)", locale: /en|es|fr/ do
-    resources :users, only: [:new, :create]
+    resources :users, only: [:new, :create, :update]
     resources :entries
     resources :sessions
     get '/meetings/search' => "meetings#search_meetings", as: "search_meetings"
