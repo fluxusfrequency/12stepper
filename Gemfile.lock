@@ -177,6 +177,8 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    puma (2.7.1)
+      rack (>= 1.1, < 2.0)
     pusher-client (0.4.0)
       websocket (~> 1.0.0)
     quiet_assets (1.0.2)
@@ -306,6 +308,7 @@ DEPENDENCIES
   pg
   phantomjs
   poltergeist
+  puma
   quiet_assets
   rack-livereload
   rails (= 4.0.3)
