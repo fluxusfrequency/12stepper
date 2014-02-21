@@ -2,3 +2,10 @@ li {
   list-style: none;
 }
 
+.navbar {
+  height: 0;
+}
+
+#big-book-container {
+  margin-top: 30px;
+}
