@@ -28,7 +28,7 @@
       var view = '<div class="row" id="entry-index-item-row">' + 
         '<div class="col-lg-2 col-md-2"><h3 class="entry-item-title">' + 
         '<a href="/en/entries">' + result['title'] + '</a></h3>' + 
-        '<img class="img-responsive" src="http://placehold.it/700x300" alt="">' +
+        '<img class="img-responsive" src="http://placehold.it/165x70" alt="">' +
         '</div><div class="col-lg-8 col-md-8" id="entry-index-item-body"><p>' + 
         result['body'] + '</p></div><div class="col-lg-2 col-md-2">' + 
         '<ul id="entry-item-actions"><li><a href="/' + locale + '/entries/' + 
