@@ -4,6 +4,7 @@ TwelveStepper::Application.routes.draw do
   scope "(:locale)", locale: /en|es|fr/ do
     resources :users
     resources :entries
+    resources :worksheet_entries
     resources :sessions
     get '/meetings/search' => "meetings#search_meetings", as: "search_meetings"
     resources :meetings
@@ -17,7 +18,7 @@ TwelveStepper::Application.routes.draw do
     namespace :api do
       namespace :v1 do
 
-        namespace :entries do 
+        namespace :entries do
           get '/search/:query', to: 'search#show'
         end
 

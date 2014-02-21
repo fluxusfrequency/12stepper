@@ -25,3 +25,7 @@
 .page-header {
   border: none;
 }
+
+#cke_14, #cke_21, #cke_34, #cke_29 {
+  display: none;
+}

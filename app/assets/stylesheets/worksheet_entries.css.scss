@@ -1,0 +1,22 @@
+// Place all the styles related to the WorksheetEntries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#cke_worksheet-step {
+  width: 600px;
+}
+
+.worksheet {
+  display: inline-block;
+}
+
+#worksheet-entry-submit {
+  border: none;
+  background-color: white;
+  color: #428bca;
+}
+
+#worksheet-entry-submit:hover, #worksheet-entry-submit:focus {
+  color: #2a6496;
+  text-decoration: underline;
+}
