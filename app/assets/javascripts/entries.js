@@ -4,9 +4,9 @@
       var query, queryData, locale;;
       query = $(this).val();
       
-      locale = document.URL.split("/")[3];
+      locale = document.URL.split("/")[3].replace(/\?locale\=/, "");
       queryData = { query: query };
-      
+
       $.ajax({
         url: "http://localhost:3000/" + locale + '/api/v1/entries/search/' + query,
         type: 'GET',
@@ -28,7 +28,7 @@
       var view = '<div class="row" id="entry-index-item-row">' + 
         '<div class="col-lg-2 col-md-2"><h3 class="entry-item-title">' + 
         '<a href="/en/entries">' + result['title'] + '</a></h3>' + 
-        '<img class="img-responsive" src="http://placehold.it/700x300" alt="">' +
+        '<img class="img-responsive" src="http://placehold.it/165x70" alt="">' +
         '</div><div class="col-lg-8 col-md-8" id="entry-index-item-body"><p>' + 
         result['body'] + '</p></div><div class="col-lg-2 col-md-2">' + 
         '<ul id="entry-item-actions"><li><a href="/' + locale + '/entries/' + 

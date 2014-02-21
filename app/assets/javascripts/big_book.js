@@ -16,7 +16,7 @@
 
     function searchApi(id) {
       var locale;
-      locale = document.URL.split("/")[3];
+      locale = document.URL.split("/")[3].replace(/\?locale\=/, "");
 
       $.ajax({
         url: "/" + locale + '/api/v1/big_book/chapters/' + id,
@@ -24,10 +24,9 @@
         dataType: 'json',
         success: function(response) {
           var chapter = findChapterTranslationForLocale(locale);
-          debugger;
-          $('#chapter-view-panel').html(chapter + 
-            response.chapter_number.toString() + "<br />" + response.title + 
-            "<br />" + response.body);
+          $('#chapter-view-panel').html("<p>" + chapter + 
+            response.chapter_number.toString() + "<br /><br />" + response.title + 
+            "<br /><br />" + response.body.replace(/\n/g, "<br /><br />" + "</p>"));
         },
         error: function(response) {
         }
@@ -39,7 +38,7 @@
       var query, locale;
 
       query = $('#toc_search').val();
-      locale = document.URL.split("/")[3];
+      locale = document.URL.split("/")[3].replace(/\?locale\=/, "");
 
       $.ajax({
         url: "/" + locale + '/api/v1/big_book/search/' + query,

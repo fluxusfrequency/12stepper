@@ -1,5 +1,7 @@
 <%= t('bigbook.chapter') + " " + @chapters.first.chapter_number.to_s %>
 <br />
+<br />
 <%= @chapters.first.title %>
 <br />
-<%= @chapters.first.body %>
+<br />
+<%= @chapters.first.body.gsub("\n", "<br /><br />").html_safe %>

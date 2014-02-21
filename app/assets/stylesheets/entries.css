@@ -24,8 +24,43 @@
 
 .page-header {
   border: none;
+  margin-top: 20px;
 }
 
 #cke_14, #cke_21, #cke_34, #cke_29 {
   display: none;
+}
+
+.entry-edit-container {
+  margin-top: 40px;
+}
+
+#journal-actions {
+  text-align: right;
+}
+
+#entries-index-container {
+  width: 70%;
+}
+
+#entry-index-actions {
+  display: inline;
+}
+
+#entry-index-actions li {
+  display: inline;
+}
+
+.entry-index-list {
+  display: inline;
+}
+
+.entry-index-list li p {
+  display: inline;
+}
+
+.new-entry-action a {
+  margin-right: 45px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
