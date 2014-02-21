@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  layout 'landing', only: :new
+  layout 'landing', only: [:new, :create]
 
   def new
     @user = User.new
@@ -22,6 +22,7 @@ class SessionsController < ApplicationController
         render :new
       end
     else
+      @user = User.new
       display_error_message
       render :new
     end

@@ -1,10 +1,13 @@
 <div class="row" id="landing-stripe">
-  <div class="col-lg-2 col-md-2 col-lg-offset-1 col-md-offset-1">
-    <h1>Our Support.</h1>
-    <h1>Your Success.</h1>
+  <div class="col-lg-2 col-md-2 col-lg-offset-1">
+    <h1>Our Support.<br />
+        Your Success.</h1>
     <%= image_tag '12Stepper_dark_logo.png' %>
   </div>
-  <div class="col-lg-3 col-md-3">
+  <div class="col-lg-3 col-md-2">
+    <div class="actions" id="welcome">
+      <%= link_to I18n.t("profile.welcome_back") %>
+    </div>
     <%= form_tag sessions_path do %>
       <div class="field">
         <%= text_field_tag :email, params[:email], {:placeholder => I18n.t("profile.email")} %>
@@ -13,12 +16,12 @@
         <%= text_field_tag :fake_password, params[:fake_password], {:placeholder => I18n.t("profile.password")} %>
         <%= password_field_tag :password, params[:password] %>
       </div>
-      <div class="actions">
-        <%= link_to I18n.t("profile.login") %>
+      <div class="actions" id="log-in">
+        <%= submit_tag I18n.t("profile.login") %>
       </div>
-    <% end %>
+    <% end %> 
   </div>
-  <div class="col-lg-6 col-md-6">
+  <div class="col-lg-6 col-md-8">
     <%= render partial: 'users/new', user: @user %>
   </div>
 </div>

@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
     if current_user
       @entries = current_user.entries
     else
-      redirect_to new_session_path
+      redirect_to login_path
     end
   end
 

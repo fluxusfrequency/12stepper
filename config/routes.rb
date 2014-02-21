@@ -4,6 +4,7 @@ TwelveStepper::Application.routes.draw do
   scope "(:locale)", locale: /en|es|fr/ do
     resources :users, only: [:new, :create, :update]
     resources :entries
+    get '/login' => "sessions#new", as: "login"
     resources :sessions
     get '/meetings/search' => "meetings#search_meetings", as: "search_meetings"
     resources :meetings

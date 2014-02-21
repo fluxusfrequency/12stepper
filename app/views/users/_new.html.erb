@@ -10,25 +10,29 @@
       </ul>
     </div>
   <% end %>
-  <div class="col-lg-4">
+  <div class="col-lg-4 col-md-2">
+    <div class="actions" id="get-started">
+      <%= link_to I18n.t("profile.get_started") %>
+    </div>
     <div class="field">
       <%= f.text_field :username, :placeholder => I18n.t("profile.username") %>
     </div>
     <div class="field">
       <%= f.text_field :email, :placeholder => I18n.t("profile.email") %>
     </div>
+    <div class="actions" id="sign-up">
+      <%= f.submit I18n.t("profile.create_account") %>
+    </div>
   </div>
-  <div class="col-lg-4">
+
+  <div class="col-lg-4 col-md-2" id="right-login-column">
     <div class="field">
-      <%= f.text_field :password, :placeholder => I18n.t("profile.password"), id: "new_fake_password" %><br>
       <%= f.password_field :password, id: "new_password" %>
+      <%= f.text_field :password, :placeholder => I18n.t("profile.password"), id: "new_fake_password" %><br>
     </div>
     <div class="field">
       <%= f.text_field :password_confirmation, :placeholder => I18n.t("profile.password_confirmation"), id: "new_fake_password_confirmation" %>
       <%= f.password_field :password_confirmation, id: "new_password_confirmation" %>
-    </div>
-    <div class="actions">
-      <%= link_to I18n.t("profile.create_account") %>
     </div>
   </div>
 <% end %>
