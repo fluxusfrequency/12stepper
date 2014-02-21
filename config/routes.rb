@@ -17,10 +17,16 @@ TwelveStepper::Application.routes.draw do
 
     namespace :api do
       namespace :v1 do
+
+        namespace :entries do 
+          get '/search/:query', to: 'search#show'
+        end
+
         namespace :big_book do
           resources :chapters
           get '/search/:query', to: 'search#show'
         end
+
       end
     end
   end

@@ -1,12 +1,12 @@
-Edit!!!
+<div class="entry-edit-container">
+  <%= form_for @entry do |f| %>
 
-<%= form_for @entry do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title %>
+    <%= f.cktext_area :body, :class => 'ckeditor' %>
 
-  <%= f.cktext_area :body, :class => 'ckeditor' %>
-
-  <%= f.submit %>
-  
-<% end %>
+    <%= f.submit %>
+    
+  <% end %>
+</div>

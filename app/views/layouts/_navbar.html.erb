@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to t("title"), root_path, id: "logo-link", class: "navbar-brand" %>
+      <%= link_to image_tag('12Stepper_white_logo.png'), root_path, id: "logo-link" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -16,7 +16,6 @@
 
         <li class="dropdown">
           <%= link_to t("navbar.resources"), "#", {:id => "resources-link", :class => "dropdown-toggle", 'data-toggle' => "dropdown"}%>
-          <b class="caret"></b>
           <ul class="dropdown-menu">
             <li><%= link_to t("navbar.twelvesteps"), page_path("twelve-steps-#{I18n.locale.to_s}") %>
             </li>
@@ -35,27 +34,33 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-        <li><%= link_to t('navbar.congrats') + 
-          " #{days_ago(current_user.last_drink)} " + 
-          t('navbar.sober') + "!", "#" %></li>
+
+          <li><%= link_to t('navbar.congrats') + 
+            " #{days_ago(current_user.last_drink)} " + 
+            t('navbar.sober') + "!", "#", id:"congrats-link" %>
+            <%= image_tag('blue_token.png', class: "navbar-token") %>
+          </li>
           <li class="dropdown">
             <%= link_to t('navbar.welcome') + ", " + 
-              current_user.username + "!", "#", {:id => "resources-link", 
-              :class => "dropdown-toggle", 'data-toggle' => "dropdown"}%>
-
-            <b class="caret"></b>
-            <ul class="dropdown-menu">
-              <li>
-                <%= link_to t("navbar.profile"), edit_user_path(current_user) %>
-              </li>
-              <li>
-                <%= link_to t("navbar.logout"), sessions_path, method: :delete %>
-              </li>
-            </ul>
+            current_user.username + "!", "#", {:id => "account-link", 
+            :class => "dropdown-toggle", 'data-toggle' => "dropdown"} %>
           </li>
+
+
+          <b class="caret"></b>
+          <ul class="dropdown-menu account-dropdown">
+            <li>
+              <%= link_to t("navbar.profile"), edit_user_path(current_user) %>
+            </li>
+            <li>
+              <%= link_to t("navbar.logout"), sessions_path, method: :delete %>
+            </li>
+          </ul>
         <% else %>
-          <%= link_to t("navbar.signup"), new_user_path %>
-          <%= link_to t("navbar.login"), new_session_path %>
+          <ul>
+            <li><%= link_to t("navbar.signup"), new_user_path %></li>
+            <li><%= link_to t("navbar.login"), new_session_path %></li>
+          </ul>
         <% end %>
       </ul>
     </div>
@@ -63,4 +68,3 @@
   </div>
   <!-- /.container -->
 </nav>
-

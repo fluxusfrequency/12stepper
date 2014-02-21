@@ -2,3 +2,30 @@ li {
   list-style: none;
 }
 
+body {
+  background-color: #EFF4F4;
+  font-family: 'Helvetica Neue Medium';
+  font-size: 14pt;
+  color: #3F3A3C;
+}
+
+a {
+  color: #B5ABAF;
+}
+
+a:hover {
+  color: #3F3A3C;
+  text-decoration: none;
+}
+
+.footer {
+  border-top: 1px solid #B5ABAF;
+}
+
+.page-header {
+  border-bottom: 1px solid #B5ABAF;
+}
+
+.footer-outer {
+  margin: 0;
+}
