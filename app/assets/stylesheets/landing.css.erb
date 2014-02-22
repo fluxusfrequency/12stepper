@@ -1,5 +1,5 @@
 #landing-body {
-  background: url(<%= asset_path 'landing_page_bg.jpg' %>);
+  background: url(<%= (Rails.env == :production) ? asset_path('landing_page_bg.jpg') : 'landing_page_bg.jpg' %>);
   background-size: 100%;
 }
 

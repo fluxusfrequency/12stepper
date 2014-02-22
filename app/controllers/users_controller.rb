@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       flash[:notice] = "Your account has been created"
       redirect_to root_path
     else
-      render "new"
+      render "sessions/new", :layout => "landing"
     end
   end
 
