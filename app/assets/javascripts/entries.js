@@ -3,6 +3,9 @@
     $('#entries-search').on('keyup', function(){
       var query, queryData, locale;;
       query = $(this).val();
+      if (query === "") {
+        query = " ";
+      }
       
       locale = document.URL.split("/")[3].replace(/\?locale\=/, "");
       queryData = { query: query };
@@ -25,16 +28,17 @@
     });
 
     function buildResultView(result, locale) {
-      var view = '<div class="row" id="entry-index-item-row">' + 
+      var view = '<div class="row" id="entry-index-item-row">' +
       '<div class="col-lg-3 col-md-3">' +
-      '<img class="entry-token" src="" />' +
-      '<h4 class="entry-item-title"><a href="' + '/entries/' + 
+      '<h4 class="entry-item-title"><a href="' + '/entries/' +
       result['id'] + '/edit">' + result['title'] + '</a></h4>' +
-      '<p class="entry-date">' + result['created_at'].slice(0, 10) + '</p></div>' + 
-      '<div class="col-lg-7 col-md-7" id="entry-index-item-body"><p>' + 
-      result['body'] + '</p></div><div class="col-lg-2 col-md-2">' + 
-      '<ul id="entry-item-actions"><li><a href="' + '/entries/' + 
-      result['id'] + '/edit">Edit</a></li><li><a data-method="delete" href="' + 
+      '<p class="entry-date">' + result['created_at'].slice(5, 7) + "/" +
+      result['created_at'].slice(8, 10) + "/" + result['created_at'].slice(0, 4) +
+      '</p><img class="entry-token" src="/assets/green_token_sm.png" /></div>' +
+      '<div class="col-lg-7 col-md-7" id="entry-index-item-body"><p>' +
+      result['body'] + '</p></div><div class="col-lg-2 col-md-2">' +
+      '<ul id="entry-item-actions"><li><a href="' + '/entries/' +
+      result['id'] + '/edit">Edit</a></li><li><a data-method="delete" href="' +
       '/entries/' + result['id'] + '" rel="nofollow">Delete</a></li>' +
       '<li><a href="#">Share</a></li></ul></div></div>';
 
