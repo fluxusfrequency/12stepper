@@ -1,12 +1,12 @@
 <div class="row" id="landing-stripe">
   <div class="col-lg-2 col-md-2 col-lg-offset-1">
-    <h1>Our Support.<br />
-        Your Success.</h1>
+    <h1><%= t("our_support") + "." %><br />
+        <%= t("your_success") + "." %></h1>
     <%= image_tag '12Stepper_dark_logo.png' %>
   </div>
   <div class="col-lg-3 col-md-2">
     <div class="actions" id="welcome">
-      <%= link_to I18n.t("profile.welcome_back") %>
+      <strong><%= I18n.t("profile.welcome_back") %></strong>
     </div>
     <%= form_tag sessions_path, id:"login-form" do %>
       <div class="field">

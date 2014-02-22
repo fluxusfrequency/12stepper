@@ -1,5 +1,7 @@
 fr:
   title: Douze Steppeur
+  our_support: Notre Soutien
+  your_success: Votre Succès
   flash:
     account_update_success: Vos coordonnées bancaires ont été mis à jour!
     account_update_failure: Il y avait un problème de mise à jour vos coordonnées.
@@ -59,4 +61,4 @@ fr:
     login: Connecter à votre compte
     welcome_back: Accueillir à Nouveau
     get_started: Commencer
-    language: Langue
+    language: Votre Langue

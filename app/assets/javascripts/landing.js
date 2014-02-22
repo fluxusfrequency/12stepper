@@ -43,5 +43,9 @@
         $('#new_fake_password_confirmation').show();
       }
     });
+
+    $('#user_locale').on('change', function(){
+      window.location.replace('/login/?locale=' + $(this).val());
+    });
   });
 })();

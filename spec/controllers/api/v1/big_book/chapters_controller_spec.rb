@@ -12,6 +12,8 @@ describe Api::V1::BigBook::ChaptersController do
         chapter_number: 3, 
         title: "MORE ABOUT ALCOHOLISM", 
         body: "MOST OF us have been unwilling to admit we were...")
+    user = FactoryGirl.create(:user)
+    controller.stub(:current_user).and_return(user)
   end
 
   it "should exist" do

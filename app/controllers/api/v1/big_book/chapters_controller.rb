@@ -6,7 +6,7 @@ class Api::V1::BigBook::ChaptersController < ApplicationController
   end
 
   def show
-    I18n.locale = params[:locale]
+    I18n.locale = current_user.locale
     @chapter = BigBook::Chapter.find(params[:id])
     respond_with @chapter
   end

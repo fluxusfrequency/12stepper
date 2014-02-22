@@ -12,16 +12,16 @@
   <% end %>
   <div class="col-lg-4 col-md-2">
     <div class="actions" id="get-started">
-      <%= link_to I18n.t("profile.get_started") %>
+      <strong><%= I18n.t("profile.get_started") %></strong>
     </div>
     <div class="field">
       <%= f.text_field :username, :placeholder => I18n.t("profile.username") %>
     </div>
     <div class="field">
       <%= f.text_field :email, :placeholder => I18n.t("profile.email") %>
-    </div>
+    </div><br />
     <div class="actions" id="last-drink-selector">
-      <p><%= f.label :last_drink, t("profile.last_drink") %></p>
+      <p><%= t("profile.last_drink") %></p>
       <p><%= f.date_field :last_drink, value: "", id: "datepicker" %></p>
     </div>
   </div>
@@ -34,9 +34,10 @@
     <div class="field">
       <%= text_field_tag :new_fake_password_confirmation, params[:new_fake_password_confirmation], {:placeholder => I18n.t("profile.password_confirmation")} %>
       <%= f.password_field :password_confirmation, id: "new_password_confirmation" %>
-    </div>
+    </div><br />
     <div class="actions" id="sign-up-locale">
-      <p><%= f.select :locale, [:en, :es, :fr] %></p>
+      <p><%= t('profile.language') + ": " %></p>
+      <p><%= f.select :locale, options_for_select([:en, :es, :fr], I18n.locale) %></p>
     </div>
   </div>
   <div class="actions col-lg-12 col-md-12" id="sign-up">

@@ -1,5 +1,7 @@
 en:
   title: Twelve Stepper
+  out_support: Our Support
+  your_success: Your Success
   flash:
     account_update_success: Your account details were updated!
     account_update_failure: There was a problem updating your details.
@@ -59,4 +61,4 @@ en:
     login: Log in
     welcome_back: Welcome Back
     get_started: Get Started
-    language: Language
+    language: Your Language
