@@ -37,13 +37,12 @@ var addResults = function(response) {
     $('#search-results').append("Sorry, no meetings matched your search.");
   } else {
     for (var meeting in response) {
-      var meetingName = '<h3>' + response[meeting]["name"] + '</h3>'
-      var meetingLocation = response[meeting]["location"] + '<br/>'
-      var meetingAddress = response[meeting]["address"] + '<br/>'
-      var meetingDay = response[meeting]["day"] + '<br/>'
-      var meetingTime = response[meeting]["time"] + '<br/>'
-      var meetingFellowship = response[meeting]["fellowship"] + '<br/>'
-      $('#search-results').append(meetingName + meetingLocation + meetingAddress + meetingDay + meetingTime + meetingFellowship);
+      var meetingName = '<h3>' + response[meeting]["name"] + '</h3>';
+      var meetingLocation = response[meeting]["location"] + '<br/>';
+      var meetingAddress = response[meeting]["address"] + '<br/>';
+      var meetingDay = response[meeting]["day"] + '<br/>';
+      var meetingTime = response[meeting]["time"] + '<br/>';
+      $('#search-results').append(meetingName + meetingLocation + meetingAddress + meetingDay + meetingTime);
     };
   };
 };
