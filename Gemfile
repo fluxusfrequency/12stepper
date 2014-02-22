@@ -13,7 +13,7 @@ gem 'paperclip'
 gem 'bcrypt-ruby'
 gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1e5253d7e92ba'
 gem 'globalize'
-gem 'meeting_finder', '0.1.3'
+gem 'meeting_finder', '0.1.2'
 gem 'puma'
 
 group :development, :test do
