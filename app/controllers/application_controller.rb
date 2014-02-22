@@ -7,7 +7,12 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
-  helper_method :current_user
+  def current_token
+    SobrietyCounter.token_for(current_user.last_drink)
+  end
+
+  helper_method :current_user, :current_token
+
 
   private
 
