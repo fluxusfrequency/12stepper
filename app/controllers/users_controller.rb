@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.update_attributes(last_drink: Time.now)
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "Your account has been created"
