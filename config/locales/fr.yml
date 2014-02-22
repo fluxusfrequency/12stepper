@@ -46,9 +46,11 @@ fr:
     share: Partager
   profile: 
     title: Mon Profil
-    username: Nom
+    username: Nom (anonyme)
     email: Email
     last_drink: À quand remonte votre dernier verre?
+    last_drink_was: Mon dernier verre était sur
+    change: Changer dernier verre
     update: Mettre à jour le profil
     password: Mot de passe
     password_confirmation: Confirmation de mot de passe

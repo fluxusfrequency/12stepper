@@ -23,7 +23,7 @@ describe "User Authentication" do
       expect(page).to have_content "Our Support."
       expect(page).to have_content "Your Success."
 
-      expect(current_path).to eq(new_session_path(locale: :en))
+      expect(current_path).to eq(new_session_path)
     end
   end
 

@@ -19,7 +19,7 @@
       locale = document.URL.split("/")[3].replace(/\?locale\=/, "");
 
       $.ajax({
-        url: "/" + locale + '/api/v1/big_book/chapters/' + id,
+        url: 'api/v1/big_book/chapters/' + id,
         method: 'GET',
         dataType: 'json',
         success: function(response) {
@@ -41,7 +41,7 @@
       locale = document.URL.split("/")[3].replace(/\?locale\=/, "");
 
       $.ajax({
-        url: "/" + locale + '/api/v1/big_book/search/' + query,
+        url: 'api/v1/big_book/search/' + query,
         method: 'GET',
         dataType: 'json',
         success: function(response) {

@@ -7,7 +7,7 @@ $(function() {
     queryString = $("#search-form").val();
     queryData = { address : queryString };
     $.ajax({
-      url: '/en/meetings/search',
+      url: '/meetings/search',
       type: 'GET',
       dataType: 'json',
       data: queryData,

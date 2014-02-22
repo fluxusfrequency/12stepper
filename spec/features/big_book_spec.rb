@@ -26,7 +26,7 @@ describe "Big Book" do
 
     it "clicks on the link and views another chapter", js: true do
       login
-      visit big_book_path(locale: :en)
+      visit big_book_path
 
       within "#chapter-view-panel" do
         expect(page).to_not have_content("WE, OF ALCOHOLICS ANONYMOUS")
@@ -60,7 +60,7 @@ describe "Big Book" do
 
     it "executes a search and shows results panel", js: true do
       login
-      visit big_book_path(locale: :en)
+      visit big_book_path
 
       expect(page).to have_selector("#toc-main-panel", visible: true)
       expect(page).to have_selector("#toc-search-tabs", visible: false)

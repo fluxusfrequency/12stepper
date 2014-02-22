@@ -46,9 +46,11 @@ en:
     share: Share
   profile: 
     title: My Profile
-    username: Username
+    username: Username (anonymous)
     email: Email
     last_drink: When was your last drink?
+    last_drink_was: My last drink was on
+    change: Change last drink
     update: Update Profile
     password: Password
     password_confirmation: Password Confirmation

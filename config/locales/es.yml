@@ -46,9 +46,11 @@ es:
     share: Compartir
   profile:
     title: Mi Perfil
-    username: Nombre
+    username: Nombre (anónimo)
     email: Email
     last_drink: ¿Cuándo fue su última copa?
+    last_drink_was: Mi última copa fue en
+    change: Cambiar última copa
     update: Actualizar Perfil
     password: Contraseña
     password_confirmation: Confirmación de la contraseña

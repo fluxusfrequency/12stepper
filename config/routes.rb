@@ -1,7 +1,7 @@
 TwelveStepper::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
-  scope "(:locale)", locale: /en|es|fr/ do
+  # scope "(:locale)", locale: /en|es|fr/ do
     resources :users, only: [:new, :create, :update]
     resources :entries
     get '/login' => "sessions#new", as: "login"
@@ -30,7 +30,7 @@ TwelveStepper::Application.routes.draw do
 
       end
     end
-  end
+  # end
 
   get '/:locale', to: 'entries#index'
   root 'entries#index'

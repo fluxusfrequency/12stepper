@@ -7,8 +7,8 @@ describe "User Account Creation" do
       visit login_path
     end
 
-    it "a user can reach the sign up page" do
-      expect(page).to have_field("Username")
+    it "a user can reach the sign up page", js: true do
+      expect(page).to have_field("Username (anonymous)")
       expect(page).to have_field("Email")
       expect(page).to have_field("Password")
       expect(page).to have_field("Password Confirmation")

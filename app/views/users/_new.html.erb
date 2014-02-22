@@ -20,8 +20,9 @@
     <div class="field">
       <%= f.text_field :email, :placeholder => I18n.t("profile.email") %>
     </div>
-    <div class="actions" id="sign-up">
-      <%= f.submit I18n.t("profile.create_account") %>
+    <div class="actions" id="last-drink-selector">
+      <p><%= f.label :last_drink, t("profile.last_drink") %></p>
+      <p><%= f.date_field :last_drink, value: "", id: "datepicker" %></p>
     </div>
   </div>
 
@@ -37,5 +38,8 @@
     <div class="actions" id="sign-up-locale">
       <p><%= f.select :locale, [:en, :es, :fr] %></p>
     </div>
+  </div>
+  <div class="actions col-lg-12 col-md-12" id="sign-up">
+    <%= f.submit I18n.t("profile.create_account") %>
   </div>
 <% end %>

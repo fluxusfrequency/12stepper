@@ -1,9 +1,15 @@
 <div class="row page-header">
   <div class="col-lg-8 col-md-8">
     <h1><%= t('profile.title') %></h1>
-    <div id="profile-edit">
-      <h3><%= t('profile.details') %></h3>
+    <div id="profile-edit"><br />
       <%= form_for current_user do |f| %>
+
+        <p><%= f.label :last_drink, t("profile.change") + ": " %></p>
+        <p><%= f.date_field :last_drink, value: "", id: "datepicker" %></p>
+        <p><%= t("profile.last_drink_was") + ": " + current_user.last_drink.strftime("%m/%d/%Y") %></p><br />
+
+        <h3><%= t('profile.details') %></h3>
+
         <p><%= f.label :username, t("profile.username") %></p>
         <p><%= f.text_field :username %></p>
 
@@ -13,11 +19,7 @@
         <p><%= f.label :password_confirmation, t("profile.password_confirmation") %></p>
         <p><%= f.password_field :password_confirmation %></p>
 
-        <p><%= f.label :locale, t("profile.language") %></p>
-        <p><%= f.select :locale, [:en, :es, :fr] %></p>
-
-        <p><%= f.label :last_drink, t("profile.last_drink") %></p>
-        <p><%= f.text_field :last_drink, value: "", id: "datepicker" %></p>
+        <p><%= f.label :locale, t("profile.language") + ":" %><%= f.select :locale, [:en, :es, :fr] %></p><br />
 
         <%= f.submit t("profile.update") %>
       <% end %>
