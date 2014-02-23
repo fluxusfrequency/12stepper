@@ -66,8 +66,6 @@ en:
     edit: Edit
     delete: Delete
     share: Share
-<<<<<<< HEAD
-=======
   profile: 
     title: My Profile
     username: Username (anonymous)
@@ -84,4 +82,3 @@ en:
     welcome_back: Welcome Back
     get_started: Get Started
     language: Your Language
->>>>>>> d48dde51cc1abaf1763bcd0e9a734201b8a54d17

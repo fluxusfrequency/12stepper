@@ -7,15 +7,10 @@ TwelveStepper::Application.routes.draw do
     get '/:id/profile', to: 'users#edit', as: "edit_user"
 
     resources :entries
-<<<<<<< HEAD
-    resources :worksheet_entries
-    resources :sessions
-    get '/meetings/search' => "meetings#search_meetings", as: "search_meetings"
-    resources :meetings
-=======
 
+    resources :worksheet_entries
     get '/login' => "sessions#new", as: "login"
->>>>>>> d48dde51cc1abaf1763bcd0e9a734201b8a54d17
+
     delete '/sessions', to: 'sessions#destroy'
     resources :sessions, only: [:new, :create, :destroy]
 
