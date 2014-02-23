@@ -69,4 +69,17 @@ hr {
 
 .btn {
   background-color: #BCD530;
+  font-size: 1em;
+  padding: 1px 10px;
+  vertical-align: baseline;
+}
+
+.btn-link {
+  background-color: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: #3F3A3C;
+  font-size: 1.2em;
 }

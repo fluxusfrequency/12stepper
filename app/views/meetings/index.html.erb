@@ -3,10 +3,8 @@
 <%= form_tag search_meetings_path, method: :get do %>
   <p>
     <%= text_field_tag :address, params[:address], id: "search-form", placeholder: t("meetings.address") %>
-  </p>
-  <p>
-    <%= submit_tag t('meetings.search'), name: nil, id: "search-button"%>
-  </p>
+    <%= submit_tag t('meetings.search'), name: nil, id: "search-button", class: "btn" %>
+  </p><br />
 <% end %>
 
 <div class="span6">
