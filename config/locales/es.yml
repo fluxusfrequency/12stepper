@@ -5,18 +5,38 @@ es:
   flash:
     account_update_success: Detalles de la cuenta se han actualizado!
     account_update_failure: Hubo un problema al actualizar sus datos.
+    account_create_success: Su cuenta ha sido creada.
+    unauthorized: Usted no está autorizado para hacer eso.
+    sign_in_first: Por favor, inicie sesión primero.
+    error: error
+    prohibited_save: prohibido esta página se guarden
+    invalid_credentials: Ha introducido un correo electrónico o contraseña no es válida, por favor intente de nuevo.
+    signin: Registrado!
+    signout: Exitosamente cerrado la sesión.
+    milestone: Felicitaciones por
   navbar:
     logout: Desloguear
     login: Conexión
     signup: Apuntarse
     resources: Recursos
+    resources_tooltip: Leer de los textos más comunes en AA
     twelvesteps: Los 12 Pasos
     twelvetraditions: Las 12 Tradiciones
     serenityprayer: La Oración de la Serenidad
     bigbook: El Libro Grande
     welcome: Bienvenidos
     meetings: Buscar Reuniones
+    meetings_tooltip: Buscar reuniones en su área y ver en un mapa
     congrats: ¡Felicidades!
+    congrats_tooltip: |
+                      Esto se calcula en base a la fecha de su último trago. 
+                      Usted puede cambiar la fecha de su perfil.
+                      Su símbolo cambia de color en función de sus días de sobriedad. 
+                      1 día - Azul 
+                      10 días - Verde 
+                      30 días - Orange 
+                      90 días - Red 
+                      1 año - Luz Verde 
     sober: días sobrio 
     profile: Perfil
   bigbook:

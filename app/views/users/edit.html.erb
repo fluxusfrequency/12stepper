@@ -5,8 +5,7 @@
       <%= form_for current_user do |f| %>
 
         <p><%= f.label :last_drink, t("profile.change") + ": " %></p>
-        <p><%= f.date_field :last_drink, value: "", id: "datepicker" %></p>
-        <p><%= t("profile.last_drink_was") + ": " + current_user.last_drink.strftime("%m/%d/%Y") %></p><br />
+        <p><%= f.date_field :last_drink, id: "datepicker" %></p>
 
         <h3><%= t('profile.details') %></h3>
 
@@ -21,7 +20,7 @@
 
         <p><%= f.label :locale, t("profile.language") + ":" %><%= f.select :locale, [:en, :es, :fr] %></p><br />
 
-        <%= f.submit t("profile.update") %>
+        <%= f.submit t("profile.update"), class: "btn" %>
       <% end %>
     </div>
   </div>

@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-  before_action :authorize!, except: :create
+  before_action :authorize!, except: [:index, :create]
+
+  def index
+    redirect_to login_path(locale: params[:locale])
+  end
 
   def new
     @user = User.new
@@ -9,12 +13,13 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "Your account has been created"
+      flash[:notice] = t("flash.account_create_success")
       redirect_to root_path
     else
       render "sessions/new", :layout => "landing"
     end
   end
+
 
   def update
     I18n.locale = params[:user][:locale]
@@ -33,7 +38,7 @@ class UsersController < ApplicationController
 
   def show
     unless params[:id] == current_user.id
-      redirect_to root_path, :notice => "You aren't authorized to do that."
+      redirect_to root_path, :notice => t("flash.unauthorized")
     end
   end
 

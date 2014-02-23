@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def authorize!
     unless current_user
-      redirect_to root_path, :notice => "Please sign in first"
+      redirect_to root_path, :notice => t("flash.sign_in_first")
     end
   end
 
