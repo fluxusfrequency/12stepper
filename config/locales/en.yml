@@ -66,6 +66,7 @@ en:
     edit: Edit
     delete: Delete
     share: Share
+    token_label: Icon
   profile: 
     title: My Profile
     username: Username (anonymous)

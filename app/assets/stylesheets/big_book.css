@@ -38,3 +38,20 @@
 #toc-search-tabs {
   margin-bottom: 20px; 
 }
+
+p.entry-date {
+  margin-left: 0px;
+}
+
+.entry-token {
+  display: inline;
+}
+
+.entry-token {
+  vertical-align: baseline;
+  margin-bottom: -4px;
+}
+
+.token-label {
+  display: inline;
+}
