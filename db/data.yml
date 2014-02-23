@@ -7,6 +7,7 @@ users:
   - email
   - password_digest
   - locale
+  - last_drink
   - created_at
   - updated_at
   records: 
@@ -15,6 +16,7 @@ users:
     - benhorne44@gmail.com
     - $2a$10$UKf04EkFHtiY2N/OCJPzQ.Kdc5pzptiC/xja.psPDnAgz1IIxKBFS
     - 
+<<<<<<< HEAD
     - '2014-02-18 02:36:54.006756'
     - '2014-02-18 02:36:54.006756'
   - - '2'
@@ -52,6 +54,11 @@ users:
     - 
     - '2014-02-18 21:11:20.197917'
     - '2014-02-18 21:11:20.197917'
+=======
+    - '2014-02-18 17:14:05.606077'
+    - '2014-02-18 17:14:05.606077'
+    - '2014-02-18 17:14:05.606077'
+>>>>>>> d48dde51cc1abaf1763bcd0e9a734201b8a54d17
 
 ---
 entries:

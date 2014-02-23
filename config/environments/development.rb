@@ -25,6 +25,9 @@ TwelveStepper::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
+  config.i18n.fallbacks = true
+  config.i18n.available_locales = [:en, :es, :fr]
+
   config.assets.debug = true
   config.middleware.use Rack::LiveReload
 end

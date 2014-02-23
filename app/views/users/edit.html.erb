@@ -1,0 +1,27 @@
+<div class="row page-header">
+  <div class="col-lg-8 col-md-8">
+    <h1><%= t('profile.title') %></h1>
+    <div id="profile-edit"><br />
+      <%= form_for current_user do |f| %>
+
+        <p><%= f.label :last_drink, t("profile.change") + ": " %></p>
+        <p><%= f.date_field :last_drink, id: "datepicker" %></p>
+
+        <h3><%= t('profile.details') %></h3>
+
+        <p><%= f.label :username, t("profile.username") %></p>
+        <p><%= f.text_field :username %></p>
+
+        <p><%= f.label :password, t("profile.password") %></p>
+        <p><%= f.password_field :password %></p>
+
+        <p><%= f.label :password_confirmation, t("profile.password_confirmation") %></p>
+        <p><%= f.password_field :password_confirmation %></p>
+
+        <p><%= f.label :locale, t("profile.language") + ":" %><%= f.select :locale, [:en, :es, :fr] %></p><br />
+
+        <%= f.submit t("profile.update"), class: "btn" %>
+      <% end %>
+    </div>
+  </div>
+</div>

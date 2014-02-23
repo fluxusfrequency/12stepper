@@ -1,18 +1,44 @@
 en:
   title: Twelve Stepper
+  out_support: Our Support
+  your_success: Your Success
+  flash:
+    account_update_success: Your account details were updated!
+    account_update_failure: There was a problem updating your details.
+    account_create_success: Your account has been created.
+    unauthorized: You aren't authorized to do that.
+    sign_in_first: Please sign in first.
+    error: error
+    prohibited_save: prohibited this page from being saved
+    invalid_credentials: You entered an invalid email or password, please try again.
+    signin: Signed in!
+    signout: Successfully signed out.
+    milestone: Congratulations on 
   navbar:
     logout: Logout
     login: Login
     signup: Sign Up
     resources: Resources
+    resources_tooltip: Read from the most common texts in AA
     twelvesteps: The 12 Steps
     twelvetraditions: The 12 Traditions
     serenityprayer: The Serenity Prayer
     bigbook: The Big Book
     welcome: Welcome back
     meetings: Find Meetings
-    congrats: Congratulations
-    sober: sober
+    meetings_tooltip: Search for meetings in your area and see them on a map
+    congrats: Congratulations!
+    congrats_tooltip: |
+                      This is calculated based on the date of your last drink.
+                      You can change the date in your profile.
+                      Your token changes color based on your days of sobriety.
+                      1 day - Blue
+                      10 days - Green
+                      30 days - Orange
+                      90 days - Red
+                      1 year - Light Green
+    sober: days sober
+    profile: Profile
   bigbook:
     toc: Table of Contents
     chapter: Chapter
@@ -40,3 +66,22 @@ en:
     edit: Edit
     delete: Delete
     share: Share
+<<<<<<< HEAD
+=======
+  profile: 
+    title: My Profile
+    username: Username (anonymous)
+    email: Email
+    last_drink: When was your last drink?
+    last_drink_was: My last drink was on
+    change: Change last drink
+    update: Update Profile
+    password: Password
+    password_confirmation: Password Confirmation
+    details: Edit Your Account Details
+    create_account: Sign Up
+    login: Log in
+    welcome_back: Welcome Back
+    get_started: Get Started
+    language: Your Language
+>>>>>>> d48dde51cc1abaf1763bcd0e9a734201b8a54d17

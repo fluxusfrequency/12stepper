@@ -6,26 +6,22 @@ describe "User Authentication" do
     it "can login with username and valid password" do
       user = login
       expect(current_path).to eq(root_path)
-      within(".navbar") do
-        expect(page).to_not have_content "Login"
-        expect(page).to_not have_content "Sign Up"
-      end
+      expect(page).to_not have_content "Our Support."
+      expect(page).to_not have_content "Your Success."
     end
   end
 
   context "logging out" do
     it "can logout" do
       user = login
-      within(".navbar") do
-        expect(page).to_not have_content "Login"
-        expect(page).to_not have_content "Sign Up"
-        expect(page).to have_content "Logout"
-        click_on "Logout"
-      end
-      within(".navbar") do
-        expect(page).to have_content "Login"
-        expect(page).to have_content "Sign Up"
-      end
+      expect(page).to_not have_content "Our Support."
+      expect(page).to_not have_content "Your Success."
+      click_on "Welcome back, SecretSanta!"
+      expect(page).to have_content "Logout"
+      click_on "Logout"
+      
+      expect(page).to have_content "Our Support."
+      expect(page).to have_content "Your Success."
 
       expect(current_path).to eq(new_session_path(locale: :en))
     end

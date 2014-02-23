@@ -1,4 +1,5 @@
 class BigBook::ChaptersController < ApplicationController
+  before_action :authorize!
   def index
     @chapters = BigBook::Chapter.all
   end

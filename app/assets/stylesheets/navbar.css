@@ -47,6 +47,7 @@
 #congrats-link {
   border-left: 1px solid #CCC3C7;
   display: inline-block;
+  cursor: default;
 }
 
 #account-link {

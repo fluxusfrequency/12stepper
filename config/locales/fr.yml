@@ -1,18 +1,44 @@
 fr:
   title: Douze Steppeur
+  our_support: Notre Soutien
+  your_success: Votre Succès
+  flash:
+    account_update_success: Vos coordonnées bancaires ont été mis à jour!
+    account_update_failure: Il y avait un problème de mise à jour vos coordonnées.
+    account_create_success: Votre compte a été créé.
+    unauthorized: Vous n'êtes pas autorisé à le faire.
+    sign_in_first: S'il vous plaît vous connecter d'abord.
+    error: error
+    prohibited_save: interdit cette page d'être sauvé
+    invalid_credentials: Vous avez saisi un e-mail ou mot de passe incorrect, s'il vous plaît essayez de nouveau.
+    signin: D'enregistrement!
+    signout: Succès signé sur.
+    milestone: Félicitations pour 
   navbar:
     logout: Déconnexion
     login: Connexion
     signup: Inscription
     resources: Ressources
+    resources_tooltip: Lire des textes les plus courantes chez les AA
     twelvesteps: Les 12 Étapes
     twelvetraditions: Les 12 Traditions
     serenityprayer: La Prière de Sérénité
     bigbook: Gros Livre
     welcome: Bienvenu
     meetings: Trouver Réunions
-    congrats: Félicitations
-    sober: sobre
+    meetings_tooltip: Rechercher des rencontres dans votre région et les voir sur une carte
+    congrats: Félicitations!
+    congrats_tooltip: |
+                      Il est calculé sur la base de la date de votre dernier verre.
+                      Vous pouvez changer la date dans votre profil.
+                      Votre jeton change de couleur en fonction de vos jours de sobriété.
+                      Un jour - Bleu 
+                      10 jours - Vert 
+                      30 jours - Orange 
+                      90 jours - Rouge 
+                      1 an - Green Light
+    sober: journées sobre
+    profile: Profil
   bigbook:
     toc: Table des Matières
     chapter: Chapitre
@@ -40,3 +66,19 @@ fr:
     edit: Modifier
     delete: Effacer
     share: Partager
+  profile: 
+    title: Mon Profil
+    username: Nom (anonyme)
+    email: Email
+    last_drink: À quand remonte votre dernier verre?
+    last_drink_was: Mon dernier verre était sur
+    change: Changer dernier verre
+    update: Mettre à jour le profil
+    password: Mot de passe
+    password_confirmation: Confirmation de mot de passe
+    details: Modifier Détails de Votre Compte
+    create_account: Créer un Compte
+    login: Connecter à votre compte
+    welcome_back: Accueillir à Nouveau
+    get_started: Commencer
+    language: Votre Langue

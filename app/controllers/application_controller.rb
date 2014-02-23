@@ -7,13 +7,27 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
-  helper_method :current_user
+  def authorize!
+    unless current_user
+      redirect_to root_path, :notice => t("flash.sign_in_first")
+    end
+  end
+
+  def current_token
+    SobrietyCounter.token_for(current_user.last_drink)
+  end
+
+  helper_method :current_user, :current_token
+
 
   private
 
   def set_locale
-    I18n.locale = params[:locale] || I18n.default_locale || :en
-    # current_user.locale
+    if current_user
+      I18n.locale = current_user.locale || params[:locale] || I18n.default_locale
+    else
+      I18n.locale = params[:locale] || I18n.default_locale
+    end
   end
 
   def default_url_options(options={})

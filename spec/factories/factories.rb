@@ -7,6 +7,7 @@ FactoryGirl.define do
     password "password"
     password_confirmation "password"
     locale "en"
+    last_drink Time.now
   end
 
   factory :chapter, :class => BigBook::Chapter do

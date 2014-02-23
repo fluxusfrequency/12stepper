@@ -15,6 +15,9 @@ gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1
 gem 'globalize'
 gem 'meeting_finder', '0.1.1'
 gem 'kaminari'
+gem 'meeting_finder', '0.1.2'
+gem 'puma'
+gem 'rails-i18n', '~> 4.0.0'
 
 group :development, :test do
   gem 'quiet_assets'

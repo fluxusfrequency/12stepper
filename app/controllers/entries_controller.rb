@@ -1,10 +1,11 @@
 class EntriesController < ApplicationController
+  before_action :authorize!, except: :index
 
   def index
     if current_user
       @entries = current_user.entries
     else
-      redirect_to new_session_path
+      redirect_to login_path
     end
   end
 
@@ -16,7 +17,7 @@ class EntriesController < ApplicationController
     entry = Entry.new(entry_params)
     entry.user_id = current_user.id
     if entry.save
-      redirect_to root_path
+      redirect_to entries_path
     else
       render :new
     end

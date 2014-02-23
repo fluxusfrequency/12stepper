@@ -9,7 +9,7 @@ describe "Big Book" do
 
     it "sees the table of contents and first chapter" do
       login
-      visit big_book_chapters_path
+      visit big_book_path(locale: :en)
       expect(page).to have_content("Table of Contents")
       expect(page).to have_content("WAR FEVER ran high in the New England town to which we new, young officers from Plattsburg were assigned")
     end
@@ -60,7 +60,7 @@ describe "Big Book" do
 
     it "executes a search and shows results panel", js: true do
       login
-      visit big_book_path(locale: :en)
+      visit big_book_path
 
       expect(page).to have_selector("#toc-main-panel", visible: true)
       expect(page).to have_selector("#toc-search-tabs", visible: false)
