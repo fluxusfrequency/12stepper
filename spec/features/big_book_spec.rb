@@ -67,18 +67,17 @@ describe "Big Book" do
 
       within "#toc-search-field-panel" do
         fill_in "toc-search-form[toc_search]", with: "ALCOHOL"
-        find("#search-submit").trigger('click')
       end
+      click_on "Search"
 
       expect(page).to have_selector("#toc-main-panel", visible: false)
-
+      expect(page).to have_content("Search Results")
       within "#toc-search-results-panel" do
-        expect(page).to have_content("Search Results:")
         expect(page).to have_content("ALCOHOL")
         expect(page).to have_content("Chapter 2. THERE IS A SOLUTION")
         expect(page).to have_content("...ALCOHOLICS ANONYMOUS, know t...")
         expect(page).to have_content("Chapter 3. MORE ABOUT ALCOHOLISM")
-        expect(page).to have_content("... to admit we were...ALCOHOL us have been unwilli...")
+        expect(page).to have_content("... to admit we were...MOST OF us have been unwilli...")
       end
 
       expect(page).to have_selector("#toc-search-tabs", visible: true)
@@ -100,6 +99,7 @@ describe "Big Book" do
       within "#toc-search-results-panel" do
         click_on "Chapter 2. THERE IS A SOLUTION"
       end
+      expect(page.has_css?('.highlighted')).to be
     end
   end
 end

@@ -16,4 +16,20 @@
 //= require ckeditor/init
 //= require bootstrap.min
 //= require jquery-ui
+//= require scrollTo
 //= require_tree .
+
+$.expr[":"].Contains = $.expr.createPseudo(function(arg) {
+  return function( elem ) {
+    return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+  };
+});
+
+var searchAndHighlight = function(searchTerm) {
+  $('.highlighted').removeClass('highlighted');
+  $("#chapter-view-panel:contains('"+searchTerm+"')").html($('#chapter-view-panel').html().replace(searchTerm,"<span class='highlighted'>"+searchTerm+"</span>"));
+  
+  if($('.highlighted:first').length) {
+    $('html').scrollTop($('.highlighted:first').offset().top);
+  }
+};

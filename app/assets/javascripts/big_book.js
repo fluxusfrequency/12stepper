@@ -4,17 +4,18 @@
       e.preventDefault();
       var id;
       id = $(e.currentTarget).attr('id').replace(/\D+/g, "");
-      searchApi(id);
+      searchApi(id, e.currentTarget);
     });
 
     $('#toc-search-results-panel').on('click', 'a', function(e){
       e.preventDefault();
-      var id;
+      var id, searchTerm;
       id = $(e.currentTarget).attr('id').replace(/\D+/g, "");
-      searchApi(id);
+      searchTerm = $(e.currentTarget).children('span').text();
+      searchApi(id, searchTerm);
     });
 
-    function searchApi(id) {
+    function searchApi(id, searchTerm) {
       var locale;
       locale = document.URL.split("/")[3].replace(/\?locale\=/, "");
 
@@ -27,6 +28,9 @@
           $('#chapter-view-panel').html("<p>" + chapter + 
             response.chapter_number.toString() + "<br /><br />" + response.title + 
             "<br /><br />" + response.body.replace(/\n/g, "<br /><br />" + "</p>"));
+          searchAndHighlight(searchTerm);
+
+          $.scrollTo(".highlighted", 1000, {offset: {top: -200, left: 0}});
         },
         error: function(response) {
         }
@@ -46,17 +50,19 @@
         dataType: 'json',
         success: function(response) {
           $('#result-list').html('');
+          $('#results-tab').addClass('active');
+          $('#initial-toc').css('display', 'none');
           $('#toc-main-panel').css('display', 'none');
-          $('#toc-search-tabs').css('display', 'inline');
-          $('#toc-search-results-panel').css('display', 'inline');
+          $('#toc-search-tabs').css('display', 'block');
+          $('#toc-search-results-panel').css('display', 'block');
           for (var i = response.length - 1; i >= 0; i--){
             var result = "<li class='search-result-item'>" +
               "<a href='#' class='chapter-link' id='" +
               + response[i].chapter_number.toString() + "'>" + 
               findChapterTranslationForLocale(locale) + 
               response[i].chapter_number.toString() + ". " +
-              response[i].chapter_title + "</a>" + "<br />" + 
-              response[i].snippet + "<hr />" + "</li>";
+              response[i].chapter_title + "<br />" + 
+              response[i].snippet + "<hr />" + "</a>" + "</li>";
             $("#result-list").append(result);
           }
         },
@@ -68,12 +74,16 @@
 
     $('#toc-tab').on('click', function(e) {
       e.preventDefault();
-      $('#toc-main-panel').css('display', 'inline');
-      $('#toc-search-results-panel').css('display', 'none');
+      $('#results-tab').removeClass('active');
+      $('#toc-tab').addClass('active');
+      $('#toc-main-panel').css('display', 'inline').toggleClass('active');
+      $('#toc-search-results-panel').css('display', 'none').toggleClass('active');
     });
 
     $('#results-tab').on('click', function(e) {
       e.preventDefault();
+      $('#results-tab').addClass('active');
+      $('#toc-tab').removeClass('active');
       $('#toc-main-panel').css('display', 'none');
       $('#toc-search-results-panel').css('display', 'inline');
     });
@@ -89,7 +99,6 @@
       }
       return message; 
     };
-
     
   });
 
