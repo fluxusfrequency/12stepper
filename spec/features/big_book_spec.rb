@@ -9,7 +9,7 @@ describe "Big Book" do
 
     it "sees the table of contents and first chapter" do
       login
-      visit big_book_chapters_path
+      visit big_book_path(locale: :en)
       expect(page).to have_content("Table of Contents")
       expect(page).to have_content("WAR FEVER ran high in the New England town to which we new, young officers from Plattsburg were assigned")
     end
@@ -26,7 +26,7 @@ describe "Big Book" do
 
     it "clicks on the link and views another chapter", js: true do
       login
-      visit big_book_path
+      visit big_book_path(locale: :en)
 
       within "#chapter-view-panel" do
         expect(page).to_not have_content("WE, OF ALCOHOLICS ANONYMOUS")

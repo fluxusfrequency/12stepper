@@ -1,4 +1,5 @@
 class EntriesController < ApplicationController
+  before_action :authorize!, except: :index
 
   def index
     if current_user

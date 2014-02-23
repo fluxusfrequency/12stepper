@@ -9,8 +9,8 @@ class SobrietyCounter
 
   def self.lookups
     { (1..1) => "blue_token_sm.png",
-      (10..30) => "green_token_sm.png",
-      (30..90) => "red_token_sm.png",
+      (10..29) => "green_token_sm.png",
+      (30..89) => "red_token_sm.png",
       (90..365) => "orange_token_sm.png" }
   end
 end

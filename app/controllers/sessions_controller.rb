@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   layout 'landing', only: [:new, :create]
+  before_action :authorize!, only: :destroy
 
   def new
     @user = User.new
@@ -33,6 +34,8 @@ class SessionsController < ApplicationController
     flash[:notice] = "Successfully signed out."
     redirect_to new_session_path
   end
+
+  private
 
   def display_error_message
     flash[:error] = "You entered an invalid email or password, please try again."

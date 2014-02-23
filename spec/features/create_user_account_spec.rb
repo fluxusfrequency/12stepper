@@ -4,7 +4,7 @@ describe "User Account Creation" do
 
   context "create an account" do
     before :each do
-      visit login_path
+      visit login_path(locale: :en)
     end
 
     it "a user can reach the sign up page", js: true do
@@ -18,8 +18,8 @@ describe "User Account Creation" do
       page.execute_script("$('#new_password').show()")
       page.execute_script("$('#new_password_confirmation').show()")
       within "#new_user" do
-        fill_in "user[username]", with: "Shhhhhh"
-        fill_in "user[email]", with: "santa@northpole.org"
+        fill_in "user[username]", with: "sinterklaas"
+        fill_in "user[email]", with: "santa2@northpole.org"
         fill_in "user[password]", with: "password"
         fill_in "user[password_confirmation]", with: "password"
         expect{click_on "Sign Up"}.to change{User.count}.by(1)

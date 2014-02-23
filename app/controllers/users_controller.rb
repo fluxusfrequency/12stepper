@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authorize!, except: :create
 
   def new
     @user = User.new
@@ -31,6 +32,9 @@ class UsersController < ApplicationController
   end
 
   def show
+    unless params[:id] == current_user.id
+      redirect_to root_path, :notice => "You aren't authorized to do that."
+    end
   end
 
   private

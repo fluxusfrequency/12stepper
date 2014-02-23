@@ -57,7 +57,7 @@ describe "Static Pages" do
       end
       click_on "The Big Book"
       expect(page).to have_content('WAR FEVER ran high in the New England town')
-      expect(current_path).to eq(big_book_chapters_path)
+      expect(current_path).to eq(big_book_path(locale: :en))
     end
 
 

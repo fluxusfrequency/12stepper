@@ -1,20 +1,24 @@
 TwelveStepper::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
-  # scope "(:locale)", locale: /en|es|fr/ do
+  scope "(:locale)", locale: /en|es|fr/ do
+
     resources :users, only: [:new, :create, :update]
-    resources :entries
-    get '/login' => "sessions#new", as: "login"
-    resources :sessions
-    get '/meetings/search' => "meetings#search_meetings", as: "search_meetings"
-    resources :meetings
-    delete '/sessions', to: 'sessions#destroy'
     get '/:id/profile', to: 'users#edit', as: "edit_user"
+
+    resources :entries
+
+    get '/login' => "sessions#new", as: "login"
+    delete '/sessions', to: 'sessions#destroy'
+    resources :sessions, only: [:new, :create, :destroy]
+
+    get '/meetings/search' => "meetings#search_meetings", as: "search_meetings"
+    resources :meetings, only: [:index, :search_meetings]
 
     namespace :big_book do
       get '/', to: 'chapters#index'
-      resources :chapters
     end
+
 
     namespace :api do
       namespace :v1 do
@@ -30,7 +34,9 @@ TwelveStepper::Application.routes.draw do
 
       end
     end
-  # end
+  end
+
+  get "/pages/*id" => 'pages#show', as: :page, format: false
 
   get '/:locale', to: 'entries#index'
   root 'entries#index'
