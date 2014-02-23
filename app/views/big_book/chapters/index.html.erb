@@ -3,28 +3,26 @@
 
     <div id="toc-search-field-panel">
       <%= search_field "toc-search-form", :toc_search, id: 'toc_search', placeholder: t("bigbook.search") %>
-      <br />
-      <br />
       <button id="search-submit" class="btn-link">Search</button>
       <br />
       <br />
     </div>
 
     <div id="toc-search-tabs">
-      <%= link_to "Table of Contents", "#", id:"toc-tab" %>
-      <%= link_to "Search Results", "#", id:"results-tab" %>
+      <%= link_to t("bigbook.toc"), "#", id:"toc-tab" %>
+      <%= link_to t("bigbook.searchresults"), "#", id:"results-tab" %>
     </div>
 
     <div id="toc-main-panel">
-      <%= t('bigbook.toc') %>
+      <p id="initial-toc"><%= t('bigbook.toc') %></p>
       <br />
       <% @chapters.each_with_index do |c, i| %>
         <%= link_to "#{i+1}. #{c.title}", "#", class:"chapter-link", id: "chapter-#{c.id}-link" %>
         <br />
       <% end %>
     </div>
+
     <div id="toc-search-results-panel">
-      <%= t('bigbook.searchresults') + ": " %>
       <div id="results">
         <ul id="result-list">
         </ul>

@@ -15,7 +15,7 @@ class Search
         chapter_number: record.chapter_number, 
         chapter_title: record.title, 
         snippet: "..." + record.body[i-20..i - 1] + "<span class='search-result'>" + 
-          query + "</span>" + record.body[j..j+20] + "..." ))
+          record.body[i,query.length] + "</span>" + record.body[j..j+20] + "..." ))
     end
 
     results

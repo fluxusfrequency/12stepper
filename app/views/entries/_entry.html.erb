@@ -1,11 +1,13 @@
 <div class="row" id="entry-index-item-row">
 
   <div class="col-lg-3 col-md-3">
+
     <h4 class="entry-item-title"><%= link_to "#{entry.title}", edit_entry_path(entry.id) %></h4>
     <p class="entry-date"><%= entry.created_at.strftime("%m/%d/%Y") %></p>
     <% if entry.step %>
       <p class="entry-step"><%= t("entries.step") %>: <%= entry.step %></p>
     <% end %>
+    <p class="token-label"><%= t('entries.token_label') %>: </p>
     <%= image_tag "green_token_sm.png", class: "entry-token" %>
   </div>
 
