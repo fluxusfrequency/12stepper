@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'authorization' do
   context 'not logged in' do
     before do
-      user = FactoryGirl.create(:user, email: "bob@example.com")
+      user = FactoryGirl.create(:user, username: "bobby", email: "bob@example.com")
       chapter = FactoryGirl.create(:chapter)
     end
 
