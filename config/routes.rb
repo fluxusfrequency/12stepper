@@ -21,6 +21,11 @@ TwelveStepper::Application.routes.draw do
       get '/', to: 'chapters#index'
     end
 
+    resources :friendships, only: [:index, :create]
+
+    namespace :friends do
+      resources :search, only: [:new, :create, :index]
+    end
 
     namespace :api do
       namespace :v1 do

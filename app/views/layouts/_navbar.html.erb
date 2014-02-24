@@ -62,6 +62,12 @@
                 <%= link_to t("navbar.profile"), edit_user_path(current_user) %>
               </li>
               <li>
+                <%= link_to t("navbar.view_friends"), friendships_path %>
+              </li>
+              <li>
+                <%= link_to t("navbar.find_friends"), new_friends_search_path %>
+              </li>
+              <li>
                 <%= link_to t("navbar.logout"), sessions_path, method: :delete %>
               </li>
             </ul>

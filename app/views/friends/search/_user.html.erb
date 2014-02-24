@@ -1,0 +1,7 @@
+<div id=<%= "search-result-#{user.username}" %>>
+  <%= form_for Friendship.new, method: :create, url: friendships_path do |f| %>
+    <%= user.username %>
+    <%= f.hidden_field :user_id, value: user.id %>
+    <%= f.submit "Add Friend", id: "#{user.username}-submit" %>
+  <% end %>
+</div>
