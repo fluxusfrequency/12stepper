@@ -23,6 +23,10 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    unless can_view?(@user)
+      flash.notice = t("flash.unauthorized")
+      redirect_to root_path
+    end
   end
 
   def update
@@ -44,6 +48,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :email, :password, :password_confirmation, :locale, :last_drink)
+  end
+
+  def can_view?(user)
+    current_user == user || current_user.approved_friends.include?(user)
   end
 
 end

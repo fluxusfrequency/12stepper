@@ -11,7 +11,7 @@ en:
     account_update_success: Your account details were updated!
     account_update_failure: There was a problem updating your details.
     account_create_success: Your account has been created.
-    unauthorized: You aren't authorized to do that.
+    unauthorized: You aren't authorized to do that!
     sign_in_first: Please sign in first.
     error: error
     prohibited_save: prohibited this page from being saved

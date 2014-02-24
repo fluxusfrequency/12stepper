@@ -19,4 +19,11 @@ class User < ActiveRecord::Base
     diff.to_i / 86400
   end
 
+  def approved_friends
+    friends = []
+    friends += self.friendships.approved.where(user_id: id).map {|friendship| friendship.friend}
+    friends += self.inverse_friendships.approved.where(friend_id: id).map {|friendship| friendship.user}
+    friends
+  end
+
 end
