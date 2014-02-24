@@ -1,3 +1,12 @@
+#my-journal a {
+  color: #3F3A3C;
+}
+
+.my-journal-container {
+  margin-left: 0;
+  padding-left: 0;
+}
+
 #entry-index-item-body h3 {
   margin-top: 0px;
 }

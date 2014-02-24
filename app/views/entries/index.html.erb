@@ -1,7 +1,7 @@
 <% cache :entries_index do %>
   <div class="row page-header">
-      <div class="col-lg-3 col-md-3">
-        <h1 id="my-journal"><%= t('entries.my_journal') %></h1>
+      <div class="col-lg-3 col-md-3 my-journal-container">
+        <h1 id="my-journal"><%= link_to t('entries.my_journal'), entries_path %></h1>
       </div>
       <div class="col-lg-4 col-md-4">
         <%= search_field 'entries_search', :meetings_search,  placeholder: t('meetings.search'), id:'entries-search' %>
