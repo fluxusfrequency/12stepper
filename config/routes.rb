@@ -22,6 +22,7 @@ TwelveStepper::Application.routes.draw do
     end
 
     resources :friendships, only: [:index, :create]
+    post '/friendships/accept/:id', to: 'friendships#update', as: :accept_friendship
 
     namespace :friends do
       resources :search, only: [:new, :create, :index]

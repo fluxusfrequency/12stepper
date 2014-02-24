@@ -1,0 +1,4 @@
+<div id=<%= "pending-#{inverse_friendship.user.username}"%>>
+  <%= inverse_friendship.user.username %>
+  <%= button_to "Accept", accept_friendship_path(inverse_friendship.id), class: 'btn-link' %>
+</div>

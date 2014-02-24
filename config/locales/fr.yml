@@ -19,6 +19,9 @@ fr:
     signin: D'enregistrement!
     signout: Succès signé sur.
     milestone: Félicitations pour 
+    friend_request_sent: Votre ami demande a été adressée.
+    friend_request_failed: Il y avait un problème de soumettre votre demande d'ami.
+    friendship_approved: Vous êtes maintenant amis avec
   navbar:
     logout: Déconnexion
     login: Connexion

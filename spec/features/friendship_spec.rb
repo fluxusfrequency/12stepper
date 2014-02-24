@@ -4,7 +4,9 @@ describe "User Friendships" do
   before :each do
     @user1 = FactoryGirl.create(:user)
     @user2 = FactoryGirl.create(:user, email: "billy@example.com", username: "billy")
-    FactoryGirl.create(:friendship, user_id: @user1.id, friend_id: @user2.id)
+    @user3 = FactoryGirl.create(:user, email: "benny@example.com", username: "benny")
+    FactoryGirl.create(:friendship, user_id: @user1.id, friend_id: @user2.id, status: "approved")
+    FactoryGirl.create(:friendship, user_id: @user3.id, friend_id: @user1.id, status: "pending")
   end
 
   context "user can request a friend" do
@@ -19,6 +21,7 @@ describe "User Friendships" do
       page.execute_script("$('#friend-search-form').submit()")
 
       within "#friend-search-results" do
+        expect(page).to_not have_content("benny")
         within "#search-result-billy" do
           expect(page).to have_content("billy")
           page.execute_script("$('#search-result-billy form').submit()")
@@ -36,6 +39,23 @@ describe "User Friendships" do
       click_on "Welcome back, SecretSanta!"
       click_on "View My Friends"
       expect(page).to have_content(@user2.username)
+    end
+  end
+
+  context "user accepts a friend request" do
+    it "can see pending friend requests", js: true do
+      friendship_login
+      click_on "Welcome back, SecretSanta!"
+      click_on "View My Friends"
+
+      within "#pending-friendships" do
+        expect(page).to have_content "benny"
+        within "#pending-benny" do
+          click_on "Accept"
+        end
+      end
+
+      expect(page).to have_content("You are now friends with benny.")
     end
   end
 

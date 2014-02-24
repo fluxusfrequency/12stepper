@@ -7,7 +7,7 @@ class Friends::SearchController < ApplicationController
   end
 
   def index
-    @users = User.where(:username == params[:friend_name])
+    @users = User.where(username: params[:friend_search_input])
   end
 
 end

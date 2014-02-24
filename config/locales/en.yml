@@ -19,6 +19,9 @@ en:
     signin: Signed in!
     signout: Successfully signed out.
     milestone: Congratulations on 
+    friend_request_sent: Your friend request was sent.
+    friend_request_failed: There was a problem submitting your friend request.
+    friendship_approved: You are now friends with
   navbar:
     logout: Logout
     login: Login
