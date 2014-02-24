@@ -1,6 +1,6 @@
 class MeetingsController < ApplicationController
   before_action :authorize!
-  
+
   def index
 
   end
@@ -13,5 +13,5 @@ class MeetingsController < ApplicationController
       format.json { render json: @meetings }
     end
   end
-    
+
 end

@@ -19,6 +19,7 @@ gem 'puma'
 gem 'rails-i18n', '~> 4.0.0'
 
 group :development, :test do
+  gem 'newrelic_rpm'
   gem 'quiet_assets'
   gem 'guard'
   gem 'guard-rspec'
