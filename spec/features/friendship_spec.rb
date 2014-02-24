@@ -59,6 +59,23 @@ describe "User Friendships" do
     end
   end
 
+  context "user rejects a friend request" do
+    it "can reject a friend request", js: true do
+      friendship_login
+      click_on "Welcome back, SecretSanta!"
+      click_on "View My Friends"
+
+      within "#pending-friendships" do
+        expect(page).to have_content "benny"
+        within "#pending-benny" do
+          click_on "Reject"
+        end
+      end
+
+      expect(page).to have_content("REJECTED!")
+    end
+  end
+
   def friendship_login
     visit login_path(locale: :en)
     page.execute_script("$('#password').show()")

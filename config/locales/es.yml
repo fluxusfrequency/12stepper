@@ -22,6 +22,7 @@ es:
     friend_request_sent: Su amigo petición ha sido enviada.
     friend_request_failed: Hubo un problema al enviar su solicitud de amigo.
     friendship_approved: Usted ahora es amigo de
+    friendship_rejected: RECHAZADO!
   navbar:
     logout: Desloguear
     login: Conexión
