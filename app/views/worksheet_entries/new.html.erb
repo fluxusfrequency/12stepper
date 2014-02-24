@@ -1,3 +1,11 @@
+<div class="row page-header">
+    <div class="col-lg-3 col-md-3">
+      <h1 id="my-journal"><%= t('entries.work_step') %></h1>
+    </div>
+    <div class="col-lg-4 col-md-4">
+      <%= search_field 'entries_search', :meetings_search,  placeholder: t('meetings.search'), id:'entries-search' %>
+    </div>
+</div>
 <div id='worksheet-entry-text'>
   <%= form_for @entry do |f| %>
 
@@ -6,8 +14,8 @@
     <%= f.hidden_field :step %>
 
     <%= f.cktext_area :body, {:class => 'ckeditor', :id => 'worksheet-step'} %>
-
-    <%= f.submit t('entries.create') %>
+    <%= f.submit t('entries.create'), id:'worksheet-entry-submit' %>
+    <%= link_to t('entries.delete'), entries_path, :id => 'worksheet-entry-delete' %>
     
   <% end %>
 </div>
@@ -21,3 +29,10 @@
   <%= paginate @worksheets %>
 
 </div>
+
+<script>
+  window.onload=function(){
+    document.getElementsByClassName("cke_bottom")[0].style.marginTop = "220px";
+  }
+</script>
+
