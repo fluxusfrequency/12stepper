@@ -1,3 +1,12 @@
+#my-journal a {
+  color: #3F3A3C;
+}
+
+.my-journal-container {
+  margin-left: 0;
+  padding-left: 0;
+}
+
 #entry-index-item-body h3 {
   margin-top: 0px;
 }
@@ -83,7 +92,7 @@
 .entry-date,
 .entry-step {
   margin-top: 5px;
-  margin-left: 5px;
+  margin-left: 0px;
 }
 
 #work-a-step {
@@ -94,3 +103,4 @@
   margin-top: 24px;
   margin-left: -13px;
 }
+

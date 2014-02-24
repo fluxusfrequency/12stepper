@@ -20,6 +20,7 @@
           for (var i = 0; i < response.length; i++) {
             $('#entry-list-container').append(buildResultView(response[i], locale));
           }
+          entrySearchAndHighlight(query);
         },
         error: function(response) {
           
@@ -34,9 +35,8 @@
       result['id'] + '/edit">' + result['title'] + '</a></h4>' +
       '<p class="entry-date">' + result['created_at'].slice(5, 7) + "/" +
       result['created_at'].slice(8, 10) + "/" + result['created_at'].slice(0, 4) +
-      '</p><p class="token-label">Icon: </p><img class="entry-token"' + 
-      'src="/assets/green_token_sm.png" /></div>' + 
-      '<div class="col-lg-7 col-md-7" id="entry-index-item-body"><p>' +
+      '</p><p class="entry-step">' + stepTranslation(locale) + result['step'].toString() + 
+      '</p></div><div class="col-lg-7 col-md-7" id="entry-index-item-body"><p>' +
       result['body'] + '</p></div><div class="col-lg-2 col-md-2">' +
       '<ul id="entry-item-actions"><li><a href="' + '/entries/' +
       result['id'] + '/edit">Edit</a></li><li><a data-method="delete" href="' +
@@ -45,6 +45,16 @@
 
       return view;
     };
+
+    function stepTranslation(locale) {
+      if (locale === "es") {
+        return "Paso: ";
+      } else if (locale === "fr") {
+        return "Étape: ";
+      } else {
+        return "Step: ";
+      }
+    }
   });
 })();
 

@@ -11,7 +11,7 @@
       </ul>
     </div>
   <% end %>
-  <div class="col-lg-4 col-md-2">
+  <div class="col-lg-5 col-md-2">
     <div class="actions" id="get-started">
       <strong><%= I18n.t("profile.get_started") %></strong>
     </div>
@@ -23,7 +23,7 @@
     </div><br />
     <div class="actions" id="last-drink-selector">
       <p><%= t("profile.last_drink") %></p>
-      <p><%= f.date_field :last_drink, id: "datepicker" %></p>
+      <%= f.date_select :last_drink %>
     </div>
   </div>
 
@@ -36,12 +36,8 @@
       <%= text_field_tag :new_fake_password_confirmation, params[:new_fake_password_confirmation], {:placeholder => I18n.t("profile.password_confirmation")} %>
       <%= f.password_field :password_confirmation, id: "new_password_confirmation" %>
     </div><br />
-    <div class="actions" id="sign-up-locale">
-      <p><%= t('profile.language') + ": " %></p>
-      <p><%= f.select :locale, options_for_select([:en, :es, :fr], I18n.locale) %></p>
+    <div class="actions col-lg-12 col-md-12" id="sign-up">
+      <%= f.submit I18n.t("profile.create_account"), class: "btn-link" %>
     </div>
-  </div>
-  <div class="actions col-lg-12 col-md-12" id="sign-up">
-    <%= f.submit I18n.t("profile.create_account"), class: "btn-link" %>
   </div>
 <% end %>

@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    @user.update_attributes(locale: params[:locale])
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = t("flash.account_create_success")
@@ -45,7 +46,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation, :last_drink, :locale)
+    params.require(:user).permit(:username, :email, :password, :password_confirmation, :last_drink)
   end
 
 end

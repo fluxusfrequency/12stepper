@@ -13,9 +13,8 @@
 }
 
 .worksheet {
-  width: 515px;
   display: inline-block;
-  height: 600px;
+  max-height: 600px;
   overflow:scroll;
 }
 
@@ -39,4 +38,9 @@
 
 .cke_bottom {
   margin-top: 220px;
+  color: red;
+}
+
+#worksheet-entry-title {
+  margin-top: 10px;
 }

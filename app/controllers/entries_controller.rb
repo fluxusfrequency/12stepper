@@ -29,7 +29,6 @@ class EntriesController < ApplicationController
 
   def update
     entry = Entry.find(params[:id])
-    fail
     e = entry.update_attributes(entry_params)
     redirect_to root_path
   end

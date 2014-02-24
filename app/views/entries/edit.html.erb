@@ -9,4 +9,13 @@
     <%= f.submit %>
     
   <% end %>
+
+  <br />
+  <br />
+  <p class="new-entry-action">
+    <%= link_to t('entries.create'), "#", :onclick=>"$('.new_entry').submit()", id:"entry-submit" %>
+    <%= link_to t('entries.delete'), entries_path %>
+    <%= link_to t('entries.share'), "#" %>
+  </p>
+  
 </div>

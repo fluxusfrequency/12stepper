@@ -2,6 +2,11 @@ es:
   title: Doce Bailarín
   our_support: Nuestro Apoyo
   your_success: Su Éxito
+  languages:
+    english: Inglés
+    spanish: Español
+    french: Francés
+    select: Seleccionar el Idioma
   flash:
     account_update_success: Detalles de la cuenta se han actualizado!
     account_update_failure: Hubo un problema al actualizar sus datos.
@@ -78,7 +83,7 @@ es:
     password_confirmation: Confirmación de la contraseña
     details: Editar Detalles de su Cuenta
     create_account: Crear una Cuenta
-    login: Iniciar la sesión
+    login: Iniciar la Sesión
     welcome_back: Bienvenida de Nuevo
     get_started: Empezar
     language: Su Idioma

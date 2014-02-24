@@ -23,7 +23,7 @@
 }
 
 .account-dropdown {
-  margin-right: -88px;
+  /*margin-right: -88px;*/
 }
 
 #resources-link,
@@ -36,24 +36,28 @@
 #resources-link {
   border-left: 1px solid #CCC3C7;
   border-bottom: 5px solid #BCD530;
+  min-height: 55px;
 }
 
 #meetings-link {
   border-left: 1px solid #CCC3C7;
   border-right: 1px solid #CCC3C7;
   border-bottom: 5px solid #E0422D;
+  min-height: 55px;
 }
 
 #congrats-link {
   border-left: 1px solid #CCC3C7;
   display: inline-block;
   cursor: default;
+  min-height: 55px;
 }
 
 #account-link {
   border-left: 1px solid #CCC3C7;
   border-bottom: 5px solid #3D98AA;
-  margin-right: -135px;
+  min-height: 55px;
+  border-right: 1px solid #CCC3C7;
 }
 
 .navbar-token {

@@ -65,10 +65,12 @@ describe "Big Book" do
       expect(page).to have_selector("#toc-main-panel", visible: true)
       expect(page).to have_selector("#toc-search-tabs", visible: false)
 
+      
+
       within "#toc-search-field-panel" do
         fill_in "toc-search-form[toc_search]", with: "ALCOHOL"
       end
-      click_on "Search"
+      find("#search-submit").trigger('click')
 
       expect(page).to have_selector("#toc-main-panel", visible: false)
       expect(page).to have_content("Search Results")

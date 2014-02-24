@@ -44,8 +44,10 @@
       }
     });
 
-    $('#user_locale').on('change', function(){
-      window.location.replace('/login/?locale=' + $(this).val());
+    $('.language-dropdown').on('click', 'li a', function(){
+      window.location.replace('/login/?locale=' + $(this).attr('id'));
     });
+
+    $('#datepicker').datepicker();
   });
 })();

@@ -29,6 +29,10 @@ TwelveStepper::Application.routes.draw do
           get '/search/:query', to: 'search#show'
         end
 
+        namespace :worksheet do
+          get '/entries', to: 'entries#index'
+        end
+
         namespace :big_book do
           resources :chapters
           get '/search/:query', to: 'search#show'
