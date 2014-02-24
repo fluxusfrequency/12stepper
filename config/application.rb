@@ -22,5 +22,6 @@ module TwelveStepper
 
     # config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{yml}')]
     # config.i18n.default_locale = :de
+    config.assets.precompile += Ckeditor.assets
   end
 end
