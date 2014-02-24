@@ -93,3 +93,7 @@ fr:
     welcome_back: Accueillir à Nouveau
     get_started: Commencer
     language: Votre Langue
+  friendships:
+    remove: Supprimer
+    accept: Accepter
+    reject: Rejeter

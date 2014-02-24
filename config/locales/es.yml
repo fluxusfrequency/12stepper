@@ -93,3 +93,7 @@ es:
     welcome_back: Bienvenida de Nuevo
     get_started: Empezar
     language: Su Idioma
+  friendships:
+    remove: Eliminar
+    accept: Aceptar
+    reject: Rechazar

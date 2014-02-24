@@ -1,5 +1,5 @@
 <div id=<%= "pending-#{inverse_friendship.user.username}"%>>
   <%= inverse_friendship.user.username %>
-  <%= button_to "Accept", accept_friendship_path(inverse_friendship.id), class: 'btn-link' %>
-  <%= button_to "Reject", reject_friendship_path(inverse_friendship.id), method: :delete, aclass: 'btn-link' %>
+  <%= button_to I18n.t("friendships.accept"), accept_friendship_path(inverse_friendship.id), class: 'btn-link' %>
+  <%= button_to I18n.t("friendships.reject"), reject_friendship_path(inverse_friendship.id), method: :delete, aclass: 'btn-link' %>
 </div>

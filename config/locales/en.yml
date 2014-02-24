@@ -94,3 +94,7 @@ en:
     welcome_back: Welcome Back
     get_started: Get Started
     language: Your Language
+  friendships:
+    remove: Remove
+    accept: Accept
+    reject: Reject

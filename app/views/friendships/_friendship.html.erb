@@ -1,4 +1,4 @@
 <div id=<%= "friend-#{friendship.friend.username}"%>>
   <%= friendship.friend.username %>
-  <%= button_to "Remove", remove_friendship_path(friendship.id), method: :delete, aclass: 'btn-link' %>
+  <%= button_to I18n.t("friendships.remove"), remove_friendship_path(friendship.id), method: :delete, class: 'btn-link' %>
 </div>
