@@ -12,4 +12,11 @@ class User < ActiveRecord::Base
   has_many :friends, through: :friendships
   has_many :inverse_friends, through: :inverse_friendships, source: :user
 
+
+  def days_sober
+    diff = Time.now - last_drink.to_time
+    return 1 if diff < 86400  
+    diff.to_i / 86400
+  end
+
 end

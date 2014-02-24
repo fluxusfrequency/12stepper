@@ -42,6 +42,20 @@ describe "User Friendships" do
     end
   end
 
+  context "user views a friends profile" do
+    it "sees the friends details", js: true do
+      friendship_login
+
+      click_on "Welcome back, SecretSanta!"
+      click_on "View My Friends"
+      within "#friend-billy" do
+        click_on "View Profile"
+      end
+      expect(page).to have_content("#{@user2.username}")
+      expect(page).to have_content("#{@user2.days_sober.to_s} day sober!")
+    end
+  end
+
   context "user removes a friend" do
     it "can remove a friend listed in the index page", js: true do
       friendship_login

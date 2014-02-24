@@ -47,9 +47,8 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to t('navbar.congrats') +
-            " #{days_ago(current_user.last_drink)} " + 
-            t('navbar.sober') + "!", "#", id:"congrats-link", :title => I18n.t('navbar.congrats_tooltip') %>
+          <li><%= link_to t('navbar.congrats') + " " + print_days_sober(current_user), 
+            "#", id:"congrats-link", :title => I18n.t('navbar.congrats_tooltip') %>
             <%= image_tag("#{current_token}", class: "navbar-token") %>
           </li>
           <li class="dropdown">

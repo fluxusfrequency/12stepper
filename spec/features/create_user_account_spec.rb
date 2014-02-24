@@ -22,6 +22,7 @@ describe "User Account Creation" do
         fill_in "user[email]", with: "santa2@northpole.org"
         fill_in "user[password]", with: "password"
         fill_in "user[password_confirmation]", with: "password"
+        fill_in "user[last_drink]", with: "01/01/2010"
         expect{click_on "Sign Up"}.to change{User.count}.by(1)
       end
     end

@@ -46,7 +46,8 @@ es:
                       30 días - Orange 
                       90 días - Red 
                       1 año - Luz Verde 
-    sober: días sobrio 
+    day: día
+    sober: sobrio 
     profile: Perfil
     view_friends: Ver a Mis Amigos
     find_friends: Buscar Amigos
@@ -97,3 +98,4 @@ es:
     remove: Eliminar
     accept: Aceptar
     reject: Rechazar
+    view_profile: Ver Perfil

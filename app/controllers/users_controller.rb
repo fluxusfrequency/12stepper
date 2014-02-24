@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authorize!, except: [:index, :create]
+  before_action :authorize!, except: [:index, :create, :show]
 
   def index
     redirect_to login_path(locale: params[:locale])
@@ -21,6 +21,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
 
   def update
     I18n.locale = params[:user][:locale]
@@ -37,16 +40,10 @@ class UsersController < ApplicationController
 
   end
 
-  def show
-    unless params[:id] == current_user.id
-      redirect_to root_path, :notice => t("flash.unauthorized")
-    end
-  end
-
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation, :last_drink)
+    params.require(:user).permit(:username, :email, :password, :password_confirmation, :locale, :last_drink)
   end
 
 end

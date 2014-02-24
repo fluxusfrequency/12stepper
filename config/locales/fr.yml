@@ -46,7 +46,8 @@ fr:
                       30 jours - Orange 
                       90 jours - Rouge 
                       1 an - Green Light
-    sober: journées sobre
+    day: jour
+    sober: sobre
     profile: Profil
     view_friends: Voir mes Amis
     find_friends: Rechercher des Amis
@@ -97,3 +98,4 @@ fr:
     remove: Supprimer
     accept: Accepter
     reject: Rejeter
+    view_profile: Voir le profil

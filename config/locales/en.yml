@@ -46,7 +46,8 @@ en:
                       30 days - Orange
                       90 days - Red
                       1 year - Light Green
-    sober: days sober
+    day: day
+    sober: sober
     profile: Profile
     view_friends: View My Friends
     find_friends: Find Friends
@@ -98,3 +99,4 @@ en:
     remove: Remove
     accept: Accept
     reject: Reject
+    view_profile: View Profile

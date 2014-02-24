@@ -48,6 +48,5 @@
       window.location.replace('/login/?locale=' + $(this).attr('id'));
     });
 
-    $('#datepicker').datepicker();
   });
 })();
