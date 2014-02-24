@@ -1,5 +1,26 @@
 
 ---
+users:
+  columns:
+  - id
+  - username
+  - email
+  - password_digest
+  - locale
+  - created_at
+  - updated_at
+  - last_drink
+  records: 
+  - - '1'
+    - tester
+    - benhorne44@gmail.com
+    - $2a$10$Ar5qbaK6EvFXbiqgCKAnX.Yp0KiiyqhARbQ0OLs1D7ZhQo49iw0r6
+    - en
+    - '2014-02-23 23:30:31.708401'
+    - '2014-02-23 23:30:31.708401'
+    - '2014-02-01 00:00:00'
+
+---
 worksheets:
   columns:
   - id
@@ -2416,3 +2437,428 @@ worksheets:
     - '12'
     - '2014-02-23 23:22:43.290713'
     - '2014-02-23 23:22:43.290713'
+  - - '41'
+    - Paso 1
+    - "<p><em>&iquest;As seriamente da&ntilde;ado tus relaciones con otros estando
+      en tu estado de adicci&oacute;n activa? Y si lo has hecho, menciona las relaciones
+      y como las da&ntilde;aste.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Si
+      otras personas te han dicho como las has herido, entonces escribe lo que te
+      han dicho.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      cualquier cita que no atendiste como resultado de tu adicci&oacute;n activa.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      cualquier laguna de memoria donde no te recuerdes d&oacute;nde estabas.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      cualquier ocasi&oacute;n que no te recuerdes como llegaste a tu casa.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      cuando y como has sido negligente o da&ntilde;ado relaciones con los que te
+      aman por satisfacer tu adicci&oacute;n activa o porque te est&aacute;s recuperando
+      de tu adici&oacute;n.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      cualquier enfermedad como resultado de tu adici&oacute;n activa.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Si
+      tu adicci&oacute;n activa ha contribuido al gasto excesivo, describe la situaci&oacute;n
+      y porque lo hiciste.</em></p>\r\n\r\n<p><em>Describe ocasiones en que t&uacute;
+      te has apartado de interacci&oacute;n social y te aislaste hasta el grado extremo
+      y porque.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      incidentes donde t&uacute; expresaste enojo inapropiadamente hacia otras personas.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      incidentes embarazosos o humillantes en tu vida. &iquest;Eran relacionados a
+      tu adicci&oacute;n activa? Si fue as&iacute;, &iquest;c&oacute;mo fueron relacionados?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      atentos de controlar tu adicci&oacute;n activa en el pasado, &iquest;qu&eacute;
+      tan exitoso fueron? &iquest;Han estos intentos mostrado lo impotente que eres
+      contra la adicci&oacute;n activa?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Sientes
+      alg&uacute;n remordimiento sobre la forma que has actuado en tu vida? Si es
+      as&iacute;, explica en detalle.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      cualquier evento irracional o insano que ha pasado desde que empez&oacute; tu
+      adicci&oacute;n active. &iquest;Racionalizaste Este comportamiento? Si fue as&iacute;
+      en que manera?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;As
+      evitada gente por que no comparten o aprueban tu comportamiento adictivo? Si
+      es as&iacute; has una lista de personas y situaciones.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      cualquier sue&ntilde;o que has tenido que exhiba la ingobernabilidad&nbsp; o
+      caos de tu vida.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Puedes
+      se&ntilde;alar un periodo de tiempo en tu vida donde tu vida empez&oacute; a
+      ser extremadamente ingobernable? Si es as&iacute;, describe ese periodo y que
+      estaba sucediendo.&nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Hubo
+      alg&uacute;n incidente o se&ntilde;al que hizo realizar que tu vida era ingobernable?
+      Si es as&iacute; describe en detalle.&nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;C&oacute;mo
+      resumir&iacute;as la impotencia e ingobernabilidad de tu vida en cara (en frente)
+      a tu adicci&oacute;n?&nbsp;</em></p>\r\n"
+    - es
+    - '1'
+    - '2014-02-24 01:40:03.567802'
+    - '2014-02-24 01:40:03.567802'
+  - - '42'
+    - Paso 2
+    - "<p><em>&iquest;Qu&eacute; religi&oacute;n tu familia original practica o alegan
+      ser parte de?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Has
+      una lista de los aspectos negativos y positives seg&uacute;n como lo percibas
+      de la religi&oacute;n que practica tu familia.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Has
+      cortado la pr&aacute;ctica de la religi&oacute;n de tu familia o te has quedado
+      en ella?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      otras personas te han ayudado a ver los aspectos ingobernables (fuera de manejo)
+      de tu vida? Creen ellos en un Poder &uml;Superior? Si creen, escribe su creencia
+      como t&uacute; la percibes.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Recu&eacute;rdate
+      de algunos de tus mejores amigos de tu infancia o adolescencia. Describe &iquest;qu&eacute;
+      es lo que m&aacute;s te gustaba de ellos y ellos gustaban de ti? &iquest;Piensas
+      tu, que estas cualidades tienen alguna relaci&oacute;n con un Poder Superior?&nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>De
+      la siguiente lista de grupos, escriba &uml;si&uml; o &uml;no&uml; en acuerdo
+      a si usted comparte con ellos los mismos valores o no.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table
+      cellpadding=\"0\" cellspacing=\"0\" class=\"t1\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>Grupo</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>&iquest;Comparte
+      Valores?</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Grupo
+      de Doce (12) Pasos</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Iglesia
+      Cristiana Conservativa&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Iglesia
+      Cristiana Liberal&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Sinagoga</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Mosquete</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Templo
+      Hind&uacute;&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Templo
+      Budista</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Iglesia
+      Unitaria o no-Cristiana&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Organizaci&oacute;n
+      No-religiosa &eacute;tica&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Grupo
+      Activista Humanitario&nbsp; (eje., Amnist&iacute;a Int.)</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Organizaci&oacute;n
+      Ambiental (eje., Club Sierra)</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describa
+      eventos, situaciones o personas que te han ayudado a entender que es el Poder
+      Superior o de que se trata Dios.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      cualquier sue&ntilde;o que hayas tenido con respecto al &uml;Poder Superior&uml;
+      o Dios, y &iquest;que significaron para ti?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Cu&aacute;l
+      ha sido sus experiencias previas con religi&oacute;n? En qu&eacute; forma piensa
+      usted que esto se relacione o no con su experiencia con Dios como usted lo conciba
+      (lo entienda).</em></p>\r\n"
+    - es
+    - '2'
+    - '2014-02-24 01:40:38.13911'
+    - '2014-02-24 01:40:38.13911'
+  - - '43'
+    - Paso 3
+    - "<p><em>&iquest;Cu&aacute;les son los temores m&aacute;s grandes que tienes
+      en lo que concierne entregar control de su vida a Dios como usted lo concibe
+      (lo entiende)?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      cosas, personas o circunstancias has tratado de controlar en el pasado y cu&aacute;l
+      ha sido el resultado? &iquest;Piensas que Dios es capaz de manejar (manipular)
+      tu vida mejor que t&uacute;?&nbsp; &nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>En
+      forma general, &iquest;Cu&aacute;l es tu emoci&oacute;n respecto a entregar
+      tu vida a Dios?&nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;En
+      qu&eacute; formas mantendr&iacute;as el proceso de entregar tu vida a Dios?
+      Posibilidades incluye ir a servicios religiosos, reuniones de doce (12) Pasos,
+      reuniones con otros en recobro, mantener un diario (jornal), servir a otros,
+      meditaci&oacute;n, lectura, ejercicio f&iacute;sico, contactando tu padrino
+      (patrocinador) o atender terapia.&nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;C&oacute;mo
+      contestar&iacute;as la pregunta &uml;Quien soy Yo?&nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Como
+      contestar&iacute;as la pregunta &uml;Quien es Dios&uml;?&nbsp; en otras palabras,
+      describe a Dios como lo concibas (entiendas).</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Describe
+      a quien o con que conf&iacute;as y hasta qu&eacute; grado?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;En
+      qu&eacute; encuentras significado (prop&oacute;sito) ahora o piensas que puedas
+      encontrar en el futuro?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;C&oacute;mo
+      piensa usted que deber&iacute;a vivir su vida despu&eacute;s de haber entregado
+      su vi al cuidado de Dios como lo concibas (entiendas)? &iquest;Que cambios usted
+      espera hacer y como esto se apreciar&iacute;a en forma detallada?&nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;C&oacute;mo
+      planea celebrar u honrar este pas&oacute; de entregar tu vida al cuidado de
+      Dios?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      cualquiera celebraci&oacute;n o homenaje (honrar) que has hecho por entregar
+      tu vida al cuidado de Dios.</em></p>\r\n"
+    - es
+    - '3'
+    - '2014-02-24 01:41:00.276233'
+    - '2014-02-24 01:41:00.276233'
+  - - '44'
+    - Paso 4
+    - "<p><em>&iquest;Has tenido alguna ruptura de relaciones? Si es as&iacute;, descr&iacute;belas
+      y como hiri&oacute; a otros o a ti. Describe cualquier enojo, rencilla, resentimiento
+      que tengas sobre estas relaciones.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Has
+      tenido la emoci&oacute;n de ser altruista? Explica cuando y las circunstancias.
+      &iquest;Fue esto justificado? Elabora.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      eventos o disparadores (en el pasado) te ha causado re empezar tu comportamiento
+      adictivo? Describe situaciones, emociones, eventos, comida o gente que aparentemente
+      son parte de tu vida justo antes o cuando activo en el comportamiento adictivo.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Has
+      alguna vez mantenido alguna rencilla? &iquest;Trataste de vengarte? Si lo hiciste,
+      explica la situaci&oacute;n y &iquest;c&oacute;mo se desenvolvi&oacute;, incluyendo
+      si alguien sali&oacute; herido o no?</em></p>\r\n\r\n<p><em>Describe ocasiones
+      cuando has sido h&iacute;per sensitivo. &iquest;Alguna vez esto ha da&ntilde;ado
+      tu relaci&oacute;n con otros, o solamente tratabas de mantener tus barreras
+      (lim&iacute;trofes o espacio personal)?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      las faltas que mas detestas en otros. &iquest;Tienes (tu mismo) algunos de estos
+      rasgos de personalidad (defectos de car&aacute;cter)?&nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Anote
+      una marca al lado de los siguientes rasgos de personalidad (defectos de car&aacute;cter)
+      que te aborrecen en otros; Tambi&eacute;n anota si lo ves tambi&eacute;n en
+      ti mismo.&nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table cellpadding=\"0\"
+      cellspacing=\"0\" class=\"t1\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>Rasgos
+      Que Desprecio En Otros</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>Rasgo</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>En
+      Otros</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>En Mi</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>Rasgo</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>En
+      Otros</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>En Mi</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Ego&iacute;smo</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Codicioso</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Cobard&iacute;a</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Altruista</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Deshonestidad</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Sarc&aacute;stico</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Atemorizado</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Critic&oacute;n</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Controlador</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Chismoso</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Manipulador</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Avaro</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Intimidador</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&Aacute;spero</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Hambriento
+      de Poder</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>No
+      perdona</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Posesivo</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Verbalmente
+      abusador</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Pre
+      juicioso</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>F&iacute;sicamente
+      abusador</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Sobre</p>\r\n\r\n\t\t\t<p>Dependiente</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Sexualmente</p>\r\n\r\n\t\t\t<p>abusador</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Procrastinado</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Impaciente</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Condenador</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Adulterador</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Ocupado
+      de ante mano</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Escudri&ntilde;oso</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Mentiroso</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Ingrato</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Tramposo,</p>\r\n\r\n\t\t\t<p>Enga&ntilde;oso</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>C&iacute;nico</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Intolerante</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Amargo</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Se
+      tiene lastima a si mismo</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Lleno
+      de ira</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Celoso</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>Envidioso</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>Inseguro</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p><em>&iquest;Has
+      fallado en las cosas que sabes que debiste haber hecho? Si fallaste, explica
+      en detalle.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Cu&aacute;les
+      son tus temores? &iquest;C&oacute;mo han causado dificultad en tu vida?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      tus relaciones con amigos, compa&ntilde;eros de trabajo y/o vecinos. &iquest;Hay
+      alguna cosa que desear&iacute;as volver a hacer si pudieras? Si hay, explica
+      en detalle.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      tus relaciones con tus familiares originales. &iquest;Tienes alg&uacute;n conflicto
+      con tus parientes (padres)?&nbsp; &iquest;Est&aacute;s evitando la materia del
+      conflicto en tu familia?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      las memorias m&aacute;s tempranas de tu vida. Compartes la misma personalidad
+      con aquellos en tu familia o &iquest;eran ellos muy diferente que t&uacute;?
+      &iquest;Piensas que estas diferencias o similitudes causo problemas en tu vida?
+      Si lo hizo explica.&nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Si
+      fueras a describir los temas mayores de tu familia, &iquest;cuales serian?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      tus relaciones con el n&uacute;cleo de tu familia (esposa e hijos) si es ahora
+      diferente a tu familia de origen. &iquest;Existe algo que desear&iacute;a borrar
+      de esta parte de su vida?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      en detalle cualquier experiencia mayor que usted cree que cambio su vida para
+      siempre despu&eacute;s de ocurrido (bueno o malo).</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      decisiones has tomado en tu vida que ha causado un significante impacto en tu
+      vida? &iquest;Qu&eacute; envergadura tomaste relacionado a las decisiones tomadas?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      tanto tu vida ya has usado? Si designaste un intervalo de tiempo de tu vida,
+      &iquest;d&oacute;nde te encuentras ahora mismo?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Pon
+      tus experiencias y decisiones mayores en un intervalo de tiempo. &iquest;Hay
+      alg&uacute;n tipo de patr&oacute;n?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      es lo que m&aacute;s te averg&uuml;enza en tu vida?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Ves
+      alg&uacute;n patr&oacute;n en tu comportamiento adictivo? Si lo ves, explica
+      en detalle.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      has hecho para esconder o cubrir tu conductiva adictiva? &iquest;Qu&eacute;
+      otras enga&ntilde;os han resultado de esto?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      clase de personalidad&nbsp; exhibes en casa? &iquest;En la escuela? &iquest;En
+      el trabajo? &iquest;Cuando no hay nadie alrededor?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      es tan vergonzoso en tu vida que no se lo dir&iacute;as a nadie? &iquest;A quien
+      herir&iacute;as si dijeras esto?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Escribe
+      los puntos importantes de tu cuarto paso.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;C&oacute;mo
+      te gustar&iacute;a compartir tu resumen del cuarto paso? &iquest;Qu&eacute;
+      detalles te gustar&iacute;a hacer conocer? Escribes estos detalles en tu resumen
+      (sumario) y prepara el resumen (sumario) para presentaci&oacute;n en el quinto
+      paso.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      cualquier actividad de celebraci&oacute;n o homenaje que hayas hecho para honrara
+      la culminaci&oacute;n (completar) del cuarto (4to) paso.</em></p>\r\n"
+    - es
+    - '4'
+    - '2014-02-24 02:23:29.711125'
+    - '2014-02-24 02:23:29.711125'
+  - - '45'
+    - Paso 5
+    - "<p><em>Despu&eacute;s de trabajar el cuestionario del cuarto (4to) paso, &iquest;Qu&eacute;
+      ha realizado sobre sus limitaciones y capacidades?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describa
+      cualquier persona quien te ha ayudado a verte a ti mismo m&aacute;s claramente
+      y objetivamente en tu proceso de recobro y tu vida.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      cualidades desear&iacute;as en tu padrino (patrocinador)? &iquest;C&oacute;mo
+      las personas en la lista de posibles padrinos (patrocinadores) llenan estos
+      requisitos?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Escribe
+      los nombres de las personas m&aacute;s confiables que conoces. &iquest;Piensas
+      que estar&aacute;n dispuestas o interesadas en ser un padrino (patrocinador)
+      para ti?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      tus emociones y expectaciones sobre el compartir tu quinto paso con tu padrino
+      (patrocinador).&nbsp;</em></p>\r\n\r\n<p><em>Crea un listado de personas que
+      t&uacute; piensas que podr&iacute;as compartir tu historia.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table
+      cellpadding=\"0\" cellspacing=\"0\" class=\"t1\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>Persona</strong></p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p><strong>Seguro,
+      Riesgo o Opci&oacute;n equivoca</strong></p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td>\r\n\t\t\t<p>&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      a quien escogiste como padrino (patrocinador) y &iquest;como El reacciono cuando
+      te acercaste a preguntarle?&nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      como fue compartir el quinto (5to) paso. &iquest;Qu&eacute; emociones tuviste
+      antes, despu&eacute;s y cuando lo hiciste? &iquest;Est&aacute;s agradecido de
+      haber hecho esto?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      alguna celebraci&oacute;n o actividades que has hecho en honor de completar
+      el quinto (5to) paso.</em></p>\r\n"
+    - es
+    - '5'
+    - '2014-02-24 02:24:26.99221'
+    - '2014-02-24 02:24:26.99221'
+  - - '46'
+    - Paso 6
+    - "<p><em>&iquest;Tiene Usted alguna afinidad especial a una fabula o mito? &iquest;Por
+      qu&eacute;?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      situaciones y eventos donde has estado lleno de orgullo. &iquest;Qu&eacute;
+      te ha tra&iacute;do esto en tu vida que te guste o regocije? &iquest;Qu&eacute;
+      problemas te ha causado?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      la causa de actividades que realmente te regocija (divierta) (obviamente no
+      tu comportamiento {o actividad} adictivo).</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Cuales
+      son algunos h&aacute;bitos saludables de comer&nbsp; de ejercicios que podr&iacute;as
+      empezar?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Cuales
+      son algunos h&aacute;bitos insaludables de comer&nbsp; que podr&iacute;as abandonar?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      alguna BUENA acci&oacute;n secreta que has realizado o te gustar&iacute;a hacer.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      situaciones y eventos en los cuales has sido codicioso, excesivamente en necesidad
+      o materialista. &iquest;Qu&eacute; te ha tra&iacute;do esto en tu vida que te
+      gusta o regocija? &iquest;Qu&eacute; problemas te ha causado? &iquest;Est&aacute;s
+      listo para darle a Dios estas actitudes?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      situaciones y eventos donde te has dejado llevar por la lujuria (y placer) sin
+      importarte por otros o alguna moralidad. &iquest;Qu&eacute; te ha tra&iacute;do
+      esto en tu vida que te gusta o regocija? &iquest;Qu&eacute; problemas te ha
+      causado? &iquest;Est&aacute;s listo para darle estas sensaciones&nbsp; y emociones,
+      de lujuria y de placer al poder de Dios?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      situaciones y eventos donde has sido deshonesto. &iquest;Qu&eacute; te ha tra&iacute;do
+      esto en tu vida que te gusta o regocija? &iquest;Qu&eacute; problemas te ha
+      causado? &iquest;Est&aacute;s listo (preparado)&nbsp; a depender en Dios para
+      mantenerte alejado de la deshonestidad? &nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      situaciones y eventos donde t&uacute; has ca&iacute;do en comer excesivamente,
+      beber, comprar o codiciar. &iquest;Qu&eacute; te ha tra&iacute;do esto en tu
+      vida que te gusta o regocija? &iquest;Qu&eacute; problemas te ha causado? &iquest;Est&aacute;s
+      listo a darle a Dios control sobre estos comportamientos y actitudes?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      situaciones y eventos donde has estado envidioso o celoso de otros. &iquest;Qu&eacute;
+      te ha tra&iacute;do esto en tu vida que te gusta o regocija? &iquest;Qu&eacute;
+      problemas te ha causado? &iquest;Est&aacute;s listo para darle a Dios estas
+      situaciones?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      situaciones y eventos que has evadido responsabilidad por tus acciones o ausencia
+      de acciones. &iquest;Qu&eacute; te ha tra&iacute;do esto en tu vida que te gusta
+      o regocija? &iquest;Qu&eacute; problemas te ha causado? &iquest;Est&aacute;s
+      listo a dejar que Dios te ayude a tomar responsabilidad de tus acciones?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Escribe
+      una Lista de tus grandes defectos de car&aacute;cter.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      piensas hacer cuando estos defectos de car&aacute;cter empiecen a ser evidente?
+      Escribe una lista de cada defecto individual junto al propuesto comportamiento
+      preventivo y &iquest;c&oacute;mo vas a permitir que Dios te ayude en tu batalla
+      contra estos defectos?</em></p>\r\n"
+    - es
+    - '6'
+    - '2014-02-24 02:25:13.442026'
+    - '2014-02-24 02:25:13.442026'
+  - - '47'
+    - Paso 7
+    - "<p><em>&iquest;Qu&eacute; defectos son los mas dif&iacute;ciles de dejar? &iquest;En
+      qu&eacute; orden planeas dejarlos?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      clase de situaciones, tensiones, presiones causan que regreses a tus defectos
+      de car&aacute;cter? &iquest;C&oacute;mo puedes minimices la posibilidad&nbsp;
+      que estas presiones ocurran?</em></p>\r\n\r\n<p><em>&iquest;Donde sientes que
+      estas m&aacute;s apoyado y ayudado en tus envergaduras (luchas) de recobro?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      te hace perder la esperanza? &iquest;Puedes evitar esas situaciones? &iquest;Si
+      es as&iacute; (si puedes), Como?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      (persona, situaci&oacute;n, evento, pensamiento) restablece tu esperanza? &iquest;Hay
+      alguna manera de maximizar estas influencias? &iquest;Si es as&iacute;, entonces
+      como?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      te gustar&iacute;a recapturar en tu vida?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      en detalle &iquest;como t&uacute; piensas que ser&iacute;a tu vida si tus defectos
+      de car&aacute;cter fueran removidos de ti?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Por
+      cuales cosas est&aacute;s lleno de agradecimiento?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Cu&aacute;ndo
+      has pensado que la vida ha sido especialmente buena para ti? &iquest;Cu&aacute;ndo
+      tuviste la m&aacute;s grande alegr&iacute;a o gozo?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      las actividades de tu d&iacute;a t&iacute;pico en t&eacute;rminos de &iquest;cu&aacute;nto
+      tiempo le dedicas a cada actividad?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      las actividades de tu d&iacute;a t&iacute;pico si sabes que todo lo que te queda
+      es un a&ntilde;o de vida.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Has
+      tomado decisiones correctas en c&oacute;mo vas a dedicarle el tiempo a tus seres
+      queridos, en solitud y en tu tiempo discreto; si no &iquest;c&oacute;mo te gustar&iacute;a
+      cambiarlo?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      har&iacute;as si te concedieran tres (3) deseos?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      piensas que puedes hacer para dejar el mundo un mejor lugar y lograr tus misiones
+      en esta vida?</em></p>\r\n"
+    - es
+    - '7'
+    - '2014-02-24 02:25:47.936241'
+    - '2014-02-24 02:25:47.936241'
+  - - '48'
+    - Paso 8
+    - "<p><em>&iquest;C&oacute;mo te has herida a ti mismo al practicar tu adicci&oacute;n?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      relaciones importantes has destruido o da&ntilde;ado por tu comportamiento adictivo?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Cu&aacute;nto
+      tiempo&nbsp; y energ&iacute;a has perdido por tu comportamiento adictivo? &iquest;Qu&eacute;
+      piensas que te pudiste hacer o convertir si no hubiera sido por tu comportamiento
+      adictivo?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Has
+      una lista de todos aquellos que posiblemente fueron heridas por tu comportamiento
+      adictivo. Escribe una lista de los efectos en ellos como individuos y en tu
+      relaci&oacute;n con ellos.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Toma
+      la lista de las personas que heriste y has una lista de posibles enmiendas para
+      cada uno de ellos.&nbsp;</em></p>\r\n\r\n<p><em>De la lista de posibles enmiendas,
+      escoge las que parecen m&aacute;s apropiadas y m&aacute;rcalas en acorde a su
+      nivel de dificultad.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Que
+      consecuencias temes al hacer enmiendas? &iquest;Qu&eacute; es lo peor que pueda
+      pasar? &iquest;Qu&eacute; es lo mejor que pueda pasar? &iquest;Qu&eacute; es
+      lo m&aacute;s seguro que va a pasar?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Tienes
+      la emoci&oacute;n de enfado o resentimiento hacia alguna gente en tu lista de
+      enmiendas? Si es as&iacute;, escr&iacute;bale una carta de enojo, pero no se
+      la mandes. Describe aqu&iacute; cualquier otro camino (forma) que has usado
+      para desacert&eacute; del enojo y resentimiento hacia cualquiera en tu lista.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      cualquier sue&ntilde;o que se relacione con &uml;hacer enmiendas hacia otros&uml;.</em></p>\r\n"
+    - es
+    - '8'
+    - '2014-02-24 02:26:15.383936'
+    - '2014-02-24 02:26:15.383936'
+  - - '49'
+    - Paso 9
+    - "<p><em>&iquest;Qu&eacute; enmiendas piensas tu que ya has hecho? Estos pueden
+      incluir disculpas que ya has hecho, actividades que ayude a esos que has herido,
+      como cambios de actitudes y otros.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>De
+      su lista de enmiendas, si hay disculpas que necesitas hacer, escr&iacute;belos
+      aqu&iacute; primero.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Lee
+      tus disculpas a un amigo o padrino (patrocinador) y preg&uacute;ntales si suenan
+      sinceras o a la defensiva o un ataque hacia la otra persona. Has un registro
+      aqu&iacute; que respondieron sobre lo que dicen sobre las disculpas cedidas.&nbsp;</em></p>\r\n\r\n<p><em>Ensaya
+      con tu padrino (patrocinador) o amigo para cualquier cosa que vayas a decir
+      al hacer enmiendas. Has nota aqu&iacute; como te fue en estas sesiones de pr&aacute;ctica
+      y que aprendiste.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Despu&eacute;s
+      de haber tenido tu primer encuentro hacienda enmiendas toma nota de lo que paso;
+      &iquest;qu&eacute; emoci&oacute;n surgi&oacute; al hacerlo? &iquest;Como la
+      otra persona respondi&oacute;? &iquest;Qu&eacute; aprendiste de esto? &iquest;Que
+      har&iacute;as diferente la pr&oacute;xima ves?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Despu&eacute;s
+      de haber logrado los primeros (varios) encuentros tratando de hacer enmiendas
+      (ejemplo: despu&eacute;s de cinco (5) veces haciendo enmiendas). Has nota de
+      tu impresi&oacute;n general aqu&iacute;, &iquest;hay algo en com&uacute;n? &iquest;Te
+      ha sorprendido algo? &iquest;Ha habido algo que te ha decepcionado? &iquest;Qu&eacute;
+      emociones emergen sobre el proceso y como te ha afectado?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      enmiendas han sido dif&iacute;ciles de lograr? &iquest;Qu&eacute; necesitas
+      hacer para realizar estas enmiendas?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Como
+      las enmiendas afectan tus relaciones con otros?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Como
+      estas sobre llevando lo que te dicen otros despu&eacute;s de hacer enmiendas?
+      &iquest;Qu&eacute; emociones surgen? &iquest;C&oacute;mo manejas el deseo de
+      defenderte?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Escribe
+      cualquier otra enmienda que encuentres despu&eacute;s de haber empezado el proceso
+      de hacer enmiendas.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;C&oacute;mo
+      puedes celebrar u honrar la culminaci&oacute;n (completar) tus enmiendas (Paso
+      9)?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Has
+      tenido alg&uacute;n sue&ntilde;o de &uml;hacer enmiendas&uml;?, si lo has so&ntilde;ado,
+      descr&iacute;belo detalladamente.&nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Describe
+      cualquier celebraci&oacute;n o actividad que has realizado (hecho) para honrar
+      la culminaci&oacute;n (al completar) de hacer tus enmiendas.</em></p>\r\n"
+    - es
+    - '9'
+    - '2014-02-24 02:27:10.331246'
+    - '2014-02-24 02:27:10.331246'
+  - - '50'
+    - Paso 10
+    - "<p><em>&iquest;Cu&aacute;l es tu plan para permitir tener tiempo para reflexionar
+      cada d&iacute;a?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      nuevo comportamientos quisiera probar para que tu programa sea m&aacute;s efectivo?
+      &iquest;Qu&eacute; har&iacute;as para implementarlos?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      clase de comportamiento y actitudes necesitas vigilar para evitar caer en tu
+      comportamiento adictivo?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Cu&aacute;les
+      son tus disparadores de tu comportamiento adictivo? &iquest;C&oacute;mo puedes
+      protegerte contra ellos o prepararte para (contra) ellos?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Cuales
+      son algunas enmiendas o remedies que debieras hacer cuando te das de cuenta
+      que estas equivocado?</em></p>\r\n"
+    - es
+    - '10'
+    - '2014-02-24 02:27:44.509977'
+    - '2014-02-24 02:27:44.509977'
+  - - '51'
+    - Paso 11
+    - "<p><em>&iquest;Puedes recordarte de una ocasi&oacute;n cuando tu vida iba en
+      direcci&oacute;n equivocada? Si te acuerdas, &iquest;Qu&eacute; te trajo de
+      regreso? Describe esto en detalle.</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Como
+      describir&iacute;as tus creencias sobre Dios y un Poder Superior a un infante
+      (ni&ntilde;o o ni&ntilde;a)?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Cu&aacute;l
+      es tu recurso favorito de sabidur&iacute;a y conocimiento de valores saludables?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;As
+      le&iacute;do alguna vez algo que ter convenci&oacute; a cambiar algo en manera
+      fundamental y profunda?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Si
+      estabas (atascado o abandonado) en una isla desierta&nbsp; con solo un libro,
+      &iquest;cual libro llevar&iacute;as? &iquest;Por qu&eacute;?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Si
+      solo te quedara una semana de vida y recursos ilimitados, &iquest;con qui&eacute;n
+      te rodear&iacute;as y como pasar&iacute;as el tiempo?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Escribe
+      en forma completa lo que te gustar&iacute;a que tu obituario (necrolog&iacute;a)
+      dir&iacute;a.</em></p>\r\n"
+    - es
+    - '11'
+    - '2014-02-24 02:28:07.060757'
+    - '2014-02-24 02:28:07.060757'
+  - - '52'
+    - Paso 12
+    - "<p><em>&iquest;Has podido estrechar tu ayuda a otro adicto en recuperaci&oacute;n?
+      Si lo has hecho, describe la situaci&oacute;n y &iquest;en qu&eacute; forma
+      te emocionaste?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      forma de ataque (acercamiento) hubieras querido tener cuando primeramente empezaste
+      el programa? &iquest;C&oacute;mo puedes implementar esta forma de ataque (acercamiento)
+      en tu vida hacia otros?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Que
+      dir&iacute;as si alguien te preguntara como el programa de los doce (12) pasos
+      ha trabajado para ti?&nbsp;</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>Usualmente,
+      &iquest;c&oacute;mo manejas (sobrellevas) un conflicto? &iquest;Sabes alguna
+      manera efectiva de lograr la resoluci&oacute;n de conflictos? Si la sabes, &iquest;c&oacute;mo
+      ser&iacute;a usted m&aacute;s efectivo? &iquest;Cu&aacute;l serian los pasos?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Cuanto
+      tiempo desear&iacute;as y puedes permitir para trabajar con otros en su programa?
+      &iquest;Como lograr&iacute;as establecer este tiempo aparte?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;Qu&eacute;
+      recursos externos puede&nbsp; utilizar cuando necesitas ayuda cuando eres padrino
+      (patrocinador)?</em></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><em>&iquest;C&oacute;mo
+      sabe usted si est&aacute; apto para ayudar a otra persona trabajar el programa
+      de los doce (12) Pasos?</em></p>\r\n"
+    - es
+    - '12'
+    - '2014-02-24 02:28:38.212934'
+    - '2014-02-24 02:28:38.212934'
