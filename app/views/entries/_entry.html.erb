@@ -1,24 +1,26 @@
-<div class="row" id="entry-index-item-row">
+<% cache entry do %>
+  <div class="row" id="entry-index-item-row">
 
-  <div class="col-lg-3 col-md-3">
+    <div class="col-lg-3 col-md-3">
 
-    <h4 class="entry-item-title"><%= link_to "#{entry.title}", edit_entry_path(entry.id) %></h4>
-    <p class="entry-date"><%= entry.created_at.strftime("%m/%d/%Y") %></p>
-    <% if entry.step %>
-      <p class="entry-step"><%= t("entries.step") %>: <%= entry.step %></p>
-    <% end %>
+      <h4 class="entry-item-title"><%= link_to "#{entry.title}", edit_entry_path(entry.id) %></h4>
+      <p class="entry-date"><%= entry.created_at.strftime("%m/%d/%Y") %></p>
+      <% if entry.step %>
+        <p class="entry-step"><%= t("entries.step") %>: <%= entry.step %></p>
+      <% end %>
+    </div>
+
+    <div class="col-lg-7 col-md-7" id="entry-index-item-body">
+      <%= entry.body.html_safe %>
+    </div>
+
+    <div class="col-lg-2 col-md-2">
+      <ul id="entry-item-actions">
+        <li><%= link_to t('entries.edit'), edit_entry_path(entry.id) %></li>
+        <li><%= link_to t('entries.delete'), entry_path(entry.id), method: :delete %></li>
+        <li><%= link_to t('entries.share'), "#" %></li>
+      </ul>
+    </div>
+
   </div>
-
-  <div class="col-lg-7 col-md-7" id="entry-index-item-body">
-    <%= entry.body.html_safe %>
-  </div>
-
-  <div class="col-lg-2 col-md-2">
-    <ul id="entry-item-actions">
-      <li><%= link_to t('entries.edit'), edit_entry_path(entry.id) %></li>
-      <li><%= link_to t('entries.delete'), entry_path(entry.id), method: :delete %></li>
-      <li><%= link_to t('entries.share'), "#" %></li>
-    </ul>
-  </div>
-
-</div>
+<% end %>

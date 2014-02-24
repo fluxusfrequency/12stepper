@@ -17,6 +17,7 @@ gem 'kaminari'
 gem 'meeting_finder', '0.1.2'
 gem 'puma'
 gem 'rails-i18n', '~> 4.0.0'
+gem 'dalli'
 
 group :development, :test do
   gem 'newrelic_rpm'
