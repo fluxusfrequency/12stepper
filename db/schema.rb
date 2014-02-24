@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140221013237) do
+ActiveRecord::Schema.define(version: 20140224043135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,18 @@ ActiveRecord::Schema.define(version: 20140221013237) do
     t.datetime "updated_at"
     t.datetime "last_drink"
   end
+
+  create_table "worksheet_translations", force: true do |t|
+    t.integer  "worksheet_id", null: false
+    t.string   "locale",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.text     "body"
+  end
+
+  add_index "worksheet_translations", ["locale"], name: "index_worksheet_translations_on_locale", using: :btree
+  add_index "worksheet_translations", ["worksheet_id"], name: "index_worksheet_translations_on_worksheet_id", using: :btree
 
   create_table "worksheets", force: true do |t|
     t.string   "title"

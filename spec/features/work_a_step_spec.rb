@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Work a Step" do
 
-  it "pulls up the correct worksheet" do
+  xit "pulls up the correct worksheet" do
     worksheet = FactoryGirl.create(:worksheet)
     login
     select("1",:from=> "work-a-step")

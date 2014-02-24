@@ -2,15 +2,11 @@
     <div class="col-lg-3 col-md-3">
       <h1 id="my-journal"><%= t('entries.my_journal') %></h1>
     </div>
-    <div class="col-lg-5 col-md-5" id="entry-index-actions">
-      <%= form_tag new_worksheet_entry_path, method: 'get' do %>
-        <%= select_tag :step, "<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>".html_safe, id:'work-a-step' %>
-        <%= submit_tag t("entries.work_step"), id:'worksheet-entry-submit' %> - 
-      <% end %>
-      <%= link_to t("entries.worksheet"), new_entry_path %> - 
+    <div class="col-lg-4 col-md-4">
       <%= search_field 'entries_search', :meetings_search,  placeholder: t('meetings.search'), id:'entries-search' %>
     </div>
     <div class="col-lg-3 col-md-3 col-lg-offset-2 col-md-offset-2" id="entry-index-actions">
+      <%= link_to t("entries.work_step"), new_entry_path, id: "work-a-step" %> 
       <%= link_to t("entries.write"), new_entry_path %>
     </div>
 </div>
