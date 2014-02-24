@@ -28,7 +28,7 @@
           $('#chapter-view-panel').html("<p>" + chapter + 
             response.chapter_number.toString() + "<br /><br />" + response.title + 
             "<br /><br />" + response.body.replace(/\n/g, "<br /><br />" + "</p>"));
-          searchAndHighlight(searchTerm);
+          bigbookSearchAndHighlight(searchTerm);
 
           $.scrollTo(".highlighted", 1000, {offset: {top: -200, left: 0}});
         },

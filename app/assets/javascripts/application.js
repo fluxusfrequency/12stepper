@@ -25,7 +25,18 @@ $.expr[":"].Contains = $.expr.createPseudo(function(arg) {
   };
 });
 
-var searchAndHighlight = function(searchTerm) {
+var entrySearchAndHighlight = function(searchTerm) {
+  if (searchTerm === " ") { return ; }
+  $('.highlighted').removeClass('highlighted');
+  $("#entry-list-container #entry-index-item-body:contains('"+searchTerm+"')").html($('#entry-list-container #entry-index-item-body').html().replace(searchTerm,"<span class='highlighted'>"+searchTerm+"</span>"));
+  $("#entry-list-container .entry-item-title a:contains('"+searchTerm+"')").html($('#entry-list-container .entry-item-title a').html().replace(searchTerm,"<span class='highlighted'>"+searchTerm+"</span>"));
+
+  if($('.highlighted:first').length) {
+    $('html').scrollTop($('.highlighted:first').offset().top);
+  }
+};
+
+var bigbookSearchAndHighlight = function(searchTerm) {
   $('.highlighted').removeClass('highlighted');
   $("#chapter-view-panel:contains('"+searchTerm+"')").html($('#chapter-view-panel').html().replace(searchTerm,"<span class='highlighted'>"+searchTerm+"</span>"));
   
