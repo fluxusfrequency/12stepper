@@ -12,12 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ckeditor-jquery
 //= require ckeditor/override
 //= require ckeditor/init
 //= require bootstrap.min
 //= require jquery-ui
 //= require scrollTo
 //= require_tree .
+
+$('.ckeditor').ckeditor({
+});
 
 $.expr[":"].Contains = $.expr.createPseudo(function(arg) {
   return function( elem ) {
