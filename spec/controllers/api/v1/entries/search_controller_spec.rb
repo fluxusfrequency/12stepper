@@ -6,9 +6,9 @@ describe Api::V1::Entries::SearchController do
     user = FactoryGirl.create(:user)
     controller.stub(:current_user).and_return(user)
 
-    FactoryGirl.create(:entry, user_id: user.id, title: "Tough one", 
+    one = FactoryGirl.create(:entry, user_id: user.id, title: "Tough one", 
       body: "Some days it's hard to stick with it.", step: 4)
-    FactoryGirl.create(:entry, user_id: user.id, title: "Good one", 
+    two = FactoryGirl.create(:entry, user_id: user.id, title: "Good one", 
       body: "It's hard sometimes, but today it was easy.")
   end
 
@@ -33,9 +33,11 @@ describe Api::V1::Entries::SearchController do
       expect(JSON.parse(response.body).length).to be(2)
       expect(response.body).to have_json_path('0/title')
       expect(response.body).to have_json_path('1/title')
-      expect(response.body).to be_json_eql(%|"Tough one"|).at_path('0/title')
-      expect(response.body).to be_json_eql(%|"Some days it's hard to stick with it."|).at_path('0/body')
-      expect(response.body).to be_json_eql(%|4|).at_path('0/step')
+      expect(response.body).to include("Tough one")
+      expect(response.body).to include("Good one")
+      expect(response.body).to include("Some days it's hard to stick with it.")
+      expect(response.body).to include("It's hard sometimes, but today it was easy.")
+      expect(response.body).to include("4")
     end
   end
 
