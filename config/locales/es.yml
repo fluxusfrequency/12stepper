@@ -42,7 +42,8 @@ es:
                       30 días - Orange 
                       90 días - Red 
                       1 año - Luz Verde 
-    sober: días sobrio 
+    days: días                      
+    sober: sobrio 
     profile: Perfil
   bigbook:
     toc: Tabla de Contenidos

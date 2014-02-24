@@ -42,7 +42,8 @@ fr:
                       30 jours - Orange 
                       90 jours - Rouge 
                       1 an - Green Light
-    sober: journées sobre
+    days: journées
+    sober: sobre
     profile: Profil
   bigbook:
     toc: Table des Matières
