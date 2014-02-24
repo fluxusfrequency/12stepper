@@ -1,5 +1,4 @@
-<div id=<%= "pending-#{inverse_friendship.user.username}"%>>
+<div id=<%= "friend-#{inverse_friendship.user.username}"%>>
   <%= inverse_friendship.user.username %>
-  <%= button_to "Accept", accept_friendship_path(inverse_friendship.id), class: 'btn-link' %>
-  <%= button_to "Reject", reject_friendship_path(inverse_friendship.id), method: :delete, class: 'btn-link' %>
+  <%= button_to "Remove", remove_friendship_path(inverse_friendship.id), method: :delete, aclass: 'btn-link' %>
 </div>

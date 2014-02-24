@@ -24,6 +24,7 @@ TwelveStepper::Application.routes.draw do
     resources :friendships, only: [:index, :create]
     post '/friendships/accept/:id', to: 'friendships#update', as: :accept_friendship
     delete '/friendships/reject/:id', to: 'friendships#destroy', as: :reject_friendship
+    delete '/friendships/remove/:id', to: 'friendships#destroy', as: :remove_friendship
 
     namespace :friends do
       resources :search, only: [:new, :create, :index]

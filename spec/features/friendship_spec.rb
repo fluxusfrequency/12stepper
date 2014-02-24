@@ -42,6 +42,19 @@ describe "User Friendships" do
     end
   end
 
+  context "user removes a friend" do
+    it "can remove a friend listed in the index page", js: true do
+      friendship_login
+
+      click_on "Welcome back, SecretSanta!"
+      click_on "View My Friends"
+      within "#friend-billy" do
+        click_on "Remove"
+      end
+      expect(page).to have_content("REJECTED!")
+    end
+  end
+
   context "user accepts a friend request" do
     it "can see pending friend requests", js: true do
       friendship_login

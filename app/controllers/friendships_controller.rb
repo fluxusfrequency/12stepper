@@ -3,6 +3,7 @@ class FriendshipsController < ApplicationController
     @friendships = current_user.friendships.approved 
     @inverse_friendships = current_user.inverse_friendships.approved
     @pending = current_user.inverse_friendships.pending
+    # fail
   end
 
   def create
@@ -24,10 +25,19 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @friendship = current_user.inverse_friendships.find(params[:id])
+    # fail
+    begin
+      @friendship = current_user.inverse_friendships.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      @friendship = current_user.friendships.find(params[:id])
+    end
     @friendship.destroy
     flash[:notice] = t("flash.friendship_rejected")
     redirect_to :back
+  end
+
+  def remove
+
   end
 
 end

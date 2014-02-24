@@ -1,8 +1,8 @@
 <h3>My Friends</h3>
-<%= render @friendships %>
-<%= render @inverse_friendships %>
+<%= render partial: 'friendship', collection: @friendships %>
+<%= render partial: 'inverse_friendship', collection: @inverse_friendships %>
 
 <div id="pending-friendships">
   <h3>Friend Requests</h3>
-  <%= render partial: 'inverse_friendship', collection: @pending, as: :inverse_friendship %>
+  <%= render partial: 'pending_inverse_friendship', collection: @pending, as: :inverse_friendship %>
 </div>

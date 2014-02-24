@@ -1,1 +1,4 @@
-<%= friendship.friend.username %>
+<div id=<%= "friend-#{friendship.friend.username}"%>>
+  <%= friendship.friend.username %>
+  <%= button_to "Remove", remove_friendship_path(friendship.id), method: :delete, aclass: 'btn-link' %>
+</div>
