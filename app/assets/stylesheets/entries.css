@@ -79,7 +79,7 @@
 .entry-date,
 .entry-step {
   margin-top: 5px;
-  margin-left: 5px;
+  margin-left: 0px;
 }
 
 #work-a-step {
@@ -90,3 +90,4 @@
   margin-top: 24px;
   margin-left: -13px;
 }
+
