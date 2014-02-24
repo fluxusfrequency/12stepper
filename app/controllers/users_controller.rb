@@ -37,11 +37,11 @@ class UsersController < ApplicationController
     else
       flash[:notice] = t("flash.account_update_failure")
     end
-    redirect_to edit_user_path(current_user)
+    redirect_to edit_user_path
   end
 
   def edit
-
+    @user = current_user
   end
 
   private

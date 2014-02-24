@@ -28,4 +28,31 @@ describe "User Account Creation" do
     end
   end
 
+  context "viewing profile" do
+    it "can view its own profile", js: true do
+      login
+      click_on "Welcome back, SecretSanta!"
+      click_on "My Profile"
+      within "#user-details" do
+        expect(page).to have_content("SecretSanta")
+        expect(page).to have_content("1 day sober!")
+      end
+    end
+
+    it "can edit its details", js: true do
+      login
+      click_on "Welcome back, SecretSanta!"
+      click_on "My Profile"
+      click_on "Edit My Profile"
+      expect(page).to have_content("Edit Your Account Details")
+      fill_in "user[username]", with: "sinterklaasje"
+      fill_in "user[email]", with: "santa2@northpole.org"
+      fill_in "user[password]", with: "password"
+      fill_in "user[password_confirmation]", with: "password"
+      fill_in "user[last_drink]", with: "01/01/2010"
+      click_on "Update Profile"
+      expect(page).to have_content("Your account details were updated!")
+    end
+  end
+
 end
