@@ -19,7 +19,14 @@ FactoryGirl.define do
   factory :entry do
     title "I love being sober"
     body "It is the best feeling ever"
-    user_id 1 
+    user_id 1
     step 3
+  end
+
+  factory :worksheet do
+    title "Section 1"
+    body "Section questions"
+    step 1
+    locale "en"
   end
 end

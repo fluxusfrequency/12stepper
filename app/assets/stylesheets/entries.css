@@ -34,6 +34,10 @@
   margin-top: 20px;
 }
 
+#cke_14, #cke_21, #cke_34, #cke_29 {
+  display: none;
+}
+
 .entry-edit-container {
   margin-top: 40px;
 }

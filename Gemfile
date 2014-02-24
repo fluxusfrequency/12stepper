@@ -13,11 +13,13 @@ gem 'paperclip'
 gem 'bcrypt-ruby'
 gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1e5253d7e92ba'
 gem 'globalize'
+gem 'kaminari'
 gem 'meeting_finder', '0.1.2'
 gem 'puma'
 gem 'rails-i18n', '~> 4.0.0'
 
 group :development, :test do
+  gem 'newrelic_rpm'
   gem 'quiet_assets'
   gem 'guard'
   gem 'guard-rspec'

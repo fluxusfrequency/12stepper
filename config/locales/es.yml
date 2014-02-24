@@ -54,7 +54,7 @@ es:
     time: Tiempo
     fellowship: Compañerismo
   entries:
-    step: Trabajar en un paso
+    work_step: Trabajar en un paso
     worksheet: Buscar una hoja de cálculo
     write: Sólo escribir
     title: Título

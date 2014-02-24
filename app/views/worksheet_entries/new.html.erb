@@ -1,0 +1,23 @@
+<div id='worksheet-entry-text'>
+  <%= form_for @entry do |f| %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.hidden_field :step %>
+
+    <%= f.cktext_area :body, {:class => 'ckeditor', :id => 'worksheet-step'} %>
+
+    <%= f.submit t('entries.create') %>
+    
+  <% end %>
+</div>
+
+<h2>Worksheet for Step <%= @entry.step %></h2>
+<div class='worksheet'>
+  <% @worksheets.each do |worksheet| %>
+    <%= worksheet.title %>
+    <%= worksheet.body.html_safe %>
+  <% end %>
+  <%= paginate @worksheets %>
+
+</div>

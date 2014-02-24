@@ -8,7 +8,9 @@ TwelveStepper::Application.routes.draw do
 
     resources :entries
 
+    resources :worksheet_entries
     get '/login' => "sessions#new", as: "login"
+
     delete '/sessions', to: 'sessions#destroy'
     resources :sessions, only: [:new, :create, :destroy]
 
@@ -23,7 +25,7 @@ TwelveStepper::Application.routes.draw do
     namespace :api do
       namespace :v1 do
 
-        namespace :entries do 
+        namespace :entries do
           get '/search/:query', to: 'search#show'
         end
 
