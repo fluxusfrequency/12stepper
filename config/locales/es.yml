@@ -19,6 +19,10 @@ es:
     signin: Registrado!
     signout: Exitosamente cerrado la sesión.
     milestone: Felicitaciones por
+    friend_request_sent: Su amigo petición ha sido enviada.
+    friend_request_failed: Hubo un problema al enviar su solicitud de amigo.
+    friendship_approved: Usted ahora es amigo de
+    friendship_rejected: RECHAZADO!
   navbar:
     logout: Desloguear
     login: Conexión
@@ -42,9 +46,11 @@ es:
                       30 días - Orange 
                       90 días - Red 
                       1 año - Luz Verde 
-    days: días                      
+    day: día
     sober: sobrio 
-    profile: Perfil
+    profile: Mi Perfil
+    view_friends: Ver a Mis Amigos
+    find_friends: Buscar Amigos
   bigbook:
     toc: Tabla de Contenidos
     chapter: Capítulo
@@ -88,3 +94,8 @@ es:
     welcome_back: Bienvenida de Nuevo
     get_started: Empezar
     language: Su Idioma
+  friendships:
+    remove: Eliminar
+    accept: Aceptar
+    reject: Rechazar
+    view_profile: Ver Perfil

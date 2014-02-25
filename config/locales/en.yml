@@ -11,7 +11,7 @@ en:
     account_update_success: Your account details were updated!
     account_update_failure: There was a problem updating your details.
     account_create_success: Your account has been created.
-    unauthorized: You aren't authorized to do that.
+    unauthorized: You aren't authorized to do that!
     sign_in_first: Please sign in first.
     error: error
     prohibited_save: prohibited this page from being saved
@@ -19,6 +19,10 @@ en:
     signin: Signed in!
     signout: Successfully signed out.
     milestone: Congratulations on 
+    friend_request_sent: Your friend request was sent.
+    friend_request_failed: There was a problem submitting your friend request.
+    friendship_approved: You are now friends with
+    friendship_rejected: REJECTED!
   navbar:
     logout: Logout
     login: Login
@@ -42,9 +46,11 @@ en:
                       30 days - Orange
                       90 days - Red
                       1 year - Light Green
-    days: days
+    day: day
     sober: sober
-    profile: Profile
+    profile: My Profile
+    view_friends: View My Friends
+    find_friends: Find Friends
   bigbook:
     toc: Table of Contents
     chapter: Chapter
@@ -89,3 +95,8 @@ en:
     welcome_back: Welcome Back
     get_started: Get Started
     language: Your Language
+  friendships:
+    remove: Remove
+    accept: Accept
+    reject: Reject
+    view_profile: View Profile

@@ -3,8 +3,9 @@ TwelveStepper::Application.routes.draw do
 
   scope "(:locale)", locale: /en|es|fr/ do
 
+    get '/profile/edit', to: 'users#edit', as: "edit_profile"
+    get '/profile/:username', to: 'users#show', as: :user_show
     resources :users, only: [:index, :new, :create, :update]
-    get '/:id/profile', to: 'users#edit', as: "edit_user"
 
     resources :entries
 
@@ -21,6 +22,14 @@ TwelveStepper::Application.routes.draw do
       get '/', to: 'chapters#index'
     end
 
+    resources :friendships, only: [:index, :create]
+    post '/friendships/accept/:id', to: 'friendships#update', as: :accept_friendship
+    delete '/friendships/reject/:id', to: 'friendships#destroy', as: :reject_friendship
+    delete '/friendships/remove/:id', to: 'friendships#destroy', as: :remove_friendship
+
+    namespace :friends do
+      resources :search, only: [:new, :create, :index]
+    end
 
     namespace :api do
       namespace :v1 do

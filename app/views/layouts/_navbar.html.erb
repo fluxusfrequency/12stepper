@@ -47,9 +47,8 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to t('navbar.congrats') +
-            " #{pluralize(days_ago(current_user.last_drink), t('navbar.days'))} " + 
-            t('navbar.sober') + "!", "#", id:"congrats-link", :title => I18n.t('navbar.congrats_tooltip') %>
+          <li><%= link_to t('navbar.congrats') + " " + print_days_sober(current_user), 
+            "#", id:"congrats-link", :title => I18n.t('navbar.congrats_tooltip') %>
             <%= image_tag("#{current_token}", class: "navbar-token") %>
           </li>
           <li class="dropdown">
@@ -59,7 +58,13 @@
 
             <ul class="dropdown-menu account-dropdown">
               <li>
-                <%= link_to t("navbar.profile"), edit_user_path(current_user) %>
+                <%= link_to t("navbar.profile"), user_show_path(current_user.username) %>
+              </li>
+              <li>
+                <%= link_to t("navbar.view_friends"), friendships_path %>
+              </li>
+              <li>
+                <%= link_to t("navbar.find_friends"), new_friends_search_path %>
               </li>
               <li>
                 <%= link_to t("navbar.logout"), sessions_path, method: :delete %>

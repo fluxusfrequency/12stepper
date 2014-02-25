@@ -16,7 +16,6 @@
 //= require ckeditor/override
 //= require ckeditor/init
 //= require bootstrap.min
-//= require jquery-ui
 //= require scrollTo
 //= require_tree .
 

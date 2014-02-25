@@ -1,0 +1,5 @@
+<div id=<%= "friend-#{inverse_friendship.user.username}"%>>
+  <%= inverse_friendship.user.username %>
+  <%= link_to I18n.t("friendships.view_profile"), user_show_path(inverse_friendship.user.username) %>
+  <%= button_to I18n.t("friendships.remove"), remove_friendship_path(inverse_friendship.id), method: :delete, aclass: 'btn-link' %>
+</div>
