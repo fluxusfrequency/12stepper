@@ -25,6 +25,7 @@ en:
     friendship_rejected: REJECTED!
     status_save_success: Your status was posted
     status_save_failure: There was a problem saving your status
+    status_update_success: Your status was updated
   navbar:
     logout: Logout
     login: Login
@@ -106,3 +107,4 @@ en:
   statuses:
     post: Post
     whats_up: What's up?
+    update: Update

@@ -25,6 +25,7 @@ fr:
     friendship_rejected: REJETÉ!
     status_save_success: Votre statut a été publié
     status_save_failure: Il y avait un problème sauver votre statut
+    status_update_success: Votre statut a été mis à jour
   navbar:
     logout: Déconnexion
     login: Connexion
@@ -105,3 +106,4 @@ fr:
   statuses:
     post: Diffusez
     whats_up: Quoi de neuf?
+    update: Mettre à jour

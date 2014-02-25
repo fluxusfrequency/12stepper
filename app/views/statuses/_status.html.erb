@@ -2,6 +2,6 @@
   <%= link_to status.user.username, user_show_path(status.user.username) %>
   <p><%= status.content %></p>
   <% if current_user == status.user %>
-    <%= link_to I18n.t("entries.edit"), "#", class: "edit-status-link" %>
+    <%= link_to I18n.t("entries.edit"), edit_status_path(status), class: "edit-status-link" %>
   <% end %>
 </div>

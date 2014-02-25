@@ -4,8 +4,13 @@ describe "feed" do
   context "index" do
     before do
       @user = FactoryGirl.create(:user)
+      @user2 = FactoryGirl.create(:user, username: "bennybeans", email: "ben@example.com")
+      @user3 = FactoryGirl.create(:user, username: "billybeans", email: "billy@example.com")
       @status1 = FactoryGirl.create(:status, :user_id => @user.id)
       @status2 = FactoryGirl.create(:status, :content => "My second status update", :user_id => @user.id)
+      @status3 = FactoryGirl.create(:status, :content => "Benny's status update", :user_id => @user2.id)
+      @status4 = FactoryGirl.create(:status, :content => "Billy's status update", :user_id => @user3.id)
+      FactoryGirl.create(:friendship, user_id: @user.id, friend_id: @user2.id, status: "approved")
     end
 
     it "should see all of its own statuses in the feed", js: true do
@@ -16,7 +21,14 @@ describe "feed" do
       end
     end
 
-    xit "should see its friends statuses in the feed", js: true do
+    it "should see only its friends statuses in the feed", js: true do
+      feed_login
+      within "#feed-activity" do
+        expect(page).to have_content("My first status update")
+        expect(page).to have_content("My second status update")
+        expect(page).to have_content("Benny's status update")
+        expect(page).to_not have_content("Billy's status update")
+      end
     end
 
   end
@@ -48,15 +60,17 @@ describe "feed" do
       @status = FactoryGirl.create(:status, user_id: @user.id)
     end
 
-    xit "can edit a status it posted", js: true do
+    it "can edit a status it posted", js: true do
       feed_login
       within "#status-#{@status.id}" do
         click_on "Edit"
-        fill_in "status[content]", with: "This is my updated status."
-        click_on "Save"
-        expect(page).to_not have_content("This is my first status.")
-        expect(page).to have_content("This is my updated status.")
       end
+      within "#edit-status" do
+        fill_in "status[content]", with: "This is my updated status."
+        find("#update-submit").trigger('click')
+      end
+      expect(page).to_not have_content("This is my first status.")
+      expect(page).to have_content("This is my updated status.")
     end
   end
 

@@ -25,6 +25,7 @@ es:
     friendship_rejected: RECHAZADO!
     status_save_success: Su estado fue publicada
     status_save_failure: Había un problema al guardar tu estado
+    status_update_success: Su estado se actualiza
   navbar:
     logout: Desloguear
     login: Conexión
@@ -105,3 +106,4 @@ es:
   statuses:
     post: Publique
     whats_up: ¿Qué tal?
+    update: Actualizar

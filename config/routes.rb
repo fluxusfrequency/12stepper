@@ -9,7 +9,7 @@ TwelveStepper::Application.routes.draw do
 
     resources :entries
     get '/feed' => 'statuses#index', as: 'feed'
-    resources :statuses, only: [:new, :create]
+    resources :statuses, only: [:new, :create, :edit, :update]
 
     resources :worksheet_entries
     get '/login' => "sessions#new", as: "login"
