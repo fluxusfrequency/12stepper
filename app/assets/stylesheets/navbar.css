@@ -46,11 +46,19 @@
   min-height: 55px;
 }
 
-#congrats-link {
+#congrats-link-container {
   border-left: 1px solid #CCC3C7;
-  display: inline-block;
+  display: inline;
   cursor: default;
   min-height: 55px;
+  min-width: 100px;
+}
+
+#congrats-link {
+  display: block;
+  margin: 5px;
+  padding: 0;
+  line-height: 1em;
 }
 
 #account-link {
@@ -61,9 +69,8 @@
 }
 
 .navbar-token {
-  display: inline-block;
-  padding-right: 15px;
-  padding-bottom: 7px;
+  padding: 0 10px 0 5px;
+  margin-top: 15px;
 }
 
 #logo-link img {

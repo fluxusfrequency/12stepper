@@ -34,9 +34,9 @@ en:
     serenityprayer: The Serenity Prayer
     bigbook: The Big Book
     welcome: Welcome back
-    meetings: Find Meetings
+    meetings: Meetings
     meetings_tooltip: Search for meetings in your area and see them on a map
-    congrats: Congratulations!
+    congrats: Congratulations
     congrats_tooltip: |
                       This is calculated based on the date of your last drink.
                       You can change the date in your profile.

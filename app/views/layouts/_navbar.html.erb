@@ -47,10 +47,13 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to t('navbar.congrats') + " " + print_days_sober(current_user), 
+          <li id="congrats-link-container">
+            <%= link_to t('navbar.congrats') + ", ",
             "#", id:"congrats-link", :title => I18n.t('navbar.congrats_tooltip') %>
-            <%= image_tag("#{current_token}", class: "navbar-token") %>
+            <%= link_to print_days_sober(current_user), 
+            "#", id:"congrats-link", :title => I18n.t('navbar.congrats_tooltip') %>
           </li>
+          <li><%= image_tag("#{current_token}_token.png", class: "navbar-token") %></li>
           <li class="dropdown">
             <%= link_to t('navbar.welcome') + ", " + 
             current_user.username + "!", "#", {:id => "account-link", 
