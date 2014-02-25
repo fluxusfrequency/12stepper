@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
       if result
         session[:user_id] = result.id
         flash[:notice] = t("flash.signin")
-        flash[:success] = @user.display_milestone_congrats
+        flash[:success] = @user.display_milestone_congrats if @user.display_milestone_congrats
         redirect_to root_path
       else
         display_error_message

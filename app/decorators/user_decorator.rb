@@ -18,19 +18,43 @@ class UserDecorator < Draper::Decorator
   end
 
   def display_milestone_congrats
-    if Date.today - 1.year == object.last_drink.to_date
-      return t("flash.anniversary") + " " + t("flash.milestone") + " " + 
-        pluralize(1, t("navbar.year")) + " " + t("navbar.sober") + "!"
+    year_milestones.each do |n|
+      return years_anniversary_message(n) if year_milestone?(n)
     end
 
-    [9, 6, 3, 2, 1].each do |i|
-      if Date.today - i.months == object.last_drink.to_date
-        return t("flash.anniversary") + " " + t("flash.milestone") + " " + 
-          pluralize(i, t("navbar.month")) + " " + t("navbar.sober") + "!"
-      end
+    month_milestones.each do |n|
+      return months_anniversary_message(n) if month_milestone?(n)
     end
-    return 
+
+    return false
   end
 
+  private
+
+  def year_milestones
+    (20..1).to_a
+  end
+
+  def month_milestones
+    [9, 6, 3, 2, 1]
+  end
+
+  def year_milestone?(n)
+    Date.today - n.years == object.last_drink.to_date
+  end
+
+  def month_milestone?(n)
+    Date.today - n.months == object.last_drink.to_date
+  end
+
+  def years_anniversary_message(n)
+    t("flash.anniversary") + " " + t("flash.milestone") + " " + 
+      pluralize(n, t("navbar.year")) + " " + t("navbar.sober") + "!"
+  end
+
+  def months_anniversary_message(n)
+    t("flash.anniversary") + " " + t("flash.milestone") + " " + 
+      pluralize(n, t("navbar.month")) + " " + t("navbar.sober") + "!"
+  end
 
 end
