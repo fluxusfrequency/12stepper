@@ -3,8 +3,9 @@ TwelveStepper::Application.routes.draw do
 
   scope "(:locale)", locale: /en|es|fr/ do
 
-    resources :users, only: [:index, :new, :create, :show, :update]
-    get '/profile/edit', to: 'users#edit', as: "edit_user"
+    get '/profile/edit', to: 'users#edit', as: "edit_profile"
+    get '/profile/:username', to: 'users#show', as: :user_show
+    resources :users, only: [:index, :new, :create, :update]
 
     resources :entries
 

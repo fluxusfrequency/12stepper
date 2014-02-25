@@ -30,5 +30,5 @@ TwelveStepper::Application.configure do
   config.i18n.available_locales = [:en, :es, :fr]
 
   config.assets.debug = true
-  config.middleware.use Rack::LiveReload
+  # config.middleware.use Rack::LiveReload
 end

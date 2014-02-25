@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by(username: params[:username])
     unless can_view?(@user)
       flash.notice = t("flash.unauthorized")
       redirect_to root_path
@@ -37,7 +37,7 @@ class UsersController < ApplicationController
     else
       flash[:notice] = t("flash.account_update_failure")
     end
-    redirect_to edit_user_path
+    redirect_to edit_profile_path
   end
 
   def edit

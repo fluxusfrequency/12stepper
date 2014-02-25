@@ -51,6 +51,7 @@ describe "User Friendships" do
       within "#friend-billy" do
         click_on "View Profile"
       end
+      
       expect(page).to have_content("#{@user2.username}")
       expect(page).to have_content("#{@user2.days_sober.to_s} day sober!")
     end
