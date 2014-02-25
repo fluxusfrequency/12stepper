@@ -6,18 +6,18 @@
   </div>
   <div class="col-lg-3 col-md-2">
     <div class="actions" id="welcome">
-      <strong><%= I18n.t("profile.welcome_back") %></strong>
+      <strong><%= t("profile.welcome_back") %></strong>
     </div>
     <%= form_tag sessions_path, id:"login-form" do %>
       <div class="field">
-        <%= text_field_tag :email, params[:email], {:placeholder => I18n.t("profile.email")} %>
+        <%= text_field_tag :email, params[:email], {:placeholder => t("profile.email")} %>
       </div>
       <div class="field">
-        <%= text_field_tag :fake_password, params[:fake_password], {:placeholder => I18n.t("profile.password")} %>
+        <%= text_field_tag :fake_password, params[:fake_password], {:placeholder => t("profile.password")} %>
         <%= password_field_tag :password, params[:password] %>
       </div>
       <div class="actions" id="log-in">
-        <%= submit_tag I18n.t("profile.login"), class: "btn-link" %>
+        <%= submit_tag t("profile.login"), class: "btn-link" %>
       </div>
     <% end %> 
   </div>

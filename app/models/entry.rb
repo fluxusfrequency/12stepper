@@ -3,7 +3,7 @@ class Entry < ActiveRecord::Base
 
 
   def to_status
-    (self.title + "\n" + self.body).gsub(/(\<p\>|\<\/p\>)/, "")
+    (self.title.html_safe + "\n" + self.body.html_safe[0, 500]).gsub(/(\<p\>|\<\/p\>)/, "").gsub("&#39;", "'")
   end
 
 end

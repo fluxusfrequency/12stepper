@@ -12,7 +12,7 @@
     <% unless current_user %>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" id ="language-link" class="dropdown-toggle" data-toggle="dropdown" ><%= I18n.t("languages.select") %><b class="caret"></b></a>
+          <a href="#" id ="language-link" class="dropdown-toggle" data-toggle="dropdown" ><%= t("languages.select") %><b class="caret"></b></a>
 
           <ul class="dropdown-menu language-dropdown">
             <li><%= link_to "English", "#", id: "en" %></li>
@@ -27,7 +27,7 @@
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
 
-          <li><%= link_to I18n.t("navbar.journal"), entries_path, {:id => "journal-link"} %>
+          <li><%= link_to t("navbar.journal"), entries_path, {:id => "journal-link"} %>
           </li>
           <li class="dropdown">
             <%= link_to t("navbar.resources"), "#", {:id => "resources-link", :class => "dropdown-toggle", 'data-toggle' => "dropdown" }%>
@@ -35,11 +35,11 @@
               <li><%= link_to t("navbar.bigbook"), big_book_path %>
               </li>
               <li class="divider"></li>
-              <li><%= link_to t("navbar.twelvesteps"), page_path("twelve-steps-#{I18n.locale.to_s}") %>
+              <li><%= link_to t("navbar.twelvesteps"), page_path("twelve-steps-#{locale.to_s}") %>
               </li>
-              <li><%= link_to t("navbar.twelvetraditions"), page_path("twelve-traditions-#{I18n.locale.to_s}") %>
+              <li><%= link_to t("navbar.twelvetraditions"), page_path("twelve-traditions-#{locale.to_s}") %>
               </li>
-              <li><%= link_to t("navbar.serenityprayer"), page_path("serenity-prayer-#{I18n.locale.to_s}") %>
+              <li><%= link_to t("navbar.serenityprayer"), page_path("serenity-prayer-#{locale.to_s}") %>
               </li>
             </ul>
           </li>

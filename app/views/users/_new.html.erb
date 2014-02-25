@@ -1,8 +1,8 @@
 <%= form_for @user, url: users_path, method: :post do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, I18n.t("flash.error")) %>
-          <%= " " + I18n.t('flash.prohibited_save') + ": " %></h2>
+      <h2><%= pluralize(@user.errors.count, t("flash.error")) %>
+          <%= " " + t('flash.prohibited_save') + ": " %></h2>
 
       <ul>
       <% @user.errors.full_messages.each do |msg| %>
@@ -13,13 +13,13 @@
   <% end %>
   <div class="col-lg-5 col-md-2">
     <div class="actions" id="get-started">
-      <strong><%= I18n.t("profile.get_started") %></strong>
+      <strong><%= t("profile.get_started") %></strong>
     </div>
     <div class="field">
-      <%= f.text_field :username, :placeholder => I18n.t("profile.username") %>
+      <%= f.text_field :username, :placeholder => t("profile.username") %>
     </div>
     <div class="field">
-      <%= f.text_field :email, :placeholder => I18n.t("profile.email") %>
+      <%= f.text_field :email, :placeholder => t("profile.email") %>
     </div><br />
     <div class="actions" id="last-drink-selector">
       <p><%= t("profile.last_drink") %></p>
@@ -30,14 +30,14 @@
   <div class="col-lg-4 col-md-2" id="right-login-column">
     <div class="field">
       <%= f.password_field :password, id: "new_password" %>
-      <%= text_field_tag :new_fake_password, params[:new_fake_password], {:placeholder => I18n.t("profile.password")} %>
+      <%= text_field_tag :new_fake_password, params[:new_fake_password], {:placeholder => t("profile.password")} %>
     </div>
     <div class="field">
-      <%= text_field_tag :new_fake_password_confirmation, params[:new_fake_password_confirmation], {:placeholder => I18n.t("profile.password_confirmation")} %>
+      <%= text_field_tag :new_fake_password_confirmation, params[:new_fake_password_confirmation], {:placeholder => t("profile.password_confirmation")} %>
       <%= f.password_field :password_confirmation, id: "new_password_confirmation" %>
     </div><br />
     <div class="actions col-lg-12 col-md-12" id="sign-up">
-      <%= f.submit I18n.t("profile.create_account"), class: "btn-link" %>
+      <%= f.submit t("profile.create_account"), class: "btn-link" %>
     </div>
   </div>
 <% end %>

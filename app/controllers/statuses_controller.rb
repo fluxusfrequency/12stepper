@@ -8,7 +8,7 @@ class StatusesController < ApplicationController
     unless current_user.approved_friends.compact.empty?
       @statuses << current_user.approved_friends.map {|friend| friend.statuses.take(10)}
     end
-    @statuses.flatten!
+    @statuses = StatusDecorator.decorate_collection(@statuses.flatten.sort)
 
     @status = current_user.statuses.new
   end

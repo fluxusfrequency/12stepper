@@ -105,12 +105,13 @@ en:
     update: Update Profile
     password: Password
     password_confirmation: Password Confirmation
-    details: Edit Your Account Details
+    details: Edit My Account Details
     create_account: Sign Up
     login: Log in
     welcome_back: Welcome Back
     get_started: Get Started
-    language: Your Language
+    language: My Language
+    edit: Edit My Profile
   friendships:
     remove: Remove
     accept: Accept
@@ -120,3 +121,4 @@ en:
     post: Post
     whats_up: What's up?
     update: Update
+    ago: ago

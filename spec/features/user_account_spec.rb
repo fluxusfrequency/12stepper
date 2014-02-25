@@ -44,7 +44,8 @@ describe "User Account Creation" do
       click_on "Welcome back, SecretSanta!"
       click_on "My Profile"
       click_on "Edit My Profile"
-      expect(page).to have_content("Edit Your Account Details")
+      
+      expect(page).to have_content("Edit My Account Details")
       fill_in "user[username]", with: "sinterklaasje"
       fill_in "user[email]", with: "santa2@northpole.org"
       fill_in "user[password]", with: "password"

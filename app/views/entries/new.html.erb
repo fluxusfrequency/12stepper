@@ -12,7 +12,7 @@
 <div id="new-entry-container">
   <%= form_for @entry do |f| %>
 
-    <p><%= f.text_field :title, :placeholder => I18n.t('entries.title') %></p>
+    <p><%= f.text_field :title, :placeholder => t('entries.title') %></p>
 
     <p><%= f.cktext_area :body, :class => 'ckeditor' %></p>
 

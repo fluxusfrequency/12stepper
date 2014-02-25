@@ -5,4 +5,8 @@ class Status < ActiveRecord::Base
   def ==(other)
     self.content == other.content && self.user_id == other.user_id
   end
+
+  def <=>(other)
+    other.updated_at <=> self.updated_at
+  end
 end

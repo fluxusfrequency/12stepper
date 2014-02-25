@@ -104,12 +104,13 @@ es:
     update: Actualizar Perfil
     password: Contraseña
     password_confirmation: Confirmación de la contraseña
-    details: Editar Detalles de su Cuenta
+    details: Editar Detalles de mi Cuenta
     create_account: Crear una Cuenta
     login: Iniciar la Sesión
     welcome_back: Bienvenida de Nuevo
     get_started: Empezar
-    language: Su Idioma
+    language: Mi Idioma
+    edit: Editar mi Perfil
   friendships:
     remove: Eliminar
     accept: Aceptar
@@ -119,3 +120,4 @@ es:
     post: Publique
     whats_up: ¿Qué tal?
     update: Actualizar
+    ago: Hace

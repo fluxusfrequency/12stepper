@@ -19,7 +19,7 @@
   <div id='entry-text-input'>
     <%= form_for @entry do |f| %>
 
-      <p><%= f.text_field :title, :placeholder => I18n.t('entries.title'), id:'worksheet-entry-title' %></p>
+      <p><%= f.text_field :title, :placeholder => t('entries.title'), id:'worksheet-entry-title' %></p>
 
       <%= f.cktext_area :body, :class => 'ckeditor' %>
        <br />

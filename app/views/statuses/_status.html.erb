@@ -1,8 +1,9 @@
 <div id=<%= "status-#{status.id}" %> class="status-item">
   <%= link_to status.user.username, user_show_path(status.user.username) %>
   <p><%= status.content %></p>
+  <p><%= status.posted_time_ago %></p>
   <% if current_user == status.user %>
-    <%= link_to I18n.t("entries.edit"), edit_status_path(status), class: "edit-status-link" %>
-    <%= link_to I18n.t("entries.delete"), status_path(status), method: :delete, class: "delete-status-link" %>
+    <%= link_to t("entries.edit"), edit_status_path(status), class: "edit-status-link" %>
+    <%= link_to t("entries.delete"), status_path(status), method: :delete, class: "delete-status-link" %>
   <% end %>
 </div>

@@ -1,7 +1,7 @@
 <div id="new-status">
   <%= form_for @status do |f| %>
-    <%= f.text_field :content, :placeholder => I18n.translate('statuses.whats_up') %>
-    <%= f.submit I18n.t("statuses.post") %>
+    <%= f.text_field :content, :placeholder => t('statuses.whats_up') %>
+    <%= f.submit t("statuses.post") %>
   <% end %>
 </div>
 

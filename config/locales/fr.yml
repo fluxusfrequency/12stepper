@@ -104,12 +104,13 @@ fr:
     update: Mettre à jour votre profil
     password: Mot de passe
     password_confirmation: Confirmation de mot de passe
-    details: Modifier Détails de Votre Compte
+    details: Modifier mon Compte Détails
     create_account: Créer un Compte
     login: Connecter à Votre Compte
     welcome_back: Accueillir à Nouveau
     get_started: Commencer
-    language: Votre Langue
+    language: Mon Langue
+    edit: Éditer mon Profil
   friendships:
     remove: Supprimer
     accept: Accepter
@@ -119,3 +120,4 @@ fr:
     post: Diffusez
     whats_up: Quoi de neuf?
     update: Mettre à jour
+    ago: Il ya
