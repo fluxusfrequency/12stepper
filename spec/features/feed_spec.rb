@@ -16,6 +16,9 @@ describe "feed" do
       end
     end
 
+    xit "should see its friends statuses in the feed", js: true do
+    end
+
   end
 
   context "new/create" do
