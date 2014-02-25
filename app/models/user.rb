@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  include InvalidatesCache
   has_secure_password
 
   validates :username, :email, presence: true
@@ -21,10 +22,12 @@ class User < ActiveRecord::Base
   end
 
   def approved_friends
-    friends = []
-    friends += self.friendships.approved.where(user_id: id).map {|friendship| friendship.friend}
-    friends += self.inverse_friendships.approved.where(friend_id: id).map {|friendship| friendship.user}
-    friends
+    Rails.cache.fetch("approved_friends_for_#{self.username}") do
+      friends = []
+      friends += self.friendships.approved.where(user_id: id).map {|friendship| friendship.friend}
+      friends += self.inverse_friendships.approved.where(friend_id: id).map {|friendship| friendship.user}
+      friends
+    end
   end
 
 end
