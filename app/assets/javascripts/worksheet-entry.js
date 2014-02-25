@@ -54,7 +54,6 @@ $(function() {
   }
 
   var setTitle = function(worksheet) {
-    console.log($('.new-worksheet-details').find('h4'))
     $('.new-worksheet-details h4').html("<strong>Step " + worksheet["step"] + "</strong> - <em>" + worksheet["title"] + "</em>");
   }
 
@@ -64,9 +63,9 @@ $(function() {
   }
 
   var setWorksheetPrompt = function(response) {
-    $('#worksheet-details').empty();
-    $('#worksheet-details').append(response["worksheet"]["body"])
-    
+    $('#worksheet-details').find('h4').empty();
+    $('#worksheet-details').find('.worksheet').empty();
+    $('#worksheet-details').find('.worksheet').append(response["worksheet"]["body"])
   };
 
   var setInitialWorksheetPrompt = function(response) {
@@ -96,8 +95,9 @@ $(function() {
       data: queryData,
       success: function(response) {
         setNewStepValues(response);
-        $('#worksheet-details').empty();
-        $('#worksheet-details').append(response["worksheet"][0]["body"])
+        $('#worksheet-details').find('h4').empty()
+        $('#worksheet-details').find('.worksheet').empty();
+        $('#worksheet-details').find('.worksheet').append(response["worksheet"][0]["body"])
         setEntryData(response);
         setTitle(response["worksheet"][0])
         if (response["entry"] !== null) {

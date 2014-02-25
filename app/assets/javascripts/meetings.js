@@ -12,11 +12,12 @@ $(function() {
       dataType: 'json',
       data: queryData,
       success: function(response) {
-        clearMarkers();
-        for (var meeting in response) {
-          console.log(response[meeting]);
-          addToMap(response[meeting]);
-        }
+        console.log('hehehehehe')
+        // clearMarkers();
+        // for (var meeting in response) {
+        //   console.log(response[meeting]);
+        //   addToMap(response[meeting]);
+        // }
       },
       error: function(response) {
         var errors = response.responseJSON;
@@ -38,14 +39,17 @@ var addResults = function(response) {
   } else {
     for (var meeting in response) {
       var meetingName = '<h3>' + response[meeting]["name"] + '</h3>';
-      var meetingLocation = response[meeting]["location"] + '<br/>';
-      var meetingAddress = response[meeting]["address"] + '<br/>';
-      var meetingDay = response[meeting]["day"] + '<br/>';
-      var meetingTime = response[meeting]["time"] + '<br/>';
-      $('#search-results').append(meetingName + meetingLocation + meetingAddress + meetingDay + meetingTime);
+      var mapLink = '<a class="view-map-link" href="#">view map</a>'
+      var meetingLocation = '<p>Location: ' + response[meeting]["location"] + '</p>';
+      var meetingAddress = '<p>Address: ' + response[meeting]["address"] + '</p>';
+      var meetingDay = '<p>Day: ' + response[meeting]["day"] + '</p>';
+      var meetingTime = '<p>Time: ' + response[meeting]["time"] + '</p>';
+      var meetingData = '<div class="individual-search-result col-lg-12">' + meetingName + mapLink + meetingLocation + meetingAddress + meetingDay + meetingTime + '</div>'
+      $('#search-results').append(meetingData);
     };
   };
 };
+
 
 var markers = [];
 
