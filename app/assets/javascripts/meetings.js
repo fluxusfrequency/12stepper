@@ -1,8 +1,8 @@
 (function() {
 $(function() {
 
-  $('#search-button').click(function(e) {
     var queryString, queryData;
+  $('#search-button').click(function(e) {
     e.preventDefault();
     queryString = $("#search-form").val();
     queryData = { address : queryString };
@@ -26,13 +26,13 @@ $(function() {
         }
       }
     }).done(function(response) {
-      addResults(response);
+      addResults(response, queryString);
     });
   });
 
 });
 
-var addResults = function(response) {
+var addResults = function(response, queryString) {
   $('#search-results').html('');
   if (response.length === 0) {
     $('#search-results').append("Sorry, no meetings matched your search.");
@@ -44,7 +44,7 @@ var addResults = function(response) {
       var meetingAddress = '<p>Address: ' + response[meeting]["address"] + '</p>';
       var meetingDay = '<p>Day: ' + response[meeting]["day"] + '</p>';
       var meetingTime = '<p>Time: ' + response[meeting]["time"] + '</p>';
-      var meetingData = '<div class="individual-search-result col-lg-12">' + meetingName + mapLink + meetingLocation + meetingAddress + meetingDay + meetingTime + '</div>'
+      var meetingData = '<h3>Meetings for <em>' + queryString + '</em></h3><div class="individual-search-result col-lg-12">' + meetingName + mapLink + meetingLocation + meetingAddress + meetingDay + meetingTime + '</div>'
       $('#search-results').append(meetingData);
     };
   };
