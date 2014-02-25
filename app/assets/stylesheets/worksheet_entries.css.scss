@@ -13,9 +13,8 @@
 }
 
 .worksheet {
-  width: 515px;
   display: inline-block;
-  height: 600px;
+  max-height: 600px;
   overflow:scroll;
 }
 
@@ -25,7 +24,23 @@
   color: #B5ABAF;
 }
 
+#worksheet-entry-delete {
+  border: none;
+  display: inline-block;
+  background-color: #EFF4F4;
+  color: #B5ABAF;
+}
+
 #worksheet-entry-submit:hover, #worksheet-entry-submit:focus {
   color: black;
   text-decoration: none;
+}
+
+.cke_bottom {
+  margin-top: 220px;
+  color: red;
+}
+
+#worksheet-entry-title {
+  margin-top: 10px;
 }

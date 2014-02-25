@@ -1,3 +1,4 @@
+
 <% cache :entries_index do %>
   <div class="row page-header">
       <div class="col-lg-3 col-md-3 my-journal-container">
@@ -7,7 +8,7 @@
         <%= search_field 'entries_search', :meetings_search,  placeholder: t('meetings.search'), id:'entries-search' %>
       </div>
       <div class="col-lg-3 col-md-3 col-lg-offset-2 col-md-offset-2" id="entry-index-actions">
-        <%= link_to t("entries.work_step"), new_entry_path, id: "work-a-step" %> 
+        <%= link_to t("entries.work_step"), new_worksheet_entry_path, id: "work-a-step" %> 
         <%= link_to t("entries.write"), new_entry_path %>
       </div>
   </div>

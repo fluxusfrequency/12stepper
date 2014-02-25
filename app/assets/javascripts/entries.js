@@ -1,4 +1,5 @@
 (function(){
+
   $(function(){
     $('#entries-search').on('keyup', function(){
       var query, queryData, locale;;
@@ -55,7 +56,28 @@
         return "Step: ";
       }
     }
+
+    $('#toggle-worksheet').on("click", function() {
+      toggleLink();
+      console.log($('#toggle-worksheet'))
+    })
+
+    function toggleLink() {
+      if ($('#toggle-worksheet').html() === "Show Worksheet") {
+        $('#toggle-worksheet').empty().html("Hide Worksheet");
+        $('#toggled-worksheet-details').removeClass('hide-worksheet-details');
+        $('#toggled-worksheet-details').addClass('worksheet col-lg-5');
+
+        $('#entry-text-input').addClass('col-lg-7');
+      } else {
+        $('#toggle-worksheet').empty().html("Show Worksheet");
+        $('#toggled-worksheet-details').addClass('hide-worksheet-details');
+        $('#toggled-worksheet-details').removeClass('worksheet col-lg-5');
+        $('#entry-text-input').removeClass('col-lg-7');
+      }
+    }
   });
+
 })();
 
 CKEDITOR.editorConfig = function( config )
@@ -75,3 +97,5 @@ CKEDITOR.editorConfig = function( config )
         { name: 'tools', items : [ 'Maximize','-','About' ] }
     ];
 }
+
+

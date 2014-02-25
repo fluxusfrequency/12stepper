@@ -51,3 +51,7 @@ var bigbookSearchAndHighlight = function(searchTerm) {
     $('html').scrollTop($('.highlighted:first').offset().top);
   }
 };
+
+$(function(){
+    setTimeout($(".cke_bottom").css('margin-top', "220px"), 1000);
+  });

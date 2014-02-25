@@ -11,6 +11,7 @@ TwelveStepper::Application.routes.draw do
     get '/feed' => 'statuses#index', as: 'feed'
     resources :statuses, only: [:new, :create, :edit, :update]
 
+    patch '/worksheet_entries' => 'worksheet_entries#create'
     resources :worksheet_entries
     get '/login' => "sessions#new", as: "login"
 
@@ -38,6 +39,10 @@ TwelveStepper::Application.routes.draw do
 
         namespace :entries do
           get '/search/:query', to: 'search#show'
+        end
+
+        namespace :worksheet do
+          get '/entries', to: 'entries#index'
         end
 
         namespace :big_book do

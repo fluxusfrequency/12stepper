@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20140225032420) do
     t.integer  "step"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "section"
   end
 
   add_index "entries", ["user_id"], name: "index_entries_on_user_id", using: :btree

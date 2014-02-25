@@ -1,23 +1,37 @@
-<div id='worksheet-entry-text'>
-  <%= form_for @entry do |f| %>
-
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.hidden_field :step %>
-
-    <%= f.cktext_area :body, {:class => 'ckeditor', :id => 'worksheet-step'} %>
-
-    <%= f.submit t('entries.create') %>
-    
-  <% end %>
+<div class="row page-header">
+    <div class="col-lg-3 col-md-3">
+      <h1 id="my-journal"><%= t('entries.work_step') %></h1>
+    </div>
+    <div class="col-lg-4 col-md-4">
+      <%= search_field 'entries_search', :meetings_search,  placeholder: t('meetings.search'), id:'entries-search' %>
+    <div id='choose-the-step'>
+      <h3>Choose a Step <%= @entry.step %></h3>
+      <%= select_tag "choose-a-step", "<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>".html_safe %>
+    </div>
+    <h3>Section</h3>
+    <%= select_tag "choose-a-section", options_from_collection_for_select(@worksheet_entries, "title", "title") %>
+    </div>
 </div>
+<div class='row'>
+  <div id='worksheet-entry-text' class='col-lg-7'>
+    <%= form_for @entry, url: worksheet_entries_path do |f| %>
 
-<h2>Worksheet for Step <%= @entry.step %></h2>
-<div class='worksheet'>
-  <% @worksheets.each do |worksheet| %>
-    <%= worksheet.title %>
-    <%= worksheet.body.html_safe %>
-  <% end %>
-  <%= paginate @worksheets %>
+      <p><%= f.text_field :title, :placeholder => I18n.t('entries.title'), id:'worksheet-entry-title' %></p>
 
+      <%= f.hidden_field "step", :value => '', id:'hidden-step-field' %>
+      <%= f.hidden_field "entry_id", :value => '', id:'hidden-entry-id-field' %>
+      <%= f.hidden_field "section", :value => '', id:'hidden-section-field' %>
+
+      <%= f.cktext_area :body, {:class => 'ckeditor', :id => 'worksheet-step'} %>
+      <%= f.submit t('entries.create'), id:'worksheet-entry-submit' %>
+      <%= link_to t('entries.delete'), entries_path, :id => 'worksheet-entry-delete' %>
+      
+    <% end %>
+  </div>
+
+  <div class='worksheet col-lg-5' id='worksheet-details'>
+    <%= @worksheet.title %>
+    <%= @worksheet.body.html_safe %>
+
+  </div>
 </div>
