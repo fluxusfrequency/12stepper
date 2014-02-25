@@ -18,11 +18,15 @@ es:
     invalid_credentials: Ha introducido un correo electrónico o contraseña no es válida, por favor intente de nuevo.
     signin: Registrado!
     signout: Exitosamente cerrado la sesión.
+    anniversary: Feliz aniversario!
     milestone: Felicitaciones por
     friend_request_sent: Su amigo petición ha sido enviada.
     friend_request_failed: Hubo un problema al enviar su solicitud de amigo.
     friendship_approved: Usted ahora es amigo de
     friendship_rejected: RECHAZADO!
+    status_save_success: Su estado fue publicada
+    status_save_failure: Había un problema al guardar tu estado
+    status_update_success: Su estado se actualiza
   navbar:
     logout: Desloguear
     login: Conexión
@@ -48,6 +52,8 @@ es:
                       90 días - Red 
                       1 año - Luz Verde 
     day: día
+    month: mez
+    year: año
     sober: sobrio 
     profile: Mi Perfil
     view_friends: Ver a Mis Amigos
@@ -101,3 +107,7 @@ es:
     accept: Aceptar
     reject: Rechazar
     view_profile: Ver Perfil
+  statuses:
+    post: Publique
+    whats_up: ¿Qué tal?
+    update: Actualizar

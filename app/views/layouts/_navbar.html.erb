@@ -50,10 +50,10 @@
           <li id="congrats-link-container">
             <%= link_to t('navbar.congrats') + ", ",
             "#", id:"congrats-link" %>
-            <%= link_to print_days_sober(current_user), 
+            <%= link_to current_user.decorate.days_sober, 
             "#", id:"congrats-link" %>
           </li>
-          <li><%= image_tag("#{current_token}_token.png", class: "navbar-token") %></li>
+          <li><%= image_tag(current_user.decorate.current_token_image, class: "navbar-token") %></li>
           <li class="dropdown">
             <%= link_to t('navbar.welcome') + ", " + 
             current_user.username + "!", "#", {:id => "account-link", 

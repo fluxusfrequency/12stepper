@@ -18,11 +18,15 @@ fr:
     invalid_credentials: Vous avez saisi un e-mail ou mot de passe incorrect, s'il vous plaît essayez de nouveau.
     signin: D'enregistrement!
     signout: Succès signé sur.
+    anniversary: Joyeux anniversaire!
     milestone: Félicitations pour 
     friend_request_sent: Votre ami demande a été adressée.
     friend_request_failed: Il y avait un problème de soumettre votre demande d'ami.
     friendship_approved: Vous êtes maintenant amis avec
     friendship_rejected: REJETÉ!
+    status_save_success: Votre statut a été publié
+    status_save_failure: Il y avait un problème sauver votre statut
+    status_update_success: Votre statut a été mis à jour
   navbar:
     logout: Déconnexion
     login: Connexion
@@ -48,6 +52,8 @@ fr:
                       90 jours - Rouge 
                       1 an - Green Light
     day: jour
+    month: mois
+    year: année
     sober: sobre
     profile: Ma/Mon Profil
     view_friends: Voir mes Amis
@@ -101,3 +107,7 @@ fr:
     accept: Accepter
     reject: Rejeter
     view_profile: Voir le profil
+  statuses:
+    post: Diffusez
+    whats_up: Quoi de neuf?
+    update: Mettre à jour

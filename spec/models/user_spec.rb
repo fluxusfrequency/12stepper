@@ -16,6 +16,7 @@ describe User do
 
   context "#associations" do
     it { should have_many :entries }
+    it { should have_many :statuses }
     
     it { should have_many :friends }
     it { should have_many :inverse_friends }

@@ -18,11 +18,15 @@ en:
     invalid_credentials: You entered an invalid email or password, please try again.
     signin: Signed in!
     signout: Successfully signed out.
+    anniversary: Happy anniversary!
     milestone: Congratulations on 
     friend_request_sent: Your friend request was sent.
     friend_request_failed: There was a problem submitting your friend request.
     friendship_approved: You are now friends with
     friendship_rejected: REJECTED!
+    status_save_success: Your status was posted
+    status_save_failure: There was a problem saving your status
+    status_update_success: Your status was updated
   navbar:
     logout: Logout
     login: Login
@@ -48,6 +52,8 @@ en:
                       90 days - Red
                       1 year - Light Green
     day: day
+    month: month
+    year: year
     sober: sober
     profile: My Profile
     view_friends: View My Friends
@@ -102,3 +108,7 @@ en:
     accept: Accept
     reject: Reject
     view_profile: View Profile
+  statuses:
+    post: Post
+    whats_up: What's up?
+    update: Update

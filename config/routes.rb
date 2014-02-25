@@ -8,6 +8,8 @@ TwelveStepper::Application.routes.draw do
     resources :users, only: [:index, :new, :create, :update]
 
     resources :entries
+    get '/feed' => 'statuses#index', as: 'feed'
+    resources :statuses, only: [:new, :create, :edit, :update]
 
     patch '/worksheet_entries' => 'worksheet_entries#create'
     resources :worksheet_entries
@@ -54,6 +56,6 @@ TwelveStepper::Application.routes.draw do
 
   get "/pages/*id" => 'pages#show', as: :page, format: false
 
-  get '/:locale', to: 'entries#index'
-  root 'entries#index'
+  get '/:locale', to: 'statuses#index'
+  root 'statuses#index'
 end

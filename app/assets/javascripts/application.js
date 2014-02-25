@@ -17,7 +17,11 @@
 //= require ckeditor/init
 //= require bootstrap.min
 //= require scrollTo
-//= require_tree .
+//= require big_book
+//= require entries
+//= require landing
+//= require static
+//= require statuses
 
 $('.ckeditor').ckeditor({
 });

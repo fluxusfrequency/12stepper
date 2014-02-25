@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
   layout 'landing', only: [:new, :create]
   before_action :authorize!, only: :destroy
-  include UsersHelper
 
   def new
     @user = User.new
@@ -11,14 +10,14 @@ class SessionsController < ApplicationController
     email = params[:email]
     password = params[:password]
 
-    @user = User.find_by(email: email)
+    @user = User.find_by(email: email).decorate
 
     if @user
       result = @user.authenticate(password)
       if result
         session[:user_id] = result.id
-        display_milestone_congrats(@user)
         flash[:notice] = t("flash.signin")
+        flash[:success] = @user.display_milestone_congrats if @user.display_milestone_congrats
         redirect_to root_path
       else
         display_error_message
@@ -41,14 +40,6 @@ class SessionsController < ApplicationController
 
   def display_error_message
     flash[:error] = t("flash.invalid_credentials")
-  end
-
-  def display_milestone_congrats(user)
-    milestone = days_ago(user.last_drink)
-    if [1, 10, 30, 90, 365].include?(milestone)
-      flash[:success] = t("flash.milestone") + " " + milestone.to_s + " " +
-        t("navbar.sober") + "!"
-    end
   end
 
 

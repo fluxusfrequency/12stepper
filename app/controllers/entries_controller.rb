@@ -1,12 +1,8 @@
 class EntriesController < ApplicationController
-  before_action :authorize!, except: :index
+  before_action :authorize!
 
   def index
-    if current_user
-      @entries = current_user.entries
-    else
-      redirect_to login_path
-    end
+    @entries = current_user.entries
   end
 
   def new
