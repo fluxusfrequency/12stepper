@@ -1,0 +1,8 @@
+<div id="user-details">
+  <h3><%= @user.username %></h3>
+  <p><%= print_days_sober(@user) %></p>
+</div>
+
+<% if current_user == @user %>
+  <%= link_to "Edit My Profile", edit_profile_path %>
+<% end %>

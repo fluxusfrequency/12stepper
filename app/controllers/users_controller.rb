@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authorize!, except: [:index, :create]
+  before_action :authorize!, except: [:index, :create, :show]
 
   def index
     redirect_to login_path(locale: params[:locale])
@@ -21,6 +21,13 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.find_by(username: params[:username])
+    unless can_view?(@user)
+      flash.notice = t("flash.unauthorized")
+      redirect_to root_path
+    end
+  end
 
   def update
     I18n.locale = params[:user][:locale]
@@ -30,23 +37,21 @@ class UsersController < ApplicationController
     else
       flash[:notice] = t("flash.account_update_failure")
     end
-    redirect_to edit_user_path(current_user)
+    redirect_to edit_profile_path
   end
 
   def edit
-
-  end
-
-  def show
-    unless params[:id] == current_user.id
-      redirect_to root_path, :notice => t("flash.unauthorized")
-    end
+    @user = current_user
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation, :last_drink)
+    params.require(:user).permit(:username, :email, :password, :password_confirmation, :locale, :last_drink)
+  end
+
+  def can_view?(user)
+    current_user == user || current_user.approved_friends.include?(user)
   end
 
 end

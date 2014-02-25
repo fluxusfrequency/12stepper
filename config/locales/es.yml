@@ -19,10 +19,15 @@ es:
     signin: Registrado!
     signout: Exitosamente cerrado la sesión.
     milestone: Felicitaciones por
+    friend_request_sent: Su amigo petición ha sido enviada.
+    friend_request_failed: Hubo un problema al enviar su solicitud de amigo.
+    friendship_approved: Usted ahora es amigo de
+    friendship_rejected: RECHAZADO!
   navbar:
     logout: Desloguear
     login: Conexión
     signup: Apuntarse
+    journal: Diario
     resources: Recursos
     resources_tooltip: Leer de los textos más comunes en AA
     twelvesteps: Los 12 Pasos
@@ -30,9 +35,9 @@ es:
     serenityprayer: La Oración de la Serenidad
     bigbook: El Libro Grande
     welcome: Bienvenidos
-    meetings: Buscar Reuniones
+    meetings: Reuniones
     meetings_tooltip: Buscar reuniones en su área y ver en un mapa
-    congrats: ¡Felicidades!
+    congrats: Felicidades
     congrats_tooltip: |
                       Esto se calcula en base a la fecha de su último trago. 
                       Usted puede cambiar la fecha de su perfil.
@@ -42,8 +47,11 @@ es:
                       30 días - Orange 
                       90 días - Red 
                       1 año - Luz Verde 
-    sober: días sobrio 
-    profile: Perfil
+    day: día
+    sober: sobrio 
+    profile: Mi Perfil
+    view_friends: Ver a Mis Amigos
+    find_friends: Buscar Amigos
   bigbook:
     toc: Tabla de Contenidos
     chapter: Capítulo
@@ -87,3 +95,8 @@ es:
     welcome_back: Bienvenida de Nuevo
     get_started: Empezar
     language: Su Idioma
+  friendships:
+    remove: Eliminar
+    accept: Aceptar
+    reject: Rechazar
+    view_profile: Ver Perfil

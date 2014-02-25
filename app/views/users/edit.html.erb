@@ -1,16 +1,14 @@
 <div class="row page-header">
   <div class="col-lg-8 col-md-8">
-    <h1><%= t('profile.title') %></h1>
     <div id="profile-edit"><br />
-      <%= form_for current_user do |f| %>
-
-        <p><%= f.label :last_drink, t("profile.change") + ": " %></p>
-        <p><%= f.date_field :last_drink, id: "datepicker" %></p>
-
-        <h3><%= t('profile.details') %></h3>
+      <%= form_for current_user, method: :patch, url: user_path(current_user.id) do |f| %>
+        <h2><%= t('profile.details') %></h2>
 
         <p><%= f.label :username, t("profile.username") %></p>
         <p><%= f.text_field :username %></p>
+
+        <p><%= f.label :email, t("profile.email") %></p>
+        <p><%= f.text_field :email %></p>
 
         <p><%= f.label :password, t("profile.password") %></p>
         <p><%= f.password_field :password %></p>
@@ -19,6 +17,9 @@
         <p><%= f.password_field :password_confirmation %></p>
 
         <p><%= f.label :locale, t("profile.language") + ":" %><%= f.select :locale, [:en, :es, :fr] %></p><br />
+
+        <p><%= f.label :last_drink, t("profile.change") + ": " %></p>
+        <p><%= f.date_field :last_drink, id: "datepicker" %></p>
 
         <%= f.submit t("profile.update"), class: "btn" %>
       <% end %>

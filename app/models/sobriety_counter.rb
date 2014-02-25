@@ -1,16 +1,22 @@
 class SobrietyCounter
-  include UsersHelper
 
   def self.token_for(date)
-    distance = new.days_ago(date)
-    result = lookups.keys.select {|range| range.include?(distance)}
-    result.empty? ? "light_green_token_sm.png" : lookups[result.first]
+    milestones.each do |condition, color|
+      return color if condition.call(date)
+    end
   end
 
-  def self.lookups
-    { (1..1) => "blue_token_sm.png",
-      (10..29) => "green_token_sm.png",
-      (30..89) => "red_token_sm.png",
-      (90..365) => "orange_token_sm.png" }
+  def self.milestones
+    {
+      lambda {|date| date < DateTime.now - 1.year} => "bronze",
+      lambda {|date| date < DateTime.now - 9.months} => "purple",
+      lambda {|date| date < DateTime.now - 6.months} => "blue",
+      lambda {|date| date < DateTime.now - 3.months} => "emerald",
+      lambda {|date| date < DateTime.now - 2.months} => "gold",
+      lambda {|date| date < DateTime.now - 1.month} => "red",
+      lambda {|date| true} => "silver"
+    }
   end
+
+ 
 end

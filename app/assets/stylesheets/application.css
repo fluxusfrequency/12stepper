@@ -11,6 +11,5 @@
  *= require_self
  *= require bootstrap.min
  *= require 1-col-portfolio
- *= require jquery-ui
  *= require_tree .
  */

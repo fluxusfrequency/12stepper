@@ -19,10 +19,15 @@ fr:
     signin: D'enregistrement!
     signout: Succès signé sur.
     milestone: Félicitations pour 
+    friend_request_sent: Votre ami demande a été adressée.
+    friend_request_failed: Il y avait un problème de soumettre votre demande d'ami.
+    friendship_approved: Vous êtes maintenant amis avec
+    friendship_rejected: REJETÉ!
   navbar:
     logout: Déconnexion
     login: Connexion
     signup: Inscription
+    journal: Journal
     resources: Ressources
     resources_tooltip: Lire des textes les plus courantes chez les AA
     twelvesteps: Les 12 Étapes
@@ -30,9 +35,9 @@ fr:
     serenityprayer: La Prière de Sérénité
     bigbook: Gros Livre
     welcome: Bienvenu
-    meetings: Trouver Réunions
+    meetings: Réunions
     meetings_tooltip: Rechercher des rencontres dans votre région et les voir sur une carte
-    congrats: Félicitations!
+    congrats: Félicitations
     congrats_tooltip: |
                       Il est calculé sur la base de la date de votre dernier verre.
                       Vous pouvez changer la date dans votre profil.
@@ -42,8 +47,11 @@ fr:
                       30 jours - Orange 
                       90 jours - Rouge 
                       1 an - Green Light
-    sober: journées sobre
-    profile: Profil
+    day: jour
+    sober: sobre
+    profile: Ma/Mon Profil
+    view_friends: Voir mes Amis
+    find_friends: Rechercher des Amis
   bigbook:
     toc: Table des Matières
     chapter: Chapitre
@@ -87,3 +95,8 @@ fr:
     welcome_back: Accueillir à Nouveau
     get_started: Commencer
     language: Votre Langue
+  friendships:
+    remove: Supprimer
+    accept: Accepter
+    reject: Rejeter
+    view_profile: Voir le profil
