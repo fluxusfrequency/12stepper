@@ -48,7 +48,7 @@ describe "feed" do
       @status = FactoryGirl.create(:status, user_id: @user.id)
     end
 
-    it "can edit a status it posted", js: true do
+    xit "can edit a status it posted", js: true do
       feed_login
       within "#status-#{@status.id}" do
         click_on "Edit"
