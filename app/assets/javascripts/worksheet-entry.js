@@ -3,13 +3,15 @@ $(function() {
 
   $('#choose-a-step').change(function(){
     var queryData = {step: $('#choose-a-step').val()};
+    removeEntryData();
     getEntryData(queryData);
-    
   })
 
   $('#choose-a-section').change(function(){
     var queryData = {step: $('#choose-a-step').val(),
                      section: $('#choose-a-section').val()};
+    removeEntryData();
+    
     setNewPageData(queryData);
     
   })
@@ -21,9 +23,13 @@ $(function() {
       dataType: 'json',
       data: queryData,
       success: function(response) {
-        // console.log(response)
         setWorksheetPrompt(response);
         setEntryData(response);
+        if (response["entry"] !== null) {
+          addExistingEntryData(response["entry"])
+          // $('#hidden-entry-id-field').val(response["entry"]["id"]);
+          // $('iframe').contents().find("body").empty().append(response["entry"]["body"]).html();
+        }
       },
       error: function(response) {
         var errors = response.responseJSON;
@@ -34,14 +40,21 @@ $(function() {
     })
   }
 
+  var addExistingEntryData = function(entry) {
+    $('#hidden-entry-id-field').val(entry["id"]);
+    $("#worksheet-entry-title").val(entry["title"]);
+    $('iframe').contents().find("body").empty().append(entry["body"]).html();
+  }
+
   var setEntryData = function(response) {
-    // console.log(response)
     $('#hidden-step-field').val(response["step"]);
     $('#hidden-section-field').val(response["worksheet"]["title"]);
-    if (response["entry"].length !== 0) {
-    $('#hidden-entry-id-field').val(response["entry"][0]["id"]);
-      $("#worksheet-entry-title").val(response["entry"][0]["title"])
-    }
+    
+  }
+
+  var removeEntryData = function() {
+    $("#worksheet-entry-title").val('');
+    $('iframe').contents().find("body").text('');
   }
 
   var setWorksheetPrompt = function(response) {
@@ -50,16 +63,18 @@ $(function() {
   };
 
   var setInitialWorksheetPrompt = function(response) {
-    $('#worksheet-details').append(response["worksheets"][0]["body"]) 
+    $('#worksheet-details').append(response["worksheet"]["body"]) 
   };
 
   var setNewStepValues = function(response) {
     $('#hidden-step-field').val(response["step"]);
-    $('#hidden-section-field').val(response["worksheets"][0]["title"]);
-    for(worksheet in response["worksheets"]) {
-      $('#choose-a-section').append("<option>" + response["worksheets"][worksheet]["title"] + "</option>")
+    $('#hidden-section-field').val(response["worksheet"][0]["title"]);
+    $('#choose-a-section').empty()
+    for(worksheet in response["worksheet"]) {
+      $('#choose-a-section').append("<option>" + response["worksheet"][worksheet]["title"] + "</option>")
     }
   };
+
 
   var clearContainers = function() {
     $('#worksheet-details').empty();
@@ -73,9 +88,13 @@ $(function() {
       dataType: 'json',
       data: queryData,
       success: function(response) {
-        clearContainers();
         setNewStepValues(response);
-        setInitialWorksheetPrompt(response);
+        $('#worksheet-details').empty();
+        $('#worksheet-details').append(response["worksheet"][0]["body"])
+        setEntryData(response);
+        if (response["entry"] !== null) {
+          addExistingEntryData(response["entry"])
+        }
       },
       error: function(response) {
         var errors = response.responseJSON;
@@ -89,7 +108,9 @@ $(function() {
   $(document).ready(function(){
     var queryData = {step: $('#choose-a-step').val(),
                      section: $('#choose-a-section').val()};
-    setNewPageData(queryData);
+    $('#hidden-step-field').val($('#choose-a-step').val())
+    $('#hidden-section-field').val($('#choose-a-section').val());
+
   })
 })
 // $('.worksheet').hide()

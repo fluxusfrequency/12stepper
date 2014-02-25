@@ -8,6 +8,7 @@ TwelveStepper::Application.routes.draw do
 
     resources :entries
 
+    patch '/worksheet_entries' => 'worksheet_entries#create'
     resources :worksheet_entries
     get '/login' => "sessions#new", as: "login"
 

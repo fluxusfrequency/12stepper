@@ -9,7 +9,7 @@
       <%= select_tag "choose-a-step", "<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>".html_safe %>
     </div>
     <h3>Section</h3>
-    <%= select_tag "choose-a-section", options_from_collection_for_select(@worksheet_entries, "id", "title") %>
+    <%= select_tag "choose-a-section", options_from_collection_for_select(@worksheet_entries, "title", "title") %>
     </div>
 </div>
 <div class='row'>
