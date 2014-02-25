@@ -25,6 +25,7 @@ $(function() {
       success: function(response) {
         setWorksheetPrompt(response);
         setEntryData(response);
+        setTitle(response["worksheet"])
         if (response["entry"] !== null) {
           addExistingEntryData(response["entry"])
           // $('#hidden-entry-id-field').val(response["entry"]["id"]);
@@ -52,6 +53,11 @@ $(function() {
     
   }
 
+  var setTitle = function(worksheet) {
+    console.log($('.new-worksheet-details').find('h4'))
+    $('.new-worksheet-details h4').html("<strong>Step " + worksheet["step"] + "</strong> - <em>" + worksheet["title"] + "</em>");
+  }
+
   var removeEntryData = function() {
     $("#worksheet-entry-title").val('');
     $('iframe').contents().find("body").text('');
@@ -60,6 +66,7 @@ $(function() {
   var setWorksheetPrompt = function(response) {
     $('#worksheet-details').empty();
     $('#worksheet-details').append(response["worksheet"]["body"])
+    
   };
 
   var setInitialWorksheetPrompt = function(response) {
@@ -92,6 +99,7 @@ $(function() {
         $('#worksheet-details').empty();
         $('#worksheet-details').append(response["worksheet"][0]["body"])
         setEntryData(response);
+        setTitle(response["worksheet"][0])
         if (response["entry"] !== null) {
           addExistingEntryData(response["entry"])
         }

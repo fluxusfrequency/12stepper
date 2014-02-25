@@ -78,6 +78,7 @@ fr:
     write: Il suffit d'écrire
     title: Titre 
     step: Étape
+    section: Section
     no_step: Il n'y a aucune étape associée avec cette inscription
     none: Vous n'avez pas actuellement toutes les entrées
     my_journal: Mon Journal

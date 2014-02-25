@@ -1,16 +1,18 @@
 <div class="row page-header">
-    <div class="col-lg-3 col-md-3">
-      <h1 id="my-journal"><%= t('entries.work_step') %></h1>
+  <div class="col-lg-3 col-md-3">
+    <h1 id="my-journal"><%= t('entries.work_step') %></h1>
+  </div>
+  <div class="col-lg-9 col-md-4">
+      
+    <div id='choose-the-section' class='pull-right'>
+      <h3><%= t("entries.section") %></h3>
+      <%= select_tag "choose-a-section", options_from_collection_for_select(@worksheet_entries, "title", "title") %>
     </div>
-    <div class="col-lg-4 col-md-4">
-      <%= search_field 'entries_search', :meetings_search,  placeholder: t('meetings.search'), id:'entries-search' %>
-    <div id='choose-the-step'>
-      <h3>Choose a Step <%= @entry.step %></h3>
+    <div id='choose-the-step' class='pull-right'>
+      <h3><%= t("entries.step") %><%= @entry.step %></h3>
       <%= select_tag "choose-a-step", "<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>".html_safe %>
     </div>
-    <h3>Section</h3>
-    <%= select_tag "choose-a-section", options_from_collection_for_select(@worksheet_entries, "title", "title") %>
-    </div>
+  </div>
 </div>
 <div class='row'>
   <div id='worksheet-entry-text' class='col-lg-7'>
@@ -29,9 +31,11 @@
     <% end %>
   </div>
 
-  <div class='worksheet col-lg-5' id='worksheet-details'>
-    <%= @worksheet.title %>
-    <%= @worksheet.body.html_safe %>
-
+  <div class='col-lg-5 new-worksheet-details' id='worksheet-details'>
+    <h4><strong>Step <%= @worksheet.step %></strong> - <em><%= @worksheet.title %></em></h4>
+      <div class='worksheet '>
+        <%= @worksheet.body.html_safe %>
+      </div>
+   
   </div>
 </div>

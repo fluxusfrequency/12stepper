@@ -66,14 +66,15 @@
     function toggleLink() {
       if ($('#toggle-worksheet').html() === "Show Worksheet") {
         $('#toggle-worksheet').empty().html("Hide Worksheet");
-        $('#toggled-worksheet-details').removeClass('hide-worksheet-details');
-        $('#toggled-worksheet-details').addClass('worksheet col-lg-5');
+        $('.toggled-worksheet-details').removeClass('hide-worksheet-details');
+        $('.toggled-worksheet-details').addClass('col-lg-5');
+        $('.worksheet-body-details').addClass('worksheet');
 
         $('#entry-text-input').addClass('col-lg-7');
       } else {
         $('#toggle-worksheet').empty().html("Show Worksheet");
-        $('#toggled-worksheet-details').addClass('hide-worksheet-details');
-        $('#toggled-worksheet-details').removeClass('worksheet col-lg-5');
+        $('.toggled-worksheet-details').addClass('hide-worksheet-details');
+        $('.toggled-worksheet-details').removeClass('worksheet col-lg-5');
         $('#entry-text-input').removeClass('col-lg-7');
       }
     }
