@@ -5,7 +5,9 @@ class StatusesController < ApplicationController
     return redirect_to login_path unless current_user
       
     @statuses = current_user.statuses.take(10)
-    @statuses << current_user.approved_friends.map {|friend| friend.statuses.take(10)}
+    unless current_user.approved_friends.compact.empty?
+      @statuses << current_user.approved_friends.map {|friend| friend.statuses.take(10)}
+    end
     @statuses.flatten!
 
     @status = current_user.statuses.new

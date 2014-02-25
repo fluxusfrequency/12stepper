@@ -29,6 +29,12 @@ es:
     status_update_success: Su estado se actualiza
     status_delete_success: Se ha eliminado el estado de su
     status_delete_failure: Hubo un problema al eliminar el estado de su
+    entry_save_success: Su entrada fue salvado. 
+    entry_save_failure: Hubo un problema al guardar tu entrada. 
+    entry_share_success: compartido su entrada. 
+    entry_share_failure: Hubo un problema al compartir su entrada. Por favor, inténtelo de nuevo. 
+    entry_delete_success: Entrada fue borrada! 
+    entry_delete_failure: No se pudo borrar la entrada.
   navbar:
     logout: Desloguear
     login: Conexión
@@ -87,7 +93,7 @@ es:
     create: Guardar
     edit: Editar
     delete: Borrar
-    share: Compartir
+    share: Guardar y Compartir
   profile:
     title: Mi Perfil
     username: Nombre (anónimo)

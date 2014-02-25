@@ -8,7 +8,7 @@ fr:
     french: Français
     select: Sélectionner la Langue
   flash:
-    account_update_success: Vos coordonnées bancaires ont été mis à jour!
+    account_update_success: Mettre à jour réussie
     account_update_failure: Il y avait un problème de mise à jour vos coordonnées.
     account_create_success: Votre compte a été créé.
     unauthorized: Vous n'êtes pas autorisé à le faire.
@@ -29,6 +29,12 @@ fr:
     status_update_success: Votre statut a été mis à jour
     status_delete_success: Votre statut a été supprimé
     status_delete_failure: Il y avait un problème de supprimer votre statut
+    entry_save_success: Votre article a été enregistré. 
+    entry_save_failure: Il y avait un problème d'enregistrer votre entrée. 
+    entry_share_success: Commune votre entrée. 
+    entry_share_failure: Il y avait un partage votre entrée problème. S'il vous plaît essayez de nouveau. 
+    entry_delete_success: Entrée a été supprimée! 
+    entry_delete_failure: Impossible de supprimer votre entrée.
   navbar:
     logout: Déconnexion
     login: Connexion
@@ -87,15 +93,15 @@ fr:
     create: Sauver
     edit: Modifier
     delete: Effacer
-    share: Partager
+    share: Sauvegarder et Partager
   profile: 
     title: Mon Profil
     username: Nom (anonyme)
     email: Email
     last_drink: À quand remonte votre dernier verre?
     last_drink_was: Mon dernier verre était sur
-    change: Changer dernier verre
-    update: Mettre à jour le profil
+    change: Changer votre dernier verre
+    update: Mettre à jour votre profil
     password: Mot de passe
     password_confirmation: Confirmation de mot de passe
     details: Modifier Détails de Votre Compte

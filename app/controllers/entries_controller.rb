@@ -11,10 +11,14 @@ class EntriesController < ApplicationController
 
   def create
     entry = Entry.new(entry_params)
-    entry.user_id = current_user.id
+    entry.update_attributes(user_id: current_user.id)
+
     if entry.save
+      return share(entry) if params[:commit] == "Save and Share"
+      flash[:notice] = t('flash.entry_create_failure')
       redirect_to entries_path
     else
+      flash[:notice] = t('flash.entry_create_failure')
       render :new
     end
   end
@@ -29,17 +33,18 @@ class EntriesController < ApplicationController
 
   def update
     entry = Entry.find(params[:id])
-    e = entry.update_attributes(entry_params)
+    entry.update_attributes(entry_params)
+    return share(entry) if params[:commit] == "Save and Share"
     redirect_to root_path
   end
 
   def destroy
     entry = Entry.find(params[:id])
     if entry.destroy
-      flash[:notice] = "Entry was deleted!"
+      flash[:notice] = t("flash.entry_delete_success")
       redirect_to entries_path
     else
-      flash[:notice] = "Couldn't delete your entry."
+      flash[:notice] = t("flash.entry_delete_failure")
       render :index
     end
 
@@ -49,6 +54,19 @@ class EntriesController < ApplicationController
 
   def entry_params
     params.require(:entry).permit(:title, :body, :step, :section)
+  end
+
+  def share(entry)
+    status = current_user.statuses.build(content: entry.to_status)
+    if status.valid? && entry.valid?
+      status.save
+      entry.save
+      flash[:notice] = t('flash.entry_share_success')
+      redirect_to root_path
+    else
+      flash[:notice] = ("flash.entry_share_failure")
+      redirect_to :back
+    end
   end
 
 end

@@ -21,6 +21,7 @@ FactoryGirl.define do
     body "It is the best feeling ever"
     user_id 1
     step 3
+    section "Session 7"
   end
 
   factory :worksheet do

@@ -7,7 +7,8 @@ TwelveStepper::Application.routes.draw do
     get '/profile/:username', to: 'users#show', as: :user_show
     resources :users, only: [:index, :new, :create, :update]
 
-    resources :entries
+    resources :entries, except: :show
+
     get '/feed' => 'statuses#index', as: 'feed'
     resources :statuses, only: [:new, :create, :edit, :update, :destroy]
 

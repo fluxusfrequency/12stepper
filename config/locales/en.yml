@@ -24,11 +24,17 @@ en:
     friend_request_failed: There was a problem submitting your friend request.
     friendship_approved: You are now friends with
     friendship_rejected: REJECTED!
-    status_save_success: Your status was posted
-    status_save_failure: There was a problem saving your status
-    status_update_success: Your status was updated
-    status_delete_success: Your status was deleted
-    status_delete_failure: There was a problem deleting your status
+    status_save_success: Your status was posted.
+    status_save_failure: There was a problem saving your status.
+    status_update_success: Your status was updated.
+    status_delete_success: Your status was deleted.
+    status_delete_failure: There was a problem deleting your status.
+    entry_save_success: Your entry was saved.
+    entry_save_failure: There was a problem saving your entry.
+    entry_share_success: Shared your entry.
+    entry_share_failure: There was a problem sharing your entry. Please try again.
+    entry_delete_success: Entry was deleted!
+    entry_delete_failure: Couldn't delete your entry.
   navbar:
     logout: Logout
     login: Login
@@ -87,7 +93,7 @@ en:
     create: Save
     edit: Edit
     delete: Delete
-    share: Share
+    share: Save and Share
     token_label: Icon
   profile: 
     title: My Profile

@@ -99,7 +99,7 @@ describe "feed" do
       FactoryGirl.create(:friendship, user_id: @user.id, friend_id: @user2.id, status: "approved")
     end
 
-    it "can post a journal entry as a status" do
+    it "can post a journal entry as a status", js: true do
       feed_login
 
       within "#feed-activity" do
@@ -108,10 +108,11 @@ describe "feed" do
 
       click_on "Journal"
       click_on "I love being sober"
-      click_on "Share"
-
+      click_on "Save and Share"
+      
+      expect(page).to have_content("Shared your entry.")
       within "#feed-activity" do
-        expect(page).to have_content("My first status update")
+        expect(page).to have_content("I love being sober")
       end
       
     end
