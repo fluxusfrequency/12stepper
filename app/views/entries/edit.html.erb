@@ -1,13 +1,24 @@
-<div class="entry-edit-container">
+<div class="row page-header">
+  <div class="col-lg-3 col-md-3  my-journal-container">
+
+    <% if @worksheet %>
+      <h1 id="my-journal"><%= t('entries.work_step') %></h1>
+    <% else %>
+      <h1 id="my-journal"><%= t("entries.write") %></h1>
+    <% end %>
+  </div>
+</div>
+<div class='col-lg-3 col-md-3 col-lg-offset-2 col-md-offset-2 pull-right'>
   <% if @worksheet %>
     <%= link_to "Show Worksheet", '#', id:'toggle-worksheet' %>
 
   <% end %>
+</div>
+<div class="entry-edit-container">
   <div id='entry-text-input'>
     <%= form_for @entry do |f| %>
 
-      <%= f.label :title %>
-      <%= f.text_field :title %>
+      <p><%= f.text_field :title, :placeholder => I18n.t('entries.title'), id:'worksheet-entry-title' %></p>
 
       <%= f.cktext_area :body, :class => 'ckeditor' %>
        <br />
@@ -19,9 +30,11 @@
     <% end %>
   </div>
   <% if @worksheet %>
-    <div class='hide-worksheet-details' id='toggled-worksheet-details'>
-      <%= @worksheet.title %>
-      <%= @worksheet.body.html_safe %>
+    <div class='hide-worksheet-details toggled-worksheet-details'>
+      <h4><strong>Step <%= @worksheet.step %></strong> - <em><%= @worksheet.title %></em></h4>
+      <div class='worksheet-body-details'>
+        <%= @worksheet.body.html_safe %>
+      </div>
     </div>
   <% end %>
 

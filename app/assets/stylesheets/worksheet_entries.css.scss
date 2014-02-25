@@ -2,19 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#cke_worksheet-step {
-  width: 600px;
-}
-
 #worksheet-entry-text {
   display: inline-block;
   float: left;
-  padding-right: 20px;
 }
 
 .worksheet {
   display: inline-block;
-  max-height: 600px;
+  max-height: 590px;
   overflow:scroll;
 }
 
@@ -44,3 +39,28 @@
 #worksheet-entry-title {
   margin-top: 10px;
 }
+
+.new-worksheet-details {
+  margin-top: 15px;
+}
+
+#choose-a-step, #choose-a-section {
+  display: inline;
+  margin-left: 7px;
+}
+
+#choose-the-step, #choose-the-section {
+  display: inline;
+  margin-left: 15px;
+}
+
+#choose-the-step h3 {
+  display: inline;
+}
+
+#choose-the-section h3 {
+  display: inline;
+}
+
+
+

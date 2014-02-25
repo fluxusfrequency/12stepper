@@ -72,6 +72,7 @@ en:
     write: Just Write
     title: Title
     step: Step
+    section: Section
     no_step: There is no step associated with this entry
     none: You do not currently have any entries
     my_journal: My Journal
