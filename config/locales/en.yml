@@ -117,6 +117,7 @@ en:
     accept: Accept
     reject: Reject
     view_profile: View Profile
+    cancel: Cancel
   statuses:
     post: Post
     whats_up: What's up?

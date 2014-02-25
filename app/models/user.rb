@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   include InvalidatesCache unless ENV['TRAVIS']
   has_secure_password
 
-  validates :username, :email, presence: true
+  validates :username, :email, :last_drink, presence: true
   validates_uniqueness_of :username, :email
 
   has_many :entries

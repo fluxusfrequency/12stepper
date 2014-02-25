@@ -1,4 +1,11 @@
-<%= form_tag friends_search_index_path, id: "friend-search-form", method: :get, url: friends_search_index_path do %>
-  <%= text_field_tag :friend_search_input, params[:friend_name], :placeholder => "Search for a Friend" %>
-  <%= submit_tag "Search", id: 'friend_search_button' %>
-<% end %>
+<div id="friend-search">
+  <%= form_tag friends_search_index_path, id: "friend-search-form", method: :get, url: friends_search_index_path do %>
+    <%= text_field_tag :friend_search_input, params[:friend_name], :placeholder => "Search for a Friend" %>
+    <%= submit_tag "Search", id: 'friend_search_button' %>
+  <% end %>
+</div>
+
+<div id="awaiting-confirmation">
+  <h3>Awaiting Confirmation</h3>
+  <%= render partial: 'friendships/pending_friendship', collection: @pending, as: :friendship %>
+</div>

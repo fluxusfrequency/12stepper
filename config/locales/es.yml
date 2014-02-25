@@ -116,6 +116,7 @@ es:
     accept: Aceptar
     reject: Rechazar
     view_profile: Ver Perfil
+    cancel: Cancelar
   statuses:
     post: Publique
     whats_up: ¿Qué tal?

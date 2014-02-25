@@ -29,6 +29,27 @@ describe "User Friendships" do
       end
 
       expect(page).to have_content("Your friend request was sent.")
+
+      click_on "Welcome back, SecretSanta!"
+      click_on "Find Friends"
+
+      expect(page).to have_content("Awaiting Confirmation")
+      within "#awaiting-confirmation" do
+        expect(page).to have_content("billy")
+      end
+    end
+
+    it "can't friend itself", js: true do
+      friendship_login
+      click_on "Welcome back, SecretSanta!"
+      click_on "Find Friends"
+
+      fill_in "Search for a Friend", with: "SecretSanta"
+      page.execute_script("$('#friend-search-form').submit()")
+
+      within "#friend-search-results" do
+        expect(page).to_not have_content("SecretSanta")
+      end
     end
   end
 

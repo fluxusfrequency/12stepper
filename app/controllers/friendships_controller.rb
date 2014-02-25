@@ -3,7 +3,6 @@ class FriendshipsController < ApplicationController
     @friendships = current_user.friendships.approved 
     @inverse_friendships = current_user.inverse_friendships.approved
     @pending = current_user.inverse_friendships.pending
-    # fail
   end
 
   def create
@@ -25,7 +24,6 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    # fail
     begin
       @friendship = current_user.inverse_friendships.find(params[:id])
     rescue ActiveRecord::RecordNotFound
@@ -37,7 +35,6 @@ class FriendshipsController < ApplicationController
   end
 
   def remove
-
   end
 
 end

@@ -1,0 +1,5 @@
+<div id=<%= "friend-#{friendship.friend.username}"%>>
+  <%= friendship.friend.username %>
+  <%= link_to t("friendships.view_profile"), user_show_path(friendship.friend.username) %>
+  <%= button_to t("friendships.cancel"), remove_friendship_path(friendship.id), method: :delete, class: 'btn-link' %>
+</div>
