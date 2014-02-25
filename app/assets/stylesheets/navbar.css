@@ -29,8 +29,15 @@
 #resources-link,
 #meetings-link,
 #account-link,
-#congrats-link {
+#congrats-link,
+#journal-link {
   color: white;
+}
+
+#journal-link {
+  border-left: 1px solid #CCC3C7;
+  border-bottom: 5px solid rgb(236, 108, 51);
+  min-height: 55px;
 }
 
 #resources-link {

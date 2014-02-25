@@ -27,6 +27,7 @@ es:
     logout: Desloguear
     login: Conexión
     signup: Apuntarse
+    journal: Diario
     resources: Recursos
     resources_tooltip: Leer de los textos más comunes en AA
     twelvesteps: Los 12 Pasos

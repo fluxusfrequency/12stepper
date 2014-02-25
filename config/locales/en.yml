@@ -27,6 +27,7 @@ en:
     logout: Logout
     login: Login
     signup: Sign Up
+    journal: Journal
     resources: Resources
     resources_tooltip: Read from the most common texts in AA
     twelvesteps: The 12 Steps

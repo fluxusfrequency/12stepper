@@ -27,6 +27,7 @@ fr:
     logout: Déconnexion
     login: Connexion
     signup: Inscription
+    journal: Journal
     resources: Ressources
     resources_tooltip: Lire des textes les plus courantes chez les AA
     twelvesteps: Les 12 Étapes
