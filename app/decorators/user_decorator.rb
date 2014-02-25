@@ -12,5 +12,9 @@ class UserDecorator < Draper::Decorator
     return 1 if diff < 86400
     diff.to_i / 86400
   end
-  
+
+  def current_token_image
+    "#{SobrietyCounter.token_for(object.last_drink)}_token.png"
+  end
+
 end
