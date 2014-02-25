@@ -4,3 +4,17 @@
   border: 1px solid #C9D1D3;
   position: fixed;
 }
+
+.hide-map-container {
+  display: none;
+}
+
+.map-container {
+  float: right;
+}
+
+.map-container a {
+  position: fixed;
+}
+
+
