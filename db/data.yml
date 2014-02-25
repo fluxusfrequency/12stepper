@@ -10618,6 +10618,27 @@ big_book_chapter_translations:
       bénisse !\r\n"
 
 ---
+users:
+  columns:
+  - id
+  - username
+  - email
+  - password_digest
+  - locale
+  - created_at
+  - updated_at
+  - last_drink
+  records: 
+  - - '1'
+    - admin
+    - admin@example.com
+    - $2a$10$rMeJtkn6U0Fn2wKfpEOirOn7oKGN3HDnE9lmBBb0/A8m4NRI6CZAC
+    - en
+    - '2014-02-18 17:14:05.606077'
+    - '2014-02-24 03:51:41.218165'
+    - '2014-01-26 00:00:00'
+
+---
 entries:
   columns:
   - id
@@ -10627,6 +10648,7 @@ entries:
   - step
   - created_at
   - updated_at
+  - section
   records: 
   - - '24'
     - My Name is Roger, and I'm An Alcoholic
@@ -10637,7 +10659,8 @@ entries:
     - '1'
     - '1'
     - '2014-02-24 04:55:26.941002'
-    - '2014-02-24 04:55:26.941002'
+    - '2014-02-25 15:55:59.717391'
+    - Session 1
   - - '25'
     - Sea of Humanity
     - |-
@@ -10646,7 +10669,8 @@ entries:
     - '1'
     - '2'
     - '2014-02-24 04:55:26.990437'
-    - '2014-02-24 04:55:26.990437'
+    - '2014-02-25 15:57:18.520744'
+    - Session 6
   - - '26'
     - Updating on a Saturday night!
     - |-
@@ -10658,7 +10682,8 @@ entries:
     - '1'
     - '3'
     - '2014-02-24 04:55:27.00038'
-    - '2014-02-24 04:55:27.00038'
+    - '2014-02-25 15:57:26.361283'
+    - Session 7
   - - '27'
     - Two Months Yesterday
     - |-
@@ -10671,7 +10696,8 @@ entries:
     - '1'
     - '4'
     - '2014-02-24 04:55:27.009324'
-    - '2014-02-24 04:55:27.009324'
+    - '2014-02-25 15:57:31.260854'
+    - Session 8
   - - '28'
     - Is AA the Only Option? Not Anymore.
     - |-
@@ -10681,7 +10707,8 @@ entries:
     - '1'
     - '5'
     - '2014-02-24 04:55:27.018815'
-    - '2014-02-24 04:55:27.018815'
+    - '2014-02-25 15:57:47.753889'
+    - Action - Session 13
   - - '29'
     - Is AA the Only Option? Not Anymore.
     - |-
@@ -10702,7 +10729,8 @@ entries:
     - '1'
     - '6'
     - '2014-02-24 04:55:27.022371'
-    - '2014-02-24 04:55:27.022371'
+    - '2014-02-25 15:57:57.641086'
+    - Session 14
   - - '30'
     - How I Stopped Drowning in Drink
     - |-
@@ -10716,7 +10744,8 @@ entries:
     - '1'
     - '7'
     - '2014-02-24 04:55:27.024472'
-    - '2014-02-24 04:55:27.024472'
+    - '2014-02-25 15:58:07.907667'
+    - Written Inventory
   - - '31'
     - Who is Brenda?
     - "Writing this blog is scary. I’ve written about other people for the Chicago
@@ -10731,7 +10760,8 @@ entries:
     - '1'
     - '8'
     - '2014-02-24 04:55:27.026786'
-    - '2014-02-24 04:55:27.026786'
+    - '2014-02-25 15:58:16.259728'
+    - Session 16
   - - '32'
     - Reflecting on the first AA Meeting
     - |-
@@ -10742,7 +10772,8 @@ entries:
     - '1'
     - '9'
     - '2014-02-24 04:55:27.028866'
-    - '2014-02-24 04:55:27.028866'
+    - '2014-02-25 15:58:21.043215'
+    - Session 17
   - - '33'
     - Seventeen Years
     - |-
@@ -10757,7 +10788,8 @@ entries:
     - '1'
     - '10'
     - '2014-02-24 04:55:27.030837'
-    - '2014-02-24 04:55:27.030837'
+    - '2014-02-25 15:58:25.702762'
+    - Session 18
   - - '34'
     - A Calm, 36 Junky Hours
     - |-
@@ -10767,7 +10799,8 @@ entries:
     - '1'
     - '11'
     - '2014-02-24 04:55:27.032989'
-    - '2014-02-24 04:55:27.032989'
+    - '2014-02-25 15:58:30.324834'
+    - Session 19
   - - '35'
     - Sober, But Still A Perfectionist
     - |-
@@ -10777,25 +10810,13 @@ entries:
     - '1'
     - '12'
     - '2014-02-24 04:55:27.035235'
-    - '2014-02-24 04:55:27.035235'
-
----
-users:
-  columns:
-  - id
-  - username
-  - email
-  - password_digest
-  - locale
-  - created_at
-  - updated_at
-  - last_drink
-  records: 
-  - - '1'
-    - admin
-    - admin@example.com
-    - $2a$10$rMeJtkn6U0Fn2wKfpEOirOn7oKGN3HDnE9lmBBb0/A8m4NRI6CZAC
-    - en
-    - '2014-02-18 17:14:05.606077'
-    - '2014-02-24 03:51:41.218165'
-    - '2014-01-26 00:00:00'
+    - '2014-02-25 15:58:36.320454'
+    - Session 20
+  - - '36'
+    - My llamo
+    - "<p>Jorge!</p>\r\n"
+    - '6'
+    - 
+    - '2014-02-25 15:04:01.178893'
+    - '2014-02-25 15:04:01.178893'
+    - Session 14

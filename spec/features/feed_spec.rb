@@ -90,6 +90,33 @@ describe "feed" do
     end
   end
 
+  context "posting a journal entry" do
+    before do
+      @user = FactoryGirl.create(:user)
+      @user2 = FactoryGirl.create(:user, username: "bennybeans", email: "ben@example.com")
+      @status = FactoryGirl.create(:status, :user_id => @user.id)
+      @entry = FactoryGirl.create(:entry, :user_id => @user.id)
+      FactoryGirl.create(:friendship, user_id: @user.id, friend_id: @user2.id, status: "approved")
+    end
+
+    it "can post a journal entry as a status" do
+      feed_login
+
+      within "#feed-activity" do
+        expect(page).to have_content("My first status update")
+      end
+
+      click_on "Journal"
+      click_on "I love being sober"
+      click_on "Share"
+
+      within "#feed-activity" do
+        expect(page).to have_content("My first status update")
+      end
+      
+    end
+  end
+
   def feed_login
     visit login_path(locale: :en)
     page.execute_script("$('#password').show()")
