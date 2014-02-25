@@ -27,6 +27,8 @@ es:
     status_save_success: Su estado fue publicada
     status_save_failure: Había un problema al guardar tu estado
     status_update_success: Su estado se actualiza
+    status_delete_success: Se ha eliminado el estado de su
+    status_delete_failure: Hubo un problema al eliminar el estado de su
   navbar:
     logout: Desloguear
     login: Conexión

@@ -27,6 +27,8 @@ fr:
     status_save_success: Votre statut a été publié
     status_save_failure: Il y avait un problème sauver votre statut
     status_update_success: Votre statut a été mis à jour
+    status_delete_success: Votre statut a été supprimé
+    status_delete_failure: Il y avait un problème de supprimer votre statut
   navbar:
     logout: Déconnexion
     login: Connexion

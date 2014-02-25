@@ -9,7 +9,7 @@ TwelveStepper::Application.routes.draw do
 
     resources :entries
     get '/feed' => 'statuses#index', as: 'feed'
-    resources :statuses, only: [:new, :create, :edit, :update]
+    resources :statuses, only: [:new, :create, :edit, :update, :destroy]
 
     patch '/worksheet_entries' => 'worksheet_entries#create'
     resources :worksheet_entries

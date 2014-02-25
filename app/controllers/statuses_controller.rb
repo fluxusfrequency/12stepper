@@ -22,21 +22,11 @@ class StatusesController < ApplicationController
   end
 
   def edit
-    @status = Status.find(params[:id])
-
-    if @status.user != current_user
-      flash[:notice] = t('flash.unauthorized')
-      return redirect_to root_path
-    end
+    authorize_status_user
   end
 
   def update
-    @status = Status.find(params[:id])
-
-    if @status.user != current_user
-      flash[:notice] = t('flash.unauthorized')
-      return redirect_to root_path
-    end
+    authorize_status_user
 
     @status.update_attributes(content: params[:status][:content])
     if
@@ -46,4 +36,25 @@ class StatusesController < ApplicationController
     end
     redirect_to root_path
   end
+
+  def destroy
+    authorize_status_user
+    if @status.destroy
+      flash[:notice] = t('flash.status_delete_success')
+    else
+      flash[:notice] = t('flash.status_delete_failure')
+    end
+    redirect_to root_path
+  end
+
+  private
+
+  def authorize_status_user
+    @status = Status.find(params[:id])
+    if @status.user != current_user
+      flash[:notice] = t('flash.unauthorized')
+      return redirect_to root_path
+    end
+  end
+
 end

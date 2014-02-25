@@ -75,6 +75,21 @@ describe "feed" do
     end
   end
 
+  context "delete" do
+    before do
+      @user = FactoryGirl.create(:user)
+      @status = FactoryGirl.create(:status, user_id: @user.id)
+    end
+
+    it "can remove a status it posted", js: true do
+      feed_login
+      within "#status-#{@status.id}" do
+        click_on "Delete"
+      end
+      expect(page).to_not have_content("This is my first status.")
+    end
+  end
+
   def feed_login
     visit login_path(locale: :en)
     page.execute_script("$('#password').show()")

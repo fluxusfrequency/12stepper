@@ -3,5 +3,6 @@
   <p><%= status.content %></p>
   <% if current_user == status.user %>
     <%= link_to I18n.t("entries.edit"), edit_status_path(status), class: "edit-status-link" %>
+    <%= link_to I18n.t("entries.delete"), status_path(status), method: :delete, class: "delete-status-link" %>
   <% end %>
 </div>

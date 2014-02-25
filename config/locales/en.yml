@@ -27,6 +27,8 @@ en:
     status_save_success: Your status was posted
     status_save_failure: There was a problem saving your status
     status_update_success: Your status was updated
+    status_delete_success: Your status was deleted
+    status_delete_failure: There was a problem deleting your status
   navbar:
     logout: Logout
     login: Login
