@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  include InvalidatesCache
+  include InvalidatesCache unless ENV['TRAVIS']
   has_secure_password
 
   validates :username, :email, presence: true
