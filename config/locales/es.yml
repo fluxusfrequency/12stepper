@@ -18,6 +18,7 @@ es:
     invalid_credentials: Ha introducido un correo electrónico o contraseña no es válida, por favor intente de nuevo.
     signin: Registrado!
     signout: Exitosamente cerrado la sesión.
+    anniversary: Feliz aniversario!
     milestone: Felicitaciones por
     friend_request_sent: Su amigo petición ha sido enviada.
     friend_request_failed: Hubo un problema al enviar su solicitud de amigo.
@@ -51,6 +52,8 @@ es:
                       90 días - Red 
                       1 año - Luz Verde 
     day: día
+    month: mez
+    year: año
     sober: sobrio 
     profile: Mi Perfil
     view_friends: Ver a Mis Amigos
