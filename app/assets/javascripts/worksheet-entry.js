@@ -10,7 +10,11 @@ $(function() {
   $('#choose-a-section').change(function(){
     var queryData = {step: $('#choose-a-step').val(),
                      section: $('#choose-a-section').val()};
+    setNewPageData(queryData);
+    
+  })
 
+  var setNewPageData = function(queryData){
     $.ajax({
       url: '/api/v1/worksheet/entries',
       type: 'GET',
@@ -28,10 +32,10 @@ $(function() {
         }
       }
     })
-  })
+  }
 
   var setEntryData = function(response) {
-    console.log(response)
+    // console.log(response)
     $('#hidden-step-field').val(response["step"]);
     $('#hidden-section-field').val(response["worksheet"]["title"]);
     if (response["entry"].length !== 0) {
@@ -81,6 +85,12 @@ $(function() {
       }
     })
   }
+
+  $(document).ready(function(){
+    var queryData = {step: $('#choose-a-step').val(),
+                     section: $('#choose-a-section').val()};
+    setNewPageData(queryData);
+  })
 })
 // $('.worksheet').hide()
 // $('#worksheet-entry-text').removeClass('col-lg-12').addClass('col-lg-7')

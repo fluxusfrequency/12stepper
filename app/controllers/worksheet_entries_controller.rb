@@ -11,7 +11,7 @@ class WorksheetEntriesController < ApplicationController
   end
 
   def create
-    entry = Entry.find_by(id: params["entry"]["entry_id"].to_i)
+    entry = current_user.entries.where(id: params["entry"]["entry_id"].to_i)
     if entry
       entry.update_attributes(entry_params)
     else
