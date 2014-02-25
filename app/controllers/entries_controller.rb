@@ -25,6 +25,10 @@ class EntriesController < ApplicationController
 
   def edit
     @entry = current_user.entries.where(id: params[:id]).first
+    if @entry.section && @entry.step
+      worksheets = Worksheet.where(step: @entry.step)
+      @worksheet = worksheets.select {|worksheet| worksheet.title == @entry.section }.first
+    end
   end
 
   def update

@@ -1,13 +1,25 @@
 <div class="entry-edit-container">
-  <%= form_for @entry do |f| %>
+  <% if @worksheet %>
+    <%= link_to "Show Worksheet", '#', id:'toggle-worksheet' %>
 
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+  <% end %>
+  <div id='entry-text-input'>
+    <%= form_for @entry do |f| %>
 
-    <%= f.cktext_area :body, :class => 'ckeditor' %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
 
-    <%= f.submit %>
-    
+      <%= f.cktext_area :body, :class => 'ckeditor' %>
+
+      <%= f.submit %>
+      
+    <% end %>
+  </div>
+  <% if @worksheet %>
+    <div class='hide-worksheet-details' id='toggled-worksheet-details'>
+      <%= @worksheet.title %>
+      <%= @worksheet.body.html_safe %>
+    </div>
   <% end %>
 
   <br />

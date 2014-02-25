@@ -104,3 +104,10 @@
   margin-left: -13px;
 }
 
+.hide-worksheet-details {
+  display: none;
+}
+
+#toggle-worksheet {
+  float:  right;
+}
