@@ -30,6 +30,7 @@
     });
 
     function buildResultView(result, locale) {
+      result['step'] = result['step'] || "";
       var view = '<div class="row" id="entry-index-item-row">' +
       '<div class="col-lg-3 col-md-3">' + 
       '<h4 class="entry-item-title"><a href="' + '/entries/' +

@@ -5,7 +5,7 @@
 
       <h4 class="entry-item-title"><%= link_to "#{entry.title}", edit_entry_path(entry.id) %></h4>
       <p class="entry-date"><%= entry.created_at.strftime("%m/%d/%Y") %></p>
-      <% if entry.step %>
+      <% if entry.step.kind_of?(Fixnum) %>
         <p class="entry-step"><%= t("entries.step") %>: <%= entry.step %></p>
       <% end %>
     </div>

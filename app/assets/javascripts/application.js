@@ -23,9 +23,6 @@
 //= require static
 //= require statuses
 
-$('.ckeditor').ckeditor({
-});
-
 $.expr[":"].Contains = $.expr.createPseudo(function(arg) {
   return function( elem ) {
     return $(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
@@ -51,7 +48,3 @@ var bigbookSearchAndHighlight = function(searchTerm) {
     $('html').scrollTop($('.highlighted:first').offset().top);
   }
 };
-
-$(function(){
-    setTimeout($(".cke_bottom").css('margin-top', "220px"), 1000);
-  });
