@@ -1,6 +1,6 @@
 <div id="user-details">
   <h3><%= @user.username %></h3>
-  <p><%= print_days_sober(@user) %></p>
+  <p><%= @user.days_sober %></p>
 </div>
 
 <% if current_user == @user %>
