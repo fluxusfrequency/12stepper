@@ -1,0 +1,4 @@
+<div id="status-#{status.id}">
+  <%= link_to status.user.username, user_show_path(status.user.username) %>
+  <%= status.content %>
+</div>

@@ -23,6 +23,8 @@ es:
     friend_request_failed: Hubo un problema al enviar su solicitud de amigo.
     friendship_approved: Usted ahora es amigo de
     friendship_rejected: RECHAZADO!
+    status_save_success: Su estado fue publicada
+    status_save_failure: Había un problema al guardar tu estado
   navbar:
     logout: Desloguear
     login: Conexión
@@ -100,3 +102,6 @@ es:
     accept: Aceptar
     reject: Rechazar
     view_profile: Ver Perfil
+  statuses:
+    post: Publique
+    whats_up: ¿Qué tal?

@@ -35,4 +35,9 @@ FactoryGirl.define do
     friend_id 2
     status "approved"
   end
+
+  factory :status do
+    user_id 1
+    content "My first status update"
+  end
 end

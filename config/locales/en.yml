@@ -23,6 +23,8 @@ en:
     friend_request_failed: There was a problem submitting your friend request.
     friendship_approved: You are now friends with
     friendship_rejected: REJECTED!
+    status_save_success: Your status was posted
+    status_save_failure: There was a problem saving your status
   navbar:
     logout: Logout
     login: Login
@@ -101,3 +103,6 @@ en:
     accept: Accept
     reject: Reject
     view_profile: View Profile
+  statuses:
+    post: Post
+    whats_up: What's up?

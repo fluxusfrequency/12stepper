@@ -17,11 +17,8 @@ describe 'authorization' do
       visit new_entry_path
       check_unauthorized
 
-      visit search_meetings_path
-      check_unauthorized
-
-      visit meetings_path
-      check_unauthorized
+      # visit search_meetings_path
+      # check_unauthorized
 
       visit big_book_path
       check_unauthorized
@@ -43,11 +40,8 @@ describe 'authorization' do
       visit new_entry_path
       check_authorized
 
-      visit search_meetings_path
-      check_authorized
-
-      visit meetings_path
-      check_authorized
+      # visit search_meetings_path
+      # check_authorized
 
       visit big_book_path
       check_authorized

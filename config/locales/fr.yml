@@ -23,6 +23,8 @@ fr:
     friend_request_failed: Il y avait un problème de soumettre votre demande d'ami.
     friendship_approved: Vous êtes maintenant amis avec
     friendship_rejected: REJETÉ!
+    status_save_success: Votre statut a été publié
+    status_save_failure: Il y avait un problème sauver votre statut
   navbar:
     logout: Déconnexion
     login: Connexion
@@ -100,3 +102,6 @@ fr:
     accept: Accepter
     reject: Rejeter
     view_profile: Voir le profil
+  statuses:
+    post: Diffusez
+    whats_up: Quoi de neuf?
