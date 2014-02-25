@@ -10,9 +10,12 @@
       <%= f.text_field :title %>
 
       <%= f.cktext_area :body, :class => 'ckeditor' %>
+       <br />
+      <br />
+      <%= f.submit t('entries.create'), id:'worksheet-entry-submit' %>
+      <%= link_to t('entries.delete'), entry_path(@entry.id), method: :delete %>
+      <%= link_to t('entries.share'), "#" %>
 
-      <%= f.submit %>
-      
     <% end %>
   </div>
   <% if @worksheet %>
@@ -22,12 +25,7 @@
     </div>
   <% end %>
 
-  <br />
-  <br />
-  <p class="new-entry-action">
-    <%= link_to t('entries.create'), "#", :onclick=>"$('.new_entry').submit()", id:"entry-submit" %>
-    <%= link_to t('entries.delete'), entries_path %>
-    <%= link_to t('entries.share'), "#" %>
-  </p>
+ 
+ 
   
 </div>
