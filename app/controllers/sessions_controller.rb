@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
     password = params[:password]
 
     @user = User.find_by(email: email).decorate
+    I18n.locale = @user.locale
 
     if @user
       result = @user.authenticate(password)
