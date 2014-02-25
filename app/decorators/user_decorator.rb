@@ -17,4 +17,25 @@ class UserDecorator < Draper::Decorator
     "#{SobrietyCounter.token_for(object.last_drink)}_token.png"
   end
 
+  def display_milestone_congrats
+    if milestone?(object.last_drink.to_date)
+      t("flash.milestone") + " " + 
+      pluralize(days_ago(object.last_drink), t("navbar.day")) + " " +
+      t("navbar.sober") + "!"
+    end
+  end
+
+  private
+
+  def milestone?(date)
+    [ Date.today - 1.month, 
+      Date.today - 2.months, 
+      Date.today - 3.months, 
+      Date.today - 6.months, 
+      Date.today - 9.months, 
+      Date.today - 1.year ].any? do |milestone| 
+       date == milestone
+      end
+  end
+
 end
