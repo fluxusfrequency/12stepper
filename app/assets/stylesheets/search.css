@@ -1,0 +1,47 @@
+#friend-search-conatiner {
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+#friend-search-results {
+  margin-top: 40px;
+}
+
+#friend-search-conatiner h1,
+#friend-search-results h1 {
+  padding-bottom: 10px;
+}
+
+#pending-section-title {
+  border-bottom: 2px solid #CDC1C7;
+  padding-bottom: 10px;
+}
+
+.pending-friendship {
+  border-bottom: 2px solid #CDC1C7;
+}
+
+.pending-friendship div {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.pending-details {
+  font-size: 1.3em;
+}
+
+#friend-search-results-title {
+  border-bottom: 2px solid #CDC1C7;
+}
+
+.searched-friend {
+  border-bottom: 2px solid #CDC1C7;
+}
+
+.searched-friend div {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.searched-friend-details {
+  font-size: 1.3em;
+}
