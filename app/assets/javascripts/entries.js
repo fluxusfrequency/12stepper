@@ -58,9 +58,9 @@
       }
     }
 
-    $('#toggle-worksheet').on("click", function() {
+    $('#toggle-worksheet').on("click", function(e) {
+      e.preventDefault();
       toggleLink();
-      console.log($('#toggle-worksheet'))
     })
 
     function toggleLink() {
@@ -76,6 +76,27 @@
         $('.toggled-worksheet-details').addClass('hide-worksheet-details');
         $('.toggled-worksheet-details').removeClass('worksheet col-lg-5');
         $('#entry-text-input').removeClass('col-lg-7');
+      }
+    }
+
+    $('#toggle-entry-worksheet').on("click", function(e) {
+      e.preventDefault();
+      toggleEntryLink();
+    })
+
+    function toggleEntryLink() {
+      console.log('clik')
+      if ($('#toggle-entry-worksheet').html() === "Show Worksheet") {
+        $('#toggle-entry-worksheet').empty().html("Hide Worksheet");
+        $('.new-worksheet-details').removeClass('hide-worksheet-details');
+        $('.new-worksheet-details').addClass('col-lg-5');
+        $('#worksheet-entry-text').addClass('col-lg-7');
+      } else {
+        $('#toggle-entry-worksheet').empty().html("Show Worksheet");
+        $('.new-worksheet-details').addClass('hide-worksheet-details');
+        $('.new-worksheet-details').removeClass('col-lg-5');
+        $('#worksheet-entry-text').removeClass('col-lg-7');
+        $('#worksheet-entry-text').addClass('col-lg-12');
       }
     }
   });
