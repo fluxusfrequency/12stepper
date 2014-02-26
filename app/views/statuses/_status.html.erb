@@ -1,9 +1,14 @@
-<div id=<%= "status-#{status.id}" %> class="status-item">
-  <%= link_to status.user.username, user_show_path(status.user.username) %>
-  <p><%= status.content %></p>
-  <p><%= status.posted_time_ago %></p>
-  <% if current_user == status.user %>
-    <%= link_to t("entries.edit"), edit_status_path(status), class: "edit-status-link" %>
-    <%= link_to t("entries.delete"), status_path(status), method: :delete, class: "delete-status-link" %>
-  <% end %>
+<div class="row status-item" id=<%= "status-#{status.id}" %>>
+  <div class="col-lg-3">
+    <p><%= image_tag (status.user.decorate.current_token_image_sm), class: "status-token" %>
+    <%= link_to status.user.username, user_show_path(status.user.username), class: "status-username" %></p>
+    <p class="status-time"><%= status.posted_time_ago %></p>
+  </div>
+  <div class="col-lg-8">
+    <p><%= status.content %></p>
+    <% if current_user == status.user %>
+      <%= link_to t("entries.edit"), edit_status_path(status), class: "edit-status-link" %>
+      <%= link_to t("entries.delete"), status_path(status), method: :delete, class: "delete-status-link" %>
+    <% end %>
+  </div>
 </div>

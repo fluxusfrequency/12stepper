@@ -122,7 +122,7 @@ es:
     no_results: Lo sentimos, no hay resultados que coincidan con tu búsqueda.
     add_friend: Añadir Amigo
   statuses:
-    post: Publique
+    share: Compartir
     whats_up: ¿Qué tal?
     update: Actualizar
     ago: Hace

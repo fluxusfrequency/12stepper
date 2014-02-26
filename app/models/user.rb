@@ -22,26 +22,19 @@ class User < ActiveRecord::Base
   end
 
   def approved_friends
-    if ENV['TRAVIS']
-      friends = []
-      friends += self.friendships.approved.where(user_id: id).map {|friendship| friendship.friend}
-      friends += self.inverse_friendships.approved.where(friend_id: id).map {|friendship| friendship.user}
-      return friends
-    end
+    return calculate_approved_friends if ENV['TRAVIS']
     
     Rails.cache.fetch("approved_friends_for_#{self.username}") do
-      friends = []
-      friends += self.friendships.approved.where(user_id: id).map {|friendship| friendship.friend}
-      friends += self.inverse_friendships.approved.where(friend_id: id).map {|friendship| friendship.user}
-      friends
+      calculate_approved_friends
     end
   end
 
   def pending_friends
-    friends = []
-    friends += self.friendships.pending.where(user_id: id).map {|friendship| friendship.friend}
-    friends += self.inverse_friendships.pending.where(friend_id: id).map {|friendship| friendship.user}
-    friends
+    return calculate_pending_friends if ENV['TRAVIS']
+    
+    Rails.cache.fetch("pending_friends_for_#{self.username}") do
+      calculate_pending_friends
+    end
   end
 
   def all_friendships_and_inverse_friendships
@@ -56,4 +49,19 @@ class User < ActiveRecord::Base
     self == other || self.all_friendships_and_inverse_friendships.include?(other)
   end
 
+  private
+
+  def calculate_approved_friends
+    friends = []
+    friends += self.friendships.approved.where(user_id: id).map {|friendship| friendship.friend}
+    friends += self.inverse_friendships.approved.where(friend_id: id).map {|friendship| friendship.user}
+    friends
+  end
+
+  def calculate_pending_friends
+    friends = []
+    friends += self.friendships.pending.where(user_id: id).map {|friendship| friendship.friend}
+    friends += self.inverse_friendships.pending.where(friend_id: id).map {|friendship| friendship.user}
+    friends
+  end
 end

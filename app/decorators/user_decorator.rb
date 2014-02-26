@@ -17,6 +17,10 @@ class UserDecorator < Draper::Decorator
     "#{SobrietyCounter.token_for(object.last_drink)}_token.png"
   end
 
+  def current_token_image_sm
+    "#{SobrietyCounter.token_for(object.last_drink)}_token_sm.png"
+  end
+
   def display_milestone_congrats
     year_milestones.each do |n|
       return years_anniversary_message(n) if year_milestone?(n)

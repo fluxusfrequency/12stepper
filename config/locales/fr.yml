@@ -122,7 +122,7 @@ fr:
     no_results: Désolé, aucun résultat ne correspond à votre recherche.
     add_friend: Ajouter un Ami
   statuses:
-    post: Diffusez
+    share: Partager
     whats_up: Quoi de neuf?
     update: Mettre à jour
     ago: Il ya

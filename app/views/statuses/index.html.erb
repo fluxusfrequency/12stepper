@@ -1,10 +1,31 @@
-<div id="new-status">
-  <%= form_for @status do |f| %>
-    <%= f.text_field :content, :placeholder => t('statuses.whats_up') %>
-    <%= f.submit t("statuses.post") %>
-  <% end %>
+<div class="row" id="friend-actions-bar">
+  <div class="col-lg-5">
+    <h2>Supporter Share</h2>
+  </div>
+  <div class="col-lg-7" id="friend-action-links">
+    <%= link_to 'View Your Friends', '#', class:"action-link-item" %>
+    <%= link_to 'Find Friends', '#', class:"action-link-item" %>
+    <%= text_field_tag :user_search, nil, placeholder: "Search" %>
+    <%= link_to image_tag('green_token.png'), "#", id: "user-search-submit" %>
+  </div>
 </div>
 
-<div id="feed-activity">
-  <%= render @statuses %>
+<div class="row" id="new-status-container">
+  <div class="col-lg-3">
+    <h3>What's on your mind?</h3>
+  </div>
+  <div id="new-status-form" class="col-lg-8">
+    <%= form_for @status do |f| %>
+      <%= f.text_area :content, :placeholder => t('statuses.whats_up'), id: "new-status-field" %>
+  </div>
+  <div class="col-lg-1">
+      <%= f.submit t("statuses.share"), class: "btn", id: "new-status-submit" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div id="feed-activity" class="col-lg-12">
+    <%= render @statuses %>
+  </div>
 </div>

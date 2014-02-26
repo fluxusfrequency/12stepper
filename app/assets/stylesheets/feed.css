@@ -1,0 +1,82 @@
+#new-status, #friend-actions-bar {
+  padding-top: 20px;
+}
+
+#friend-actions-bar {
+  border-bottom: 2px solid #CDC1C7;
+  padding-bottom: 40px;
+}
+
+#friend-action-links {
+  text-align: right;
+  vertical-align: bottom;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-right: 0;
+}
+
+.action-link-item {
+  font-size: 1.15em;
+  vertical-align: bottom;
+  margin-right: 20px;
+}
+
+#friend-action-links input {
+  margin-bottom: 5px;
+  height: 23px;
+  width: 150px;
+  padding-left: 2px;
+  font-size: .9em;
+}
+
+textarea {
+  resize: none;
+  border: 2px solid #CDC1C7;
+}
+
+#user-search-submit img {
+  vertical-align: baseline;
+  margin-bottom: -5px;
+  padding-bottom: 0;
+}
+
+#new-status-form {
+  padding-top: 0;
+}
+
+#new-status-container {
+  border-bottom: 2px solid #CDC1C7;
+  padding-bottom: 10px;
+}
+
+#new-status-field {
+  width: 750px;
+  height: 150px;
+  margin-top: 20px;
+}
+
+#new-status-submit {
+  margin-top: 20px;
+  color: white;
+  padding: 3px 18px;
+}
+
+.status-item {
+  border-bottom: 2px solid #CDC1C7;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.status-username {
+  color: #3F3A3C;
+  font-size: 1.2em;
+}
+
+.status-token {
+  padding-bottom: 7px;
+  padding-right: 3px;
+}
+
+.status-time {
+  font-size: 0.9em;
+}
