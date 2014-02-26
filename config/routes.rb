@@ -51,6 +51,10 @@ TwelveStepper::Application.routes.draw do
           get '/search/:query', to: 'search#show'
         end
 
+        namespace :feed do
+          resources :statuses, only: [:index]
+        end
+
       end
     end
   end

@@ -21,7 +21,6 @@
 //= require entries
 //= require landing
 //= require static
-//= require statuses
 //= require worksheet-entry
 
 $.expr[":"].Contains = $.expr.createPseudo(function(arg) {
