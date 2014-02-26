@@ -48,4 +48,8 @@ class User < ActiveRecord::Base
     self.friendships + self.inverse_friendships
   end
 
+  def is_friends_with?(other)
+    self == other || self.approved_friends.include?(other)
+  end
+
 end

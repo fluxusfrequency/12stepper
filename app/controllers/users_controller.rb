@@ -23,9 +23,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by(username: params[:username]).decorate
-    unless can_view?(@user)
-      flash.notice = t("flash.unauthorized")
-      redirect_to root_path
+    if current_user.is_friends_with?(@user)
+      @statuses = StatusDecorator.decorate_collection(@user.statuses.take(30))
     end
   end
 
@@ -48,10 +47,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :email, :password, :password_confirmation, :locale, :last_drink)
-  end
-
-  def can_view?(user)
-    current_user == user || current_user.approved_friends.include?(user)
   end
 
 end

@@ -112,6 +112,7 @@ en:
     get_started: Get Started
     language: My Language
     edit: Edit My Profile
+    recent_activity: Recent Activity
   friendships:
     remove: Remove
     accept: Accept
@@ -119,6 +120,7 @@ en:
     view_profile: View Profile
     cancel: Cancel
     no_results: Sorry, no results matched your search.
+    add_friend: Add Friend
   statuses:
     post: Post
     whats_up: What's up?

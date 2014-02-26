@@ -111,6 +111,7 @@ es:
     get_started: Empezar
     language: Mi Idioma
     edit: Editar mi Perfil
+    recent_activity: Actividad Reciente
   friendships:
     remove: Eliminar
     accept: Aceptar
@@ -118,6 +119,7 @@ es:
     view_profile: Ver Perfil
     cancel: Cancelar
     no_results: Lo sentimos, no hay resultados que coincidan con tu búsqueda.
+    add_friend: Añadir Amigo
   statuses:
     post: Publique
     whats_up: ¿Qué tal?

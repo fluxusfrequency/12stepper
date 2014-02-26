@@ -111,6 +111,7 @@ fr:
     get_started: Commencer
     language: Mon Langue
     edit: Éditer mon Profil
+    recent_activity: Activité Récente
   friendships:
     remove: Supprimer
     accept: Accepter
@@ -118,6 +119,7 @@ fr:
     view_profile: Voir le profil
     cancel: Annuler
     no_results: Désolé, aucun résultat ne correspond à votre recherche.
+    add_friend: Ajouter un Ami
   statuses:
     post: Diffusez
     whats_up: Quoi de neuf?

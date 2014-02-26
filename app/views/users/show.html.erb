@@ -1,7 +1,14 @@
 <div id="user-details">
-  <h3><%= @user.username %></h3>
+  <h2><%= @user.username %></h2>
   <p><%= @user.days_sober %></p>
 </div>
+
+<% if current_user.is_friends_with?(@user) %>
+  <div id="recent-activity">
+    <h3><%= @user.username + "'s " + t("profile.recent_activity") %></h3>
+    <%= render @statuses %>
+  </div>
+<% end %>
 
 <% if current_user == @user %>
   <%= link_to t("profile.edit"), edit_profile_path %>
