@@ -15,6 +15,7 @@
   </div>
 </div>
 <div class='row'>
+<%= link_to "Hide Worksheet", '#', class: 'pull-right', id:'toggle-entry-worksheet' %><br />
   <div id='worksheet-entry-text' class='col-lg-7'>
     <%= form_for @entry, url: worksheet_entries_path do |f| %>
 

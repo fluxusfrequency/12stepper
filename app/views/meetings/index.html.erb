@@ -3,7 +3,7 @@
 <%= form_tag search_meetings_path, method: :get do %>
   <p>
     <%= text_field_tag :address, params[:address], id: "search-form", placeholder: t("meetings.address") %>
-    <%= submit_tag t('meetings.search'), name: nil, id: "search-button", class: "btn" %>
+    <%= submit_tag t('meetings.search'), {name: nil, id: "search-button", class: "btn"} %>
   </p><br />
 <% end %>
 
@@ -14,12 +14,13 @@
 
 <div id='search-results' class='col-lg-6'></div>
 
+<%= stylesheet_link_tag "mapbox" %>
 <%= javascript_include_tag "mapbox" %>
 <%= javascript_include_tag "meetings" %>
-<%= stylesheet_link_tag "mapbox" %>
 
 <script type='text/javascript' id="map-script">
-  var map = L.mapbox.map('main-map', 'examples.map-20v6611k').setView([39.7391667, -104.984167], 12);
+  var map = L.mapbox.map('main-map', 'examples.map-9ijuk24y').setView([39.7391667, -104.984167], 12);
   $(".map-container").addClass("hide-map-container")
 
 </script>
+
