@@ -113,6 +113,7 @@ en:
     language: My Language
     edit: Edit My Profile
     recent_activity: Recent Activity
+    bio: Bio
   friendships:
     remove: Remove
     accept: Accept

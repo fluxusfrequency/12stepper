@@ -1,6 +1,9 @@
 <div id="user-details">
   <h2><%= @user.username %></h2>
   <p><%= @user.days_sober %></p>
+  <% unless @user.bio == "" %>
+    <p><%= t("profile.bio") + ": " + @user.bio %></p>
+  <% end %>
 </div>
 
 <% if current_user.is_friends_with?(@user) %>
@@ -8,6 +11,13 @@
     <h3><%= @user.username + "'s " + t("profile.recent_activity") %></h3>
     <%= render @statuses %>
   </div>
+<% end %>
+
+<% unless current_user.friend_or_pending_with?(@user) %>
+  <%= form_for Friendship.new, method: :create, url: friendships_path do |f| %>
+    <%= f.hidden_field :user_id, value: @user.id %>
+    <%= f.submit t("friendships.add_friend"), id: "#{@user.username}-submit" %>
+  <% end %>
 <% end %>
 
 <% if current_user == @user %>

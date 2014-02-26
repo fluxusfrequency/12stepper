@@ -52,4 +52,8 @@ class User < ActiveRecord::Base
     self == other || self.approved_friends.include?(other)
   end
 
+  def friend_or_pending_with?(other)
+    self == other || self.all_friendships_and_inverse_friendships.include?(other)
+  end
+
 end
