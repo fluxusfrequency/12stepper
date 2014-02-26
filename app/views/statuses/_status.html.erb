@@ -4,8 +4,10 @@
     <%= link_to status.user.username, user_show_path(status.user.username), class: "status-username" %></p>
     <p class="status-time"><%= status.posted_time_ago %></p>
   </div>
-  <div class="col-lg-8">
+  <div class="col-lg-9">
     <p><%= status.content %></p>
+  </div>
+  <div class="col-lg-2 col-lg-offset-10">
     <% if current_user == status.user %>
       <%= link_to t("entries.edit"), edit_status_path(status), class: "edit-status-link" %>
       <%= link_to t("entries.delete"), status_path(status), method: :delete, class: "delete-status-link" %>

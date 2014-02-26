@@ -1,3 +1,36 @@
 #user_locale {
   margin-left: 10px;
 }
+
+#user-details {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#user-details h1 {
+  margin-top: 0px;
+}
+
+#recent-activity h3 {
+  border-bottom: 2px solid #CDC1C7;
+}
+
+#user-show-actions {
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+#user-show-actions h3 {
+  margin-top: 0px;
+}
+
+#user-show-actions h3 a {
+  color: #3F3A3C;
+}
+
+.edit-status-link,
+.delete-status-link {
+  padding-top: 10px;
+  float: right;
+  margin-left: 25px;
+}
