@@ -80,7 +80,9 @@ describe "User Account Creation" do
       account_login
 
       click_on "Welcome back, Batman!"
-      click_on "View My Friends"
+      within ".dropdown-menu" do
+        click_on "View My Friends"
+      end
       within "#friend-Robin" do
         click_on "View Profile"
       end
