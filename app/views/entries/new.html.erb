@@ -18,11 +18,14 @@
 
     <br />
     <br />
-    <p class="new-entry-action">
-      <%= f.submit t('entries.create'), class:"btn-link", id:"entry-submit" %>
-      <%= link_to t('entries.delete'), entries_path %>
-      <%= f.submit t('entries.share'), class:"btn-link" %>
-    </p>
+    <div class="entry-link-container">
+      <%= f.submit t('entries.create'), class:"btn-link entry-link-action", id:'entry-submit' %>
+      <%= link_to t('entries.delete'), entries_path, class:"btn-link entry-link-action" %>
+      <%= f.submit t('entries.share'), class:"btn-link entry-link-action" %>
+    </div>
+      <%# f.submit t('entries.create'), class:"btn-link", id:"entry-submit" %>
+      <%# link_to t('entries.delete'), entries_path %>
+      <%# f.submit t('entries.share'), class:"btn-link" %>
     
   <% end %>
 </div>

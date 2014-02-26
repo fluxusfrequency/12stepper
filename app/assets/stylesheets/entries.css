@@ -111,3 +111,11 @@
 #toggle-worksheet {
   float:  right;
 }
+
+.entry-link-container {
+  border-bottom: 2px solid #CDC1C7;
+}
+
+.entry-link-action {
+  margin-right: 30px!important;
+}

@@ -24,10 +24,11 @@
       <%= f.cktext_area :body, :class => 'ckeditor' %>
        <br />
       <br />
-
-      <%= f.submit t('entries.create'), class:"btn-link", id:'worksheet-entry-submit' %>
-      <%= link_to t('entries.delete'), entry_path(@entry.id), method: :delete %>
-      <%= f.submit t('entries.share'), class:"btn-link" %>
+      <div class="entry-link-container">
+        <%= f.submit t('entries.create'), class:"btn-link entry-link-action", id:'worksheet-entry-submit' %>
+        <%= link_to t('entries.delete'), entry_path(@entry.id), class:"btn-link entry-link-action", method: :delete %>
+        <%= f.submit t('entries.share'), class:"btn-link entry-link-action" %>
+      </div>
 
     <% end %>
   </div>

@@ -61,6 +61,10 @@
   min-width: 100px;
 }
 
+#congrats-link-container a {
+  cursor: default;
+}
+
 #congrats-link {
   display: block;
   margin: 5px;

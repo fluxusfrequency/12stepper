@@ -3,10 +3,12 @@
     <h2>Supporter Share</h2>
   </div>
   <div class="col-lg-7" id="friend-action-links">
-    <%= link_to 'View Your Friends', '#', class:"action-link-item" %>
-    <%= link_to 'Find Friends', '#', class:"action-link-item" %>
-    <%= text_field_tag :user_search, nil, placeholder: "Search" %>
-    <%= link_to image_tag('green_token.png'), "#", id: "user-search-submit" %>
+    <%= link_to t("navbar.view_friends"), friendships_path, class:"action-link-item" %>
+    <%= link_to t("navbar.find_friends"), new_friends_search_path, class:"action-link-item" %>
+    <%= form_tag friends_search_index_path, id: "friend-search-form", method: :get, url: friends_search_index_path do %>
+      <%= text_field_tag :user_search, params[:friend_name], :placeholder => "Search" %>
+      <%= link_to image_tag('green_token.png'), "#", :onclick => "$('#friend-search-form').submit()", id: 'user-search-submit' %>
+    <% end %>
   </div>
 </div>
 
