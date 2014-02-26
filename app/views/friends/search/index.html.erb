@@ -1,6 +1,9 @@
-<div id="friend-search-results">
-  <%= render partial: 'friends/search/user', collection: @users %>
+<div class="row" id="friend-search-results">
+  <div class="col-lg-12" id="friend-search-results-title">
+    <h1>Friends Matching Your Search</h1>
+  </div>
   <% if @users.empty? %>
     <p><%= t('friendships.no_results') %></p>
   <% end %>
 </div>
+<%= render partial: 'friends/search/user', collection: @users %>

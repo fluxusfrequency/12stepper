@@ -11,5 +11,15 @@
  *= require_self
  *= require bootstrap.min
  *= require 1-col-portfolio
- *= require_tree .
+ *= require big_book
+ *= require entries
+ *= require feed
+ *= require landing
+ *= require meetings
+ *= require meetings
+ *= require navbar
+ *= require styles
+ *= require user
+ *= require worksheet_entries
+ *= require search
  */

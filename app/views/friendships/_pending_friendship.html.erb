@@ -1,5 +1,13 @@
-<div id=<%= "friend-#{friendship.friend.username}"%>>
-  <%= friendship.friend.username %>
-  <%= link_to t("friendships.view_profile"), user_show_path(friendship.friend.username) %>
-  <%= button_to t("friendships.cancel"), remove_friendship_path(friendship.id), method: :delete, class: 'btn-link' %>
+<div class="row pending-friendship" id=<%= "friend-#{friendship.friend.username}"%>>
+  <div class="col-lg-2">
+    <p class="pending-details"><%= image_tag (friendship.friend.decorate.current_token_image_sm), class: "status-token" %>
+    <%= friendship.friend.username %></p>
+  </div>
+  <div class="col-lg-8">
+    <%= t('profile.bio') + ": " + friendship.friend.bio %>
+  </div>
+  <div class="col-lg-2 pending-actions">
+    <%= link_to t("friendships.view_profile"), user_show_path(friendship.friend.username), class: 'btn-link' %></p>
+    <%= button_to t("friendships.cancel"), remove_friendship_path(friendship.id), method: :delete, class: 'btn-link' %>
+  </div>
 </div>

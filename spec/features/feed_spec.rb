@@ -109,7 +109,7 @@ describe "feed" do
       click_on "Journal"
       click_on "I love being sober"
       click_on "Save and Share"
-      
+      save_and_open_page
       expect(page).to have_content("Shared your entry.")
       within "#feed-activity" do
         expect(page).to have_content("I love being sober")

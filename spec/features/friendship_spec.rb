@@ -26,11 +26,12 @@ describe "User Friendships" do
 
       within "#friend-search-results" do
         expect(page).to_not have_content("benny")
-        expect(page).to_not have_content("billy")
-        within "#search-result-benhorne44" do
-          expect(page).to have_content("benhorne44")
-          page.execute_script("$('#search-result-benhorne44 form').submit()")
-        end
+        expect(page).to_not have_content("billy")        
+      end
+
+      within "#search-result-benhorne44" do
+        expect(page).to have_content("benhorne44")
+        page.execute_script("$('#search-result-benhorne44 form').submit()")
       end
 
       expect(page).to have_content("Your friend request was sent.")
@@ -41,7 +42,7 @@ describe "User Friendships" do
       end
 
       expect(page).to have_content("Awaiting Confirmation")
-      within "#awaiting-confirmation" do
+      within "#friend-benhorne44" do
         expect(page).to have_content("benhorne44")
       end
     end

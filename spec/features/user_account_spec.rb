@@ -102,10 +102,8 @@ describe "User Account Creation" do
       end
       fill_in "Search for a Friend", with: @user3.username
       page.execute_script("$('#friend-search-form').submit()")
-      within "#friend-search-results" do
-        within "#search-result-Joker" do
-          click_on "View Profile"
-        end
+      within "#search-result-Joker" do
+        click_on "View Profile"
       end
       expect(page).to have_content("Joker")
       expect(page).to have_content("1 day sober!")
