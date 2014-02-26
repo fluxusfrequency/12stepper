@@ -1,5 +1,6 @@
 (function() {
   var meetingDetails = {};
+  var searchAddress = {};
   $(function() {
 
     var queryString, queryData, meetingObject;
@@ -7,6 +8,7 @@
       e.preventDefault();
       queryString = $("#search-form").val();
       queryData = { address : queryString };
+      clearMarkers()
       $.ajax({
         url: '/meetings/search',
         type: 'GET',
@@ -15,11 +17,25 @@
         success: function(response) {
           addResults(response, queryString);
           mapLinks();
-          // clearMarkers();
-          // for (var meeting in response) {
-          //   console.log(response[meeting]);
-          //   addToMap(response[meeting]);
-          // }
+          $.ajax({
+            url: 'https://maps.googleapis.com/maps/api/geocode/json?address=' + queryString + '&sensor=false',
+            type: 'GET',
+            dataType: 'json',
+            data: '',
+            success: function(response) {
+              searchAddress["address"] = queryString;
+              searchAddress["lat"] = response["results"][0]["geometry"]["location"]["lat"];
+              searchAddress["lng"] = response["results"][0]["geometry"]["location"]["lng"];
+
+            },
+            error: function(response) {
+              var errors = response.responseJSON;
+              if(errors) {
+                $('#flash-section').html(errors);
+              }
+            }
+          })
+
         },
         error: function(response) {
           var errors = response.responseJSON;
@@ -83,6 +99,7 @@
             $('.map-container').removeClass('hide-map-container')
           }
           addToMap(meetingObject)
+          addSearchToMap();
         } else {
 
         }
@@ -127,6 +144,10 @@
     });
     markers.push(marker);
     marker.addTo(map);
+    var group = new L.featureGroup(markers);
+
+    map.fitBounds(group.getBounds());
+
   };
 
 
@@ -151,6 +172,36 @@
         // addToMap(meetingDetails)
       })
     // }
+  };
+
+  var addSearchToMap = function() {
+    var marker = L.mapbox.markerLayer({
+      // this feature is in the GeoJSON format: see geojson.org
+      // for the full specification
+      type: 'Feature',
+      geometry: {
+          type: 'Point',
+          // coordinates here are in longitude, latitude order because
+          // x, y is the standard for GeoJSON and many formats
+          coordinates: [parseFloat(searchAddress["lng"]), parseFloat(searchAddress["lat"])]
+      },
+      properties: {
+          title: "Your Search",
+          description: searchAddress["address"],
+          // one can customize markers by adding simplestyle properties
+          // http://mapbox.com/developers/simplestyle/
+          'marker-size': 'large',
+          'marker-color': '#0099ff'
+          // 'marker-symbol': counter
+      }
+    });
+    markers.push(marker);
+    marker.addTo(map);
+    var group = new L.featureGroup(markers);
+
+    map.fitBounds(group.getBounds());
+    // map.fitBounds(marker.getBounds())
+
   };
 
   // }
