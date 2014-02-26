@@ -7,6 +7,7 @@ class ReminderNotifier < ActionMailer::Base
     @meeting_location = meeting_location
     @meeting_time = meeting_time
     @meeting_day = meeting_day
+    @link = "http://12stepper.org"
     mail(to: email,
       subject: "Reminder for #{meeting_name} meeting at #{meeting_time}")
   end
