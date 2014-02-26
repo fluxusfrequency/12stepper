@@ -22,6 +22,13 @@ class User < ActiveRecord::Base
   end
 
   def approved_friends
+    if ENV['TRAVIS']
+      friends = []
+      friends += self.friendships.approved.where(user_id: id).map {|friendship| friendship.friend}
+      friends += self.inverse_friendships.approved.where(friend_id: id).map {|friendship| friendship.user}
+      return friends
+    end
+    
     Rails.cache.fetch("approved_friends_for_#{self.username}") do
       friends = []
       friends += self.friendships.approved.where(user_id: id).map {|friendship| friendship.friend}
