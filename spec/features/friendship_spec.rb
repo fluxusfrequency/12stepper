@@ -72,6 +72,7 @@ describe "User Friendships" do
       within ".dropdown-menu" do
         click_on "View My Friends"
       end
+      save_and_open_page
       expect(page).to have_content(@user2.username)
     end
   end
