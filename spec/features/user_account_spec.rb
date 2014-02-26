@@ -95,8 +95,9 @@ describe "User Account Creation" do
     it "can see non-friend's profiles, but not their posts", js: true do
       account_login
       click_on "Welcome back, Batman!"
-
-      click_on "Find Friends"
+      within ".dropdown-menu" do
+        click_on "Find Friends"
+      end
       fill_in "Search for a Friend", with: @user3.username
       page.execute_script("$('#friend-search-form').submit()")
       within "#friend-search-results" do

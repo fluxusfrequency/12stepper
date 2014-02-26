@@ -15,7 +15,9 @@ describe "User Friendships" do
     it "can find a user and request to be her friend", js: true do
       friendship_login
       click_on "Welcome back, SecretSanta!"
-      click_on "Find Friends"
+      within ".dropdown-menu" do
+        click_on "Find Friends"
+      end
 
       expect(current_path).to eq(new_friends_search_path(locale: :en))
       
@@ -34,7 +36,9 @@ describe "User Friendships" do
       expect(page).to have_content("Your friend request was sent.")
 
       click_on "Welcome back, SecretSanta!"
-      click_on "Find Friends"
+      within ".dropdown-menu" do
+        click_on "Find Friends"
+      end
 
       expect(page).to have_content("Awaiting Confirmation")
       within "#awaiting-confirmation" do
@@ -45,7 +49,9 @@ describe "User Friendships" do
     it "can't friend itself", js: true do
       friendship_login
       click_on "Welcome back, SecretSanta!"
-      click_on "Find Friends"
+      within ".dropdown-menu" do
+        click_on "Find Friends"
+      end
 
       fill_in "Search for a Friend", with: "SecretSanta"
       page.execute_script("$('#friend-search-form').submit()")
@@ -62,7 +68,9 @@ describe "User Friendships" do
       friendship_login
 
       click_on "Welcome back, SecretSanta!"
-      click_on "View My Friends"
+      within ".dropdown-menu" do
+        click_on "View My Friends"
+      end
       expect(page).to have_content(@user2.username)
     end
   end
@@ -72,7 +80,9 @@ describe "User Friendships" do
       friendship_login
 
       click_on "Welcome back, SecretSanta!"
-      click_on "View My Friends"
+      within ".dropdown-menu" do
+        click_on "View My Friends"
+      end
       within "#friend-billy" do
         click_on "View Profile"
       end
@@ -87,7 +97,9 @@ describe "User Friendships" do
       friendship_login
 
       click_on "Welcome back, SecretSanta!"
-      click_on "View My Friends"
+      within ".dropdown-menu" do
+        click_on "View My Friends"
+      end
       within "#friend-billy" do
         click_on "Remove"
       end
@@ -99,7 +111,9 @@ describe "User Friendships" do
     it "can see pending friend requests", js: true do
       friendship_login
       click_on "Welcome back, SecretSanta!"
-      click_on "View My Friends"
+      within ".dropdown-menu" do
+        click_on "View My Friends"
+      end
 
       within "#pending-friendships" do
         expect(page).to have_content "benny"
@@ -116,7 +130,9 @@ describe "User Friendships" do
     it "can reject a friend request", js: true do
       friendship_login
       click_on "Welcome back, SecretSanta!"
-      click_on "View My Friends"
+      within ".dropdown-menu" do
+        click_on "View My Friends"
+      end
 
       within "#pending-friendships" do
         expect(page).to have_content "benny"

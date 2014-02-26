@@ -44,10 +44,10 @@ describe "feed" do
       within "#feed-activity" do
         expect(page).to_not have_content("My first status update")
       end
-      within "#new-status" do
+      within "#new-status-form" do
         fill_in "status[content]", with: "My first status update"
-        click_on "Post"
       end
+      click_on "Share"
       expect(page).to have_content("Your status was posted")
       within "#feed-activity" do
         expect(page).to have_content("My first status update")
