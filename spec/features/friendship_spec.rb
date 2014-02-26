@@ -72,7 +72,7 @@ describe "User Friendships" do
       within ".dropdown-menu" do
         click_on "View My Friends"
       end
-      save_and_open_page
+
       expect(page).to have_content(@user2.username)
     end
   end
@@ -116,12 +116,9 @@ describe "User Friendships" do
       within ".dropdown-menu" do
         click_on "View My Friends"
       end
-
-      within "#pending-friendships" do
-        expect(page).to have_content "benny"
-        within "#pending-benny" do
-          click_on "Accept"
-        end
+      expect(page).to have_content "benny"
+      within "#pending-benny" do
+        click_on "Accept"
       end
 
       expect(page).to have_content("You are now friends with benny.")
@@ -136,11 +133,8 @@ describe "User Friendships" do
         click_on "View My Friends"
       end
 
-      within "#pending-friendships" do
-        expect(page).to have_content "benny"
-        within "#pending-benny" do
-          click_on "Reject"
-        end
+      within "#pending-benny" do
+        click_on "Reject"
       end
 
       expect(page).to have_content("REJECTED!")
