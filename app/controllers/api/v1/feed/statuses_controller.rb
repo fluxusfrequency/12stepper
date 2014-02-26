@@ -2,9 +2,9 @@ class Api::V1::Feed::StatusesController < ApplicationController
   respond_to :json
 
   def index
-    # unless current_user
-    #   render json: {}, :status => 404
-    # end
+    unless current_user
+      render json: {}, :status => 404
+    end
 
     sec = (params["time"].to_f / 1000).to_s
     timestamp = Time.strptime(sec, '%s')
@@ -14,8 +14,11 @@ class Api::V1::Feed::StatusesController < ApplicationController
     end
     statuses = StatusDecorator.decorate_collection(statuses.flatten.sort)
     statuses = statuses.map do |status|
-      {status: status, token: "#{SobrietyCounter.token_for(status.user.last_drink)}_token_sm.png"}
+      {posted_at: status.posted_time_ago, status: status, token: "#{SobrietyCounter.token_for(status.user.last_drink)}_token_sm.png", user: status.user}
     end
+
+    # status = Status.first
+    # statuses = [{status: status, token: "#{SobrietyCounter.token_for(status.user.last_drink)}_token_sm.png", user: status.user}]
     respond_with statuses
   end
 
