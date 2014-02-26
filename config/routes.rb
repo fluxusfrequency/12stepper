@@ -52,7 +52,7 @@ TwelveStepper::Application.routes.draw do
         end
 
         namespace :feed do
-          resources :statuses, only: [:index]
+          get '/statuses', to: 'statuses#index'
         end
 
       end

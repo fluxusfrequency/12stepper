@@ -8,14 +8,16 @@
 //   });
 // })();
 
-
+var timeStamp;
 var pollActivity = function() {
+  queryData = {time: timeStamp, }
   $.ajax({
     url: '/api/v1/feed/statuses',
     type: "GET",
     dataType: "json",
+    data: queryData,
     success: function(data) {
-      console.log('YEAH')
+      console.log(data)
       // window.lastFetch = Math.floor((new Date).getTime() / 1000);
       // if (data.length > 0) {
       //   for (var i = 0; i < data.length; i++) {
@@ -27,6 +29,10 @@ var pollActivity = function() {
   });
 }
 
-// setInterval(
-//   function() { pollActivity(); },
-//   5000);
+$(document).ready(function() {
+  timeStamp = new Date().getTime();
+})
+
+setInterval(
+  function() { pollActivity(); },
+  5000);
