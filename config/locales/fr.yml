@@ -1,5 +1,6 @@
 fr:
   title: Douze Steppeur
+  tagline: Trouvez Votre Soutien à la Relance
   our_support: Notre Soutien
   your_success: Votre Succès
   languages: 
@@ -80,9 +81,11 @@ fr:
     day: Jour
     time: Heure
     fellowship: Camaraderie
+    hide_map: Masquer la carte
   entries:
     work_step: Travailler sur une étape
     worksheet: Trouvez une feuille de calcul
+    show_worksheet: Afficher Feuille
     write: Il suffit d'écrire
     title: Titre 
     step: Étape
@@ -121,6 +124,8 @@ fr:
     cancel: Annuler
     no_results: Désolé, aucun résultat ne correspond à votre recherche.
     add_friend: Ajouter un Ami
+    my_friends: Mes Amis
+    friend_requests: Demandes Ami
   statuses:
     share: Partager
     whats_up: Quoi de neuf?

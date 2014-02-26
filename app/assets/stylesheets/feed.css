@@ -10,7 +10,7 @@
 #friend-action-links {
   text-align: right;
   vertical-align: bottom;
-  margin-top: 20px;
+  margin-top: 25px;
   margin-bottom: 10px;
   padding-right: 0;
 }
@@ -27,7 +27,7 @@
 
 #friend-action-links input {
   margin-bottom: 5px;
-  height: 23px;
+  height: 27px;
   width: 150px;
   padding-left: 2px;
   font-size: .9em;
@@ -40,8 +40,7 @@ textarea {
 
 #user-search-submit img {
   vertical-align: baseline;
-  margin-bottom: -5px;
-  padding-bottom: 0;
+  margin-bottom: -9px;
 }
 
 #new-status-form {

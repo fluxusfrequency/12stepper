@@ -1,18 +1,26 @@
-<h1><%= t("meetings.title") %></h1>
+<div class="row">
+  <div class="col-lg-12" id="meetings-title">
+    <h1><%= t("meetings.title") %></h1>
+  </div>
 
-<%= form_tag search_meetings_path, method: :get do %>
-  <p>
-    <%= text_field_tag :address, params[:address], id: "search-form", placeholder: t("meetings.address") %>
-    <%= submit_tag t('meetings.search'), name: nil, id: "search-button", class: "btn" %>
-  </p><br />
-<% end %>
-
-<div class="col-lg-6 map-container pull-right ">
-  <%= link_to "Hide Map", '#', class:'hide-map-link' %><br />
-  <div id='main-map' class='light'></div>
+  <div class="col-lg-12" id="meetings-title">
+    <%= form_tag search_meetings_path, method: :get do %>
+      <p>
+        <%= text_field_tag :address, params[:address], id: "search-form", placeholder: t("meetings.address") %>
+        <%= submit_tag t('meetings.search'), name: nil, id: "search-button", class: "btn" %>
+      </p><br />
+    <% end %>
+  </div>
 </div>
 
-<div id='search-results' class='col-lg-6'></div>
+<div class="row">
+  <div class="col-lg-6 map-container pull-right ">
+    <%= link_to t("meeting.hide_map"), '#', class:'hide-map-link' %><br />
+    <div id='main-map' class='light'></div>
+  </div>
+
+  <div id='search-results' class='col-lg-6'></div>
+</div>
 
 <%= javascript_include_tag "mapbox" %>
 <%= javascript_include_tag "meetings" %>

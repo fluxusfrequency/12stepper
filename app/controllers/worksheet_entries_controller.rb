@@ -20,7 +20,6 @@ class WorksheetEntriesController < ApplicationController
   end
 
 
-
   private
 
   def entry_params

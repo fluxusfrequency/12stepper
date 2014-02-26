@@ -54,16 +54,18 @@
     if (response.length === 0) {
       $('#search-results').append("Sorry, no meetings matched your search.");
     } else {
-      $('#search-results').append('<h3>Meetings for <em>' + queryString + '</em></h3>')
+      $('#search-results').append('<div class="row" id="mtg-search-results">' + 
+        '<div class="col-lg-12" id="found-meeting-title"><h2>Meetings for <em>' + queryString + '</em></h2></div>');
       for (var meeting in response) {
         var meetingName = '<h3>' + response[meeting]["name"] + '</h3>';
-        var mapLink = '<a class="view-map-link link-' + meeting + '" href="#">view map</a>'
-        var meetingLocation = '<p>Location: ' + response[meeting]["location"] + '</p>';
-        var meetingAddress = '<p>Address: ' + response[meeting]["address"] + '</p>';
-        var meetingDay = '<p>Day: ' + response[meeting]["day"] + '</p>';
-        var meetingTime = '<p>Time: ' + response[meeting]["time"] + '</p>';
+        var mapLink = '<a class="view-map-link link-' + meeting + '" href="#">(view map)</a><br />';
+        var meetingLocation = '<p><strong>Location: </strong>' + response[meeting]["location"] + '</p>';
+        var meetingAddress = '<p><strong>Address: </strong>' + response[meeting]["address"] + '</p>';
+        var meetingDay = '<p><strong>Day: </strong>' + response[meeting]["day"] + '</p>';
+        var meetingTime = '<p><strong>Time: </strong>' + response[meeting]["time"] + '</p>';
         var meetingData = '<div class="individual-search-result col-lg-12">' + meetingName + mapLink + meetingLocation + meetingAddress + meetingDay + meetingTime + '</div>'
         $('#search-results').append(meetingData);
+        $('#search-results').append('</div>');
       };
     };
   };
@@ -76,9 +78,9 @@
         dataType: 'json',
         data: '',
         success: function(response) {
-          meeting["lat"] = response["results"][0]["geometry"]["location"]["lat"]
-          meeting["lng"] = response["results"][0]["geometry"]["location"]["lng"]
-          meetingObject = meeting
+          meeting["lat"] = response["results"][0]["geometry"]["location"]["lat"];
+          meeting["lng"] = response["results"][0]["geometry"]["location"]["lng"];
+          meetingObject = meeting;
           
           // clearMarkers();
           // for (var meeting in response) {
@@ -96,9 +98,9 @@
         if (meetingObject["lat"] !== null && meetingObject["lng"] !== null) {
           // map = L.mapbox.map('main-map', 'examples.map-20v6611k').setView([meetingObject["lng"], meetingObject["lng"]], 12)
           if ($('.map-container').hasClass('hide-map-container')) {
-            $('.map-container').removeClass('hide-map-container')
+            $('.map-container').removeClass('hide-map-container');
           }
-          addToMap(meetingObject)
+          addToMap(meetingObject);
           addSearchToMap();
         } else {
 
@@ -108,11 +110,11 @@
 
   var cleanMap = function() {
     if ($('.map-container').hasClass('hide-map-container')) {
-      $('.map-container').removeClass('hide-map-container')
-      console.log('NEW POINT')
+      $('.map-container').removeClass('hide-map-container');
+      console.log('NEW POINT');
     } else {
       clearMarkers();
-      console.log('SHOW')
+      console.log('SHOW');
     }
   }
 
@@ -163,14 +165,18 @@
   var mapLinks = function() {
       $('.view-map-link').on('click', function(e) {
         e.preventDefault();
-        meetingDetails["location"] = this.parentNode.children[2].innerHTML
-        meetingDetails["address"] = this.parentNode.children[3].innerHTML
-        meetingDetails["day"] = this.parentNode.children[4].innerHTML
-        meetingDetails["time"] = this.parentNode.children[5].innerHTML
+        var location = this.parentNode.children[3].innerHTML;
+        meetingDetails["location"] = location[location.length - 1];
+        var address = this.parentNode.children[4].innerHTML.split(">");
+        meetingDetails["address"] = address[address.length - 1];
+        var day = this.parentNode.children[5].innerHTML;
+        meetingDetails["day"] = day[day.length - 1];
+        var time = this.parentNode.children[6].innerHTML;
+        meetingDetails["time"] = time[time.length - 1];
         
         getLatLng(meetingDetails);
         // addToMap(meetingDetails)
-      })
+      });
     // }
   };
 
@@ -212,7 +218,7 @@
       // clear map marker
       // add new
     } else {
-      $('.map-container').addClass('hide-map-container')
+      $('.map-container').addClass('hide-map-container');
     }
   })
 })();

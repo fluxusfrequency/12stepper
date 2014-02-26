@@ -1,19 +1,19 @@
 <div class="row page-header">
-  <div class="col-lg-3 col-md-3">
+  <div class="col-lg-3 col-md-3 work-step-container" id="work-step-title">
     <h1 id="my-journal"><%= t('entries.work_step') %></h1>
   </div>
-  <div class="col-lg-9 col-md-4">
-      
+  <div class="col-lg-9 col-md-4 work-step-container" id="work-step-selector">
     <div id='choose-the-section' class='pull-right'>
       <h3><%= t("entries.section") %></h3>
       <%= select_tag "choose-a-section", options_from_collection_for_select(@worksheet_entries, "title", "title") %>
     </div>
     <div id='choose-the-step' class='pull-right'>
-      <h3><%= t("entries.step") %><%= @entry.step %></h3>
+      <h3><%= t("entries.step") + " " %><%= @entry.step %></h3>
       <%= select_tag "choose-a-step", "<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>".html_safe %>
     </div>
   </div>
 </div>
+<br />
 <div class='row'>
   <div id='worksheet-entry-text' class='col-lg-7'>
     <%= form_for @entry, url: worksheet_entries_path do |f| %>
@@ -25,11 +25,20 @@
       <%= f.hidden_field "section", :value => '', id:'hidden-section-field' %>
 
       <%= f.cktext_area :body, {:class => 'ckeditor', :id => 'worksheet-step'} %>
-      <%= f.submit t('entries.create'), id:'worksheet-entry-submit' %>
-      <%= link_to t('entries.delete'), entries_path, :id => 'worksheet-entry-delete' %>
-      
+
+      <br />
+      <br />
+
+      <div class="entry-link-container">
+        <%= f.submit t('entries.create'), class:"btn-link entry-link-action", id:'worksheet-entry-submit' %>
+        <%= link_to t('entries.delete'), entries_path, class:"btn-link entry-link-action", :id => 'worksheet-entry-delete', method: :delete %>
+        <%= f.submit t('entries.share'), class:"btn-link entry-link-action" %>
+      </div>  
+
     <% end %>
   </div>
+
+
 
   <div class='col-lg-5 new-worksheet-details' id='worksheet-details'>
     <h4><strong>Step <%= @worksheet.step %></strong> - <em><%= @worksheet.title %></em></h4>

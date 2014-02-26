@@ -1,5 +1,6 @@
 en:
   title: Twelve Stepper
+  tagline: Find Your Recovery Support
   our_support: Our Support
   your_success: Your Success
   languages:
@@ -80,9 +81,11 @@ en:
     day: Day 
     time: Time 
     fellowship: Fellowship
+    hide_map: Hide Map
   entries:
     work_step: Work a Step
     worksheet: Find a Worksheet
+    show_worksheet: Show Worksheet
     write: Just Write
     title: Title
     step: Step
@@ -122,6 +125,8 @@ en:
     cancel: Cancel
     no_results: Sorry, no results matched your search.
     add_friend: Add Friend
+    my_friends: My Friends
+    friend_requests: Friend Requests
   statuses:
     share: Share
     whats_up: What's up?

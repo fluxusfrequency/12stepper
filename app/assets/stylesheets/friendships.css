@@ -1,0 +1,30 @@
+.current-friend {
+  border-bottom: 2px solid #CDC1C7;
+}
+
+.current-friend div {
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.current-friend-details {
+  font-size: 1.3em;
+}
+
+#view-friends-index-title,
+#friend-requests-title {
+  border-bottom: 2px solid #CDC1C7;
+  padding-bottom: 15px;
+}
+
+#pending-friendships {
+  margin-top: 60px;
+}
+
+#view-friends-index {
+  margin-top: 40px;
+}
+
+.button_to div {
+  padding: 0;
+}

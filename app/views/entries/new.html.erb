@@ -1,14 +1,12 @@
 <div class="row page-header">
-    <div class="col-lg-7 col-md-7 my-journal-container">
-      <h1 id="my-journal"><%= link_to t('entries.my_journal'), entries_path %>
-      </h1>
-    </div>
-    <div class="col-lg-3 col-md-3 col-lg-offset-2 col-md-offset-2" id="entry-index-actions">
-      <%= link_to t("entries.work_step"), new_worksheet_entry_path, id: "work-a-step" %> 
-      <%= link_to t("entries.write"), new_entry_path %>
-    </div>
+  <div class="col-lg-7 col-md-7 my-journal-container">
+    <h1 id="my-journal"><%= t('entries.write') %></h1>
+  </div>
+  <div class="col-lg-3 col-md-3 col-lg-offset-2 col-md-offset-2" id="entry-index-actions">
+    <%= link_to t("entries.work_step"), new_worksheet_entry_path, id: "work-a-step" %> 
+  </div>
 </div>
-<hr />
+<br />
 <div id="new-entry-container">
   <%= form_for @entry do |f| %>
 
@@ -22,10 +20,6 @@
       <%= f.submit t('entries.create'), class:"btn-link entry-link-action", id:'entry-submit' %>
       <%= link_to t('entries.delete'), entries_path, class:"btn-link entry-link-action" %>
       <%= f.submit t('entries.share'), class:"btn-link entry-link-action" %>
-    </div>
-      <%# f.submit t('entries.create'), class:"btn-link", id:"entry-submit" %>
-      <%# link_to t('entries.delete'), entries_path %>
-      <%# f.submit t('entries.share'), class:"btn-link" %>
-    
+    </div>  
   <% end %>
 </div>

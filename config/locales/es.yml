@@ -1,5 +1,6 @@
 es:
   title: Doce Bailarín
+  tagline: Encuentra tu Apoyo de Recuperación
   our_support: Nuestro Apoyo
   your_success: Su Éxito
   languages:
@@ -80,9 +81,11 @@ es:
     day: Día
     time: Tiempo
     fellowship: Compañerismo
+    hide_map: Ocultar Mapa
   entries:
     work_step: Trabajar en un paso
     worksheet: Buscar una hoja de cálculo
+    show_worksheet: Mostrar Hoja de Trabajo
     write: Sólo escribir
     title: Título
     step: Paso
@@ -121,6 +124,8 @@ es:
     cancel: Cancelar
     no_results: Lo sentimos, no hay resultados que coincidan con tu búsqueda.
     add_friend: Añadir Amigo
+    my_friends: Mis Amigos
+    friend_requests: Solicitudes de Amistad
   statuses:
     share: Compartir
     whats_up: ¿Qué tal?

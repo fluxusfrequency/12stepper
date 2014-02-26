@@ -17,4 +17,17 @@
   position: fixed;
 }
 
+.individual-search-result {
+  margin-left: 0;
+  padding: 0;
+  border-bottom: 2px solid #CDC1C7;
 
+}
+
+#found-meeting-title {
+  border-bottom: 2px solid #CDC1C7;
+}
+
+#meetings-title {
+  margin-top: 40px;
+}
