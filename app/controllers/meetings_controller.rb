@@ -16,4 +16,9 @@ class MeetingsController < ApplicationController
     end
   end
 
+  def request_reminder
+    meeting = MeetingFinder::Meeting.find(params[:id])
+    ReminderNotifier.meeting_reminder_email(current_user.email, meeting.name, meeting.location, meeting.address, meeting.time, meeting.day)
+  end
+
 end
