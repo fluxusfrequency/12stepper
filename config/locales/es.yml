@@ -117,6 +117,7 @@ es:
     reject: Rechazar
     view_profile: Ver Perfil
     cancel: Cancelar
+    no_results: Lo sentimos, no hay resultados que coincidan con tu búsqueda.
   statuses:
     post: Publique
     whats_up: ¿Qué tal?

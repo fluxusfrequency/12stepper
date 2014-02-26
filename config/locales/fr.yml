@@ -117,6 +117,7 @@ fr:
     reject: Rejeter
     view_profile: Voir le profil
     cancel: Annuler
+    no_results: Désolé, aucun résultat ne correspond à votre recherche.
   statuses:
     post: Diffusez
     whats_up: Quoi de neuf?

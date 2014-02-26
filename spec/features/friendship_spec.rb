@@ -5,11 +5,13 @@ describe "User Friendships" do
     @user1 = FactoryGirl.create(:user)
     @user2 = FactoryGirl.create(:user, email: "billy@example.com", username: "billy")
     @user3 = FactoryGirl.create(:user, email: "benny@example.com", username: "benny")
+    @user4 = FactoryGirl.create(:user, email: "benny2@example.com", username: "benhorne44")
     FactoryGirl.create(:friendship, user_id: @user1.id, friend_id: @user2.id, status: "approved")
     FactoryGirl.create(:friendship, user_id: @user3.id, friend_id: @user1.id, status: "pending")
   end
 
   context "user can request a friend" do
+
     it "can find a user and request to be her friend", js: true do
       friendship_login
       click_on "Welcome back, SecretSanta!"
@@ -17,14 +19,15 @@ describe "User Friendships" do
 
       expect(current_path).to eq(new_friends_search_path(locale: :en))
       
-      fill_in "Search for a Friend", with: "billy"
+      fill_in "Search for a Friend", with: "benhorne44"
       page.execute_script("$('#friend-search-form').submit()")
 
       within "#friend-search-results" do
         expect(page).to_not have_content("benny")
-        within "#search-result-billy" do
-          expect(page).to have_content("billy")
-          page.execute_script("$('#search-result-billy form').submit()")
+        expect(page).to_not have_content("billy")
+        within "#search-result-benhorne44" do
+          expect(page).to have_content("benhorne44")
+          page.execute_script("$('#search-result-benhorne44 form').submit()")
         end
       end
 
@@ -35,7 +38,7 @@ describe "User Friendships" do
 
       expect(page).to have_content("Awaiting Confirmation")
       within "#awaiting-confirmation" do
-        expect(page).to have_content("billy")
+        expect(page).to have_content("benhorne44")
       end
     end
 
@@ -51,6 +54,7 @@ describe "User Friendships" do
         expect(page).to_not have_content("SecretSanta")
       end
     end
+
   end
 
   context "user views all of her friendships" do

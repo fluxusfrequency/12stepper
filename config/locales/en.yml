@@ -118,6 +118,7 @@ en:
     reject: Reject
     view_profile: View Profile
     cancel: Cancel
+    no_results: Sorry, no results matched your search.
   statuses:
     post: Post
     whats_up: What's up?

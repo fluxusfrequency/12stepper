@@ -8,7 +8,9 @@ class Friends::SearchController < ApplicationController
   end
 
   def index
-    @users = User.where(username: params[:friend_search_input]).reject { |u| u == current_user }
+    @users = User.where(username: params[:friend_search_input]).reject do |u| 
+      current_user.all_friendships_and_inverse_friendships.include?(u) || u == current_user
+    end
   end
 
 end

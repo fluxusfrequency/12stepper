@@ -37,4 +37,15 @@ class User < ActiveRecord::Base
     end
   end
 
+  def pending_friends
+    friends = []
+    friends += self.friendships.pending.where(user_id: id).map {|friendship| friendship.friend}
+    friends += self.inverse_friendships.pending.where(friend_id: id).map {|friendship| friendship.user}
+    friends
+  end
+
+  def all_friendships_and_inverse_friendships
+    self.friendships + self.inverse_friendships
+  end
+
 end
