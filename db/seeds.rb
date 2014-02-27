@@ -1,141 +1,227 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
-
-Entry.create(
-  user_id:1,
-  title: "My Name is Roger, and I'm An Alcoholic",
-  body: "In August 1979, I took my last drink. It was about four o'clock on a Saturday afternoon, the hot sun streaming through the windows of my little carriage house on Dickens. I put a glass of scotch and soda down on the living room table, went to bed, and pulled the blankets over my head. I couldn't take it any more.
-    On Monday I went to visit wise old Dr. Jakob Schlichter. I had been seeing him for a year, telling him I thought I might be drinking too much. He agreed, and advised me to go to \"A.A.A,\" which is what he called it. Sounded like a place where they taught you to drink and drive. I said I didn't need to go to any meetings. I would stop drinking on my own. He told me to go ahead and try, and check back with him every month.
-    The problem with using will power, for me, was that it lasted only until my will persuaded me I could take another drink. At about this time I was reading The Art of Eating, by M. F. K. Fisher, who wrote: \"One martini is just right. Two martinis are too many. Three martinis are never enough.\" The problem with making resolutions is that you're sober when you make the first one, have had a drink when you make the second one, and so on. I've also heard, You take the first drink. The second drink takes itself. That was my problem. I found it difficult, once I started, to stop after one or two. If I could, I would continue until I decided I was finished, which was usually some hours later. The next day I paid the price in hangovers.",
-  step: 1
+luke = User.create(
+  username: 'NYLuke164',
+  email: 'luke@gschool.com',
+  bio: 'Ummm...',
+  password: 'luke',
+  password_confirmation: 'luke',
+  locale: 'es',
+  last_drink: Time.now
 )
 
-Entry.create(
-  user_id:1,
-  title: "Sea of Humanity",
-  body: 'Let us suppose we are all connected through consciousness. There are enough philosophies and modern day scientific theories out there that suggest that we are. Assuming those are or at least might be, true, then in a very real way, the people around us are aspects of ourselves. If we are all “one mind” then it follows that everyONE is in essence, ourselves. How we treat others then becomes a reflection of how we treat ourselves. And how we treat ourselves in turn is how we are treating others.
-    For example, most everyone is afraid of death, of dying. One of the ways we can soothe ourselves, altruistically, is to soothe others, to be a good friend, to be a happy face, to be a good listener. We are all in this together. Compassion is knowing this and reaching out. In so doing, we are helping ourselves as well — helping ourSELF, the whole sea of humanity.',
-  step: 2
+billy = User.create(
+  username: 'billygriffin22',
+  email: 'billy@gschool.com',
+  bio: 'I\'m your Local Smokehouse specializing in Home-Cooked Southern Style BBQ & Cajun Dishes, All Natural Burgers, and the Finest Selection of Micro-Brews. ',
+  password: 'billy',
+  password_confirmation: 'billy',
+  locale: 'en',
+  last_drink: Time.now - 2.days
 )
 
-Entry.create(
-  user_id:1,
-  title: "Updating on a Saturday night!",
-  step: 3,
-  body: 'Well, it is nearly Sunday but that is even sadder really… this used to be key party time!
-    I haven’t updated for a couple of days purely because I haven’t had much to say. I didn’t manage the meeting on Thursday as I was trying to put a job application form together that had to be in by midday Friday. The truth is I want to – and will – go to another meeting soon (probably Monday) but it is because I want to go and be in a room with other members. In terms of NEEDING to, I don’t feel like that, and that is largely because I am at home. I am trying hard to get a new job and I will be happy when I get one but I will genuinely be seeing that as the REAL test of how sobriety is in my life once that happens.
-    As I have said before, I find the ‘Saturday tea-time’ hard because it was always my favourite part of the evening… getting the first drinks down us, the banter with the lads, anticipating the fun night ahead. But tonight I even managed to breeze through because I had a curry :-)
-    Don’t get that twisted though; I am not getting complacent about my sobriety. Here is an example – next Saturday night we are having a night out. I can barely afford it but it will be okay because I drink cordial. However, if I feel that I can not do that, then I will either not go out or if I feel like that when I am out, I will go home early. The bottom line is that I think I will be okay but, while I am pleased that thinking about drink is definitely lessening, I am ready to play very safe if need be. It will probably annoy some people, however my real mates will understand, and hell to anyone that has a problem with it.
-    So that is it. Half-way through the weekend, and feeling happy. Not too shabby for KIMBO!'
+ben_l = User.create(
+  username: 'fluxusfrequency',
+  email: 'ben_l@gschool.com',
+  bio: 'Web Developer & Bluegrass Fiddle Player',
+  password: 'ben_l',
+  password_confirmation: 'ben_l',
+  locale: 'en',
+  last_drink: Time.now - 1.week
 )
 
-Entry.create(
-  user_id:1,
-  title: "Two Months Yesterday",
-  step: 4,
-  body: "That is how long I have been sober.
-    It’s been good. I haven’t been to an AA meeting in a while though so I plan on going tomorrow. I was going to go on Monday but I applied for two jobs that had closing dates of yesterday and today, so opted to delay my meeting attendance by three days. I am quite looking forward to it. But I am pleased with two months. Definitely.
-    I’ve been thinking the last few days about how it’s a shame I never had a farewell session. Not that I plan on having a grand finale or anything, just thinking it’s a shame that the last time I had a drink was on my own and not amongst friends. But then most of my drinking in the last few months was on my own with headphones blasting music in my ears; just absolute escapism.
-    Another anniversary is today and that is  my Dad hasn’t had a cigarette in 14 months. Which means the last day of his first year of non-smoking was my first day of sobriety… what a strange coincidence that was! I’m very proud of him. I am sure in many ways it is very similar, what he is going through. There are obvious differences, but I am sure that there are some similarities too.
-    I have had no desire to drink since Friday, which is good. I went the pub for lunch yesterday and had no desire at all to have a drink. The person I met for lunch had a pint and it did not not bother me at all; in fact, if I suspect someone is not drinking on my behalf that makes me feel more awkward. I admit I do not want to be around drunk people and I can control those circumstances. However, I really have no issue with people drinking in my company, and I hope no-one ever feels like they shouldn’t drink around me.
-    So, just over half-way through the week and it’s been a good week so far. It would be nice to end it with a £66m Euromillions win on Friday!"
-  )
+ben_h = User.create(
+  username: 'benhorne44',
+  email: 'ben_h@gschool.com',
+  bio: 'Student at @gSchool',
+  password: 'ben_h',
+  password_confirmation: 'ben_h',
+  locale: 'fr',
+  last_drink: Time.now - 1.month
+)
 
-Entry.create(
-  user_id:1,
-  title: "Is AA the Only Option? Not Anymore.",
-  step: 5,
-  body: "It always seemed strange to me that you had to go down into a church basement to get sober, especially if you are prone to depression, skeptical of religion, and/or sensitive to your environment.  But when I was younger, I thought Alcoholics Anonymous (AA) was the only way for alcoholics to get sober. My mom went, it worked for her, and I never heard about any other options. People she knew who dropped out usually relapsed, or so it seemed.
-    Lately, AA has come under fire. Most notably, from Gabrielle Glaser, the author of a popular new book about women and drinking, “Her Best-Kept Secret.” She claims that AA can be an unsafe place for women, as people with multiple issues attend meetings freely (sex offenders with alcohol problems, for example).
-    Now, a new study suggests that the current model of AA may be more effective for men than women. Researchers at Massachusetts General Hospital found that men tend to relapse when they’re in social situations with other drinkers. AA helps male alcoholics stay sober by offering camaraderie with other nondrinkers, and by giving them coping mechanisms for when they’re with friends who drink."
-  )
+tyler = User.create(
+  username: 'TeaPane',
+  email: 'tyler@gschool.com',
+  bio: 'Voulez vouz coucher avec moi',
+  password: 'tyler',
+  password_confirmation: 'tyler',
+  locale: 'fr',
+  last_drink: Time.now - 1.minute
+)
 
-Entry.create(
-  user_id:1,
-  title: "Is AA the Only Option? Not Anymore.",
-  step: 6,
-  body: "How do you make sure your children are safe when left alone with an alcoholic or addict?
-    How do you trust anything your addict or alcoholic co-parent says?
-    What resources exist for helping a mom or dad out when sharing their children with an alcoholic or addict?
-    What is the right thing to do when sharing children with a known liar and user?
-    How do you do what’s best for the kids (maximum time with each parent, minimal observed fighting) while maintaining small children’s safety?
-    These are the questions I have grappled with for nearly a year now.
-    And let me tell you, there are no clear answers and there is no marked path.
-    This feels like uncharted territory, with a raving lunatic as my co-pilot.
-    When I crafted a legal separation document, with the help of my lawyer, I didn’t know what the hell I was doing. She wasn’t really sure either; she’s a good lawyer but not an expert in addiction matters. As I’ve found, very few are.
-    I asked several counselors at our favorite rehab facility (soon-to-be-ex is a two time attendee, 0 time graduate), but they don’t like to get involved in custody matters. Off the record a counselor told me I was wise to be strict and that based on the little recovery he’d seen and what he knows of the dangerous drugs Zach was using, he wouldn’t trust him alone, either.
-    I asked a court-appointed parenting expert, she wasn’t sure either, but surely the court had assigned somebody?
-    No, I answered, he signed a separation agreement without getting a lawyer, we avoided the courts.
-    She had no advice to give.
-    So I am in this alone, making it up as I go, with only my Higher Power, my intuition, and my limited knowledge of addiction/alcoholism to get me by."
-  )
+jorge = User.create(
+  username: 'novohispano',
+  email: 'jorge@gschool.com',
+  bio: 'Soñador profesional. Rubí / Ruby on Rails Developer. Desarrollo de Negocio en JumpstartLab.',
+  password: 'jorge',
+  password_confirmation: 'jorge',
+  locale: 'es',
+  last_drink: Time.now - 1.year
+)
 
-Entry.create(
-  user_id:1,
-  title: "How I Stopped Drowning in Drink",
-  step: 7,
-  body: "For years I'd told myself I wasn't an alcoholic. I never drank alone. I didn't wake up with fierce cravings, and sometimes I went for one or two days without drinking. A need to drink all day, every day, was never my problem.
-    My problem was that once I had a drink—whether it was at 7 p.m. or 9 a.m.—I couldn't stop until my body shut down and I passed out in a pile on the floor. I still had plenty of friends and still managed to hold down a job, but my relationship with alcohol was very obviously different from most people's. I was an alcoholic.
-    As of Saturday, the counter on my website says \"878 days.\" Eight hundred seventy-eight days since I had my last alcoholic drink. Eight hundred seventy-eight days since I declared—very publicly—that my drinking had passed the point where it was funny, crazy or even merely dangerous. In fact, my addiction to alcohol had reached a stage where it was highly likely to kill me.
-    Enough was enough. So I decided to quit. But I didn't do it in the typical way.
-    For one thing, I didn't go to Alcoholics Anonymous. Not a single meeting. I have several friends who attend AA and have found it to be a highly effective way to quit. I have plenty of other friends who attend AA meetings every morning and are blind drunk every night. I almost attended a meeting at the suggestion of a friend, but first I decided to read the organization's Twelve Steps, the program that members must follow. The first step was enough to confirm that this form of sobriety wasn't for me:
-    \"We admitted we were powerless over alcohol—that our lives had become unmanageable.\"
-    Please. You may be weak against alcohol, or seriously addicted to it, but powerless? No. If a drinker were truly powerless, then AA would be useless to him; nothing short of death could stop him from drinking."
-  )
+jeff = User.create(
+  username: 'j3',
+  email: 'jeff@gschool.com',
+  bio: 'Don\'t talk about it, be about it. Principal at Jumpstart Lab, co-creator of Hungry Academy, gSchool, and member of CodeNow and Teach For America STEM boards.',
+  password: 'jeff',
+  password_confirmation: 'jeff',
+  locale: 'en',
+  last_drink: Time.now - 5.years
+)
 
-Entry.create(
-  user_id:1,
-  title: "Who is Brenda?",
-  step: 8,
-  body: "Writing this blog is scary. I’ve written about other people for the Chicago Tribune, The Chicago Reader, The Daily Herald, and Ad Age, but never myself. And here I am sharing the diary I kept the year I got sober, and most people don’t know I’m an alcoholic. I didn’t lose my good name, my husband, or even my driver’s license. I’m the woman next door who was fun to party with and could drink a 250-pound man under the table. I’ve changed the names of my friends, but my family, well, you’re my family and there’s no changing that. December 27, 2002, marks the day I quit drinking. So here goes. 
-    Peace,
-    Brenda Wilhelmson"
-  )
+nathaniel = User.create(
+  username: 'thewatts',
+  email: 'nathaniel@gschool.com',
+  bio: 'Saved by grace, Husband to @thekatiewatts, Blessed beyond comprehension.',
+  password: 'nathaniel',
+  password_confirmation: 'nathaniel',
+  locale: 'en',
+  last_drink: Time.now - 28.years
+)
 
-Entry.create(
-  user_id:1,
-  title: "Reflecting on the first AA Meeting",
-  step: 9,
-  body: "I recently attended my first AA meeting. It surpassed many of my expectations; however it ruined others and left me slightly dumbfounded.
-    My imagination, with the help of television and movies, painted a picture in my mind of what an AA meeting would be like. It portrayed a room filled with people that obviously looked like addicts; unkempt appearances, borderline offensive hygiene, and at least one person emitting a radiance of booze while swaying back and forth in his chair, balancing on the line between falling forward to the ground and staying in the seat.
-    My imagination laughed at me as I entered the room. One look around made me realize that I was deceived. The majority of the members were clean, well kempt, and looked healthier than my medical school classmates. Skeptical, I scanned the room again for the person that showed up with a pint of liquor in his/her system. My imagination rationalized that they must have not shown up today, for certainly you can’t have an AA meeting with 100% sobriety. To say the least, I’m still discouraged by its elaborate depiction of this clean and encouraging environment.
-    After walking through the threshold and soaking it all in, I found a seat near the back where I assumed the newbies were relegated to. Upon finding my spot, I was immediately welcomed by an older gentleman, John, whom was eager to invite me in and listen to my story. I explained everything that you already know about me i.e. intrinsic interest in addiction and an interest in learning from the people that have the greatest depth of knowledge and widest breath of experience in alcoholism, you."
-  )
+kevin = User.create(
+  username: 'Code_Union',
+  email: 'kevin@gschool.com',
+  bio: 'Coder and entrepreneur, lover of Linus.',
+  password: 'kevin',
+  password_confirmation: 'kevin',
+  locale: 'en',
+  last_drink: Time.now
+)
 
-Entry.create(
-  user_id:1,
-  title: "Seventeen Years",
-  step: 10,
-  body: "Yesterday was the 17th anniversary of my first A.A. meeting, which marked the beginning of my current spell of continuous sobriety. I can't say I celebrated, because I was too busy doing things that are little more than the blessings of a sober life:
-    Took my car in to have the oil changed and the engine light checked—I not only have a driver's license, I also have a car
-    Worked—I am employable today
-    Chaired a meeting of the local chapter of a professional organization—not only employed, but on the Board of Directors and also Program Chair
-    Attended a funeral
-    The funeral, ironically enough, was for Bumblebee, someone I sponsored for a while. I suspect I was his last sponsor. I hadn't seem him in at least a year, and sometimes wondered if he named me when asked if he had a sponsor. Then I would wonder if he was even making meetings.
-    Apparently not. He was definitely out there. He committed suicide by stabbing himself to death in the parking lot of the apartment complex where he lived. In the femoral artery. Thank you, Bumblebee, for keeping it green for me on my anniversary.
-    Tonight I will celebrate with dinner and a meeting! Praise HP, from whom all blessings flow!"
-  )
+adam = User.create(
+  username: 'adam_magan',
+  email: 'adam@gschool.com',
+  bio: 'Umm... I made you a pizza?',
+  password: 'adam',
+  password_confirmation: 'adam',
+  locale: 'en',
+  last_drink: Time.now - 8.years
+)
 
-Entry.create(
-  user_id:1,
-  title: "A Calm, 36 Junky Hours",
-  step: 11,
-  body: "You see, I stupidly and was of a stoned kinda of mind while I agreed to go to the meeting spot of an A.A. meeting with Ambiguous Andy: The kind queer fellow with 37 years of sobriety, but then out of left fucking field last week takes three different man sized Colorado hits off 3 different strains of ganja after me being back in his dwelling and life (as the only change in his), full time for a months time. In essence I am his devils details and how off my cocks rocker does it make me that I can pull it off. $200 Friday this last 18th. $25 Monday the 20th, and then $600 Tuesday the 21st at Midnight, which if technicalities are at play, it would be the 22nd. The sources range from Sober Houses to Porn Trainee.
-    Anyway, even though the amounts have been outlined to the ambiguous Droid, watching his firm jawline (since its mental due to a sexy motorcycle accident in the 70′s), watch it hit the floor when he realizes what I can collect and how rapidly and steadily because I am an entrepreneur as much as I am a long-dicked opportunist, and that combination rarely leaves someone without sources of cash. They have a sweet tooth for fast action around this territory, darling, and Im the James Dean of Flaming Fiends.
-    I guess no one is surprised in the fucking minimal of degrees that I never came close to even giving it a Dutchmen’s effort to make it into the AA meeting. Andrew, curse and bless his wretched dick loving soul, he was faithfully stacking chairs and loading coffee for the St. Paul group of drunks on a Sunday with the air temp at 10 degrees, reciting like Pole Pot, preparing the upside down crucifixion of my lifespan just shy of three decades. I really am not or was not cut out for this absolute anything monologue , let alone sobriety. What a waste of potential life adventure, and selling yourself short."
-  )
+puts "seeded the users!"
 
-Entry.create(
-  user_id:1,
-  title: "Sober, But Still A Perfectionist",
-  step: 12,
-  body: "Today is my first anniversary of sobriety, and I am extremely grateful to the fellowship of A.A. as I owe this almost entirely to them (with a huge pinch of support and encouragement from my wife).  I stopped blogging when I officially got a sponsor and was taken through the big book.  I’m sure I caused my sponsor a lot of pain, as I questioned almost everything, but I have to reach out and thank him from the bottom of my heart.  I have a slight regret that I stopped sharing my recovery, but during this period I can only summarise it as feeling a bit like a sailor being rescued at sea.  I was lost, desolate and struggling to make sense of my emotions, the book and what to do and it was only through sponsorship that the simple 12 step programme took hold.
-    It turns out that I have a few flaws in my character – I’m a manipulative, lying control freak, with a huge ego, low self-esteem and just a hint of perfectionism (did I mention anger issues?).  Even this article is perfectionism at play since it has been in the back of mind for several weeks now.  But, I’m sober and haven’t touched a drink for one year, and that is truly a miracle…
-    I don’t have a sponsor any more, but I’m extremely comfortable with this as I feel I have a community of friends, any of whom I could turn to in despair, and I have a wife who still stands by and supports me, which is amazing given the turmoil and emotional roller-coaster I have subjected her to.  The sponsor who took me through the book had an exceptional message and I truly hope that our decision to part ways was not selfish on my part, or a subtle manifestation of the disease.  I believe this is step 12 as willed by my higher power; allowing a great sponsor to work with another suffering alcoholic feels right, alongside my continued service to my local home groups and now returning to update this journal.  At some point I may work with another alcoholic, but for the moment I am grateful that I can make amends to my family on a daily basis and can retire at night grateful for the simple things in life that eluded me in the past."
-  )
+users = [ luke, billy, ben_l, ben_h, tyler, jorge, jeff, nathaniel, kevin, adam ]
+
+
+
+
+
+### FRIENDSHIPS
+
+begin
+  users.each do |user|
+    4.times { |i| user.friendships.create(friend_id: rand(9) + 1, status: 'accepted') }
+
+    begin
+      3.times { user.friendships.create(friend_id: rand(9) + 1, status: 'pending') }
+    rescue
+      puts "already friends!"
+      retry
+    end
+  end
+rescue
+  puts "problem with the friendships! :( :( :("
+  User.destroy_all
+end
+puts "created the friendships"
+
+
+
+### ENTRIES
+
+FRENCH_ENTRY_1 = "En Août 1979, j'ai pris mon dernier verre . Il était environ quatre heures un samedi après-midi , la chaleur du soleil en continu à travers les fenêtres de ma petite maison de transport sur ​​Dickens . Je mets un verre de scotch et de la soude sur la table du salon , je suis allé au lit , et tiré les couvertures sur ma tête . Je ne pouvais pas prendre plus . Le lundi, je suis allé visiter vieux sage Dr Jakob Schlichter . J'avais été le voyais pendant un an , en lui disant que je pensais que je pourrais boire trop . Il a accepté , et m'a conseillé d'aller à \" AAA \", qui est ce qu'il a appelé. Pressenti comme un lieu où l'on vous apprend à boire et conduire . J'ai dit que je n'avais pas besoin d' aller à toutes les réunions . Je voudrais arrêter de boire tout seul. Il m'a dit d'aller de l'avant et essayer , et vérifier avec lui tous les mois . Le problème avec l'aide de la volonté de puissance , pour moi , c'est que ça a duré seulement jusqu'à ce que ma volonté m'a convaincu que je pouvais prendre un autre verre . À cette époque , je lisais L'art de manger , par MFK Fisher , qui a écrit : \" . . Un martini est juste deux martinis sont trop Trois martinis sont jamais assez . \" Le problème de faire des résolutions , c'est que vous êtes sobre lorsque vous faire le premier , ont bu un verre quand vous faites le second , et ainsi de suite . J'ai aussi entendu dire , vous prenez la première boisson . La deuxième boisson elle-même prend . C'était mon problème . Je trouve qu'il est difficile , une fois que j'ai commencé , à arrêter après un ou deux. Si je pouvais, je continuerais jusqu'à que j'ai décidé de finir , qui était habituellement quelques heures plus tard . Le lendemain, j'ai payé le prix à la gueule de bois ."
+FRENCH_ENTRY_TITLE_1 = "Mer de l'humanité"
+FRENCH_ENTRY_2 = "Supposons que nous sommes tous liés par la conscience. Il ya suffisamment de philosophies et théories scientifiques des temps modernes là-bas qui suggèrent que nous sommes. En supposant que ce sont ou du moins peut-être, oui, à une manière très réelle, les gens autour de nous sont des aspects de nous-mêmes. Si nous sommes tous «un seul esprit», il s'ensuit que tout le monde est, par essence, nous-mêmes. Comment nous traitons les autres devient alors le reflet de la façon dont nous nous traitons. Et la façon dont nous nous traitons est à son tour la façon dont nous traitons les autres. Par exemple, presque tout le monde a peur de la mort, de mourir. Une des façons dont nous pouvons nous apaiser, altruiste, c'est-à apaiser les autres, d'être un bon ami, d'être un visage heureux, d'être un bon auditeur. Nous sommes tous dans le même. Compassion est de savoir ce et d'atteindre. Ce faisant, nous nous aidons ainsi - aider nous-mêmes, l'ensemble de la mer de l'humanité."
+FRENCH_ENTRY_TITLE_2 = "Mise à jour sur un samedi soir!"
+FRENCH_ENTRY_3 = "Eh bien , il est presque dimanche, mais qui est encore plus triste vraiment ... cette habitude d'être la fête la clé! Je n'ai pas mis à jour pour un couple de jours purement parce que je n'ai pas eu beaucoup à dire. Je n'ai pas réussi la réunion de jeudi alors que je tentais de mettre un formulaire de demande d'emploi ainsi que devait être dans la mi-journée vendredi. La vérité est que je veux - et sera - à une autre réunion bientôt ( probablement lundi) mais c'est parce que je veux aller et d'être dans une chambre avec les autres membres. En termes de devoir , je ne me sens pas comme ça , et c'est en grande partie parce que je suis à la maison . Je m'efforce de trouver un nouvel emploi et je serai heureux quand je reçois un, mais je vais véritablement verrai que le véritable test de la façon dont la sobriété est dans ma vie , une fois que cela arrive . Comme je l'ai dit avant , je trouve le « samedi tea-time ' dur car il a toujours été ma partie préférée de la soirée ... d'obtenir les premiers verres bas nous , la gouaille avec les gars , anticipant la nuit de plaisir à venir. Mais ce soir, j'ai même réussi à brise à travers parce que j'ai eu un curry :-) Ne vous que si tordu , je ne reçois pas de complaisance sur ma sobriété . Voici un exemple - samedi soir prochain nous avons une nuit . Je peux à peine le permettre , mais ce sera bien parce que je bois chaleureux . Cependant , si je sens que je ne peux pas le faire , alors je vais soit pas sortir ou si je me sens comme ça quand je suis , je vais rentrer à la maison plus tôt. L'essentiel est que je pense que je vais être correct, mais , alors que je suis heureux que la réflexion sur verre est définitivement s'atténue , je suis prêt à jouer très sûr en cas de besoin . Il sera probablement agacer certaines personnes, cependant mes vrais potes vont comprendre , et l'enfer pour toute personne qui a un problème avec elle . Donc, c'est tout. A mi-chemin à travers le week-end , et se sentir heureux . Pas trop mal pour KIMBO !"
+FRENCH_ENTRY_TITLE_3 = "Mon nom est Roger, et je suis un alcoolique"
+
+SPANISH_ENTRY_1 = "Ese es el tiempo que he estado sobrio . Ha sido bueno . Yo no he estado en una reunión de AA en un tiempo , así que tengo pensado ir mañana . Yo iba a ir el lunes, pero solicité dos trabajos que habían fechas de cierre de ayer y de hoy, así que opté por retrasar mi asistencia a la reunión de tres días. Estoy muy ansioso por ella. Pero estoy contento con dos meses. Por supuesto. He estado pensando en los últimos días acerca de la forma en que es una lástima que nunca tuve una sesión de despedida. No es que tengo la intención de tener un gran final ni nada, sólo de pensar que es una lástima que la última vez que tuve una bebida era por mi cuenta y no entre amigos. Pero la mayor parte de mi forma de beber en los últimos meses fue por mi cuenta con los auriculares voladura música en mis oídos ; escapismo simplemente absoluta. Otro aniversario es hoy y que es mi papá no ha tenido un cigarrillo en 14 meses. Lo que significa que el último día de su primer año de no fumadores era mi primer día de sobriedad ... ¡qué extraña coincidencia que era! Estoy muy orgulloso de él. Estoy seguro de que en muchos sentidos es muy similar , lo que está pasando. Hay diferencias obvias , pero estoy seguro de que hay algunas similitudes también. No he tenido el deseo de beber desde el viernes, lo cual es bueno . Fui al pub para el almuerzo ayer y no tenía ningún deseo en absoluto para tomar una copa . La persona que conocí para el almuerzo tenía una pinta y no a mí, no molesta en absoluto , de hecho , si sospecho que alguien no está bebiendo en mi nombre que me hace sentir más incómodo. Admito que no quiero estar rodeado de gente borracha y puedo controlar esas circunstancias. Sin embargo , realmente no tengo ningún problema con la gente que bebe en mi compañía , y espero que nunca nadie se siente como que no deben beber a mi alrededor. Así , poco más de la mitad del camino a través de la semana y que ha sido una buena semana hasta ahora. Sería bueno terminar con una 66m EUR Euromillones ganar el viernes!"
+SPANISH_ENTRY_TITLE_1 = "Dos Meses Ayer"
+SPANISH_ENTRY_2 = "Siempre me pareció extraño que había que bajar a un sótano de la iglesia para lograr la sobriedad , especialmente si usted es propenso a la depresión, creía en la religión , y / o sensibilidad a su entorno. Pero cuando era más joven , pensé que Alcohólicos Anónimos ( AA) fue la única manera de que los alcohólicos a lograr la sobriedad . Mi mamá se fue , que trabajó para ella, y nunca he oído hablar de cualquier otra opción . La gente que conocía que abandonaron generalmente recayeron , o al menos eso parecía . Últimamente , AA ha sido objeto de críticas . Lo más notable de Gabrielle Glaser, autor de un nuevo libro popular acerca de las mujeres y la bebida, \"Her Best- Kept Secret \". Afirma que AA puede ser un lugar peligroso para las mujeres, las personas con múltiples problemas de asistir a las reuniones libremente ( los delincuentes sexuales con problemas de alcohol , por ejemplo) . Ahora, un nuevo estudio sugiere que el modelo actual de AA puede ser más eficaz para los hombres que en las mujeres . Investigadores del Hospital General de Massachusetts encontraron que los hombres tienden a recaer cuando se encuentran en situaciones sociales con otros bebedores. AA ayuda a los alcohólicos a mantenerse sobrios hombres ofreciendo camaradería con otros abstemios , y dándoles los mecanismos de supervivencia para cuando están con amigos que beben ."
+SPANISH_ENTRY_TITLE_2 = "Mar de la Humanidad"
+SPANISH_ENTRY_3 = "¿Cómo asegurarse de que sus niños estén seguros cuando se quedan solos con un alcohólico o ? ¿Cómo se puede confiar en cualquier cosa que su adicto o alcohólico co - padre dice ? ¿Qué recursos existen para ayudar a una mamá o papá cuando compartir a sus hijos con un alcohólico o ? ¿Qué es lo que hay que ver si comparten los niños con un mentiroso y usuario conocido ? ¿Cómo se hace lo que es mejor para los niños ( tiempo máximo con cada padre , lucha observada mínimo ), mientras que se mantiene la seguridad de los niños pequeños ? Estas son las preguntas que he lidiado por casi un año . Y déjenme decirles , no hay respuestas claras y no hay camino marcado . Esto se siente como un territorio desconocido , con un lunático como mi copiloto. Cuando Construí un documento de separación legal, con la ayuda de mi abogado , yo no sabía qué diablos estaba haciendo . No estaba muy seguro , ya sea , ella es un buen abogado, pero no es un experto en materia de adicción. Como lo que he encontrado , muy pocos lo son. Le pregunté a varios consejeros en nuestras instalaciones de rehabilitación favorito ( pronto - a-ser - ex es un asistente en dos tiempos , graduado tiempo 0) , pero no me gusta involucrarse en asuntos de custodia . Off the record un consejero me dijo que era aconsejable ser estricto y que en base a la poca recuperación que había visto y lo que sabe de las drogas peligrosas Zach estaba usando , no confiaría en él a solas , tampoco. Le pregunté a un experto en la crianza de oficio, que no estaba segura tampoco, pero seguro que el tribunal había asignado a alguien? No, le respondí , que firmó un acuerdo de separación sin conseguir un abogado , evitamos los tribunales. Ella tenía ningún consejo que dar. Así que estoy solo en esto , por lo que es como me voy, con sólo mi Poder Superior , mi intuición y mi limitado conocimiento de la adicción / alcoholismo para que me de ."
+SPANISH_ENTRY_TITLE_3 = "¿Es AA la única opción? Ya no más."
+
+
+begin
+  users.each_with_index do |user, i|
+    if user.locale == 'en'
+      3.times do |i|
+        entry = Entry.all[rand(11)].dup
+        entry.update_attributes(section: "Section 1", user_id: user.id)
+        entry.save
+      end
+    elsif user.locale == 'fr'
+      3.times do |i|
+        user.entries.create(step: i + 1, body: eval("FRENCH_ENTRY_#{i+1}"), title: eval("FRENCH_ENTRY_TITLE_#{i+1}"), section: "1") 
+      end
+    elsif user.locale == 'es'
+      3.times do |i|
+        user.entries.create(step: i + 1, body: eval("SPANISH_ENTRY_#{i+1}"), title: eval("SPANISH_ENTRY_TITLE_#{i+1}"), section: "1") 
+      end
+    end
+  end
+  puts "seeded the entries!"
+rescue
+  puts "it broke on entries :< :< :<"
+  User.destroy_all
+end
+
+
+
+
+
+
+
+
+### STATUSES
+
+
+ENGLISH_STATUSES = [ 
+  "Hanging in there!",
+  "I'm looking for a sponsor. Does anyone know of someone who could help me in the Denver area?",
+  "Wow, I just signed up for 12Stepper. After taking a look around, I really like it! It's awesome!",
+  "I'm having a difficult day today. Please send your prayers and encouragement",
+  "We're starting a new meeting in Madison, WI. It's at St. James Church in the basement, MWF at 8:00PM. Hope you can join us!",
+  "I just finished working my fourth step in my journal in here. Looking forward to making amends and moving forward.",
+  "Two years down. Getting easier every day!"]
+
+FRENCH_STATUSES = [
+  "Hanging là!", 
+  "Je suis à la recherche d'un sponsor. Est-ce que quelqu'un sait de quelqu'un qui pourrait m'aider dans la région de Denver?", 
+  "Wow, je viens de m'inscrire pour 12Stepper. Après avoir pris un coup d'oeil autour, je l'aime vraiment! C'est génial!", 
+  "Je vais avoir une journée difficile aujourd'hui. S'il vous plaît envoyez vos prières et votre encouragement", 
+  "Nous commençons une nouvelle réunion à Madison, WI. C'est à l'église St. James dans le sous-sol, MWF à 20h00. J'espère que vous pourrez vous joindre à nous!", 
+  "Je viens de terminer mon travail quatrième étape dans mon journal ici. Plaisir de faire amende honorable et aller de l'avant.", 
+  "Deux ans plus tard. Obtenir plus facile tous les jours!" 
+]
+
+SPANISH_STATUSES = [
+  "Colgando ahí!",
+  "Estoy buscando un patrocinador. ¿Alguien sabe de alguien que me pueda ayudar en el área de Denver?", 
+  "Wow, me inscribí en 12Stepper. Después de echar un vistazo alrededor, me gusta mucho! ¡Es increíble!",
+  "Estoy teniendo un día difícil hoy en día. Favor de enviar sus oraciones y aliento", 
+  "Estamos comenzando una nueva reunión en Madison, WI. Es en la Iglesia de Santiago en el sótano, MWF a las 8:00 PM. Espero que puedan unirse a nosotros!", 
+  "Acabo de terminar de trabajar mi cuarto paso en mi diario aquí. Esperamos poder hacer las paces y seguir adelante.",
+  "Dos años más tarde. Conseguir más fácil todos los días!" 
+]
+
+begin
+  users.each do |user|
+    user.statuses.create(content: user.entries.first.to_status)
+    if user.locale == 'en'
+      2.times { user.statuses.create(content: ENGLISH_STATUSES[rand(7)]) }
+    elsif user.locale == 'fr'
+      2.times { user.statuses.create(content: FRENCH_STATUSES[rand(7)]) }
+    elsif user.locale == 'es'
+      2.times { user.statuses.create(content: SPANISH_STATUSES[rand(7)]) }
+    end
+  end
+  puts "seeded the statuses!"
+rescue
+  require 'pry'; binding.pry
+  puts "problem with the statuses :("
+  User.destroy_all
+end
+

@@ -19,7 +19,7 @@
     <% end %>
 
     <% if current_user == @user %>
-      <h3><%= link_to t("profile.edit"), edit_profile_path %></h3>
+      <h3><%= link_to t("profile.edit"), edit_profile_path, class: 'btn' %></h3>
     <% end %>
   </div>
 </div>
