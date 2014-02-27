@@ -1,16 +1,16 @@
 <div id="user-details" class="row">
-  <div class="col-lg-3">
+  <div class="col-md-3">
     <h1><%= image_tag(@user.current_token_image) %>
     <%= @user.username %></h1>
     <p><%= @user.days_sober %></p>
   </div>
-  <div class="col-lg-7" id="user-bio">
+  <div class="col-md-7" id="user-bio">
     <% unless @user.bio == "" %>
       <p><strong><%= t("profile.bio") + ": " %></strong></p>
       <p><%= @user.bio %></p>
     <% end %>
   </div>
-  <div class="col-lg-2" id="user-show-actions">
+  <div class="col-md-2" id="user-show-actions">
     <% unless current_user.friend_or_pending_with?(@user) %>
       <%= form_for Friendship.new, method: :create, url: friendships_path do |f| %>
         <%= f.hidden_field :user_id, value: @user.id %>

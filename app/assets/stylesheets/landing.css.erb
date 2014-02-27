@@ -1,6 +1,7 @@
 #landing-body {
   background: url(<%= (Rails.env == :development) ? 'landing_page_bg.jpg' : asset_path('landing_page_bg.jpg') %>);
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: none;
 }
 
 #landing-stripe {

@@ -1,5 +1,5 @@
 <div class="row page-header">
-  <div class="col-lg-3 col-md-3  my-journal-container">
+  <div class="col-md-3 col-md-3  my-journal-container">
 
     <% if @worksheet %>
       <h1 id="my-journal"><%= t('entries.work_step') %></h1>
@@ -8,7 +8,7 @@
     <% end %>
   </div>
 </div>
-<div class='col-lg-3 col-md-3 col-lg-offset-2 col-md-offset-2 pull-right'>
+<div class='col-md-3 col-md-3 col-md-offset-2 col-md-offset-2 pull-right'>
 
   <% if @worksheet %>
     <%= link_to t("entries.show_worksheet"), '#', id:'toggle-worksheet' %>

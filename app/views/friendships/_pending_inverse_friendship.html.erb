@@ -1,12 +1,12 @@
 <div class="row pending-friend" id=<%= "pending-#{inverse_friendship.user.username}"%>>
-  <div class="col-lg-2">
+  <div class="col-md-2">
     <p class="current-friend-details"><%= image_tag (inverse_friendship.user.decorate.current_token_image_sm), class: "status-token" %>
     <%= link_to inverse_friendship.user.username, user_show_path(inverse_friendship.user.username), class: "friend-name-link" %></p>
   </div>
-  <div class="col-lg-8">
+  <div class="col-md-8">
     <p><%= t('profile.bio') + ": " + inverse_friendship.user.bio %></p>
   </div>
-  <div class="col-lg-2 pending-friend-actions">
+  <div class="col-md-2 pending-friend-actions">
     <%= button_to t("friendships.accept"), accept_friendship_path(inverse_friendship.id), class: 'btn-link' %>
     <br />
     <%= button_to t("friendships.reject"), reject_friendship_path(inverse_friendship.id), method: :delete, class: 'btn-link', id:"remove-pending-friendship" %>

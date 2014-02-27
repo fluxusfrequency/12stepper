@@ -1,8 +1,8 @@
 <div class="row" id="friend-actions-bar">
-  <div class="col-lg-5">
+  <div class="col-md-5">
     <h1><%= t('statuses.latest') %></h1>
   </div>
-  <div class="col-lg-7" id="friend-action-links">
+  <div class="col-md-7" id="friend-action-links">
     <%= link_to t("navbar.view_friends"), friendships_path, class:"action-link-item" %>
     <%= link_to t("navbar.find_friends"), new_friends_search_path, class:"action-link-item" %>
     <%= form_tag friends_search_index_path, id: "friend-search-form", method: :get, url: friends_search_index_path do %>
@@ -13,21 +13,21 @@
 </div>
 
 <div class="row" id="new-status-container">
-  <div class="col-lg-3">
+  <div class="col-md-3">
     <h3><%= t('statuses.mind') %></h3>
   </div>
-  <div id="new-status-form" class="col-lg-8">
+  <div id="new-status-form" class="col-md-8">
     <%= form_for @status do |f| %>
       <%= f.text_area :content, :placeholder => t('statuses.whats_up'), id: "new-status-field" %>
   </div>
-  <div class="col-lg-1">
+  <div class="col-md-1">
       <%= f.submit t("statuses.share"), class: "btn", id: "new-status-submit" %>
     <% end %>
   </div>
 </div>
 
 <div class="row">
-  <div id="feed-activity" class="col-lg-12">
+  <div id="feed-activity" class="col-md-12">
     <%= render @statuses %>
   </div>
 </div>

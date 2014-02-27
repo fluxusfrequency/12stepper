@@ -1,12 +1,12 @@
 <div class="row current-friend" id=<%= "friend-#{friendship.friend.username}"%>>
-  <div class="col-lg-2">
+  <div class="col-md-2">
     <p class="current-friend-details"><%= image_tag (friendship.friend.decorate.current_token_image_sm), class: "status-token" %>
     <%= link_to friendship.friend.username, user_show_path(friendship.friend.username), class: "friend-name-link" %></p>
   </div>
-  <div class="col-lg-8">
+  <div class="col-md-8">
     <%= t('profile.bio') + ": " + friendship.friend.bio %>
   </div>
-  <div class="col-lg-2 current-friend-actions">
+  <div class="col-md-2 current-friend-actions">
     <%= link_to t("friendships.view_profile"), user_show_path(friendship.friend.username), class: "btn-link" %>
     <br />
     <br />

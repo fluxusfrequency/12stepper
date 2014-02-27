@@ -64,6 +64,7 @@
 
 #congrats-link-container a {
   cursor: default;
+  /*background-color: #B5ABAF;*/
 }
 
 #congrats-link {
@@ -90,3 +91,7 @@
   margin-right: 40px;
 }
 
+.navbar-nav {
+  background-color: #3F3A3C;
+  /*background-color: #B5ABAF;*/
+}

@@ -131,6 +131,7 @@ en:
     add_friend: Add Friend
     my_friends: My Friends
     friend_requests: Friend Requests
+    awaiting: Awaiting Confirmation
   statuses:
     share: Share
     whats_up: What's up?

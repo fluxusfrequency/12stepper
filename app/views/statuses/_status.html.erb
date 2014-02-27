@@ -1,19 +1,19 @@
 <div class="row status-item" id=<%= "status-#{status.id}" %>>
-  <div class="col-lg-3">
+  <div class="col-md-3">
     <p><%= image_tag (status.user.decorate.current_token_image_sm), class: "status-token" %>
     <%= link_to status.user.username, user_show_path(status.user.username), class: "status-username" %></p>
     <p class="status-time"><%= status.posted_time_ago %></p>
   </div>
-  <div class="col-lg-9 status-content hide-status-content" id="status-content-<%= status.id %>" >
+  <div class="col-md-9 status-content hide-status-content" id="status-content-<%= status.id %>" >
     <p><%= status.content %></p>
   </div>
     <% if status.long? %>
-      <div class="col-lg-2 col-lg-offset-3">
+      <div class="col-md-2 col-md-offset-3">
         <%= link_to t('entries.more'), '#', class:'toggle-status-content', id:"more-status-#{status.id}" %>
       </div>
     <% end %>
 
-  <div class="col-lg-2 col-lg-offset-10">
+  <div class="col-md-2 col-md-offset-10">
 
     <% if current_user == status.user %>
       <%= link_to t("entries.edit"), edit_status_path(status), class: "edit-status-link" %>

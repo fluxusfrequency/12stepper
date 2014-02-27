@@ -31,14 +31,14 @@
     function buildResultView(result, locale) {
       result['step'] = result['step'] || "";
       var view = '<div class="row" id="entry-index-item-row">' +
-      '<div class="col-lg-3 col-md-3">' + 
+      '<div class="col-xs-3 col-md-3">' + 
       '<h4 class="entry-item-title"><a href="' + '/entries/' +
       result['id'] + '/edit">' + result['title'] + '</a></h4>' +
       '<p class="entry-date">' + result['created_at'].slice(5, 7) + "/" +
       result['created_at'].slice(8, 10) + "/" + result['created_at'].slice(0, 4) +
       '</p><p class="entry-step">' + stepTranslation(locale) + result['step'].toString() + 
-      '</p></div><div class="col-lg-7 col-md-7" id="entry-index-item-body"><p>' +
-      result['body'] + '</p></div><div class="col-lg-2 col-md-2">' +
+      '</p></div><div class="col-xs-7 col-md-7" id="entry-index-item-body"><p>' +
+      result['body'] + '</p></div><div class="col-xs-2 col-md-2">' +
       '<ul id="entry-item-actions"><li><a href="' + '/entries/' +
       result['id'] + '/edit">Edit</a></li><li><a data-method="delete" href="' +
       '/entries/' + result['id'] + '" rel="nofollow">Delete</a></li>' +
@@ -100,15 +100,15 @@
       if (i !== -1) {
         $('#toggle-worksheet').empty().html(hideWorksheetTranslations[i]);
         $('.toggled-worksheet-details').removeClass('hide-worksheet-details');
-        $('.toggled-worksheet-details').addClass('col-lg-5');
+        $('.toggled-worksheet-details').addClass('col-xs-5');
         $('.worksheet-body-details').addClass('worksheet');
 
-        $('#entry-text-input').addClass('col-lg-7');
+        $('#entry-text-input').addClass('col-xs-7');
       } else {
         $('#toggle-worksheet').empty().html(showWorksheetTranslations[j]);
         $('.toggled-worksheet-details').addClass('hide-worksheet-details');
-        $('.toggled-worksheet-details').removeClass('worksheet col-lg-5');
-        $('#entry-text-input').removeClass('col-lg-7');
+        $('.toggled-worksheet-details').removeClass('worksheet col-xs-5');
+        $('#entry-text-input').removeClass('col-xs-7');
       }
     }
 
@@ -124,14 +124,14 @@
       if (i !== -1) {
         $('#toggle-entry-worksheet').empty().html(hideWorksheetTranslations[i]);
         $('.new-worksheet-details').removeClass('hide-worksheet-details');
-        $('.new-worksheet-details').addClass('col-lg-5');
-        $('#worksheet-entry-text').addClass('col-lg-7');
+        $('.new-worksheet-details').addClass('col-xs-5');
+        $('#worksheet-entry-text').addClass('col-xs-7');
       } else {
         $('#toggle-entry-worksheet').empty().html(showWorksheetTranslations[j]);
         $('.new-worksheet-details').addClass('hide-worksheet-details');
-        $('.new-worksheet-details').removeClass('col-lg-5');
-        $('#worksheet-entry-text').removeClass('col-lg-7');
-        $('#worksheet-entry-text').addClass('col-lg-12');
+        $('.new-worksheet-details').removeClass('col-xs-5');
+        $('#worksheet-entry-text').removeClass('col-xs-7');
+        $('#worksheet-entry-text').addClass('col-xs-12');
       }
     }
   });

@@ -1,9 +1,9 @@
 <div class="row">
-  <div class="col-lg-12" id="meetings-title">
+  <div class="col-md-12" id="meetings-title">
     <h1><%= t("meetings.title") %></h1>
   </div>
 
-  <div class="col-lg-12" id="meetings-search">
+  <div class="col-md-12" id="meetings-search">
     <%= form_tag search_meetings_path, method: :get do %>
       <p>
         <%= text_field_tag :address, params[:address], id: "search-form", placeholder: t("meetings.address") %>
@@ -15,12 +15,12 @@
 
 
 <div class="row">
-  <div class="col-lg-6 map-container pull-right ">
+  <div class="col-md-6 map-container pull-right ">
     <%= link_to t("meeting.hide_map"), '#', class:'hide-map-link' %><br />
     <div id='main-map' class='light'></div>
   </div>
 
-  <div id='search-results' class='col-lg-6'></div>
+  <div id='search-results' class='col-md-6'></div>
 </div>
 
 <%= stylesheet_link_tag "mapbox" %>

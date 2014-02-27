@@ -55,7 +55,7 @@
       $('#search-results').append("Sorry, no meetings matched your search.");
     } else {
       $('#search-results').append('<div class="row" id="mtg-search-results">' + 
-        '<div class="col-lg-12" id="found-meeting-title"><h2>Meetings for <em>' + queryString + '</em></h2></div>');
+        '<div class="col-xs-12" id="found-meeting-title"><h2>Meetings for <em>' + queryString + '</em></h2></div>');
       for (var meeting in response) {
         var meetingName = '<h3>' + response[meeting]["name"] + '</h3>';
         var mapLink = '<a class="view-map-link link-' + meeting + '" href="#">(view map)</a><br />';
@@ -63,7 +63,7 @@
         var meetingAddress = '<p><strong>Address: </strong>' + response[meeting]["address"] + '</p>';
         var meetingDay = '<p><strong>Day: </strong>' + response[meeting]["day"] + '</p>';
         var meetingTime = '<p><strong>Time: </strong>' + response[meeting]["time"] + '</p>';
-        var meetingData = '<div class="individual-search-result col-lg-12">' + meetingName + mapLink + meetingLocation + meetingAddress + meetingDay + meetingTime + '</div>'
+        var meetingData = '<div class="individual-search-result col-xs-12">' + meetingName + mapLink + meetingLocation + meetingAddress + meetingDay + meetingTime + '</div>'
         $('#search-results').append(meetingData);
         $('#search-results').append('</div>');
       };
