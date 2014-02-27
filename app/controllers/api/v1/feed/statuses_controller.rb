@@ -9,10 +9,10 @@ class Api::V1::Feed::StatusesController < ApplicationController
     sec = parse_time(params["time"])
     timestamp = Time.strptime(sec, '%s')
     puts timestamp
-    statuses = recent_statuses(current_user, timestamp)
+    statuses = []
 
     unless no_friends
-      statuses << current_user.approved_friends.map do |friend| 
+      statuses << current_user.approved_friends.map do |friend|
         recent_statuses(friend, timestamp)
       end
     end
