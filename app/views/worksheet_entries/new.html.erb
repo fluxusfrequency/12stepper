@@ -44,7 +44,7 @@
 
 
   <div class='col-lg-5 new-worksheet-details' id='worksheet-details'>
-    <h4><strong>Step <%= @worksheet.step %></strong> - <em><%= @worksheet.title %></em></h4>
+    <h4><strong><%= t('entries.step') + " " + @worksheet.step.to_s %></strong> - <em><%= @worksheet.title %></em></h4>
       <div class='worksheet'>
         <%= @worksheet.body.html_safe %>
       </div>
