@@ -1,6 +1,14 @@
-<div id="edit-status">
-  <%= form_for @status do |f| %>
-    <%= f.text_field :content, :placeholder => t('statuses.whats_up') %>
-    <%= f.submit t("statuses.update"), id: "update-submit" %>
-  <% end %>
+<div class="row">
+  <div class="col-lg-12" id="edit-status-title">
+    <h1><%= t('statuses.editing') %></h1>
+    <p class="status-time"><%= t("statuses.posted") + " " + @status.decorate.posted_time_ago %></p>
+  </div>
+
+  <div class="col-lg-12" id="edit-status">
+    <%= form_for @status do |f| %>
+      <%= f.text_area :content, :placeholder => t('statuses.whats_up'), id: "edit-status-field" %>
+      <br />
+      <%= f.submit t("statuses.update"), id: "update-submit", class:"btn" %>
+    <% end %>
+  </div>
 </div>

@@ -11,6 +11,10 @@
       </p><br />
     <% end %>
   </div>
+
+<div class="col-lg-6 map-container pull-right ">
+  <%= link_to "Hide Map", '#', class:'hide-map-link' %><br />
+  <div id='main-map' class='light'></div>
 </div>
 
 <div class="row">
@@ -22,12 +26,13 @@
   <div id='search-results' class='col-lg-6'></div>
 </div>
 
+<%= stylesheet_link_tag "mapbox" %>
 <%= javascript_include_tag "mapbox" %>
 <%= javascript_include_tag "meetings" %>
-<%= stylesheet_link_tag "mapbox" %>
 
 <script type='text/javascript' id="map-script">
-  var map = L.mapbox.map('main-map', 'examples.map-20v6611k').setView([39.7391667, -104.984167], 12);
+  var map = L.mapbox.map('main-map', 'examples.map-9ijuk24y').setView([39.7391667, -104.984167], 12);
   $(".map-container").addClass("hide-map-container")
 
 </script>
+

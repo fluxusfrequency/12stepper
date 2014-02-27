@@ -58,6 +58,13 @@ textarea {
   margin-top: 20px;
 }
 
+#edit-status-field {
+  width: 750px;
+  height: 250px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 #new-status-submit {
   margin-top: 20px;
   color: white;
@@ -91,4 +98,8 @@ textarea {
 
 .status-time {
   font-size: 0.9em;
+}
+
+#edit-status-title {
+  margin-top: 20px;
 }
