@@ -112,7 +112,7 @@
     $('#toggle-entry-worksheet').on("click", function(e) {
       e.preventDefault();
       toggleEntryLink();
-    })
+    });
 
     function toggleEntryLink() {
       console.log('clik')
@@ -149,6 +149,4 @@ CKEDITOR.editorConfig = function( config )
         { name: 'links', items : [ 'Link','Unlink','Anchor' ] },
         { name: 'tools', items : [ 'Maximize','-','About' ] }
     ];
-}
-
-
+};

@@ -5,7 +5,7 @@ $(function() {
     var queryData = {step: $('#choose-a-step').val()};
     removeEntryData();
     getEntryData(queryData);
-  })
+  });
 
   $('#choose-a-section').change(function(){
     var queryData = {step: $('#choose-a-step').val(),
@@ -14,7 +14,7 @@ $(function() {
     
     setNewPageData(queryData);
     
-  })
+  });
 
   var setNewPageData = function(queryData){
     $.ajax({
@@ -27,9 +27,7 @@ $(function() {
         setEntryData(response);
         setTitle(response["worksheet"])
         if (response["entry"] !== null) {
-          addExistingEntryData(response["entry"])
-          // $('#hidden-entry-id-field').val(response["entry"]["id"]);
-          // $('iframe').contents().find("body").empty().append(response["entry"]["body"]).html();
+          addExistingEntryData(response["entry"]);
         }
       },
       error: function(response) {
@@ -38,8 +36,8 @@ $(function() {
           $('#flash-section').html(errors);
         }
       }
-    })
-  }
+    });
+  };
 
   var addExistingEntryData = function(entry) {
     $('#hidden-entry-id-field').val(entry["id"]);
@@ -51,16 +49,17 @@ $(function() {
     $('#hidden-step-field').val(response["step"]);
     $('#hidden-section-field').val(response["worksheet"]["title"]);
     
-  }
+  };
 
   var setTitle = function(worksheet) {
-    $('.new-worksheet-details h4').html("<strong>Step " + worksheet["step"] + "</strong> - <em>" + worksheet["title"] + "</em>");
-  }
+    $('.new-worksheet-details h4').html("<strong>Step " + worksheet["step"] + 
+      "</strong> - <em>" + worksheet["title"] + "</em>");
+  };
 
   var removeEntryData = function() {
     $("#worksheet-entry-title").val('');
     $('iframe').contents().find("body").text('');
-  }
+  };
 
   var setWorksheetPrompt = function(response) {
     $('#worksheet-details').find('h4').empty();
@@ -85,7 +84,7 @@ $(function() {
   var clearContainers = function() {
     $('#worksheet-details').empty();
     $('#choose-a-section').empty();
-  }
+  };
 
   var getEntryData = function(queryData) {
     $.ajax({
@@ -97,11 +96,11 @@ $(function() {
         setNewStepValues(response);
         $('#worksheet-details').find('h4').empty()
         $('#worksheet-details').find('.worksheet').empty();
-        $('#worksheet-details').find('.worksheet').append(response["worksheet"][0]["body"])
+        $('#worksheet-details').find('.worksheet').append(response["worksheet"][0]["body"]);
         setEntryData(response);
-        setTitle(response["worksheet"][0])
+        setTitle(response["worksheet"][0]);
         if (response["entry"] !== null) {
-          addExistingEntryData(response["entry"])
+          addExistingEntryData(response["entry"]);
         }
       },
       error: function(response) {
@@ -110,16 +109,14 @@ $(function() {
           $('#flash-section').html(errors);
         }
       }
-    })
-  }
+    });
+  };
 
   $(document).ready(function(){
     var queryData = {step: $('#choose-a-step').val(),
                      section: $('#choose-a-section').val()};
     $('#hidden-step-field').val($('#choose-a-step').val())
     $('#hidden-section-field').val($('#choose-a-section').val());
+  });
+});
 
-  })
-})
-// $('.worksheet').hide()
-// $('#worksheet-entry-text').removeClass('col-lg-12').addClass('col-lg-7')
