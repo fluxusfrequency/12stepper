@@ -22,9 +22,9 @@
 //= require landing
 //= require static
 //= require worksheet-entry
+//= require mapbox
 //= require meetings
 //= require statuses
-//= require mapbox
 
 $.expr[":"].Contains = $.expr.createPseudo(function(arg) {
   return function( elem ) {
