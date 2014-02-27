@@ -157,7 +157,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    meeting_finder (0.1.4)
+    meeting_finder (0.1.5)
       faraday
       json
       nokogiri
@@ -325,7 +325,7 @@ DEPENDENCIES
   jquery-rails
   json_spec
   kaminari
-  meeting_finder (= 0.1.4)
+  meeting_finder (= 0.1.5)
   newrelic_rpm
   paperclip
   pg
