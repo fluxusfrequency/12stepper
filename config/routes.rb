@@ -57,6 +57,8 @@ TwelveStepper::Application.routes.draw do
 
       end
     end
+
+    resources :help, only: :index
   end
 
   get "/pages/*id" => 'pages#show', as: :page, format: false
