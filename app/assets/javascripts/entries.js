@@ -94,15 +94,18 @@
     });
 
     function toggleLink() {
-      if ($('#toggle-worksheet').html() === "Show Worksheet") {
-        $('#toggle-worksheet').empty().html("Hide Worksheet");
+      var triggerText = $('#toggle-entry-worksheet').html();
+      var i = showWorksheetTranslations.indexOf(triggerText);
+      var j = hideWorksheetTranslations.indexOf(triggerText);
+      if (i !== -1) {
+        $('#toggle-worksheet').empty().html(hideWorksheetTranslations[i]);
         $('.toggled-worksheet-details').removeClass('hide-worksheet-details');
         $('.toggled-worksheet-details').addClass('col-lg-5');
         $('.worksheet-body-details').addClass('worksheet');
 
         $('#entry-text-input').addClass('col-lg-7');
       } else {
-        $('#toggle-worksheet').empty().html("Show Worksheet");
+        $('#toggle-worksheet').empty().html(showWorksheetTranslations[j]);
         $('.toggled-worksheet-details').addClass('hide-worksheet-details');
         $('.toggled-worksheet-details').removeClass('worksheet col-lg-5');
         $('#entry-text-input').removeClass('col-lg-7');
@@ -115,14 +118,16 @@
     });
 
     function toggleEntryLink() {
-      console.log('clik')
-      if ($('#toggle-entry-worksheet').html() === "Show Worksheet") {
-        $('#toggle-entry-worksheet').empty().html("Hide Worksheet");
+      var triggerText = $('#toggle-entry-worksheet').html();
+      var i = showWorksheetTranslations.indexOf(triggerText);
+      var j = hideWorksheetTranslations.indexOf(triggerText);
+      if (i !== -1) {
+        $('#toggle-entry-worksheet').empty().html(hideWorksheetTranslations[i]);
         $('.new-worksheet-details').removeClass('hide-worksheet-details');
         $('.new-worksheet-details').addClass('col-lg-5');
         $('#worksheet-entry-text').addClass('col-lg-7');
       } else {
-        $('#toggle-entry-worksheet').empty().html("Show Worksheet");
+        $('#toggle-entry-worksheet').empty().html(showWorksheetTranslations[j]);
         $('.new-worksheet-details').addClass('hide-worksheet-details');
         $('.new-worksheet-details').removeClass('col-lg-5');
         $('#worksheet-entry-text').removeClass('col-lg-7');
@@ -130,6 +135,17 @@
       }
     }
   });
+
+  var showWorksheetTranslations = [
+    "Show Worksheet", 
+    "Mostrar Hoja de Trabajo", 
+    "Afficher Feuille"];
+
+  var hideWorksheetTranslations = [
+    "Hide Worksheet",
+    "Ocultar Hoja de Trabajo",
+    "Masquer Feuille"
+  ]
 
 })();
 

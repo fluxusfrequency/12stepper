@@ -16,7 +16,7 @@
 <br />
 <div class='row'>
   <div class="col-lg-12">
-    <%= link_to "Hide Worksheet", '#', class: 'pull-right', id:'toggle-entry-worksheet' %><br />
+    <%= link_to t("entries.hide_worksheet"), '#', class: 'pull-right', id:'toggle-entry-worksheet' %><br />
   </div>
   <div id='worksheet-entry-text' class='col-lg-7'>
     <%= form_for @entry, url: worksheet_entries_path do |f| %>

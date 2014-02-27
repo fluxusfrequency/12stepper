@@ -87,6 +87,7 @@ es:
     work_step: Trabajar en un paso
     worksheet: Buscar una hoja de cálculo
     show_worksheet: Mostrar Hoja de Trabajo
+    hide_worksheet: Ocultar Hoja de Trabajo
     write: Sólo escribir
     title: Título
     step: Paso
