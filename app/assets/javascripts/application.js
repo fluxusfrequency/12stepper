@@ -22,7 +22,6 @@
 //= require landing
 //= require static
 //= require worksheet-entry
-//= require mapbox
 //= require meetings
 //= require statuses
 
