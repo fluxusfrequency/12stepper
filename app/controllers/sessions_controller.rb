@@ -10,12 +10,13 @@ class SessionsController < ApplicationController
     email = params[:email]
     password = params[:password]
 
-    @user = User.find_by(email: email).decorate
-    I18n.locale = @user.locale
+    user = User.find_by(email: email)
 
-    if @user
-      result = @user.authenticate(password)
+    if user
+      result = user.authenticate(password)
       if result
+        @user = user.decorate
+        I18n.locale = @user.locale
         session[:user_id] = result.id
         flash[:notice] = t("flash.signin")
         flash[:success] = @user.display_milestone_congrats if @user.display_milestone_congrats
