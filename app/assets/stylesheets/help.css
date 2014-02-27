@@ -25,3 +25,15 @@ h2 {
 }
 
 
+#link-home {
+  text-align: center;
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+  border: 5px solid #CDC1C7;
+  padding: 10px;
+}
+
+#link-home a {
+  color: #3F3A3C;
+}

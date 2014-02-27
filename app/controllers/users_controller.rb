@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = t("flash.account_create_success")
-      redirect_to root_path
+      redirect_to help_index_path
     else
       render "sessions/new", :layout => "landing"
     end
