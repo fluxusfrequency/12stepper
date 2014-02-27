@@ -5,7 +5,7 @@
     <p class="status-time"><%= status.posted_time_ago %></p>
   </div>
   <div class="col-md-9 status-content hide-status-content" id="status-content-<%= status.id %>" >
-    <p><%= status.content %></p>
+    <p><%= status.content.html_safe %></p>
   </div>
     <% if status.long? %>
       <div class="col-md-2 col-md-offset-3">
