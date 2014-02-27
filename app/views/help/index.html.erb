@@ -1,17 +1,15 @@
 <div id="help-container" class="container">
   <div class="row help-row">
     <div class="col-md-12">
-      <h1>How to Use 12Stepper</h1>
+      <h1><%= t('help.title') %></h1>
     </div>
   </div>
 
   <hr />
   <div class="row help-row">
     <div class="col-md-4">
-      <h2>Available Resources</h2>
-      <p>
-        12Stepper has the major AA resources right here for you, including the Big Book, the 12 Steps, the 12 Traditions, and the Serenity Prayer.
-      </p>
+      <h2><%= t('help.available_title') %></h2>
+      <p><%= t('help.available_text') %></p>
     </div>
     <div class="col-md-8">
       <%= image_tag "resource-links-view.png", class:"help-image", size: "720x366" %>
@@ -24,20 +22,16 @@
       <%= image_tag "big-book-search-view.png", class:"help-image", size: "720x366" %>
     </div>
     <div class="col-md-4">
-      <h2>Big Book</h2>
-      <p>
-        You can read or reference the Big Book right from 12Stepper. Don't remember where you read something? Easily search the Big Book by search term or by chapter.
-      </p>
+      <h2><%= t('help.big_book_title') %></h2>
+      <p><%= t('help.big_book_text') %></p>
     </div>
   </div>
 
   <hr />
   <div class="row help-row">
     <div class="col-md-4">
-      <h2>Become a Part of the Community</h2>
-      <p>
-        12Stepper is an easy and interactive way for you to support one another on your journey. Post status updates, share journal entries on your profile, and browse updates from your friends.
-      </p>
+      <h2><%= t('help.community_title') %></h2>
+      <p><%= t('help.community_text') %></p>
     </div>
     <div class="col-md-8">
       <%= image_tag "feed-view.png", class:"help-image", size: "720x366" %>
@@ -50,10 +44,8 @@
       <%= image_tag "friends-index-view.png", class:"help-image", size: "720x366" %>
     </div>
     <div class="col-md-4">
-      <h2>Find Friends</h2>
-      <p>
-    View your existing friends and search for new ones. We're all in this together.
-      </p>
+      <h2><%= t('help.friends_title') %></h2>
+      <p><%= t('help.friends_text') %></p>
     </div>
   </div>
 
@@ -61,10 +53,8 @@
   <hr />
   <div class="row help-row">
     <div class="col-md-4">
-      <h2>Track your Progress in your Journal</h2>
-      <p>
-        Writing in and maintaining your journal shouldn't be hard. We make it easy to work a step, or just write about anything that's on your mind.
-      </p>
+      <h2><%= t('help.journal_title') %></h2>
+      <p><%= t('help.journal_text') %></p>
     </div>
     <div class="col-md-8">
       <%= image_tag("journal-view.png", size: "720x366", class: "help-image") %>
@@ -77,23 +67,19 @@
       <%= image_tag "meetings-view.png", class:"help-image", size: "720x366" %>
     </div>
     <div class="col-md-4">
-      <h2>Find Meetings in your Area</h2>
-      <p>
-        Online support and interaction is great, but nothing can replace in-person meetings. Frequent traveler? No problem. Quickly and easily find meetings regardless of where you are.
-      </p>
+      <h2><%= t('help.meetings_title') %></h2>
+      <p><%= t('help.meetings_text') %></p>
     </div>
   </div>
 
   <hr />
   <div class="row help-row">
     <div class="col-md-4">
-      <h2>View User Profiles</h2>
-      <p>
-    Maintain your own profile and view those of others, with the number of days sober, a short bio, and all recent status updates.
-      </p>
+      <h2><%= t('help.profiles_title') %></h2>
+      <p><%= t('help.profiles_text') %></p>
     </div>
     <div class="col-md-8">
-        <%= image_tag "user-profile-view.png", class:"help-image", size: "720x366" %>
+      <%= image_tag "user-profile-view.png", class:"help-image", size: "720x366" %>
     </div>
   </div>
 

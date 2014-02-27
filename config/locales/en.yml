@@ -51,15 +51,6 @@ en:
     meetings: Meetings
     meetings_tooltip: Search for meetings in your area and see them on a map
     congrats: Congratulations
-    congrats_tooltip: |
-                      This is calculated based on the date of your last drink.
-                      You can change the date in your profile.
-                      Your token changes color based on your days of sobriety.
-                      1 day - Blue
-                      10 days - Green
-                      30 days - Orange
-                      90 days - Red
-                      1 year - Light Green
     day: day
     month: month
     year: year
@@ -148,3 +139,19 @@ en:
     find_home: Maybe you were looking for the home page? You can find it here
   shoutouts:
     tagged: Shoutouts
+  help:
+    title: How to Use 12Stepper
+    available_title: Available Resources
+    available_text: 12Stepper has the major AA resources right here for you, including the Big Book, the 12 Steps, the 12 Traditions, and the Serenity Prayer.
+    big_book_title: Big Book
+    big_book_text: You can read or reference the Big Book right from 12Stepper. Don't remember where you read something? Easily search the Big Book by search term or by chapter.
+    community_title: Become a Part of the Community
+    community_text: 12Stepper is an easy and interactive way for you to support one another on your journey. Post status updates, share journal entries on your profile, and browse updates from your friends.
+    friends_title: Find Friends
+    friends_text: View your existing friends and search for new ones. We're all in this together.
+    journal_title: Track your Progress in your Journal
+    journal_text: Writing in and maintaining your journal shouldn't be hard. We make it easy to work a step, or just write about anything that's on your mind.
+    meetings_title: Find Meetings in your Area
+    meetings_text: Online support and interaction is great, but nothing can replace in-person meetings. Frequent traveler? No problem. Quickly and easily find meetings regardless of where you are.
+    profiles_title: View User Profiles
+    profiles_text: Maintain your own profile and view those of others, with the number of days sober, a short bio, and all recent status updates.

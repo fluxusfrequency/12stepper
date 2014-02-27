@@ -152,3 +152,19 @@ es:
     home: Visite la Página de Inicio
     thanks: Gracias por encontrar el error! Hemos sido notificados del problema y lo estamos investigando.
     find_home: Tal vez usted buscaba la página de inicio? La puede encontrar aquí
+  help:
+    title: Cómo utilizar 12Stepper
+    available_title: Recursos disponibles
+    available_text: 12Stepper tiene los mayores recursos de AA aquí para usted, incluyendo el Libro Grande, los 12 pasos , las 12 tradiciones , y la Oración de la Serenidad.
+    big_book_title: Gran Libro
+    big_book_text: Puede leer o hacer referencia al Libro Grande derecha desde 12Stepper . No recuerdo donde se lee algo ? Busca fácilmente el Libro Grande por término de búsqueda o por capítulo.
+    community_title: Entra a formar parte de la Comunidad
+    community_text: 12Stepper es una manera fácil e interactiva para que apoyen unos a otros en su viaje. Actualizaciones de estado de correos, los asientos de diario cuota en su perfil , y navegar por las actualizaciones de tus amigos .
+    friends_title: Encuentra Amigos
+    friends_text: Consulta tus amigos existentes y la búsqueda de otros nuevos. Estamos todos juntos en esto.
+    journal_title: Seguimiento de su progreso en el Diario
+    journal_text: Escribiendo en su diario y el mantenimiento no debería ser difícil . Ahora es más fácil trabajar un paso , o simplemente escribir sobre todo lo que hay en tu mente .
+    meetings_title: Buscar reuniones en su área
+    meetings_text: el apoyo y la interacción en línea es grande , pero nada puede sustituir a las reuniones en persona . Viajero frecuente ? No hay problema. Rápida y fácilmente encontrar reuniones, independientemente de dónde se encuentre.
+    profiles_title: Ver perfiles de usuario
+    profiles_text: Mantener su propio perfil y ver las de los demás , con el número de días sobrios , una breve biografía , y todas las actualizaciones de estado recientes.
