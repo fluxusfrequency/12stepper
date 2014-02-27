@@ -88,12 +88,8 @@ es:
     work_step: Trabajar en un Paso
     worksheet: Buscar una Hoja de Trabajo
     show_worksheet: Mostrar Hoja de Trabajo
-<<<<<<< HEAD
     hide_worksheet: Ocultar Hoja de Trabajo
-    write: Sólo escribir
-=======
     write: Sólo Escribir
->>>>>>> 19a9f1ba642dad9a3fb40610a02d5aa3ddd4be80
     title: Título
     step: Paso
     section: Sección
