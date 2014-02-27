@@ -1,0 +1,27 @@
+.help-image {
+  display: block;
+  width: 720px;
+  margin: 0 auto;
+  border: 2px solid #CDC1C7;
+}
+
+body {
+  background: rgb(253,253,253);
+}
+
+.help-row {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+  margin-top: 30px;
+}
+
+h2 {
+  margin-top: 0px;
+}
+
+
