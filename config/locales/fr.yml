@@ -136,8 +136,12 @@ fr:
     ago: Il ya
     editing: Édition d'un État
     posted: Publié
+    mind: Qu'est-ce qui est sur votre esprit?
+    latest: Dernières Mises à Jour
   not_found: 
     something: Quelque chose a mal tourné 
     home: Visitez la page d'accueil 
     thanks: Merci pour trouver l'erreur! Nous avons été informés du problème et nous sommes à la recherche en elle. 
     find_home: Peut-être que vous recherchez pour la page d'accueil? Vous pouvez le trouver ici
+  shoutouts:
+    tagged: Marqué
