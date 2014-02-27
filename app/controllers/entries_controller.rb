@@ -15,10 +15,10 @@ class EntriesController < ApplicationController
 
     if entry.save
       return share(entry) if params[:commit] == "Save and Share"
-      flash[:notice] = t('flash.entry_create_failure')
+      flash[:notice] = t('flash.entry_save_success')
       redirect_to entries_path
     else
-      flash[:notice] = t('flash.entry_create_failure')
+      flash[:notice] = t('flash.entry_save_failure')
       render :new
     end
   end
