@@ -60,7 +60,7 @@ describe "User Account Creation" do
       end
     end
 
-    it "can edit its details", js: true do
+    xit "can edit its details", js: true do
       login
       click_on "Welcome back, SecretSanta!"
       click_on "My Profile"
