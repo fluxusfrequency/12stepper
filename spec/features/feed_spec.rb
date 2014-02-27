@@ -23,7 +23,7 @@ describe "feed" do
 
     it "should see only its friends statuses in the feed", js: true do
       feed_login
-      
+
       within "#feed-activity" do
         expect(page).to have_content("My first status update")
         expect(page).to have_content("My second status update")
@@ -113,7 +113,7 @@ describe "feed" do
       within "#feed-activity" do
         expect(page).to have_content("I love being sober")
       end
-      
+
     end
   end
 

@@ -34,7 +34,6 @@ class EntriesController < ApplicationController
   def update
     entry = Entry.find(params[:id])
     entry.update_attributes(entry_params)
-    fail
     if params[:commit] == "Save and Share" || params[:commit] == "Share"
       return share(entry)
     end
