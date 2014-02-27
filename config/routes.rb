@@ -63,4 +63,6 @@ TwelveStepper::Application.routes.draw do
 
   get '/:locale', to: 'statuses#index'
   root 'statuses#index'
+
+  get '/*not_found', to: 'not_found#index'
 end

@@ -18,8 +18,6 @@ a:hover {
   text-decoration: none;
 }
 
-
-
 .page-header {
   margin: 40px 0 0 0 ;
   border-bottom: 1px solid #B5ABAF;
@@ -84,4 +82,27 @@ hr {
   text-decoration: none;
   color: #3F3A3C;
   font-size: 1.2em;
+}
+
+#link-home {
+  text-align: center;
+  width: 400px;
+  display: block;
+  margin: 0 auto;
+  border: 5px solid #CDC1C7;
+  padding: 10px;
+}
+
+#link-home a {
+  color: #3F3A3C;
+}
+
+#not-found-container {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+#not-found-container h1 {
+  font-size: 4em;
 }

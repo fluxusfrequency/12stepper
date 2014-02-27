@@ -59,6 +59,7 @@
   cursor: default;
   min-height: 55px;
   min-width: 100px;
+  padding-left: 10px;
 }
 
 #congrats-link-container a {
