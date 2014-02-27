@@ -96,8 +96,10 @@ en:
     create: Save
     edit: Edit
     delete: Delete
-    share: Save and Share
+    save_and_share: Save and Share
+    share: Share
     token_label: Icon
+    more: (more)
   profile: 
     title: My Profile
     username: Username (anonymous)

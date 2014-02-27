@@ -27,7 +27,7 @@
       <div class="entry-link-container">
         <%= f.submit t('entries.create'), class:"btn-link entry-link-action", id:'worksheet-entry-submit' %>
         <%= link_to t('entries.delete'), entry_path(@entry.id), class:"btn-link entry-link-action", method: :delete %>
-        <%= f.submit t('entries.share'), class:"btn-link entry-link-action" %>
+        <%= f.submit t('entries.save_and_share'), class:"btn-link entry-link-action" %>
       </div>
 
     <% end %>

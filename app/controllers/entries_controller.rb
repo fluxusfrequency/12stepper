@@ -34,7 +34,9 @@ class EntriesController < ApplicationController
   def update
     entry = Entry.find(params[:id])
     entry.update_attributes(entry_params)
-    return share(entry) if params[:commit] == "Save and Share"
+    if params[:commit] == "Save and Share" || params[:commit] == "Share"
+      return share(entry)
+    end
     redirect_to root_path
   end
 
@@ -48,6 +50,11 @@ class EntriesController < ApplicationController
       render :index
     end
 
+  end
+
+  def share_entry
+    entry = current_user.entries.find(params[:id])
+    return share(entry)
   end
 
   private

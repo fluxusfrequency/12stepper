@@ -83,6 +83,7 @@ fr:
     fellowship: Camaraderie
     hide_map: Masquer la carte
   entries:
+    more: (plus)
     work_step: Travailler sur une étape
     worksheet: Trouvez une feuille de calcul
     show_worksheet: Afficher Feuille
@@ -96,7 +97,8 @@ fr:
     create: Sauver
     edit: Modifier
     delete: Effacer
-    share: Sauvegarder et Partager
+    save_and_share: Sauvegarder et Partager
+    share: Partager
   profile: 
     title: Mon Profil
     username: Nom (anonyme)
