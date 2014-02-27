@@ -18,4 +18,8 @@ class StatusDecorator < Draper::Decorator
     message
   end
 
+  def long?
+    object.content.count(" ") > 100
+  end
+
 end

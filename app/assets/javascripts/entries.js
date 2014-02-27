@@ -58,16 +58,15 @@
     }
 
     $('.toggle-status-content').on("click", function(e) {
-      // toggleLink();
       e.preventDefault();
       if(this.innerHTML === "(" + moreTranslation(locale) + ")") {
-        $("#status-content-" + this.id.split('-')[2]).removeClass('hide-status-content')
-        this.innerHTML = "(" + lessTranslation(locale) + ")"
+        $("#status-content-" + this.id.split('-')[2]).removeClass('hide-status-content');
+        this.innerHTML = "(" + lessTranslation(locale) + ")";
       } else {
-      $("#status-content-" + this.id.split('-')[2]).addClass('hide-status-content')
-        this.innerHTML = "(" + moreTranslation(locale) + ")"
+      $("#status-content-" + this.id.split('-')[2]).addClass('hide-status-content');
+        this.innerHTML = "(" + moreTranslation(locale) + ")";
       }
-    })
+    });
 
     function moreTranslation(locale) {
       if (locale === "es") {
@@ -92,7 +91,7 @@
     $('#toggle-worksheet').on("click", function(e) {
       e.preventDefault();
       toggleLink();
-    })
+    });
 
     function toggleLink() {
       if ($('#toggle-worksheet').html() === "Show Worksheet") {
