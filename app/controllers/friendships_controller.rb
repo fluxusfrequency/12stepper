@@ -6,10 +6,15 @@ class FriendshipsController < ApplicationController
   end
 
   def create
-    @friendship = current_user.friendships.new
-    @friendship.update_attributes(status: 'pending', friend_id: params[:friendship][:user_id])
-    if @friendship.save
-      flash.notice = t("flash.friend_request_sent")
+    other = User.find(params[:friendship][:user_id])
+    unless current_user.friend_or_pending_with?(other)
+
+      @friendship = current_user.friendships.new
+      @friendship.update_attributes(status: 'pending', friend_id: params[:friendship][:user_id])
+      if @friendship.save
+        flash.notice = t("flash.friend_request_sent")
+      end
+
     else
       flash.notice = t("flash.friend_request_failed")
     end

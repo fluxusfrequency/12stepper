@@ -12,7 +12,9 @@
     <%= link_to t("friendships.view_profile"), user_show_path(user.username), class: 'btn-link' %>
     <br />
     <br />
-    <%= f.submit t("friendships.add_friend"), id: "#{user.username}-submit", class: 'btn-link' %>
+    <% unless current_user.friend_or_pending_with?(user) %>
+      <%= f.submit t("friendships.add_friend"), id: "#{user.username}-submit", class: 'btn-link' %>
+    <% end %>
   </div>
   <% end %>
 </div>

@@ -41,12 +41,19 @@ class User < ActiveRecord::Base
     self.friendships + self.inverse_friendships
   end
 
+  def all_friends_and_inverse_friends
+    result = []
+    result += self.friendships.map { |f| f.friend }
+    result += self.inverse_friendships.map { |f| f.user }
+    result
+  end
+
   def is_friends_with?(other)
     self == other || self.approved_friends.include?(other)
   end
 
   def friend_or_pending_with?(other)
-    self == other || self.all_friendships_and_inverse_friendships.include?(other)
+    self == other || self.all_friends_and_inverse_friends.include?(other)
   end
 
   private
