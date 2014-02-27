@@ -7,7 +7,7 @@
   <div class="col-lg-9 status-content hide-status-content" id="status-content-<%= status.id %>" >
     <p><%= status.content %></p>
   </div>
-    <% if status.decorate.long? %>
+    <% if status.long? %>
       <div class="col-lg-2 col-lg-offset-3">
         <%= link_to t('entries.more'), '#', class:'toggle-status-content', id:"more-status-#{status.id}" %>
       </div>

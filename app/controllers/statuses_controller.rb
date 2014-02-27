@@ -52,7 +52,7 @@ class StatusesController < ApplicationController
   private
 
   def authorize_status_user
-    @status = Status.find(params[:id])
+    @status = Status.find(params[:id]).decorate
     if @status.user != current_user
       flash[:notice] = t('flash.unauthorized')
       return redirect_to root_path
