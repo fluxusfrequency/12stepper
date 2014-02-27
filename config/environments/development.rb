@@ -32,3 +32,4 @@ TwelveStepper::Application.configure do
   config.assets.debug = true
   # config.middleware.use Rack::LiveReload
 end
+
