@@ -1,0 +1,12 @@
+.shoutout-panel {
+  background: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.shoutout {
+  text-decoration: underline;
+  color: blue;
+}

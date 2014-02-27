@@ -19,6 +19,7 @@
  *= require meetings
  *= require meetings
  *= require navbar
+ *= require shoutouts
  *= require styles
  *= require user
  *= require worksheet_entries

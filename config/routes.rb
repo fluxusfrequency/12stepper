@@ -55,6 +55,10 @@ TwelveStepper::Application.routes.draw do
           get '/statuses', to: 'statuses#index'
         end
 
+        namespace :users do
+          get '/search/:query', to: 'search#show'
+        end
+
       end
     end
   end

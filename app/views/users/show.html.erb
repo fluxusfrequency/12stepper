@@ -14,7 +14,7 @@
     <% unless current_user.friend_or_pending_with?(@user) %>
       <%= form_for Friendship.new, method: :create, url: friendships_path do |f| %>
         <%= f.hidden_field :user_id, value: @user.id %>
-        <h3><%= f.submit t("friendships.add_friend"), id: "#{@user.username}-submit" %></h3>
+        <h3><%= f.submit t("friendships.add_friend"), id: "#{@user.username}-submit", class: "btn" %></h3>
       <% end %>
     <% end %>
 

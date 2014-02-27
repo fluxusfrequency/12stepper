@@ -137,8 +137,11 @@ en:
     ago: ago
     editing: Editing A Status
     posted: Posted
+    mind: What's on your mind?
   not_found:
     something: Something went wrong
     home: Visit the Home Page
     thanks: Thanks for finding the error! We've been notified of the problem and we're looking into it.
     find_home: Maybe you were looking for the home page? You can find it here
+  shoutouts:
+    tagged: Shoutouts

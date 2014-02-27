@@ -1,5 +1,7 @@
 (function(){
+
   var locale = document.URL.split("/")[3].replace(/\?locale\=/, "");
+  
   $(function(){
     $('#entries-search').on('keyup', function(){
       var query, queryData;

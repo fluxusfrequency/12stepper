@@ -136,8 +136,11 @@ es:
     ago: hace
     editing: Edición de un Estado
     posted: Publicado
+    mind: ¿Qué tienes en mente?
   not_found: 
     something: Algo salió mal 
     home: Visita la Web 
     thanks: Gracias por encontrar el error! Hemos sido notificados del problema y estamos investigando. 
     find_home: Tal vez usted buscaba la página de inicio? Lo puedes encontrar   
+  shoutouts:
+    tagged: Anuncios

@@ -14,15 +14,21 @@
 
 <div class="row" id="new-status-container">
   <div class="col-lg-3">
-    <h3>What's on your mind?</h3>
+    <h3><%= t('statuses.mind') %></h3>
   </div>
   <div id="new-status-form" class="col-lg-8">
     <%= form_for @status do |f| %>
       <%= f.text_area :content, :placeholder => t('statuses.whats_up'), id: "new-status-field" %>
+      <%= f.hidden_field :shoutouts, :value => "" %>
   </div>
   <div class="col-lg-1">
       <%= f.submit t("statuses.share"), class: "btn", id: "new-status-submit" %>
     <% end %>
+  </div>
+  <div class="shoutouts-panel hidden col-lg-9 col-lg-offset-3">
+  </div>
+  <div class="shoutouts-chosen hidden col-lg-3 col-lg-offset-9">
+    <h3><%= t('shoutouts.tagged') %></h3>
   </div>
 </div>
 

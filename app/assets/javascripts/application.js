@@ -20,6 +20,7 @@
 //= require big_book
 //= require entries
 //= require landing
+//= require shoutouts
 //= require static
 //= require worksheet-entry
 
