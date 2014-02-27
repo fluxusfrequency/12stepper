@@ -10,7 +10,7 @@
     </div>
     <%= form_tag sessions_path, id:"login-form" do %>
       <div class="field">
-        <%= text_field_tag :email, params[:email], {:placeholder => t("profile.email")} %>
+        <%= text_field_tag :email, params[:email], {:placeholder => t("profile.email"), :autofocus => true } %>
       </div>
       <div class="field">
         <%= text_field_tag :fake_password, params[:fake_password], {:placeholder => t("profile.password")} %>
