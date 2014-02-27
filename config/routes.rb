@@ -6,7 +6,7 @@ TwelveStepper::Application.routes.draw do
     get '/profile/edit', to: 'users#edit', as: "edit_profile"
     get '/profile/:username', to: 'users#show', as: :user_show
     resources :users, only: [:index, :new, :create, :update]
-
+    patch '/entries/share/:id', to: 'entries#share_entry', as: "share_entry"
     resources :entries, except: :show
 
     get '/feed' => 'statuses#index', as: 'feed'

@@ -1,6 +1,6 @@
 class FriendshipsController < ApplicationController
   def index
-    @friendships = current_user.friendships.approved 
+    @friendships = current_user.friendships.approved
     @inverse_friendships = current_user.inverse_friendships.approved
     @pending = current_user.inverse_friendships.pending
   end

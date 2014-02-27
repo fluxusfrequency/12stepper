@@ -1,14 +1,13 @@
 (function(){
-
+  var locale = document.URL.split("/")[3].replace(/\?locale\=/, "");
   $(function(){
     $('#entries-search').on('keyup', function(){
-      var query, queryData, locale;;
+      var query, queryData;
       query = $(this).val();
       if (query === "") {
         query = " ";
       }
       
-      locale = document.URL.split("/")[3].replace(/\?locale\=/, "");
       queryData = { query: query };
 
       $.ajax({
@@ -55,6 +54,38 @@
         return "Étape: ";
       } else {
         return "Step: ";
+      }
+    }
+
+    $('.toggle-status-content').on("click", function(e) {
+      // toggleLink();
+      e.preventDefault();
+      if(this.innerHTML === "(" + moreTranslation(locale) + ")") {
+        $("#status-content-" + this.id.split('-')[2]).removeClass('hide-status-content')
+        this.innerHTML = "(" + lessTranslation(locale) + ")"
+      } else {
+      $("#status-content-" + this.id.split('-')[2]).addClass('hide-status-content')
+        this.innerHTML = "(" + moreTranslation(locale) + ")"
+      }
+    })
+
+    function moreTranslation(locale) {
+      if (locale === "es") {
+        return "más";
+      } else if (locale === "fr") {
+        return "plus";
+      } else {
+        return "more";
+      }
+    }
+
+    function lessTranslation(locale) {
+      if (locale === "es") {
+        return "menos";
+      } else if (locale === "fr") {
+        return "moins";
+      } else {
+        return "less";
       }
     }
 

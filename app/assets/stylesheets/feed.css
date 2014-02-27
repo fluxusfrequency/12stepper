@@ -70,6 +70,15 @@ textarea {
   padding-bottom: 30px;
 }
 
+.status-content {
+  overflow: hidden;
+}
+
+.hide-status-content {
+  height: 105px;
+  margin-bottom: 10px;
+}
+
 .status-username {
   color: #3F3A3C;
   font-size: 1.2em;

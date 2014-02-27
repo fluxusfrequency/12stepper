@@ -83,6 +83,7 @@ es:
     fellowship: Compañerismo
     hide_map: Ocultar Mapa
   entries:
+    more: (más)
     work_step: Trabajar en un paso
     worksheet: Buscar una hoja de cálculo
     show_worksheet: Mostrar Hoja de Trabajo
@@ -96,7 +97,8 @@ es:
     create: Guardar
     edit: Editar
     delete: Borrar
-    share: Guardar y Compartir
+    save_and_share: Guardar y Compartir
+    share: Compartir
   profile:
     title: Mi Perfil
     username: Nombre (anónimo)
