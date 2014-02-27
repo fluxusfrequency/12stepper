@@ -23,10 +23,6 @@
   <div id='search-results' class='col-md-6'></div>
 </div>
 
-<%= stylesheet_link_tag "mapbox" %>
-<%= javascript_include_tag "mapbox" %>
-<%= javascript_include_tag "meetings" %>
-
 <script type='text/javascript' id="map-script">
   var map = L.mapbox.map('main-map', 'examples.map-9ijuk24y').setView([39.7391667, -104.984167], 12);
   $(".map-container").addClass("hide-map-container")

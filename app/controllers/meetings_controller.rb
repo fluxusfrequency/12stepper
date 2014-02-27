@@ -1,5 +1,6 @@
 class MeetingsController < ApplicationController
   before_action :authorize!
+  layout 'meetings'
 
   def index
 

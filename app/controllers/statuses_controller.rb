@@ -1,5 +1,6 @@
 class StatusesController < ApplicationController
   before_action :authorize!, only: [:create, :edit, :update]
+  layout 'statuses', only: :index
 
   def index
     return redirect_to login_path unless current_user
