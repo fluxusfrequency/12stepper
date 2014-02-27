@@ -18,7 +18,6 @@ class Api::V1::Feed::StatusesController < ApplicationController
     end
 
     found = StatusDecorator.decorate_collection(statuses.flatten.sort)
-    # require 'pry'; binding.pry
 
     respond_with found.map { |status| build_response_from_status(status) }
   end
@@ -34,7 +33,7 @@ class Api::V1::Feed::StatusesController < ApplicationController
   end
 
   def recent_statuses(user, timestamp)
-    user.statuses.where(updated_at: (timestamp.to_time)..(Time.now)).take(10)
+    user.statuses.where(updated_at: (timestamp.to_time)..(Time.now)).last(10)
   end
 
   def build_response_from_status(status)

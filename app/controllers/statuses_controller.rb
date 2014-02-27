@@ -4,12 +4,11 @@ class StatusesController < ApplicationController
   def index
     return redirect_to login_path unless current_user
       
-    @statuses = current_user.statuses.take(10)
+    @statuses = current_user.statuses.last(10)
     unless current_user.approved_friends.compact.empty?
-      @statuses << current_user.approved_friends.map {|friend| friend.statuses.take(10)}
+      @statuses << current_user.approved_friends.map {|friend| friend.statuses.last(10)}
     end
     @statuses = StatusDecorator.decorate_collection(@statuses.flatten.sort)
-
     @status = current_user.statuses.new
   end
 
