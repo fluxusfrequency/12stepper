@@ -1,6 +1,6 @@
 es:
-  title: Doce Bailarín
-  tagline: Encuentra tu Apoyo de Recuperación
+  title: Doce Pasos
+  tagline: Encuentre el Apoyo en su Recuperación
   our_support: Nuestro Apoyo
   your_success: Su Éxito
   languages:
@@ -9,68 +9,68 @@ es:
     french: Francés
     select: Seleccionar el Idioma
   flash:
-    account_update_success: Detalles de la cuenta se han actualizado!
+    account_update_success: Los detalles de su cuenta fueron actualizados!
     account_update_failure: Hubo un problema al actualizar sus datos.
     account_create_success: Su cuenta ha sido creada.
     unauthorized: Usted no está autorizado para hacer eso.
-    sign_in_first: Por favor, inicie sesión primero.
+    sign_in_first: Por favor, primero inicie una sesión.
     error: error
-    prohibited_save: prohibido esta página se guarden
-    invalid_credentials: Ha introducido un correo electrónico o contraseña no es válida, por favor intente de nuevo.
+    prohibited_save: impidió guardar esta página
+    invalid_credentials: Ha introducido un correo electrónico o contraseña inválida, por favor intente de nuevo.
     signin: Registrado!
-    signout: Exitosamente cerrado la sesión.
+    signout: La sesión se ha cerrado exitosamente.
     anniversary: Feliz aniversario!
     milestone: Felicitaciones por
-    friend_request_sent: Su amigo petición ha sido enviada.
-    friend_request_failed: Hubo un problema al enviar su solicitud de amigo.
+    friend_request_sent: Su solicitud de amistad ha sido enviada.
+    friend_request_failed: Hubo un problema al enviar su solicitud de amistad.
     friendship_approved: Usted ahora es amigo de
     friendship_rejected: RECHAZADO!
-    status_save_success: Su estado fue publicada
-    status_save_failure: Había un problema al guardar tu estado
-    status_update_success: Su estado se actualiza
+    status_save_success: Su estado fue publicado
+    status_save_failure: Hubo un problema al guardar su estado
+    status_update_success: Su estado fue actualizado
     status_delete_success: Se ha eliminado el estado de su
     status_delete_failure: Hubo un problema al eliminar el estado de su
-    entry_save_success: Su entrada fue salvado. 
-    entry_save_failure: Hubo un problema al guardar tu entrada. 
-    entry_share_success: compartido su entrada. 
-    entry_share_failure: Hubo un problema al compartir su entrada. Por favor, inténtelo de nuevo. 
-    entry_delete_success: Entrada fue borrada! 
+    entry_save_success: Su entrada fue guardada.
+    entry_save_failure: Hubo un problema al guardar su entrada.
+    entry_share_success: compartido su entrada.
+    entry_share_failure: Hubo un problema al compartir su entrada. Por favor, inténtelo de nuevo.
+    entry_delete_success: La entrada fue borrada!
     entry_delete_failure: No se pudo borrar la entrada.
   navbar:
-    logout: Desloguear
-    login: Conexión
-    signup: Apuntarse
+    logout: Salir
+    login: Entrar
+    signup: Registro
     journal: Diario
     resources: Recursos
-    resources_tooltip: Leer de los textos más comunes en AA
+    resources_tooltip: Leer los textos más comunes en AA
     twelvesteps: Los 12 Pasos
     twelvetraditions: Las 12 Tradiciones
     serenityprayer: La Oración de la Serenidad
-    bigbook: El Libro Grande
-    welcome: Bienvenidos
+    bigbook: El Gran Libro
+    welcome: Bienvenido
     meetings: Reuniones
-    meetings_tooltip: Buscar reuniones en su área y ver en un mapa
+    meetings_tooltip: Busque reuniones en su área y véalas en un mapa
     congrats: Felicidades
     congrats_tooltip: |
-                      Esto se calcula en base a la fecha de su último trago. 
-                      Usted puede cambiar la fecha de su perfil.
-                      Su símbolo cambia de color en función de sus días de sobriedad. 
-                      1 día - Azul 
-                      10 días - Verde 
-                      30 días - Orange 
-                      90 días - Red 
-                      1 año - Luz Verde 
+                      Esto se calcula en base a la fecha de su último trago.
+                      Usted puede cambiar la fecha en su perfil.
+                      Su símbolo cambia de color en función de sus días sobrio.
+                      1 día - Azul
+                      10 días - Verde
+                      30 días - Orange
+                      90 días - Red
+                      1 año - Luz Verde
     day: día
-    month: mez
+    month: mes
     year: año
-    sober: sobrio 
+    sober: sobrio
     profile: Mi Perfil
     view_friends: Ver a Mis Amigos
     find_friends: Buscar Amigos
   bigbook:
     toc: Tabla de Contenidos
     chapter: Capítulo
-    search: Buscar en el Libro Grande
+    search: Buscar en el Gran Libro
     searchresults: Resultados de la Búsqueda
   meetings:
     title: Buscar reuniones
@@ -84,10 +84,10 @@ es:
     hide_map: Ocultar Mapa
   entries:
     more: (más)
-    work_step: Trabajar en un paso
-    worksheet: Buscar una hoja de cálculo
+    work_step: Trabajar en un Paso
+    worksheet: Buscar una Hoja de Trabajo
     show_worksheet: Mostrar Hoja de Trabajo
-    write: Sólo escribir
+    write: Sólo Escribir
     title: Título
     step: Paso
     section: Sección
@@ -104,15 +104,15 @@ es:
     username: Nombre (anónimo)
     email: Email
     last_drink: ¿Cuándo fue su última copa?
-    last_drink_was: Mi última copa fue en
+    last_drink_was: Mi última copa fue el
     change: Cambiar última copa
     update: Actualizar Perfil
     password: Contraseña
-    password_confirmation: Confirmación de la contraseña
+    password_confirmation: Confirmación de la Contraseña
     details: Editar Detalles de mi Cuenta
     create_account: Crear una Cuenta
     login: Iniciar la Sesión
-    welcome_back: Bienvenida de Nuevo
+    welcome_back: Bienvenido de Nuevo
     get_started: Empezar
     language: Mi Idioma
     edit: Editar mi Perfil
@@ -124,19 +124,19 @@ es:
     reject: Rechazar
     view_profile: Ver Perfil
     cancel: Cancelar
-    no_results: Lo sentimos, no hay resultados que coincidan con tu búsqueda.
+    no_results: Lo sentimos, no hay resultados que coincidan con su búsqueda.
     add_friend: Añadir Amigo
     my_friends: Mis Amigos
     friend_requests: Solicitudes de Amistad
   statuses:
     share: Compartir
-    whats_up: ¿Qué tal?
+    whats_up: ¿Qué hay de nuevo?
     update: Actualizar
     ago: hace
     editing: Edición de un Estado
     posted: Publicado
-  not_found: 
-    something: Algo salió mal 
-    home: Visita la Web 
-    thanks: Gracias por encontrar el error! Hemos sido notificados del problema y estamos investigando. 
-    find_home: Tal vez usted buscaba la página de inicio? Lo puedes encontrar   
+  not_found:
+    something: Algo salió mal
+    home: Visite la Página de Inicio
+    thanks: Gracias por encontrar el error! Hemos sido notificados del problema y lo estamos investigando.
+    find_home: Tal vez usted buscaba la página de inicio? La puede encontrar aquí
