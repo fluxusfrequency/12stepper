@@ -32,20 +32,25 @@
         $('.shoutouts-panel').append(link);
       }
 
-      $('.shoutouts-panel').on('mouseup', 'a', function(e){
-        e.preventDefault();
-        $('.shoutouts-panel').addClass('hidden');
-        $('.shoutouts-panel').html('');
-        tagUsername(this.text);
-        return false;
-      });
+      function setupShoutoutsClick() {
+        $('.shoutouts-panel').on('click', '.shoutout-link', function(e){
+          e.preventDefault();
+          e.stopPropagation();
+          $('.shoutouts-panel').addClass('hidden');
+          $('.shoutouts-panel').html('');
+          tagUsername(this.text);
+          return false;
+        });
+      }
 
       function tagUsername(username) {
         var text = "<p>" + username + "</p>";
-        // $('.shoutouts-chosen').append(text);
+        $('.shoutouts-chosen').append(text);
         $('.shoutouts-chosen').removeClass('hidden');
+        return false;
       }
 
     });
+    // setupShoutoutsClick();
   });
 })();
