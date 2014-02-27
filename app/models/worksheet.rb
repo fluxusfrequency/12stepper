@@ -1,4 +1,4 @@
 class Worksheet < ActiveRecord::Base
-  # translates :title, :body
+  translates :title, :body
 end
 
