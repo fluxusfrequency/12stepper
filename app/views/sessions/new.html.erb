@@ -1,10 +1,10 @@
 <div class="row" id="landing-stripe">
-  <div class="col-md-2 col-md-2 col-md-offset-1">
+  <div class="col-md-2 col-md-offset-1">
     <h1><%= t("our_support") + "." %><br />
         <%= t("your_success") + "." %></h1>
     <%= image_tag '12Stepper_dark_logo.png' %>
   </div>
-  <div class="col-md-3 col-md-2">
+  <div class="col-md-3">
     <div class="actions" id="welcome">
       <strong><%= t("profile.welcome_back") %></strong>
     </div>
@@ -21,7 +21,7 @@
       </div>
     <% end %> 
   </div>
-  <div class="col-md-6 col-md-8">
+  <div class="col-md-6">
     <%= render partial: 'users/new', user: @user %>
   </div>
 </div>

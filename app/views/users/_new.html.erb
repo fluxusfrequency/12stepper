@@ -11,7 +11,7 @@
       </ul>
     </div>
   <% end %>
-  <div class="col-md-5 col-md-2">
+  <div class="col-md-5">
     <div class="actions" id="get-started">
       <strong><%= t("profile.get_started") %></strong>
     </div>
@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <div class="col-md-4 col-md-2" id="right-login-column">
+  <div class="col-md-4" id="right-login-column">
     <div class="field">
       <%= f.password_field :password, id: "new_password" %>
       <%= text_field_tag :new_fake_password, params[:new_fake_password], {:placeholder => t("profile.password"), :tabindex => 3} %>
@@ -36,7 +36,7 @@
       <%= text_field_tag :new_fake_password_confirmation, params[:new_fake_password_confirmation], {:placeholder => t("profile.password_confirmation")} %>
       <%= f.password_field :password_confirmation, id: "new_password_confirmation", :tabindex => 4 %>
     </div><br />
-    <div class="actions col-md-12 col-md-12" id="sign-up">
+    <div class="actions col-md-12" id="sign-up">
       <%= f.submit t("profile.create_account"), class: "btn-link", :tabindex => 6 %>
     </div>
   </div>

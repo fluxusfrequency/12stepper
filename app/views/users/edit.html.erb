@@ -1,5 +1,5 @@
 <div class="row page-header">
-  <div class="col-md-8 col-md-8">
+  <div class="col-md-8">
     <div id="profile-edit"><br />
       <%= form_for current_user, method: :patch, url: user_path(current_user.id) do |f| %>
         <h2><%= t('profile.details') %></h2>

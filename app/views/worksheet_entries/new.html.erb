@@ -1,8 +1,8 @@
 <div class="row page-header">
-  <div class="col-md-3 col-md-3 work-step-container" id="work-step-title">
+  <div class="col-md-3 work-step-container" id="work-step-title">
     <h1 id="my-journal"><%= t('entries.work_step') %></h1>
   </div>
-  <div class="col-md-9 col-md-4 work-step-container" id="work-step-selector">
+  <div class="col-md-9 work-step-container" id="work-step-selector">
     <div id='choose-the-section' class='pull-right'>
       <h3><%= t("entries.section") %></h3>
       <%= select_tag "choose-a-section", options_from_collection_for_select(@worksheet_entries, "title", "title") %>
