@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 
   validates :username, :email, :last_drink, presence: true
   validates_uniqueness_of :username, :email
+  validates_date :last_drink, :after => lambda { 100.years.ago }
 
   has_many :entries
   has_many :statuses

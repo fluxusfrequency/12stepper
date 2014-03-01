@@ -19,6 +19,7 @@ gem 'meeting_finder', '0.1.5'
 gem 'puma'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'draper'
+gem 'validates_timeliness'
 
 group :development, :production do
   gem 'dalli'
