@@ -3,8 +3,8 @@ require 'spec_helper'
 describe 'authorization' do
   context 'not logged in' do
     before do
-      user = FactoryGirl.create(:user, username: "bobby", email: "bob@example.com")
-      chapter = FactoryGirl.create(:chapter)
+      FactoryGirl.create(:user, username: "bobby", email: "bob@example.com")
+      FactoryGirl.create(:chapter)
     end
 
     it "can't access pages it's unauthorized to see", js: true do
@@ -34,7 +34,7 @@ describe 'authorization' do
     end
 
     it "can access pages it is authorized to see", js: true do
-      user = login
+      login
       expect(page.current_path).to eq(root_path)
 
       visit new_entry_path

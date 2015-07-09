@@ -1,19 +1,19 @@
 require 'spec_helper'
 require 'json_spec'
 
-describe Api::V1::BigBook::ChaptersController do
+describe Api::V1::BigBook::ChaptersController, type: :controller do
   before :each do
     @chapter1 = FactoryGirl.create(:chapter)
-    @chapter2 = FactoryGirl.create(:chapter, 
-        chapter_number: 2, 
-        title: "THERE IS A SOLUTION", 
+    @chapter2 = FactoryGirl.create(:chapter,
+        chapter_number: 2,
+        title: "THERE IS A SOLUTION",
         body: "WE, OF ALCOHOLICS ANONYMOUS, know thousands of men and women...")
-    @chapter3 = FactoryGirl.create(:chapter, 
-        chapter_number: 3, 
-        title: "MORE ABOUT ALCOHOLISM", 
+    @chapter3 = FactoryGirl.create(:chapter,
+        chapter_number: 3,
+        title: "MORE ABOUT ALCOHOLISM",
         body: "MOST OF us have been unwilling to admit we were...")
     user = FactoryGirl.create(:user)
-    controller.stub(:current_user).and_return(user)
+    subject.stub(:current_user).and_return(user)
   end
 
   it "should exist" do

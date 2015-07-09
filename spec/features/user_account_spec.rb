@@ -31,22 +31,22 @@ describe "User Account Creation" do
   context "viewing profile" do
 
     before do
-      @user = FactoryGirl.create(:user, 
-        username: "Batman", 
+      @user = FactoryGirl.create(:user,
+        username: "Batman",
         email: "bwayne@gotham.org")
-      @user2 = FactoryGirl.create(:user, 
-        username: "Robin", 
-        email: "rjblake@gotham.org", 
+      @user2 = FactoryGirl.create(:user,
+        username: "Robin",
+        email: "rjblake@gotham.org",
         last_drink: Date.today - 1.month)
-      @user3 = FactoryGirl.create(:user, 
-        username: "Joker", 
-        email: "jack@gotham.org", 
+      @user3 = FactoryGirl.create(:user,
+        username: "Joker",
+        email: "jack@gotham.org",
         last_drink: Date.today)
-      FactoryGirl.create(:status, 
-        user_id: @user2.id, 
+      FactoryGirl.create(:status,
+        user_id: @user2.id,
         content: "Kicking ass and taking names!")
-      FactoryGirl.create(:friendship, 
-        user_id: @user.id, 
+      FactoryGirl.create(:friendship,
+        user_id: @user.id,
         friend_id: @user2.id)
     end
 
@@ -65,7 +65,7 @@ describe "User Account Creation" do
       click_on "Welcome back, SecretSanta!"
       click_on "My Profile"
       click_on "Edit My Profile"
-      
+
       expect(page).to have_content("Edit My Account Details")
       fill_in "user[username]", with: "sinterklaasje"
       fill_in "user[email]", with: "santa2@northpole.org"

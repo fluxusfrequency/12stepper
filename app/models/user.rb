@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
 
   validates :username, :email, :last_drink, presence: true
   validates_uniqueness_of :username, :email
+
   validates_date :last_drink, :after => lambda { 100.years.ago }
 
   has_many :entries
@@ -18,13 +19,13 @@ class User < ActiveRecord::Base
 
   def days_sober
     diff = Time.now - last_drink.to_time
-    return 1 if diff < 86400  
+    return 1 if diff < 86400
     diff.to_i / 86400
   end
 
   def approved_friends
     return calculate_approved_friends if ENV['TRAVIS']
-    
+
     Rails.cache.fetch("approved_friends_for_#{self.username}") do
       calculate_approved_friends
     end
@@ -32,7 +33,7 @@ class User < ActiveRecord::Base
 
   def pending_friends
     return calculate_pending_friends if ENV['TRAVIS']
-    
+
     Rails.cache.fetch("pending_friends_for_#{self.username}") do
       calculate_pending_friends
     end

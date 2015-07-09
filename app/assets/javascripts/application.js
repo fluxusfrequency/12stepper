@@ -13,8 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require ckeditor-jquery
-//= require ckeditor/override
-//= require ckeditor/init
+//= require ckeditor/config
 //= require bootstrap.min
 //= require scrollTo
 //= require big_book
@@ -45,7 +44,7 @@ var entrySearchAndHighlight = function(searchTerm) {
 var bigbookSearchAndHighlight = function(searchTerm) {
   $('.highlighted').removeClass('highlighted');
   $("#chapter-view-panel:contains('"+searchTerm+"')").html($('#chapter-view-panel').html().replace(searchTerm,"<span class='highlighted'>"+searchTerm+"</span>"));
-  
+
   if($('.highlighted:first').length) {
     $('html').scrollTop($('.highlighted:first').offset().top);
   }

@@ -2,7 +2,6 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'rspec/autorun'
 require 'capybara/rails'
 require 'capybara/rspec'
 require 'capybara/poltergeist'
@@ -27,25 +26,27 @@ RSpec.configure do |config|
   end
 
   config.include I18nHelpers
+  config.include Rails.application.routes.url_helpers
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"
   # config.use_transactional_fixtures = true
 
   config.infer_base_class_for_anonymous_controllers = false
 
   config.order = "random"
+
+  config.include Capybara::DSL
+
 end
 
 Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app, 
-    :phantomjs => Phantomjs.path, 
+  Capybara::Poltergeist::Driver.new(app,
+    :phantomjs => Phantomjs.path,
     :js_errors => false,
     :timeout => 60)
 end
 
 Capybara.javascript_driver = :poltergeist
 Capybara.default_driver = :poltergeist
-
-
 
 def login
   user = FactoryGirl.create(:user, password: "password")

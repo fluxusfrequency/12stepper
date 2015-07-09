@@ -1,14 +1,14 @@
 require 'spec_helper'
 require 'json_spec'
 
-describe Api::V1::Entries::SearchController do
+describe Api::V1::Entries::SearchController, type: :controller do
   before :each do
     user = FactoryGirl.create(:user)
-    controller.stub(:current_user).and_return(user)
+    subject.stub(:current_user).and_return(user)
 
-    one = FactoryGirl.create(:entry, user_id: user.id, title: "Tough one", 
+    FactoryGirl.create(:entry, user_id: user.id, title: "Tough one",
       body: "Some days it's hard to stick with it.", step: 4)
-    two = FactoryGirl.create(:entry, user_id: user.id, title: "Good one", 
+    FactoryGirl.create(:entry, user_id: user.id, title: "Good one",
       body: "It's hard sometimes, but today it was easy.")
   end
 
