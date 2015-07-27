@@ -22,3 +22,5 @@ ADD Gemfile* $APP_HOME/
 RUN bundle install
 
 ADD . $APP_HOME
+
+CMD bundle exec rails s
