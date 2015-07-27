@@ -1,23 +1,16 @@
-development:
+development: &default
   adapter: postgresql
   encoding: unicode
   database: twelve_stepper_development
   pool: 5
-  username:
-  password:
+  username: postgres
+  host: <%= ENV['DB_HOST'] %>
+  port: <%= ENV['DB_PORT'] %>
 
 test:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: twelve_stepper_test
-  pool: 5
-  username: 
-  password:
 
 production:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: twelve_stepper_production
-  pool: 5
-  username: twelve_stepper
-  password:
